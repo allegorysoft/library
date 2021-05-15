@@ -4,6 +4,5 @@
 		<RepositoryUrl>https://github.com/allegorysoft/libs</RepositoryUrl>
 		<Authors>Allegory Soft</Authors>
 		<Description>Allegory Framework</Description>
-	    <PackageIcon>..\..\..\..\allegory-icon.png</PackageIcon>
 	</PropertyGroup>
 </Project>
