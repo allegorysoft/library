@@ -1,0 +1,15 @@
+﻿IF (OBJECT_ID('Table1') IS NOT NULL)
+BEGIN
+    DROP TABLE Table1
+END
+
+CREATE TABLE Table1 (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    CreatedDate DATETIME NOT NULL,
+	ModifiedDate DATETIME,
+	Active BIT NOT NULL,
+	CustomField1 VARCHAR(50),
+	CustomField2 FLOAT,
+	CreatedBy INT NOT NULL,
+	ModifiedBy INT NULL
+)

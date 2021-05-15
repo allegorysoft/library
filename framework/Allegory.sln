@@ -31,6 +31,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allegory.ModelBinding.WinTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allegory.ModelBinding.DxTests", "test\ModelBinding\Allegory.ModelBinding.DxTests\Allegory.ModelBinding.DxTests.csproj", "{C8D410CE-6F59-4070-B13E-BEBCBBA10ABD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityRepository", "EntityRepository", "{D32718F0-51BC-47FA-9148-BD3CF39E137B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Allegory.Standart.Entities", "src\EntityRepository\Allegory.Standart.Entities\Allegory.Standart.Entities.csproj", "{AC00E3D0-D2D4-404D-9C78-CFFA6A879413}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Allegory.Standart.EntityRepository", "src\EntityRepository\Allegory.Standart.EntityRepository\Allegory.Standart.EntityRepository.csproj", "{E28E0379-F1BD-4FB0-B3A9-997781EF991D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Allegory.Standart.EntityFrameworkRepository", "src\EntityRepository\Allegory.Standart.EntityFrameworkRepository\Allegory.Standart.EntityFrameworkRepository.csproj", "{41F63F9C-4340-45F8-BDC1-A5A255B21B4E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Allegory.NET.EntityRepository.Tests", "test\Allegory.NET.EntityRepository.Tests\Allegory.NET.EntityRepository.Tests.csproj", "{A4C39521-2071-4726-ADDD-69CF49CA51A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +83,22 @@ Global
 		{C8D410CE-6F59-4070-B13E-BEBCBBA10ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8D410CE-6F59-4070-B13E-BEBCBBA10ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8D410CE-6F59-4070-B13E-BEBCBBA10ABD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC00E3D0-D2D4-404D-9C78-CFFA6A879413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC00E3D0-D2D4-404D-9C78-CFFA6A879413}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC00E3D0-D2D4-404D-9C78-CFFA6A879413}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC00E3D0-D2D4-404D-9C78-CFFA6A879413}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E28E0379-F1BD-4FB0-B3A9-997781EF991D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E28E0379-F1BD-4FB0-B3A9-997781EF991D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E28E0379-F1BD-4FB0-B3A9-997781EF991D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E28E0379-F1BD-4FB0-B3A9-997781EF991D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41F63F9C-4340-45F8-BDC1-A5A255B21B4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41F63F9C-4340-45F8-BDC1-A5A255B21B4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41F63F9C-4340-45F8-BDC1-A5A255B21B4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41F63F9C-4340-45F8-BDC1-A5A255B21B4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4C39521-2071-4726-ADDD-69CF49CA51A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4C39521-2071-4726-ADDD-69CF49CA51A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4C39521-2071-4726-ADDD-69CF49CA51A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4C39521-2071-4726-ADDD-69CF49CA51A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +116,11 @@ Global
 		{FB7E86F9-BBFA-4898-AC73-206444272BEB} = {4C25890E-B62A-4F08-A6DB-7030B20E27DF}
 		{C6621FD7-BA9C-4D4A-B27F-BD710E6A7A71} = {FB7E86F9-BBFA-4898-AC73-206444272BEB}
 		{C8D410CE-6F59-4070-B13E-BEBCBBA10ABD} = {FB7E86F9-BBFA-4898-AC73-206444272BEB}
+		{D32718F0-51BC-47FA-9148-BD3CF39E137B} = {2C72BD73-0F23-4C37-9F00-4465C86C72D5}
+		{AC00E3D0-D2D4-404D-9C78-CFFA6A879413} = {D32718F0-51BC-47FA-9148-BD3CF39E137B}
+		{E28E0379-F1BD-4FB0-B3A9-997781EF991D} = {D32718F0-51BC-47FA-9148-BD3CF39E137B}
+		{41F63F9C-4340-45F8-BDC1-A5A255B21B4E} = {D32718F0-51BC-47FA-9148-BD3CF39E137B}
+		{A4C39521-2071-4726-ADDD-69CF49CA51A4} = {4C25890E-B62A-4F08-A6DB-7030B20E27DF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C0D71235-D5C8-45BB-A444-834373A8E049}
