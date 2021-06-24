@@ -1,4 +1,5 @@
-﻿using Allegory.Standart.Filter.Enums;
+﻿using System.Collections.Generic;
+using Allegory.Standart.Filter.Enums;
 using Allegory.Standart.Filter.Properties;
 
 namespace Allegory.Standart.Filter.Concrete
@@ -12,23 +13,38 @@ namespace Allegory.Standart.Filter.Concrete
             Column = column;
             OrderDirection = orderDirection;
         }
+        public Sort(IList<Sort> sorts)
+        {
+            Group = sorts;
+        }
         #endregion
 
         #region Properties
         public string Column { get; set; }
         public OrderDirection OrderDirection { get; set; }
+
+        public IList<Sort> Group { get; set; }
+
+        public bool IsColumn => Group == null || Group.Count == 0;
+        public bool IsGroup => !IsColumn;
         #endregion
 
         #region Methods
         public void ValidateColumn()
         {
-            if (string.IsNullOrEmpty(Column))
-                throw new FilterException(Resource.ColumnNullError);
+            if(IsColumn)
+            {
+                if (string.IsNullOrEmpty(Column))
+                    throw new FilterException(Resource.ColumnNullError);
+            }
         }
         #endregion
 
         public override string ToString()
         {
+            if (IsGroup)
+                return string.Join(", ", Group);
+
             ValidateColumn();
             string[] column = Column.Replace("[", "[[").Replace("]", "]]").Split('.');
             string columnName = column.Length > 1
