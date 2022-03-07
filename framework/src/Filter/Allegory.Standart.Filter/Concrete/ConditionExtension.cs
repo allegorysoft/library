@@ -145,7 +145,7 @@ namespace Allegory.Standart.Filter.Concrete
                 var property = typeof(TEntity).GetProperty(condition.Column);
                 if (property != null && condition.Value != null)
                 {
-                    var propertType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
+                    var propertyType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
                     if (condition.Value is ICollection)
                     {
                         if (!typeof(ICollection<>).MakeGenericType(property.PropertyType).IsAssignableFrom(condition.Value.GetType()))
@@ -155,12 +155,12 @@ namespace Allegory.Standart.Filter.Concrete
                             var list = Activator.CreateInstance(listType, array.Count());
                             var method = listType.GetMethod("Add");
                             for (int i = 0; i < array.Count(); i++)
-                                method.Invoke(list, new object[] { array.ElementAt(i) == null ? null : Convert.ChangeType(array.ElementAt(i), propertType) });
+                                method.Invoke(list, new object[] { array.ElementAt(i) == null ? null : GetValue(array.ElementAt(i), propertyType) });
                             condition.Value = list;
                         }
                     }
-                    else if (condition.Value.GetType() != propertType)
-                        condition.Value = Convert.ChangeType(condition.Value, propertType);
+                    else if (condition.Value.GetType() != propertyType)
+                        condition.Value = GetValue(condition.Value, propertyType);
                 }
                 return condition;
             }
@@ -174,6 +174,17 @@ namespace Allegory.Standart.Filter.Concrete
                         conditions.Add(condition.Group[i]);
                 }
                 return conditions.Count > 0 ? new Condition(conditions, condition.GroupOr, condition.Not) : null;
+            }
+        }
+        private static object GetValue(object value, Type propertyType)
+        {
+            if (propertyType.IsEnum)
+            {
+                return Enum.Parse(propertyType, value.ToString());
+            }
+            else
+            {
+                return Convert.ChangeType(value, propertyType);
             }
         }
     }
