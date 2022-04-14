@@ -2,7 +2,7 @@
 	<PropertyGroup>
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/allegorysoft/libs</RepositoryUrl>
-		<Authors>Allegory Soft</Authors>
+		<Authors>Allegorysoft</Authors>
 		<Description>Allegory Framework</Description>
 	</PropertyGroup>
 </Project>
