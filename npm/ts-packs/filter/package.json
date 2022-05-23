@@ -1,0 +1,21 @@
+{
+  "name": "@allegory/filter",
+  "version": "1.0.0",
+  "description": "Filter package",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allegorysoft/libs.git"
+  },
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "files": [
+    "/dist"
+  ],
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  }
+}
