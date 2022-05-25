@@ -1,2 +1,2 @@
-export * from './lib/concrete';
-export * from './lib/enums';
+export { Condition } from './lib/concrete';
+export { Operator } from './lib/enums';

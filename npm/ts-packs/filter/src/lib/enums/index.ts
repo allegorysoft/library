@@ -1,1 +1,1 @@
-export * from './operator.enum';
+export { Operator } from './operator.enum';
