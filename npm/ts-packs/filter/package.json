@@ -1,7 +1,7 @@
 {
   "name": "@allegorysoft/filter",
   "author": "Masum ULU",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "Filter package",
@@ -9,6 +9,9 @@
   "devDependencies": {
     "typescript": "^4.6.4"
   },
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
     "build": "npx tsc"
   },
