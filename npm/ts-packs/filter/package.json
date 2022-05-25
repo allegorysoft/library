@@ -1,5 +1,5 @@
 {
-  "name": "@allegory/filter",
+  "name": "@allegorysoft/filter",
   "version": "1.0.0",
   "description": "Filter package",
   "license": "ISC",
@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/allegorysoft/libs.git"
+    "url": "git+https://github.com/allegorysoft/libs.git"
   },
   "scripts": {
     "build": "npx tsc"
@@ -20,5 +20,11 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/allegorysoft/libs/issues"
+  },
+  "homepage": "https://github.com/allegorysoft/libs#readme",
+  "devDependencies": {},
+  "author": ""
 }
