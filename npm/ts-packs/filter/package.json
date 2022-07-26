@@ -1,24 +1,26 @@
 {
-  "name": "@allegory/filter",
-  "version": "1.0.0",
-  "description": "Filter package",
-  "license": "ISC",
+  "name": "@allegorysoft/filter",
+  "author": "Masum ULU",
+  "version": "1.0.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/allegorysoft/libs.git"
+  "description": "Filter package",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.6.4"
   },
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
     "build": "npx tsc"
   },
-  "files": [
-    "/dist"
-  ],
-  "dependencies": {
-    "typescript": "^4.6.4"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allegorysoft/libs.git"
   },
-  "publishConfig": {
-    "access": "public"
-  }
+  "bugs": {
+    "url": "https://github.com/allegorysoft/libs/issues"
+  },
+  "homepage": "https://github.com/allegorysoft/libs#readme"
 }
