@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>MyCompanyName.MyProjectName.Common</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\framework\src\Volo.Abp.AspNetCore.Mvc\Volo.Abp.AspNetCore.Mvc.csproj" />
+    <ProjectReference Include="..\MyCompanyName.MyProjectName.Common.Application.Contracts\MyCompanyName.MyProjectName.Common.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

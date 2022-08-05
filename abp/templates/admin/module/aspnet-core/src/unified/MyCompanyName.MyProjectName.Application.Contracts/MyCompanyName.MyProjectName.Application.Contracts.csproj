@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>MyCompanyName.MyProjectName</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\public\MyCompanyName.MyProjectName.Public.Application.Contracts\MyCompanyName.MyProjectName.Public.Application.Contracts.csproj" />
+    <ProjectReference Include="..\..\admin\MyCompanyName.MyProjectName.Admin.Application.Contracts\MyCompanyName.MyProjectName.Admin.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
