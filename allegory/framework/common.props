@@ -1,7 +1,7 @@
 <Project>
 	<PropertyGroup>
 		<RepositoryType>git</RepositoryType>
-		<RepositoryUrl>https://github.com/allegorysoft/libs</RepositoryUrl>
+		<RepositoryUrl>https://github.com/allegorysoft/library</RepositoryUrl>
 		<Authors>Allegorysoft</Authors>
 		<Description>Allegory Framework</Description>
 	</PropertyGroup>
