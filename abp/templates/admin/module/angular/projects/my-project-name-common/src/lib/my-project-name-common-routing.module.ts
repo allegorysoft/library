@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { DynamicLayoutComponent } from '@abp/ng.core';
 import { Routes, RouterModule } from '@angular/router';
-import { MyProjectNameComponent } from './components/my-project-name.component';
+import { MyProjectNameCommonComponent } from './components/my-project-name-common.component';
 
 const routes: Routes = [
   {
@@ -11,7 +11,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: MyProjectNameComponent,
+        component: MyProjectNameCommonComponent,
       },
     ],
   },
@@ -21,4 +21,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class MyProjectNameRoutingModule {}
+export class MyProjectNameCommonRoutingModule { }

@@ -6,23 +6,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-project-name": {
+    "my-project-name-common": {
       "projectType": "library",
-      "root": "projects/my-project-name",
-      "sourceRoot": "projects/my-project-name/src",
+      "root": "projects/my-project-name-common",
+      "sourceRoot": "projects/my-project-name-common/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/my-project-name/ng-package.json"
+            "project": "projects/my-project-name-common/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/my-project-name/tsconfig.lib.prod.json"
+              "tsConfig": "projects/my-project-name-common/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/my-project-name/tsconfig.lib.json"
+              "tsConfig": "projects/my-project-name-common/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -30,17 +30,17 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/my-project-name/src/test.ts",
-            "tsConfig": "projects/my-project-name/tsconfig.spec.json",
-            "karmaConfig": "projects/my-project-name/karma.conf.js"
+            "main": "projects/my-project-name-common/src/test.ts",
+            "tsConfig": "projects/my-project-name-common/tsconfig.spec.json",
+            "karmaConfig": "projects/my-project-name-common/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": [
-              "projects/my-project-name/**/*.ts",
-              "projects/my-project-name/**/*.html"
+              "projects/my-project-name-common/**/*.ts",
+              "projects/my-project-name-common/**/*.html"
             ]
           }
         }

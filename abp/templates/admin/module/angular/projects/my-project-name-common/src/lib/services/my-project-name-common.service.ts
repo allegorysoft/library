@@ -4,14 +4,14 @@ import { RestService } from '@abp/ng.core';
 @Injectable({
   providedIn: 'root',
 })
-export class MyProjectNameService {
-  apiName = 'MyProjectName';
+export class MyProjectNameCommonService {
+  apiName = 'MyProjectNameCommon';
 
-  constructor(private restService: RestService) {}
+  constructor(private restService: RestService) { }
 
   sample() {
     return this.restService.request<void, any>(
-      { method: 'GET', url: '/api/MyProjectName/sample' },
+      { method: 'GET', url: '/api/MyProjectNameCommon/sample' },
       { apiName: this.apiName }
     );
   }

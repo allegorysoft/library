@@ -1,5 +1,5 @@
 {
-  "name": "@my-company-name/my-project-name",
+  "name": "@my-company-name/my-project-name-common",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": ">=9",
