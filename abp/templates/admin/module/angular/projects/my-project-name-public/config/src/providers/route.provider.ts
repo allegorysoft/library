@@ -1,8 +1,8 @@
 import { eLayoutType, RoutesService } from '@abp/ng.core';
 import { APP_INITIALIZER } from '@angular/core';
-import { eMyProjectNameAdminRouteNames } from '../enums/route-names';
+import { eMyProjectNamePublicRouteNames } from '../enums/route-names';
 
-export const MY_PROJECT_NAME_ADMIN_ROUTE_PROVIDERS = [
+export const MY_PROJECT_NAME_PUBLIC_ROUTE_PROVIDERS = [
   {
     provide: APP_INITIALIZER,
     useFactory: configureRoutes,
@@ -15,11 +15,11 @@ export function configureRoutes(routesService: RoutesService) {
   return () => {
     routesService.add([
       {
-        path: '/my-project-name/admin',
-        name: eMyProjectNameAdminRouteNames.MyProjectNameAdmin,
+        path: '/my-project-name/public',
+        name: eMyProjectNamePublicRouteNames.MyProjectNamePublic,
         iconClass: 'fas fa-book',
         layout: eLayoutType.application,
-        order: 4,
+        order: 5,
       },
     ]);
   };

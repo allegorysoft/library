@@ -17,7 +17,15 @@
         "projects/my-project-name-admin/config/src/public-api.ts"
       ],
       "@proxy/admin": ["projects/my-project-name-admin/src/lib/proxy/index.ts"],
-      "@proxy/admin/*": ["projects/my-project-name-admin/src/lib/proxy/*"]
+      "@proxy/admin/*": ["projects/my-project-name-admin/src/lib/proxy/*"],
+      "@my-company-name/my-project-name-public": [
+        "projects/my-project-name-public/src/public-api.ts"
+      ],
+      "@my-company-name/my-project-name-public/config": [
+        "projects/my-project-name-public/config/src/public-api.ts"
+      ],
+      "@proxy/public": ["projects/my-project-name-public/src/lib/proxy/index.ts"],
+      "@proxy/public/*": ["projects/my-project-name-public/src/lib/proxy/*"]
     }
   }
 }

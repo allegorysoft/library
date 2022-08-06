@@ -26,14 +26,19 @@ const routes: Routes = [
       import('@abp/ng.setting-management').then(m => m.SettingManagementModule.forLazy()),
   },
   {
-    path: 'my-project-name-common',
+    path: 'my-project-name/common',
     loadChildren: () =>
       import('@my-company-name/my-project-name-common').then(m => m.MyProjectNameCommonModule.forLazy()),
   },
   {
-    path: 'my-project-name-admin',
+    path: 'my-project-name/admin',
     loadChildren: () =>
       import('@my-company-name/my-project-name-admin').then(m => m.MyProjectNameAdminModule.forLazy()),
+  },
+  {
+    path: 'my-project-name/public',
+    loadChildren: () =>
+      import('@my-company-name/my-project-name-public').then(m => m.MyProjectNamePublicModule.forLazy()),
   },
 ];
 

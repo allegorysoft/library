@@ -11,7 +11,7 @@ export class MyProjectNameCommonService {
 
   sample() {
     return this.restService.request<void, any>(
-      { method: 'GET', url: '/api/MyProjectNameCommon/sample' },
+      { method: 'GET', url: '/api/MyProjectName/common/sample' },
       { apiName: this.apiName }
     );
   }

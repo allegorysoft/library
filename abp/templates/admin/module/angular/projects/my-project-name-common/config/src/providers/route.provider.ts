@@ -15,7 +15,7 @@ export function configureRoutes(routesService: RoutesService) {
   return () => {
     routesService.add([
       {
-        path: '/my-project-name-common',
+        path: '/my-project-name/common',
         name: eMyProjectNameCommonRouteNames.MyProjectNameCommon,
         iconClass: 'fas fa-book',
         layout: eLayoutType.application,

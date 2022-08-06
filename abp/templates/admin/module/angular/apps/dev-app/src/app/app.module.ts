@@ -11,6 +11,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyProjectNameCommonConfigModule } from '@my-company-name/my-project-name-common/config';
 import { MyProjectNameAdminConfigModule } from '@my-company-name/my-project-name-admin/config';
+import { MyProjectNamePublicConfigModule } from '@my-company-name/my-project-name-public/config';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,10 +35,11 @@ import { APP_ROUTE_PROVIDER } from './route.provider';
     SettingManagementConfigModule.forRoot(),
     MyProjectNameCommonConfigModule.forRoot(),
     MyProjectNameAdminConfigModule.forRoot(),
+    MyProjectNamePublicConfigModule.forRoot(),
     ThemeBasicModule.forRoot(),
   ],
   providers: [APP_ROUTE_PROVIDER],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
