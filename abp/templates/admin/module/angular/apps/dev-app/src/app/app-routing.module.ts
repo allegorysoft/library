@@ -30,10 +30,15 @@ const routes: Routes = [
     loadChildren: () =>
       import('@my-company-name/my-project-name-common').then(m => m.MyProjectNameCommonModule.forLazy()),
   },
+  {
+    path: 'my-project-name-admin',
+    loadChildren: () =>
+      import('@my-company-name/my-project-name-admin').then(m => m.MyProjectNameAdminModule.forLazy()),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

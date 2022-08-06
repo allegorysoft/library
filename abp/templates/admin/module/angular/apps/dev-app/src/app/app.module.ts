@@ -10,6 +10,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyProjectNameCommonConfigModule } from '@my-company-name/my-project-name-common/config';
+import { MyProjectNameAdminConfigModule } from '@my-company-name/my-project-name-admin/config';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +33,7 @@ import { APP_ROUTE_PROVIDER } from './route.provider';
     TenantManagementConfigModule.forRoot(),
     SettingManagementConfigModule.forRoot(),
     MyProjectNameCommonConfigModule.forRoot(),
+    MyProjectNameAdminConfigModule.forRoot(),
     ThemeBasicModule.forRoot(),
   ],
   providers: [APP_ROUTE_PROVIDER],
