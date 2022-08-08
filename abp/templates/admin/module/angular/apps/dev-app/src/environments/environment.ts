@@ -24,15 +24,15 @@ export const environment = {
     },
     MyProjectNameCommon: {
       url: 'https://localhost:44300',
-      rootNamespace: 'MyCompanyName.MyProjectName',
+      rootNamespace: 'MyCompanyName.MyProjectName.Common',
     },
     MyProjectNameAdmin: {
       url: 'https://localhost:44300',
-      rootNamespace: 'MyCompanyName.MyProjectName',
+      rootNamespace: 'MyCompanyName.MyProjectName.Admin',
     },
     MyProjectNamePublic: {
       url: 'https://localhost:44300',
-      rootNamespace: 'MyCompanyName.MyProjectName',
+      rootNamespace: 'MyCompanyName.MyProjectName.Public',
     },
   },
 } as Environment;
