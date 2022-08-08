@@ -5,9 +5,6 @@
       "@my-company-name/my-project-name-common": [
         "projects/my-project-name-common/src/public-api.ts"
       ],
-      "@my-company-name/my-project-name-common/config": [
-        "projects/my-project-name-common/config/src/public-api.ts"
-      ],
       "@proxy/common": ["projects/my-project-name-common/src/lib/proxy/index.ts"],
       "@proxy/common/*": ["projects/my-project-name-common/src/lib/proxy/*"],
       "@my-company-name/my-project-name-admin": [
