@@ -22,7 +22,15 @@ export const environment = {
       url: 'https://localhost:44301',
       rootNamespace: 'MyCompanyName.MyProjectName',
     },
-    MyProjectName: {
+    MyProjectNameCommon: {
+      url: 'https://localhost:44300',
+      rootNamespace: 'MyCompanyName.MyProjectName',
+    },
+    MyProjectNameAdmin: {
+      url: 'https://localhost:44300',
+      rootNamespace: 'MyCompanyName.MyProjectName',
+    },
+    MyProjectNamePublic: {
       url: 'https://localhost:44300',
       rootNamespace: 'MyCompanyName.MyProjectName',
     },

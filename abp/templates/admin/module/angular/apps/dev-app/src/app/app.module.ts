@@ -9,7 +9,6 @@ import { ThemeSharedModule } from '@abp/ng.theme.shared';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MyProjectNameCommonConfigModule } from '@my-company-name/my-project-name-common/config';
 import { MyProjectNameAdminConfigModule } from '@my-company-name/my-project-name-admin/config';
 import { MyProjectNamePublicConfigModule } from '@my-company-name/my-project-name-public/config';
 import { environment } from '../environments/environment';
@@ -33,7 +32,6 @@ import { APP_ROUTE_PROVIDER } from './route.provider';
     IdentityConfigModule.forRoot(),
     TenantManagementConfigModule.forRoot(),
     SettingManagementConfigModule.forRoot(),
-    MyProjectNameCommonConfigModule.forRoot(),
     MyProjectNameAdminConfigModule.forRoot(),
     MyProjectNamePublicConfigModule.forRoot(),
     ThemeBasicModule.forRoot(),
