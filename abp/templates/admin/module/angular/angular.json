@@ -6,23 +6,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-project-name": {
+    "my-project-name-common": {
       "projectType": "library",
-      "root": "projects/my-project-name",
-      "sourceRoot": "projects/my-project-name/src",
+      "root": "projects/my-project-name-common",
+      "sourceRoot": "projects/my-project-name-common/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/my-project-name/ng-package.json"
+            "project": "projects/my-project-name-common/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/my-project-name/tsconfig.lib.prod.json"
+              "tsConfig": "projects/my-project-name-common/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/my-project-name/tsconfig.lib.json"
+              "tsConfig": "projects/my-project-name-common/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -30,17 +30,97 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/my-project-name/src/test.ts",
-            "tsConfig": "projects/my-project-name/tsconfig.spec.json",
-            "karmaConfig": "projects/my-project-name/karma.conf.js"
+            "main": "projects/my-project-name-common/src/test.ts",
+            "tsConfig": "projects/my-project-name-common/tsconfig.spec.json",
+            "karmaConfig": "projects/my-project-name-common/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": [
-              "projects/my-project-name/**/*.ts",
-              "projects/my-project-name/**/*.html"
+              "projects/my-project-name-common/**/*.ts",
+              "projects/my-project-name-common/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "my-project-name-admin": {
+      "projectType": "library",
+      "root": "projects/my-project-name-admin",
+      "sourceRoot": "projects/my-project-name-admin/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/my-project-name-admin/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/my-project-name-admin/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/my-project-name-admin/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/my-project-name-admin/src/test.ts",
+            "tsConfig": "projects/my-project-name-admin/tsconfig.spec.json",
+            "karmaConfig": "projects/my-project-name-admin/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/my-project-name-admin/**/*.ts",
+              "projects/my-project-name-admin/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "my-project-name-public": {
+      "projectType": "library",
+      "root": "projects/my-project-name-public",
+      "sourceRoot": "projects/my-project-name-public/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/my-project-name-public/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/my-project-name-public/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/my-project-name-public/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/my-project-name-public/src/test.ts",
+            "tsConfig": "projects/my-project-name-public/tsconfig.spec.json",
+            "karmaConfig": "projects/my-project-name-public/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/my-project-name-public/**/*.ts",
+              "projects/my-project-name-public/**/*.html"
             ]
           }
         }
@@ -53,21 +133,21 @@
           "style": "scss"
         }
       },
-      "root": "projects/dev-app",
-      "sourceRoot": "projects/dev-app/src",
+      "root": "apps/dev-app",
+      "sourceRoot": "apps/dev-app/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/dev-app",
-            "index": "projects/dev-app/src/index.html",
-            "main": "projects/dev-app/src/main.ts",
-            "polyfills": "projects/dev-app/src/polyfills.ts",
-            "tsConfig": "projects/dev-app/tsconfig.app.json",
+            "index": "apps/dev-app/src/index.html",
+            "main": "apps/dev-app/src/main.ts",
+            "polyfills": "apps/dev-app/src/polyfills.ts",
+            "tsConfig": "apps/dev-app/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "allowedCommonJsDependencies": ["chart.js", "js-sha256"],
-            "assets": ["projects/dev-app/src/favicon.ico", "projects/dev-app/src/assets"],
+            "assets": ["apps/dev-app/src/favicon.ico", "apps/dev-app/src/assets"],
             "styles": [
               {
                 "input": "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
@@ -104,7 +184,7 @@
                 "inject": true,
                 "bundleName": "bootstrap-ltr.min"
               },
-              "projects/dev-app/src/styles.scss"
+              "apps/dev-app/src/styles.scss"
             ],
             "scripts": []
           },
@@ -124,8 +204,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "projects/dev-app/src/environments/environment.ts",
-                  "with": "projects/dev-app/src/environments/environment.prod.ts"
+                  "replace": "apps/dev-app/src/environments/environment.ts",
+                  "with": "apps/dev-app/src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -162,12 +242,12 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/dev-app/src/test.ts",
-            "polyfills": "projects/dev-app/src/polyfills.ts",
-            "tsConfig": "projects/dev-app/tsconfig.spec.json",
-            "karmaConfig": "projects/dev-app/karma.conf.js",
+            "main": "apps/dev-app/src/test.ts",
+            "polyfills": "apps/dev-app/src/polyfills.ts",
+            "tsConfig": "apps/dev-app/tsconfig.spec.json",
+            "karmaConfig": "apps/dev-app/karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": ["projects/dev-app/src/favicon.ico", "projects/dev-app/src/assets"],
+            "assets": ["apps/dev-app/src/favicon.ico", "apps/dev-app/src/assets"],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
@@ -175,7 +255,7 @@
               "node_modules/@swimlane/ngx-datatable/index.css",
               "node_modules/@swimlane/ngx-datatable/assets/icons.css",
               "node_modules/@swimlane/ngx-datatable/themes/material.css",
-              "projects/dev-app/src/styles.scss"
+              "apps/dev-app/src/styles.scss"
             ],
             "scripts": []
           }
@@ -183,7 +263,7 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": ["projects/dev-app/**/*.ts", "projects/dev-app/**/*.html"]
+            "lintFilePatterns": ["apps/dev-app/**/*.ts", "apps/dev-app/**/*.html"]
           }
         }
       }

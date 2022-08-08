@@ -1,17 +1,13 @@
 {
-  "root": true,
-  "ignorePatterns": ["projects/**/*"],
+  "extends": "../../.eslintrc.json",
+  "ignorePatterns": ["!**/*"],
   "overrides": [
     {
       "files": ["*.ts"],
       "parserOptions": {
-        "project": ["tsconfig.json"],
+        "project": ["apps/dev-app/tsconfig.app.json", "apps/dev-app/tsconfig.spec.json"],
         "createDefaultProgram": true
       },
-      "extends": [
-        "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates"
-      ],
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",
@@ -33,7 +29,6 @@
     },
     {
       "files": ["*.html"],
-      "extends": ["plugin:@angular-eslint/template/recommended"],
       "rules": {}
     }
   ]
