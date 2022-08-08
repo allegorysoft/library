@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
-import { DynamicLayoutComponent } from '@abp/ng.core';
 import { Routes, RouterModule } from '@angular/router';
+import { AdminLayoutComponent } from './components/admin-layout/admin-layout.component';
 import { MyProjectNameAdminComponent } from './components/my-project-name-admin.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: DynamicLayoutComponent,
+    component: AdminLayoutComponent,
     children: [
       {
         path: '',

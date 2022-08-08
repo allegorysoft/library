@@ -18,7 +18,7 @@ export function configureRoutes(routesService: RoutesService) {
         path: '/my-project-name/admin',
         name: eMyProjectNameAdminRouteNames.MyProjectNameAdmin,
         iconClass: 'fas fa-book',
-        layout: eLayoutType.application,
+        layout: eLayoutType.empty,
         order: 4,
       },
     ]);
