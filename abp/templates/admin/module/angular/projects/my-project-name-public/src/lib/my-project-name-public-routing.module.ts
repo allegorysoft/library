@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
-import { DynamicLayoutComponent } from '@abp/ng.core';
 import { Routes, RouterModule } from '@angular/router';
+import { PublicLayoutComponent } from './components/public-layout/public-layout.component';
 import { MyProjectNamePublicComponent } from './components/my-project-name-public.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: DynamicLayoutComponent,
+    component: PublicLayoutComponent,
     children: [
       {
         path: '',

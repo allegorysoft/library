@@ -18,7 +18,7 @@ export function configureRoutes(routesService: RoutesService) {
         path: '/my-project-name/public',
         name: eMyProjectNamePublicRouteNames.MyProjectNamePublic,
         iconClass: 'fas fa-book',
-        layout: eLayoutType.application,
+        layout: eLayoutType.empty,
         order: 5,
       },
     ]);
