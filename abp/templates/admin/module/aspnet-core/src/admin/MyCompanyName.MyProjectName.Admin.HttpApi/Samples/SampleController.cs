@@ -7,7 +7,7 @@ namespace MyCompanyName.MyProjectName.Admin.Samples;
 
 [Area(MyProjectNameAdminRemoteServiceConsts.ModuleName)]
 [RemoteService(Name = MyProjectNameAdminRemoteServiceConsts.RemoteServiceName)]
-[Route("api/MyProjectName/admin/sample")] //TODO can be bug ?? 
+[Route("api/MyProjectName/admin/sample")]
 public class SampleController : MyProjectNameAdminController, ISampleAppService
 {
     private readonly ISampleAppService _sampleAppService;
