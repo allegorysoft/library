@@ -201,6 +201,8 @@ Global
 		{DACAE859-4DCF-48DA-A8BE-F39495034DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DACAE859-4DCF-48DA-A8BE-F39495034DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DACAE859-4DCF-48DA-A8BE-F39495034DCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{690203F4-3CD5-4569-88D9-EE831EEA5F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{690203F4-3CD5-4569-88D9-EE831EEA5F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
