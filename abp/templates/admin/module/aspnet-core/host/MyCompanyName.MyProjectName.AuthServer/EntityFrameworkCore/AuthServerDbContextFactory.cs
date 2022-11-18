@@ -5,16 +5,16 @@ using Microsoft.Extensions.Configuration;
 
 namespace MyCompanyName.MyProjectName.EntityFrameworkCore;
 
-public class IdentityServerHostMigrationsDbContextFactory : IDesignTimeDbContextFactory<IdentityServerHostMigrationsDbContext>
+public class AuthServerDbContextFactory : IDesignTimeDbContextFactory<AuthServerDbContext>
 {
-    public IdentityServerHostMigrationsDbContext CreateDbContext(string[] args)
+    public AuthServerDbContext CreateDbContext(string[] args)
     {
         var configuration = BuildConfiguration();
 
-        var builder = new DbContextOptionsBuilder<IdentityServerHostMigrationsDbContext>()
+        var builder = new DbContextOptionsBuilder<AuthServerDbContext>()
             .UseSqlServer(configuration.GetConnectionString("Default"));
 
-        return new IdentityServerHostMigrationsDbContext(builder.Options);
+        return new AuthServerDbContext(builder.Options);
     }
 
     private static IConfigurationRoot BuildConfiguration()
