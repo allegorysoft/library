@@ -32,9 +32,7 @@ public class ClientAdminDemoService : ITransientDependency
         await TestAllManuallyAsync();
     }
 
-    /* Shows how to perform an HTTP request to the API using ABP's dynamic c# proxy
-     * feature. It is just simple as calling a local service method.
-     * Authorization and HTTP request details are handled by the ABP framework.
+    /* Shows how to use HttpClient to perform a request to the HTTP API.
      */
     private async Task TestWithDynamicProxiesAsync()
     {
