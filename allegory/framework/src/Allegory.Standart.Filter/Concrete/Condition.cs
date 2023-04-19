@@ -11,37 +11,14 @@ namespace Allegory.Standart.Filter.Concrete
     public sealed class Condition
     {
         #region Fields
+
         private string _parameterName;
         private ObservableCollection<Condition> _group;
-        #endregion
 
-        #region Constructors
-        public Condition() { }
-        public Condition(string column, Operator @operator, object value = null, bool not = false)
-        {
-            Column = column;
-            Operator = @operator;
-            Value = value;
-            Not = not;
-        }
-        public Condition(Condition condition)
-        {
-            this.Column = condition.Column;
-            this.Operator = condition.Operator;
-            this.Value = condition.Value;
-            this.Not = condition.Not;
-
-            this._parameterName = condition.ParameterName;
-        }
-        public Condition(IList<Condition> conditions, bool groupOr, bool not)
-        {
-            this.Group = conditions;
-            this.GroupOr = groupOr;
-            this.Not = not;
-        }
         #endregion
 
         #region Properties
+
         public string Column { get; set; }
         public Operator Operator { get; set; }
         public object Value { get; set; }
@@ -67,6 +44,7 @@ namespace Allegory.Standart.Filter.Concrete
                 }
             }
         }
+
         public bool GroupOr { get; set; }
 
         public string ParameterName
@@ -76,7 +54,7 @@ namespace Allegory.Standart.Filter.Concrete
                 if (string.IsNullOrEmpty(_parameterName)
                     && IsColumn
                     && Value != null
-                    )
+                   )
                     _parameterName = Guid.NewGuid().ToString().Replace("-", "");
 
                 return _parameterName;
@@ -87,9 +65,44 @@ namespace Allegory.Standart.Filter.Concrete
 
         public bool IsColumn => Group == null || Group.Count == 0;
         public bool IsGroup => Group != null && Group.Count > 0;
+
+        #endregion
+
+        #region Constructors
+
+        public Condition()
+        {
+        }
+
+        public Condition(string column, Operator @operator, object value = null, bool not = false)
+        {
+            Column = column;
+            Operator = @operator;
+            Value = value;
+            Not = not;
+        }
+
+        public Condition(Condition condition)
+        {
+            this.Column = condition.Column;
+            this.Operator = condition.Operator;
+            this.Value = condition.Value;
+            this.Not = condition.Not;
+
+            this._parameterName = condition.ParameterName;
+        }
+
+        public Condition(IList<Condition> conditions, bool groupOr, bool not)
+        {
+            this.Group = conditions;
+            this.GroupOr = groupOr;
+            this.Not = not;
+        }
+
         #endregion
 
         #region Methods
+
         public void ValidateColumn()
         {
             if (IsColumn)
@@ -102,10 +115,11 @@ namespace Allegory.Standart.Filter.Concrete
                     && !(Value is ICollection && ((ICollection)Value).Count == 2))
                     throw new FilterException(Resource.BetweenValueError);
                 if (Operator == Operator.In
-                     && !(Value is ICollection && ((ICollection)Value).Count > 0))
+                    && !(Value is ICollection && ((ICollection)Value).Count > 0))
                     throw new FilterException(Resource.InValueError);
             }
         }
+
         private void Group_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
             if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Add)
@@ -114,18 +128,21 @@ namespace Allegory.Standart.Filter.Concrete
                     (_group[i] as Condition).Parent = this;
             }
         }
+
         #endregion
 
         public override string ToString()
         {
             if (IsGroup)
-                return string.Concat((Not ? "NOT" : ""), (Parent == null && Not == false ? string.Empty : "("), string.Join((GroupOr ? " OR " : " AND "), Group), (Parent == null && Not == false ? string.Empty : ")"));
+                return string.Concat((Not ? "NOT" : ""), (Parent == null && Not == false ? string.Empty : "("),
+                    string.Join((GroupOr ? " OR " : " AND "), Group),
+                    (Parent == null && Not == false ? string.Empty : ")"));
 
             ValidateColumn();
             string[] column = Column.Replace("[", "[[").Replace("]", "]]").Split('.');
             string columnName = column.Length > 1
                 ? "[" + column[0] + "].[" + column[1] + "]"
-                : "[" + Column.Replace("[","[[").Replace("]","]]") + "]";
+                : "[" + Column.Replace("[", "[[").Replace("]", "]]") + "]";
             string filter = string.Concat((Not ? "NOT " : string.Empty), columnName);
 
             switch (Operator)
@@ -148,7 +165,7 @@ namespace Allegory.Standart.Filter.Concrete
                 case Operator.IsLessThanOrEqualto:
                     filter += "<=";
                     break;
-                case Operator.In://Working with dapper
+                case Operator.In: //Working with dapper
                     filter += " IN ";
                     break;
                 case Operator.IsBetween:
@@ -169,6 +186,7 @@ namespace Allegory.Standart.Filter.Concrete
                 case Operator.IsNullOrEmpty:
                     return string.Concat((Not ? " NOT " : string.Empty), "NULLIF(", columnName, ",'') IS NULL");
             }
+
             filter += "@" + ParameterName;
             return filter;
         }
