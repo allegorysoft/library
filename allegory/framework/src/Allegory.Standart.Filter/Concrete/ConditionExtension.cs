@@ -179,7 +179,7 @@ namespace Allegory.Standart.Filter.Concrete
 
             if (condition.Value is ICollection)
             {
-                ConvertToCollection(condition, property, propertyType);
+                ConvertToCompatibleCollection(condition, property, propertyType);
             }
             else if (condition.Value.GetType() != propertyType)
                 condition.Value = GetValue(condition.Value, propertyType);
@@ -197,7 +197,7 @@ namespace Allegory.Standart.Filter.Concrete
                     .ToArray();
         }
 
-        private static void ConvertToCollection(Condition condition, PropertyInfo property, Type propertyType)
+        private static void ConvertToCompatibleCollection(Condition condition, PropertyInfo property, Type propertyType)
         {
             if (typeof(ICollection<>).MakeGenericType(property.PropertyType).IsInstanceOfType(condition.Value))
                 return;
