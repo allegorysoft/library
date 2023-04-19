@@ -4,5 +4,6 @@
 		<RepositoryUrl>https://github.com/allegorysoft/library</RepositoryUrl>
 		<Authors>Allegorysoft</Authors>
 		<Description>Allegory Framework</Description>
+		<LangVersion>latest</LangVersion>
 	</PropertyGroup>
 </Project>

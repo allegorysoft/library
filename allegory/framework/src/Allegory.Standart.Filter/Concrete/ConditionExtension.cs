@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Text.Json;
 using Allegory.Standart.Filter.Enums;
 using Allegory.Standart.Filter.Properties;
 
@@ -154,8 +155,8 @@ namespace Allegory.Standart.Filter.Concrete
 
             if (condition.IsColumn)
             {
-                 CheckColumn<TEntity>(condition);
-                 return condition;
+                CheckColumn<TEntity>(condition);
+                return condition;
             }
 
             var conditions = new List<Condition>();
@@ -171,10 +172,11 @@ namespace Allegory.Standart.Filter.Concrete
 
         private static void CheckColumn<TEntity>(Condition condition)
         {
+            CheckJsonElementType(condition);
             ParseCommaSeparatedStringToArray(condition);
             condition.ValidateColumn();
-            var property = typeof(TEntity).GetProperty(condition.Column);
 
+            var property = typeof(TEntity).GetProperty(condition.Column);
             if (property == null || condition.Value == null) return;
             var propertyType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
 
@@ -184,6 +186,18 @@ namespace Allegory.Standart.Filter.Concrete
             }
             else if (condition.Value.GetType() != propertyType)
                 condition.Value = GetValue(condition.Value, propertyType);
+        }
+
+        private static void CheckJsonElementType(Condition condition)
+        {
+            if (condition.Value is JsonElement element)
+            {
+                condition.Value = element.ValueKind switch
+                {
+                    JsonValueKind.String => element.GetString(),
+                    _ => element.GetRawText()
+                };
+            }
         }
 
         private static void ParseCommaSeparatedStringToArray(Condition condition)
