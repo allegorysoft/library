@@ -1,11 +1,15 @@
 <Project>
-	<PropertyGroup>
-		<LangVersion>latest</LangVersion>
-		<RepositoryType>git</RepositoryType>
-		<RepositoryUrl>https://github.com/allegorysoft/library</RepositoryUrl>
-		<Authors>Allegorysoft</Authors>
-		<Description>Allegory Framework</Description>
-		<Version>1.0.6</Version>
-		<PackageIcon>..\..\..\resources\allegory-icon.png</PackageIcon>
-	</PropertyGroup>
+    <PropertyGroup>
+        <LangVersion>latest</LangVersion>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/allegorysoft/library</RepositoryUrl>
+        <Authors>Allegorysoft</Authors>
+        <Description>Allegory Framework</Description>
+        <Version>1.0.6</Version>
+        <PackageIcon>allegory-icon.png</PackageIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\..\resources\allegory-icon.png" Pack="true" PackagePath="\" />
+    </ItemGroup>
 </Project>
