@@ -23,6 +23,11 @@ namespace Allegory.Standart.Filter.Concrete
             return expression == null ? null : GetLambda<TEntity>(expression, parameterExpression);
         }
 
+        public static Func<TEntity, bool> ToLambdaExpression<TEntity>(this Condition condition)
+        {
+            return ToExpression<TEntity>(condition).Compile();
+        }
+
         [Obsolete("This extension method is obsolete and will be removed in a future version. Use ToExpression instead.")]
         public static Expression<Func<TEntity, bool>> GetLambdaExpression<TEntity>(this Condition condition)
         {

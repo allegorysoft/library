@@ -154,10 +154,11 @@ namespace Allegory.Standart.Filter.Concrete
 
             if (condition.IsColumn)
             {
-                return CheckColumn<TEntity>(condition);
+                 CheckColumn<TEntity>(condition);
+                 return condition;
             }
 
-            List<Condition> conditions = new List<Condition>();
+            var conditions = new List<Condition>();
             for (int i = 0; i < condition.Group.Count; i++)
             {
                 condition.Group[i] = condition.Group[i].ConvertToValueType<TEntity>();
@@ -168,13 +169,13 @@ namespace Allegory.Standart.Filter.Concrete
             return conditions.Count > 0 ? new Condition(conditions, condition.GroupOr, condition.Not) : null;
         }
 
-        private static Condition CheckColumn<TEntity>(Condition condition)
+        private static void CheckColumn<TEntity>(Condition condition)
         {
             ParseCommaSeparatedStringToArray(condition);
             condition.ValidateColumn();
             var property = typeof(TEntity).GetProperty(condition.Column);
 
-            if (property == null || condition.Value == null) return condition;
+            if (property == null || condition.Value == null) return;
             var propertyType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
 
             if (condition.Value is ICollection)
@@ -183,8 +184,6 @@ namespace Allegory.Standart.Filter.Concrete
             }
             else if (condition.Value.GetType() != propertyType)
                 condition.Value = GetValue(condition.Value, propertyType);
-
-            return condition;
         }
 
         private static void ParseCommaSeparatedStringToArray(Condition condition)
