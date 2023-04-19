@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>$(NetVersion)</TargetFramework>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Filter\Allegory.Standart.Filter\Allegory.Standart.Filter.csproj" />
+    <ProjectReference Include="..\..\src\Allegory.Standart.Filter\Allegory.Standart.Filter.csproj" />
   </ItemGroup>
 
 </Project>

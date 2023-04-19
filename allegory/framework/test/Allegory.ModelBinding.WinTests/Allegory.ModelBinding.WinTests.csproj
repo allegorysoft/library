@@ -86,6 +86,10 @@
       <Project>{d7f38ffc-2348-4079-a582-e9643b426a30}</Project>
       <Name>Allegory.ModelBinding</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\src\Allegory.ModelBinding\Allegory.ModelBinding.csproj">
+      <Project>{d7f38ffc-2348-4079-a582-e9643b426a30}</Project>
+      <Name>Allegory.ModelBinding</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
