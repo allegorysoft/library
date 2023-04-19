@@ -51,17 +51,14 @@ namespace Allegory.Standart.Filter.Concrete
         {
             get
             {
-                if (string.IsNullOrEmpty(_parameterName)
-                    && IsColumn
-                    && Value != null
-                   )
+                if (string.IsNullOrEmpty(_parameterName) && IsColumn && Value != null)
                     _parameterName = Guid.NewGuid().ToString().Replace("-", "");
 
                 return _parameterName;
             }
         }
 
-        public Condition Parent { get; private set; }
+        private Condition Parent { get; set; }
 
         public bool IsColumn => Group == null || Group.Count == 0;
         public bool IsGroup => Group != null && Group.Count > 0;
@@ -80,16 +77,6 @@ namespace Allegory.Standart.Filter.Concrete
             Operator = @operator;
             Value = value;
             Not = not;
-        }
-
-        public Condition(Condition condition)
-        {
-            this.Column = condition.Column;
-            this.Operator = condition.Operator;
-            this.Value = condition.Value;
-            this.Not = condition.Not;
-
-            this._parameterName = condition.ParameterName;
         }
 
         public Condition(IList<Condition> conditions, bool groupOr, bool not)
@@ -122,11 +109,10 @@ namespace Allegory.Standart.Filter.Concrete
 
         private void Group_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
-            if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Add)
-            {
-                for (int i = e.NewStartingIndex; i < _group.Count; i++)
-                    (_group[i] as Condition).Parent = this;
-            }
+            if (e.Action != NotifyCollectionChangedAction.Add) return;
+
+            for (int i = e.NewStartingIndex; i < _group.Count; i++)
+                _group[i].Parent = this;
         }
 
         #endregion
