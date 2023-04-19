@@ -21,14 +21,14 @@ namespace Allegory.Standart.Filter.Concrete
                     var array = ((ICollection)condition.Value).OfType<object>();
                     return new Dictionary<string, object>
                     {
-                        { condition.ParameterName,array.ElementAt(0) },
-                        { "_"+condition.ParameterName,array.ElementAt(1) }
+                        { condition.ParameterName, array.ElementAt(0) },
+                        { "_" + condition.ParameterName, array.ElementAt(1) }
                     };
                 }
                 else
                     return new Dictionary<string, object>
                     {
-                        { condition.ParameterName,condition.Value },
+                        { condition.ParameterName, condition.Value },
                     };
             }
             else
@@ -40,11 +40,13 @@ namespace Allegory.Standart.Filter.Concrete
                     if (_dictionaryList != null)
                         dictionaryList.AddRange(_dictionaryList);
                 }
+
                 return dictionaryList.Count > 0 ? dictionaryList.ToDictionary(k => k.Key, k => k.Value) : null;
             }
         }
 
-        public static string GetFilterQuery(this Condition condition, OperatorCombine operatorCombine = OperatorCombine.WithWhere)
+        public static string GetFilterQuery(this Condition condition,
+            OperatorCombine operatorCombine = OperatorCombine.WithWhere)
         {
             if (condition == null || string.IsNullOrEmpty(condition.ToString())) return null;
             string filterQuery = condition.ToString();
@@ -70,15 +72,21 @@ namespace Allegory.Standart.Filter.Concrete
                     filterQuery += ")";
                     break;
             }
+
             return filterQuery;
         }
-        public static string GetFilterQuery(this Condition condition, out IDictionary<string, object> dictionaries, OperatorCombine operatorCombine = OperatorCombine.WithWhere, params string[] columns)
+
+        public static string GetFilterQuery(this Condition condition, out IDictionary<string, object> dictionaries,
+            OperatorCombine operatorCombine = OperatorCombine.WithWhere, params string[] columns)
         {
             condition = condition.RemoveConditions(columns);
             dictionaries = condition.GetDictionaries();
             return condition.GetFilterQuery(operatorCombine);
         }
-        public static string GetFilterQuery<TEntity>(this Condition condition, out IDictionary<string, object> dictionaries, OperatorCombine operatorCombine = OperatorCombine.WithWhere, bool removeConditions = true, bool convertToValueType = true, params string[] columns)
+
+        public static string GetFilterQuery<TEntity>(this Condition condition,
+            out IDictionary<string, object> dictionaries, OperatorCombine operatorCombine = OperatorCombine.WithWhere,
+            bool removeConditions = true, bool convertToValueType = true, params string[] columns)
         {
             if (removeConditions)
                 condition = condition.RemoveConditions<TEntity>(columns);
@@ -109,16 +117,21 @@ namespace Allegory.Standart.Filter.Concrete
                     if (condition.Group[i] != null)
                         conditions.Add(condition.Group[i]);
                 }
+
                 return conditions.Count > 0 ? new Condition(conditions, condition.GroupOr, condition.Not) : null;
             }
         }
+
         public static Condition RemoveConditions<TEntity>(this Condition condition, params string[] columns)
         {
             if (condition == null) return condition;
 
             if (condition.IsColumn)
             {
-                return typeof(TEntity).GetProperty(condition.Column) == null ? throw new FilterException(string.Format(Resource.MemberOfTypeError, condition.Column, typeof(TEntity).FullName)) : condition.RemoveConditions(columns);
+                return typeof(TEntity).GetProperty(condition.Column) == null
+                    ? throw new FilterException(string.Format(Resource.MemberOfTypeError, condition.Column,
+                        typeof(TEntity).FullName))
+                    : condition.RemoveConditions(columns);
             }
             else
             {
@@ -129,17 +142,21 @@ namespace Allegory.Standart.Filter.Concrete
                     if (condition.Group[i] != null)
                         conditions.Add(condition.Group[i]);
                 }
+
                 return conditions.Count > 0 ? new Condition(conditions, condition.GroupOr, condition.Not) : null;
             }
         }
+
         public static Condition ConvertToValueType<TEntity>(this Condition condition)
         {
             if (condition == null) return condition;
 
             if (condition.IsColumn)
             {
-                if (condition.Value is string && (condition.Operator == Operator.In || condition.Operator == Operator.IsBetween))
-                    condition.Value = condition.Value.ToString().Split(new string[] { ", " }, StringSplitOptions.None).ToArray();
+                if (condition.Value is string &&
+                    (condition.Operator == Operator.In || condition.Operator == Operator.IsBetween))
+                    condition.Value = condition.Value.ToString().Split(new string[] { ", " }, StringSplitOptions.None)
+                        .ToArray();
 
                 condition.ValidateColumn();
                 var property = typeof(TEntity).GetProperty(condition.Column);
@@ -148,20 +165,26 @@ namespace Allegory.Standart.Filter.Concrete
                     var propertyType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
                     if (condition.Value is ICollection)
                     {
-                        if (!typeof(ICollection<>).MakeGenericType(property.PropertyType).IsAssignableFrom(condition.Value.GetType()))
+                        if (!typeof(ICollection<>).MakeGenericType(property.PropertyType)
+                                .IsAssignableFrom(condition.Value.GetType()))
                         {
                             var array = ((ICollection)condition.Value).OfType<object>();
                             var listType = typeof(List<>).MakeGenericType(property.PropertyType);
                             var list = Activator.CreateInstance(listType, array.Count());
                             var method = listType.GetMethod("Add");
                             for (int i = 0; i < array.Count(); i++)
-                                method.Invoke(list, new object[] { array.ElementAt(i) == null ? null : GetValue(array.ElementAt(i), propertyType) });
+                                method.Invoke(list,
+                                    new object[]
+                                    {
+                                        array.ElementAt(i) == null ? null : GetValue(array.ElementAt(i), propertyType)
+                                    });
                             condition.Value = list;
                         }
                     }
                     else if (condition.Value.GetType() != propertyType)
                         condition.Value = GetValue(condition.Value, propertyType);
                 }
+
                 return condition;
             }
             else
@@ -173,9 +196,11 @@ namespace Allegory.Standart.Filter.Concrete
                     if (condition.Group[i] != null)
                         conditions.Add(condition.Group[i]);
                 }
+
                 return conditions.Count > 0 ? new Condition(conditions, condition.GroupOr, condition.Not) : null;
             }
         }
+
         private static object GetValue(object value, Type propertyType)
         {
             if (propertyType.IsEnum)
