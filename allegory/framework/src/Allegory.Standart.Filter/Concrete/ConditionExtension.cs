@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using Allegory.Standart.Filter.Enums;
 using Allegory.Standart.Filter.Properties;
 
@@ -149,7 +150,7 @@ namespace Allegory.Standart.Filter.Concrete
 
         public static Condition ConvertToValueType<TEntity>(this Condition condition)
         {
-            if (condition == null) return condition;
+            if (condition == null) return null;
 
             if (condition.IsColumn)
             {
@@ -174,25 +175,11 @@ namespace Allegory.Standart.Filter.Concrete
             var property = typeof(TEntity).GetProperty(condition.Column);
 
             if (property == null || condition.Value == null) return condition;
-
             var propertyType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
+
             if (condition.Value is ICollection)
             {
-                if (!typeof(ICollection<>).MakeGenericType(property.PropertyType)
-                        .IsAssignableFrom(condition.Value.GetType()))
-                {
-                    var array = ((ICollection)condition.Value).OfType<object>();
-                    var listType = typeof(List<>).MakeGenericType(property.PropertyType);
-                    var list = Activator.CreateInstance(listType, array.Count());
-                    var method = listType.GetMethod("Add");
-                    for (int i = 0; i < array.Count(); i++)
-                        method.Invoke(list,
-                            new object[]
-                            {
-                                array.ElementAt(i) == null ? null : GetValue(array.ElementAt(i), propertyType)
-                            });
-                    condition.Value = list;
-                }
+                ConvertToCollection(condition, property, propertyType);
             }
             else if (condition.Value.GetType() != propertyType)
                 condition.Value = GetValue(condition.Value, propertyType);
@@ -210,16 +197,30 @@ namespace Allegory.Standart.Filter.Concrete
                     .ToArray();
         }
 
+        private static void ConvertToCollection(Condition condition, PropertyInfo property, Type propertyType)
+        {
+            if (typeof(ICollection<>).MakeGenericType(property.PropertyType).IsInstanceOfType(condition.Value))
+                return;
+
+            var array = ((ICollection)condition.Value).OfType<object>();
+            var listType = typeof(List<>).MakeGenericType(property.PropertyType);
+            var list = Activator.CreateInstance(listType, array.Count());
+            var method = listType.GetMethod(nameof(List<object>.Add));
+
+            for (int i = 0; i < array.Count(); i++)
+                method.Invoke(list,
+                    new[]
+                    {
+                        array.ElementAt(i) == null ? null : GetValue(array.ElementAt(i), propertyType)
+                    });
+            condition.Value = list;
+        }
+
         private static object GetValue(object value, Type propertyType)
         {
-            if (propertyType.IsEnum)
-            {
-                return Enum.Parse(propertyType, value.ToString());
-            }
-            else
-            {
-                return Convert.ChangeType(value, propertyType);
-            }
+            return propertyType.IsEnum
+                ? Enum.Parse(propertyType, value.ToString())
+                : Convert.ChangeType(value, propertyType);
         }
     }
 }
