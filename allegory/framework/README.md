@@ -1,11 +1,11 @@
 # Allegory.Filter
 
-Define conditions without lambda expression or sql parameter
+The filter package is designed to enable the creation of flexible and customizable queries in applications that require dynamic filtering of data. This package allows users to define complex filtering conditions on-the-fly, based on user input or other programmatic criteria, without the need for extensive coding or SQL knowledge.
 
-### Quick start
-> Create conditions
+### Usage
 ```csharp
-Condition conditions = new Condition
+//Create conditions
+var conditions = new Condition
 {
     Group = new List<Condition>
     {
@@ -13,36 +13,26 @@ Condition conditions = new Condition
         new Condition("Price", Operator.IsGreaterThanOrEqualto, 15)
     }
 };
-```
-> Work with ADO.NET
-```csharp
-conditions = conditions.RemoveConditions<Product>();//Remove condition not member of entity
-using (SqlDataAdapter dataAdapter = new SqlDataAdapter(string.Format("select * from Products {0}", conditions.GetFilterQuery()), connection))
-{
-    dataAdapter.SelectCommand.Parameters.AddRange(conditions.GetSqlParameters().ToArray());
-    DataTable dataTable = new DataTable();
-    dataAdapter.Fill(dataTable);
-}
-```
-> Work with Dapper
-```csharp
-string query = string.Format("select * from Products where Active = 0 {0}", conditions.GetFilterQuery(OperatorCombine.WithAnd));
-var parameters= conditions.GetDictionaries();
-connection.Query<Product>(query, parameters).ToList();
-```
-> Work with Allegory.EntityRepository
-```csharp
-_productDal.GetList(conditions.GetLambdaExpression<Product>());
-```
-> Work with DevExpress GridControl
-```csharp
-Condition conditions = CriteriaOperator.Parse(gridView1.ActiveFilterString).GetConditions();
-```
 
+//Dapper 
+var query = string.Format(
+    "SELECT * FROM Products WHERE Active = 0 {0}",
+    conditions.GetFilterQuery<ReportBikRecord>(
+	out IDictionary<string, object> parameters,
+	OperatorCombine.WithAnd));
+await connection.QueryAsync<Product>(query, parameters);
+
+//Expression
+var products = _productRepository.GetListAsync(conditions.ToExpression<Product>());
+
+//Lambda Expression
+var products = new List<Product>(){ ... };
+var filteredProducts = products.Where(conditions.ToLambdaExpression<Product>());
+```
 
 # Allegory.ModelBinding
 
-Windows form app two way binding extension
+With this extension, developers can easily establish a binding relationship between a control and a data source, and changes made to the control will automatically be reflected in the data source, and vice versa. This can significantly simplify the code required to handle data in a Windows Forms application and make it easier to maintain and update.
 
 > Program.cs
 ```csharp
