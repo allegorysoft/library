@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text.Json;
@@ -203,7 +204,7 @@ namespace Allegory.Standart.Filter.Concrete
         private static void ParseCommaSeparatedStringToArray(Condition condition)
         {
             if (condition.Value is string &&
-                (condition.Operator == Operator.In || condition.Operator == Operator.IsBetween))
+                condition.Operator is Operator.In or Operator.IsBetween)
                 condition.Value = condition.Value
                     .ToString()
                     .Split(new[] { ", " }, StringSplitOptions.None)
@@ -233,7 +234,7 @@ namespace Allegory.Standart.Filter.Concrete
         {
             return propertyType.IsEnum
                 ? Enum.Parse(propertyType, value.ToString())
-                : Convert.ChangeType(value, propertyType);
+                : Convert.ChangeType(value, propertyType, CultureInfo.InvariantCulture);
         }
     }
 }
