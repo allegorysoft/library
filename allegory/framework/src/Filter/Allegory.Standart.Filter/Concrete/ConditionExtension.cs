@@ -153,52 +153,61 @@ namespace Allegory.Standart.Filter.Concrete
 
             if (condition.IsColumn)
             {
-                if (condition.Value is string &&
-                    (condition.Operator == Operator.In || condition.Operator == Operator.IsBetween))
-                    condition.Value = condition.Value.ToString().Split(new string[] { ", " }, StringSplitOptions.None)
-                        .ToArray();
-
-                condition.ValidateColumn();
-                var property = typeof(TEntity).GetProperty(condition.Column);
-                if (property != null && condition.Value != null)
-                {
-                    var propertyType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
-                    if (condition.Value is ICollection)
-                    {
-                        if (!typeof(ICollection<>).MakeGenericType(property.PropertyType)
-                                .IsAssignableFrom(condition.Value.GetType()))
-                        {
-                            var array = ((ICollection)condition.Value).OfType<object>();
-                            var listType = typeof(List<>).MakeGenericType(property.PropertyType);
-                            var list = Activator.CreateInstance(listType, array.Count());
-                            var method = listType.GetMethod("Add");
-                            for (int i = 0; i < array.Count(); i++)
-                                method.Invoke(list,
-                                    new object[]
-                                    {
-                                        array.ElementAt(i) == null ? null : GetValue(array.ElementAt(i), propertyType)
-                                    });
-                            condition.Value = list;
-                        }
-                    }
-                    else if (condition.Value.GetType() != propertyType)
-                        condition.Value = GetValue(condition.Value, propertyType);
-                }
-
-                return condition;
+                return CheckColumn<TEntity>(condition);
             }
-            else
+
+            List<Condition> conditions = new List<Condition>();
+            for (int i = 0; i < condition.Group.Count; i++)
             {
-                List<Condition> conditions = new List<Condition>();
-                for (int i = 0; i < condition.Group.Count; i++)
-                {
-                    condition.Group[i] = condition.Group[i].ConvertToValueType<TEntity>();
-                    if (condition.Group[i] != null)
-                        conditions.Add(condition.Group[i]);
-                }
-
-                return conditions.Count > 0 ? new Condition(conditions, condition.GroupOr, condition.Not) : null;
+                condition.Group[i] = condition.Group[i].ConvertToValueType<TEntity>();
+                if (condition.Group[i] != null)
+                    conditions.Add(condition.Group[i]);
             }
+
+            return conditions.Count > 0 ? new Condition(conditions, condition.GroupOr, condition.Not) : null;
+        }
+
+        private static Condition CheckColumn<TEntity>(Condition condition)
+        {
+            ParseCommaSeparatedStringToArray(condition);
+            condition.ValidateColumn();
+            var property = typeof(TEntity).GetProperty(condition.Column);
+
+            if (property == null || condition.Value == null) return condition;
+
+            var propertyType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
+            if (condition.Value is ICollection)
+            {
+                if (!typeof(ICollection<>).MakeGenericType(property.PropertyType)
+                        .IsAssignableFrom(condition.Value.GetType()))
+                {
+                    var array = ((ICollection)condition.Value).OfType<object>();
+                    var listType = typeof(List<>).MakeGenericType(property.PropertyType);
+                    var list = Activator.CreateInstance(listType, array.Count());
+                    var method = listType.GetMethod("Add");
+                    for (int i = 0; i < array.Count(); i++)
+                        method.Invoke(list,
+                            new object[]
+                            {
+                                array.ElementAt(i) == null ? null : GetValue(array.ElementAt(i), propertyType)
+                            });
+                    condition.Value = list;
+                }
+            }
+            else if (condition.Value.GetType() != propertyType)
+                condition.Value = GetValue(condition.Value, propertyType);
+
+            return condition;
+        }
+
+        private static void ParseCommaSeparatedStringToArray(Condition condition)
+        {
+            if (condition.Value is string &&
+                (condition.Operator == Operator.In || condition.Operator == Operator.IsBetween))
+                condition.Value = condition.Value
+                    .ToString()
+                    .Split(new[] { ", " }, StringSplitOptions.None)
+                    .ToArray();
         }
 
         private static object GetValue(object value, Type propertyType)
