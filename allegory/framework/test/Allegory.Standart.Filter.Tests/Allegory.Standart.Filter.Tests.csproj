@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -14,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Filter\Allegory.Standart.Filter.SqlServer\Allegory.Standart.Filter.SqlServer.csproj" />
     <ProjectReference Include="..\..\src\Filter\Allegory.Standart.Filter\Allegory.Standart.Filter.csproj" />
   </ItemGroup>
 
