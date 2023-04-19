@@ -16,9 +16,9 @@ namespace Allegory.Standart.Filter.Tests
         {
             conditions = new Condition("column1", Operator.Equals, "some value");
 
-            var expression = conditions.ToExpression<Sample>();
+            var expression = conditions.ToLambdaExpression<Sample>();
 
-            Assert.IsTrue(expression.Compile().Invoke(new Sample
+            Assert.IsTrue(expression.Invoke(new Sample
             {
                 column1 = "some value"
             }));
@@ -29,9 +29,9 @@ namespace Allegory.Standart.Filter.Tests
         {
             conditions = new Condition("column2", Operator.DoesntEquals, 10);
 
-            var expression = conditions.ToExpression<Sample>();
+            var expression = conditions.ToLambdaExpression<Sample>();
 
-            Assert.IsTrue(expression.Compile().Invoke(new Sample
+            Assert.IsTrue(expression.Invoke(new Sample
             {
                 column2 = 15
             }));
@@ -42,9 +42,9 @@ namespace Allegory.Standart.Filter.Tests
         {
             conditions = new Condition("column2", Operator.IsGreaterThan, 10);
 
-            var expression = conditions.ToExpression<Sample>();
+            var expression = conditions.ToLambdaExpression<Sample>();
 
-            Assert.IsTrue(expression.Compile().Invoke(new Sample
+            Assert.IsTrue(expression.Invoke(new Sample
             {
                 column2 = 15
             }));
@@ -55,9 +55,9 @@ namespace Allegory.Standart.Filter.Tests
         {
             conditions = new Condition("column2", Operator.IsGreaterThanOrEqualto, 10);
 
-            var expression = conditions.ToExpression<Sample>();
+            var expression = conditions.ToLambdaExpression<Sample>();
 
-            Assert.IsTrue(expression.Compile().Invoke(new Sample
+            Assert.IsTrue(expression.Invoke(new Sample
             {
                 column2 = 10
             }));
@@ -68,9 +68,9 @@ namespace Allegory.Standart.Filter.Tests
         {
             conditions = new Condition("column2", Operator.IsLessThan, 10);
 
-            var expression = conditions.ToExpression<Sample>();
+            var expression = conditions.ToLambdaExpression<Sample>();
 
-            Assert.IsTrue(expression.Compile().Invoke(new Sample
+            Assert.IsTrue(expression.Invoke(new Sample
             {
                 column2 = 5
             }));
@@ -81,9 +81,9 @@ namespace Allegory.Standart.Filter.Tests
         {
             conditions = new Condition("column2", Operator.IsLessThanOrEqualto, 10);
 
-            var expression = conditions.ToExpression<Sample>();
+            var expression = conditions.ToLambdaExpression<Sample>();
 
-            Assert.IsTrue(expression.Compile().Invoke(new Sample
+            Assert.IsTrue(expression.Invoke(new Sample
             {
                 column2 = 10
             }));
@@ -94,9 +94,9 @@ namespace Allegory.Standart.Filter.Tests
         {
             conditions = new Condition("column2", Operator.IsBetween, new int[] { 10, 15 });
 
-            var expression = conditions.ToExpression<Sample>();
+            var expression = conditions.ToLambdaExpression<Sample>();
 
-            Assert.IsTrue(expression.Compile().Invoke(new Sample
+            Assert.IsTrue(expression.Invoke(new Sample
             {
                 column2 = 12
             }));
@@ -107,13 +107,13 @@ namespace Allegory.Standart.Filter.Tests
         {
             conditions = new Condition("column1", Operator.Contains, "thin");
 
-            var expression = conditions.ToExpression<Sample>();
+            var expression = conditions.ToLambdaExpression<Sample>();
 
-            Assert.IsTrue(expression.Compile().Invoke(new Sample
+            Assert.IsTrue(expression.Invoke(new Sample
             {
                 column1 = "something"
             }));
-            Assert.IsFalse(expression.Compile().Invoke(new Sample
+            Assert.IsFalse(expression.Invoke(new Sample
             {
                 column1 = "emtpy"
             }));
@@ -124,13 +124,13 @@ namespace Allegory.Standart.Filter.Tests
         {
             conditions = new Condition("column1", Operator.StartsWith, "some");
 
-            var expression = conditions.ToExpression<Sample>();
+            var expression = conditions.ToLambdaExpression<Sample>();
 
-            Assert.IsTrue(expression.Compile().Invoke(new Sample
+            Assert.IsTrue(expression.Invoke(new Sample
             {
                 column1 = "something"
             }));
-            Assert.IsFalse(expression.Compile().Invoke(new Sample
+            Assert.IsFalse(expression.Invoke(new Sample
             {
                 column1 = "emtpy"
             }));
@@ -141,13 +141,13 @@ namespace Allegory.Standart.Filter.Tests
         {
             conditions = new Condition("column1", Operator.EndsWith, "ing");
 
-            var expression = conditions.ToExpression<Sample>();
+            var expression = conditions.ToLambdaExpression<Sample>();
 
-            Assert.IsTrue(expression.Compile().Invoke(new Sample
+            Assert.IsTrue(expression.Invoke(new Sample
             {
                 column1 = "something"
             }));
-            Assert.IsFalse(expression.Compile().Invoke(new Sample
+            Assert.IsFalse(expression.Invoke(new Sample
             {
                 column1 = "emtpy"
             }));
@@ -158,9 +158,9 @@ namespace Allegory.Standart.Filter.Tests
         {
             conditions = new Condition("column1", Operator.IsNull);
 
-            var expression = conditions.ToExpression<Sample>();
+            var expression = conditions.ToLambdaExpression<Sample>();
 
-            Assert.IsTrue(expression.Compile().Invoke(new Sample
+            Assert.IsTrue(expression.Invoke(new Sample
             {
                 column1 = null
             }));
@@ -171,9 +171,9 @@ namespace Allegory.Standart.Filter.Tests
         {
             conditions = new Condition("column1", Operator.IsNullOrEmpty);
 
-            var expression = conditions.ToExpression<Sample>();
+            var expression = conditions.ToLambdaExpression<Sample>();
 
-            Assert.IsTrue(expression.Compile().Invoke(new Sample
+            Assert.IsTrue(expression.Invoke(new Sample
             {
                 column1 = string.Empty
             }));
@@ -184,13 +184,13 @@ namespace Allegory.Standart.Filter.Tests
         {
             conditions = new Condition("column2", Operator.In, new List<int> { 10, 12, 14 });
 
-            var expression = conditions.ToExpression<Sample>();
+            var expression = conditions.ToLambdaExpression<Sample>();
 
-            Assert.IsTrue(expression.Compile().Invoke(new Sample
+            Assert.IsTrue(expression.Invoke(new Sample
             {
                 column2 = 12
             }));
-            Assert.IsFalse(expression.Compile().Invoke(new Sample
+            Assert.IsFalse(expression.Invoke(new Sample
             {
                 column2 = 13
             }));
@@ -224,9 +224,9 @@ namespace Allegory.Standart.Filter.Tests
                 }
             };
 
-            var expression = conditions.ToExpression<Sample>();
+            var expression = conditions.ToLambdaExpression<Sample>();
 
-            Assert.IsTrue(expression.Compile().Invoke(new Sample
+            Assert.IsTrue(expression.Invoke(new Sample
             {
                 column1 = "some value",
                 column2 = 25,
@@ -256,17 +256,17 @@ namespace Allegory.Standart.Filter.Tests
                 }
             };
 
-            var expression = conditions.ToExpression<Sample>();
+            var expression = conditions.ToLambdaExpression<Sample>();
 
-            Assert.IsFalse(expression.Compile().Invoke(new Sample
+            Assert.IsFalse(expression.Invoke(new Sample
             {
                 column1 = "some value",
                 column2 = 3
             }));
 
             conditions.GroupOr = true;
-            expression = conditions.ToExpression<Sample>();
-            Assert.IsTrue(expression.Compile().Invoke(new Sample
+            expression = conditions.ToLambdaExpression<Sample>();
+            Assert.IsTrue(expression.Invoke(new Sample
             {
                 column1 = "some value",
                 column2 = 3
@@ -278,9 +278,9 @@ namespace Allegory.Standart.Filter.Tests
         {
             conditions = new Condition("column3", Operator.Equals, 10, true);
 
-            var expression = conditions.ToExpression<Sample>();
+            var expression = conditions.ToLambdaExpression<Sample>();
 
-            Assert.IsTrue(expression.Compile().Invoke(new Sample
+            Assert.IsTrue(expression.Invoke(new Sample
             {
                 column2 = 12
             }));
@@ -292,7 +292,7 @@ namespace Allegory.Standart.Filter.Tests
         {
             conditions = new Condition();
 
-            var expression = conditions.ToExpression<Sample>();
+            var expression = conditions.ToLambdaExpression<Sample>();
         }
     }
 }
