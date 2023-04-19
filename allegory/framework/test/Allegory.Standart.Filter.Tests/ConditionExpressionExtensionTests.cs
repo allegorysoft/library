@@ -9,12 +9,10 @@ namespace Allegory.Standart.Filter.Tests
     [TestClass]
     public class ConditionExpressionExtensionTests
     {
-        Condition conditions;
-
         [TestMethod]
         public void Equals()
         {
-            conditions = new Condition("column1", Operator.Equals, "some value");
+            var conditions = new Condition("column1", Operator.Equals, "some value");
 
             var expression = conditions.ToLambdaExpression<Sample>();
 
@@ -27,7 +25,7 @@ namespace Allegory.Standart.Filter.Tests
         [TestMethod]
         public void DoesntEquals()
         {
-            conditions = new Condition("column2", Operator.DoesntEquals, 10);
+            var conditions = new Condition("column2", Operator.DoesntEquals, 10);
 
             var expression = conditions.ToLambdaExpression<Sample>();
 
@@ -40,7 +38,7 @@ namespace Allegory.Standart.Filter.Tests
         [TestMethod]
         public void GreaterThan()
         {
-            conditions = new Condition("column2", Operator.IsGreaterThan, 10);
+            var conditions = new Condition("column2", Operator.IsGreaterThan, 10);
 
             var expression = conditions.ToLambdaExpression<Sample>();
 
@@ -53,7 +51,7 @@ namespace Allegory.Standart.Filter.Tests
         [TestMethod]
         public void GreaterThanOrEqual()
         {
-            conditions = new Condition("column2", Operator.IsGreaterThanOrEqualto, 10);
+            var conditions = new Condition("column2", Operator.IsGreaterThanOrEqualto, 10);
 
             var expression = conditions.ToLambdaExpression<Sample>();
 
@@ -66,7 +64,7 @@ namespace Allegory.Standart.Filter.Tests
         [TestMethod]
         public void LessThan()
         {
-            conditions = new Condition("column2", Operator.IsLessThan, 10);
+            var conditions = new Condition("column2", Operator.IsLessThan, 10);
 
             var expression = conditions.ToLambdaExpression<Sample>();
 
@@ -79,7 +77,7 @@ namespace Allegory.Standart.Filter.Tests
         [TestMethod]
         public void LessThanOrEqual()
         {
-            conditions = new Condition("column2", Operator.IsLessThanOrEqualto, 10);
+            var conditions = new Condition("column2", Operator.IsLessThanOrEqualto, 10);
 
             var expression = conditions.ToLambdaExpression<Sample>();
 
@@ -92,7 +90,7 @@ namespace Allegory.Standart.Filter.Tests
         [TestMethod]
         public void Between()
         {
-            conditions = new Condition("column2", Operator.IsBetween, new int[] { 10, 15 });
+            var conditions = new Condition("column2", Operator.IsBetween, new int[] { 10, 15 });
 
             var expression = conditions.ToLambdaExpression<Sample>();
 
@@ -105,7 +103,7 @@ namespace Allegory.Standart.Filter.Tests
         [TestMethod]
         public void Contains()
         {
-            conditions = new Condition("column1", Operator.Contains, "thin");
+            var conditions = new Condition("column1", Operator.Contains, "thin");
 
             var expression = conditions.ToLambdaExpression<Sample>();
 
@@ -122,7 +120,7 @@ namespace Allegory.Standart.Filter.Tests
         [TestMethod]
         public void StartsWith()
         {
-            conditions = new Condition("column1", Operator.StartsWith, "some");
+            var conditions = new Condition("column1", Operator.StartsWith, "some");
 
             var expression = conditions.ToLambdaExpression<Sample>();
 
@@ -139,7 +137,7 @@ namespace Allegory.Standart.Filter.Tests
         [TestMethod]
         public void EndsWith()
         {
-            conditions = new Condition("column1", Operator.EndsWith, "ing");
+            var conditions = new Condition("column1", Operator.EndsWith, "ing");
 
             var expression = conditions.ToLambdaExpression<Sample>();
 
@@ -156,7 +154,7 @@ namespace Allegory.Standart.Filter.Tests
         [TestMethod]
         public void IsNull()
         {
-            conditions = new Condition("column1", Operator.IsNull);
+            var conditions = new Condition("column1", Operator.IsNull);
 
             var expression = conditions.ToLambdaExpression<Sample>();
 
@@ -169,7 +167,7 @@ namespace Allegory.Standart.Filter.Tests
         [TestMethod]
         public void IsNullOrEmpty()
         {
-            conditions = new Condition("column1", Operator.IsNullOrEmpty);
+            var conditions = new Condition("column1", Operator.IsNullOrEmpty);
 
             var expression = conditions.ToLambdaExpression<Sample>();
 
@@ -182,7 +180,7 @@ namespace Allegory.Standart.Filter.Tests
         [TestMethod]
         public void In()
         {
-            conditions = new Condition("column2", Operator.In, new List<int> { 10, 12, 14 });
+            var conditions = new Condition("column2", Operator.In, new List<int> { 10, 12, 14 });
 
             var expression = conditions.ToLambdaExpression<Sample>();
 
@@ -199,27 +197,27 @@ namespace Allegory.Standart.Filter.Tests
         [TestMethod]
         public void Group()
         {
-            conditions = new Condition
+            var conditions = new Condition
             {
                 Group = new List<Condition>
                 {
                     new Condition
                     {
-                        Column="column1",
-                        Operator=Operator.Equals,
-                        Value="some value"
+                        Column = "column1",
+                        Operator = Operator.Equals,
+                        Value = "some value"
                     },
                     new Condition
                     {
-                        Column="column2",
-                        Operator=Operator.IsGreaterThan,
-                        Value=20
+                        Column = "column2",
+                        Operator = Operator.IsGreaterThan,
+                        Value = 20
                     },
                     new Condition
                     {
-                        Column="column3",
-                        Operator=Operator.IsLessThan,
-                        Value=20
+                        Column = "column3",
+                        Operator = Operator.IsLessThan,
+                        Value = 20
                     }
                 }
             };
@@ -237,21 +235,21 @@ namespace Allegory.Standart.Filter.Tests
         [TestMethod]
         public void GroupOr()
         {
-            conditions = new Condition
+            var conditions = new Condition
             {
                 Group = new List<Condition>
                 {
                     new Condition
                     {
-                        Column="column1",
-                        Operator=Operator.Equals,
-                        Value="some value"
+                        Column = "column1",
+                        Operator = Operator.Equals,
+                        Value = "some value"
                     },
                     new Condition
                     {
-                        Column="column2",
-                        Operator=Operator.IsGreaterThan,
-                        Value=20
+                        Column = "column2",
+                        Operator = Operator.IsGreaterThan,
+                        Value = 20
                     }
                 }
             };
@@ -276,7 +274,7 @@ namespace Allegory.Standart.Filter.Tests
         [TestMethod]
         public void Not()
         {
-            conditions = new Condition("column3", Operator.Equals, 10, true);
+            var conditions = new Condition("column3", Operator.Equals, 10, true);
 
             var expression = conditions.ToLambdaExpression<Sample>();
 
@@ -290,7 +288,7 @@ namespace Allegory.Standart.Filter.Tests
         [ExpectedException(typeof(FilterException))]
         public void ArgumentException()
         {
-            conditions = new Condition();
+            var conditions = new Condition();
 
             var expression = conditions.ToLambdaExpression<Sample>();
         }
