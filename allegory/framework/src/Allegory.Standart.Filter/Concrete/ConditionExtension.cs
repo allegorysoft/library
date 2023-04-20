@@ -195,10 +195,19 @@ namespace Allegory.Standart.Filter.Concrete
             {
                 condition.Value = element.ValueKind switch
                 {
-                    JsonValueKind.String => element.GetString(),
-                    _ => element.GetRawText()
+                    JsonValueKind.Array => element.EnumerateArray().Select(GetJsonElementValue).ToArray(),
+                    _ => GetJsonElementValue(element)
                 };
             }
+        }
+
+        private static object GetJsonElementValue(JsonElement jsonElement)
+        {
+            return jsonElement.ValueKind switch
+            {
+                JsonValueKind.String => jsonElement.GetString(),
+                _ => jsonElement.GetRawText()
+            };
         }
 
         private static void ParseCommaSeparatedStringToArray(Condition condition)
