@@ -1,0 +1,131 @@
+// @use '@angular/material' as mat;
+
+// @include mat.core();
+
+// $Saler-primary: mat.define-palette(mat.$indigo-palette);
+// $Saler-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// $Saler-warn: mat.define-palette(mat.$red-palette);
+
+// $Saler-theme: mat.define-light-theme(
+//   (
+//     color: (
+//       primary: $Saler-primary,
+//       accent: $Saler-accent,
+//       warn: $Saler-warn,
+//     ),
+//   )
+// );
+
+// $Saler-theme-dark: mat.define-dark-theme(
+//   (
+//     color: (
+//       primary: $Saler-primary,
+//       accent: $Saler-accent,
+//       warn: $Saler-warn,
+//     ),
+//   )
+// );
+
+// .theme-dark {
+//   @include mat.all-component-themes($Saler-theme-dark);
+// }
+
+// @include mat.all-component-themes($Saler-theme);
+
+/* You can add global styles to this file, and also import other style files */
+$scroll-color: #676767;
+
+@keyframes donut-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.donut {
+  display: inline-block;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #7983ff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: donut-spin 1.2s linear infinite;
+
+  &.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--surface-a);
+  // color: white;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+/*Custom Scrollbar Desing*/
+/* width */
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.4rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px $scroll-color;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3f51b5;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $scroll-color;
+}
+/*Custom Scrollbar Desing*/
+
+.badge {
+  border-radius: var(--border-radius);
+  padding: 0.25em 0.5rem;
+  // text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+
+.order-status-0 {
+  background: #ffd8b2;
+  color: #805b36;
+}
+
+.order-status-1 {
+  background: #c8e6c9;
+  color: #256029;
+}
+
+.order-status-2 {
+  background: #8256d0;
+  color: #ffffff;
+}
+
+.order-status-3 {
+  background: #c23636;
+  color: #ffffff;
+}

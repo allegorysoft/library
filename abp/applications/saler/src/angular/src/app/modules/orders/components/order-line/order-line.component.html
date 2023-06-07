@@ -1,0 +1,601 @@
+<div *ngIf="orderForm" [formGroup]="orderForm" class="card mt-1 mr-2 ml-2">
+  <p-table
+    [value]="orderLines.controls"
+    formArrayName="lines"
+    styleClass="p-datatable-sm p-datatable-striped p-1"
+    responsiveLayout="stack"
+    [abpLoading]="gettingData || (busy$ | async)"
+    [paginator]="orderLines.controls.length - 1 > 50"
+    [rows]="50"
+    [rowsPerPageOptions]="[10, 25, 50]"
+  >
+    <ng-template pTemplate="caption">
+      <div class="flex">
+        <h5>{{ '::OrderLines' | abpLocalization }}</h5>
+        <button
+          pButton
+          pRipple
+          [disabled]="newRowLength > 0"
+          pTooltip="{{ '::AddRow' | abpLocalization }}"
+          tooltipPosition="bottom"
+          type="button"
+          icon="pi pi-plus"
+          class="p-button-rounded p-button-text ml-auto"
+          (click)="addNewRow()"
+        ></button>
+      </div>
+    </ng-template>
+
+    <ng-template pTemplate="header">
+      <tr>
+        <th>{{ '::Actions' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:LineType' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:ProductCode' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:ProductName' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:Quantity' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:Unit' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:Price' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:VatRate' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:VatAmount' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:IsVatIncluded' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:Total' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:DiscountTotal' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:Discounts' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:DeductionCode' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:DeductionPart1' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:DeductionPart2' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:Currency' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:CurrencyRate' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:CurrencyPrice' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:CurrencyTotal' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:ReservedDate' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:ReservedQuantity' | abpLocalization }}</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-orderLine let-i="rowIndex">
+      <tr>
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::Actions' | abpLocalization }}
+          </span>
+
+          <button
+            pButton
+            pRipple
+            type="button"
+            icon="pi pi-trash"
+            class="p-button-rounded p-button-text p-button-danger"
+            style="width: 32px; height: 27px"
+            (click)="removeOrderLine(i, orderLine)"
+          ></button>
+        </td>
+
+        <!--Product Information-->
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:LineType' | abpLocalization }}
+          </span>
+          <p-dropdown
+            appendTo="body"
+            (onChange)="lineTypeOnChange(orderLine)"
+            placeholder="{{ '::DisplayName:LineType' | abpLocalization }}"
+            inputId="dropdown"
+            styleClass="p-inputtext-sm w-full"
+            [options]="orderLineTypeOptions"
+            formControlName="type"
+            optionLabel="key"
+            optionValue="value"
+          >
+            <ng-template pTemplate="selectedItem">
+              {{ '::Enum:OrderLineType:' + orderLine.get('type').value | abpLocalization }}
+            </ng-template>
+
+            <ng-template let-lineType pTemplate="item">
+              {{ '::Enum:OrderLineType:' + lineType.value | abpLocalization }}
+            </ng-template>
+          </p-dropdown>
+        </td>
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:ProductCode' | abpLocalization }}
+          </span>
+          <div class="p-inputgroup justify-content-end">
+            <input
+              type="text"
+              pInputText
+              class="p-inputtext-sm w-full"
+              style="min-width: 13rem"
+              placeholder="{{ '::DisplayName:ProductCode' | abpLocalization }}"
+              formControlName="productCode"
+              (focus)="productCodeOnFocus(orderLine)"
+              (blur)="productCodeOnBlur(orderLine)"
+            />
+            <button
+              pButton
+              pRipple
+              type="button"
+              icon="pi pi-ellipsis-h"
+              (click)="showProductDialog(i, orderLine)"
+            ></button>
+          </div>
+        </td>
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:ProductName' | abpLocalization }}
+          </span>
+          <div class="p-inputgroup justify-content-end">
+            <input
+              type="text"
+              pInputText
+              class="p-inputtext-sm w-full"
+              style="min-width: 13rem"
+              placeholder="{{ '::DisplayName:ProductName' | abpLocalization }}"
+              formControlName="productName"
+              (focus)="productNameOnFocus(orderLine)"
+              (blur)="productCodeOnBlur(orderLine)"
+            />
+            <button
+              pButton
+              pRipple
+              type="button"
+              icon="pi pi-ellipsis-h"
+              (click)="showProductDialog(i, orderLine)"
+            ></button>
+          </div>
+        </td>
+        <!--Product Information-->
+
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:Quantity' | abpLocalization }}
+          </span>
+
+          <p-inputNumber
+            class="p-inputtext-sm"
+            formControlName="quantity"
+            inputId="quantity"
+            (onFocus)="quantityOnFocus(orderLine)"
+            (onBlur)="quantityOnBlur(orderLine)"
+            mode="decimal"
+            [min]="0"
+            [minFractionDigits]="0"
+            [maxFractionDigits]="5"
+          >
+          </p-inputNumber>
+        </td>
+
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:Unit' | abpLocalization }}
+          </span>
+          <p-dropdown
+            [options]="orderLine.get('units')?.value"
+            (onShow)="onDropdownShow(orderLine)"
+            (onHide)="onDropdownHide(orderLine)"
+            formControlName="unitCode"
+            [placeholder]="orderLine.get('unitCode')?.value"
+            emptyMessage="{{ '::EnterProductCode' | abpLocalization }}"
+            optionLabel="code"
+            optionValue="code"
+            styleClass="p-inputtext-sm w-full"
+            appendTo="body"
+          >
+          </p-dropdown>
+        </td>
+
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:Price' | abpLocalization }}
+          </span>
+
+          <p-inputNumber
+            (onFocus)="priceOnFocus(orderLine)"
+            (onBlur)="priceOnBlur(orderLine)"
+            class="p-inputtext-sm"
+            formControlName="price"
+            inputId="price"
+            mode="decimal"
+            [min]="0"
+            [minFractionDigits]="0"
+            [maxFractionDigits]="5"
+          >
+          </p-inputNumber>
+        </td>
+
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:VatRate' | abpLocalization }}
+          </span>
+
+          <p-inputNumber
+            (onFocus)="vatRateOnFocus(orderLine)"
+            (onBlur)="vatRateOnBlur(orderLine)"
+            class="p-inputtext-sm"
+            formControlName="vatRate"
+            inputId="vatRate"
+            mode="decimal"
+            [maxlength]="3"
+            [min]="0"
+            [max]="100"
+            [minFractionDigits]="0"
+            [maxFractionDigits]="0"
+          >
+          </p-inputNumber>
+        </td>
+
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:VatAmount' | abpLocalization }}
+          </span>
+          <p-inputNumber
+            [readonly]="true"
+            class="p-inputtext-sm"
+            formControlName="vatAmount"
+            inputId="vatAmount"
+            mode="decimal"
+            [minFractionDigits]="0"
+            [maxFractionDigits]="5"
+          >
+          </p-inputNumber>
+        </td>
+
+        <td [formGroupName]="i" style="min-width: 3rem">
+          <span class="p-column-title">
+            {{ '::DisplayName:IsVatIncluded' | abpLocalization }}
+          </span>
+          <p-checkbox
+            (onChange)="isVatIncludedOnChange(orderLine)"
+            formControlName="isVatIncluded"
+            binary="true"
+            inputId="binary"
+          >
+          </p-checkbox>
+        </td>
+
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:Total' | abpLocalization }}
+          </span>
+
+          <p-inputNumber
+            (onFocus)="totalOnFocus(orderLine)"
+            (onBlur)="totalOnBlur(orderLine)"
+            class="p-inputtext-sm"
+            formControlName="total"
+            inputId="total"
+            mode="decimal"
+            [min]="0"
+            [minFractionDigits]="0"
+            [maxFractionDigits]="5"
+          >
+          </p-inputNumber>
+        </td>
+
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:DiscountTotal' | abpLocalization }}
+          </span>
+
+          <p-inputNumber
+            (onFocus)="discountTotalOnFocus(orderLine)"
+            (onBlur)="discountTotalOnBlur(orderLine)"
+            class="p-inputtext-sm"
+            formControlName="discountTotal"
+            inputId="discountTotal"
+            mode="decimal"
+            [min]="0"
+            [minFractionDigits]="0"
+            [maxFractionDigits]="5"
+          >
+          </p-inputNumber>
+        </td>
+
+        <td [formGroupName]="i">
+          <span class="p-column-title mr-2">
+            {{ '::DisplayName:Discounts' | abpLocalization }}
+          </span>
+          <div class="p-inputgroup justify-content-end float-right">
+            <div
+              style="
+                overflow: auto;
+                width: 9rem !important;
+                max-width: 9rem !important;
+                padding-top: 0.3rem;
+              "
+            >
+              <ng-container
+                *ngIf="orderLine.get('discounts')?.value?.length > 0; else hasNoDiscount"
+              >
+                <span
+                  *ngFor="let discount of orderLine.get('discounts')?.value"
+                  class="badge order-status-1 ml-1 mt-2"
+                  >(%{{ discount?.rate | number: '1.0-2' }}){{ discount?.total | number: '1.0-2' }}
+                </span>
+              </ng-container>
+              <ng-template #hasNoDiscount>
+                <span class="badge order-status-0">0.00</span>
+              </ng-template>
+            </div>
+            <button
+              pButton
+              pRipple
+              [disabled]="!(+orderLine.get('total')?.value > 0)"
+              type="button"
+              icon="pi pi-pencil"
+              class="p-button-rounded p-button-text p-button-sm"
+              (click)="editDiscounts(orderLine, i)"
+            ></button>
+          </div>
+        </td>
+
+        <!--Deduction-->
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:DeductionCode' | abpLocalization }}
+          </span>
+          <div class="p-inputgroup justify-content-end">
+            <input
+              type="text"
+              pInputText
+              class="p-inputtext-sm w-full"
+              style="max-width: 5rem; width: 3rem !important"
+              formControlName="deductionCode"
+              (focus)="deductionCodeOnFocus(orderLine)"
+              (blur)="deductionCodeOnBlur(orderLine)"
+              [maxlength]="3"
+            />
+            <button
+              [disabled]="!orderLine.get('productCode')?.value"
+              pButton
+              pRipple
+              type="button"
+              icon="pi pi-ellipsis-h"
+              (click)="showDeductionList(orderLine)"
+            ></button>
+          </div>
+        </td>
+
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:DeductionPart1' | abpLocalization }}
+          </span>
+
+          <p-inputNumber
+            class="p-inputtext-sm"
+            formControlName="deductionPart1"
+            inputId="deductionPart1"
+            mode="decimal"
+            [min]="1"
+            (onFocus)="deductionPart1OnFocus(orderLine)"
+            (onBlur)="deductionPart1OnBlur(orderLine)"
+          >
+          </p-inputNumber>
+        </td>
+
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:DeductionPart2' | abpLocalization }}
+          </span>
+
+          <p-inputNumber
+            class="p-inputtext-sm"
+            formControlName="deductionPart2"
+            inputId="deductionPart2"
+            mode="decimal"
+            [min]="+orderLine.get('deductionPart1').value || 0"
+            (onFocus)="deductionPart2OnFocus(orderLine)"
+            (onBlur)="deductionPart2OnBlur(orderLine)"
+          >
+          </p-inputNumber>
+        </td>
+        <!--Deduction-->
+
+        <!--Currency-->
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:Currency' | abpLocalization }}
+          </span>
+
+          <p-dropdown
+            [options]="currencies.value"
+            (onShow)="currencyOnShow(orderLine)"
+            (onHide)="currencyOnHide(orderLine)"
+            (onClear)="currencyOnClear(orderLine)"
+            formControlName="currencyCode"
+            [placeholder]="
+              orderLine.get('currencyCode')?.value || ('::SelectCurrency' | abpLocalization)
+            "
+            emptyMessage="{{ '::NoRecordsFound' | abpLocalization }}"
+            optionLabel="currencyCode"
+            optionValue="currencyCode"
+            styleClass="p-inputtext-sm w-full"
+            [filter]="true"
+            filterBy="currencyCode"
+            [showClear]="true"
+            appendTo="body"
+          >
+          </p-dropdown>
+        </td>
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:CurrencyRate' | abpLocalization }}
+          </span>
+
+          <p-inputNumber
+            class="p-inputtext-sm"
+            formControlName="currencyRate"
+            inputId="currencyRate"
+            mode="decimal"
+            (onFocus)="currencyRateOnFocus(orderLine)"
+            (onBlur)="currencyRateOnBlur(orderLine)"
+            [min]="0"
+            [minFractionDigits]="0"
+            [maxFractionDigits]="4"
+          >
+          </p-inputNumber>
+        </td>
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:CurrencyPrice' | abpLocalization }}
+          </span>
+
+          <p-inputNumber
+            class="p-inputtext-sm"
+            formControlName="currencyPrice"
+            inputId="currencyPrice"
+            mode="decimal"
+            (onFocus)="currencyPriceOnFocus(orderLine)"
+            (onBlur)="currencyPriceOnBlur(orderLine)"
+            [min]="0"
+            [minFractionDigits]="0"
+            [maxFractionDigits]="5"
+          >
+          </p-inputNumber>
+        </td>
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:CurrencyTotal' | abpLocalization }}
+          </span>
+
+          <p-inputNumber
+            class="p-inputtext-sm"
+            formControlName="currencyTotal"
+            inputId="currencyTotal"
+            mode="decimal"
+            (onFocus)="currencyTotalOnFocus(orderLine)"
+            (onBlur)="currencyTotalOnBlur(orderLine)"
+            [min]="0"
+            [minFractionDigits]="0"
+            [maxFractionDigits]="5"
+          >
+          </p-inputNumber>
+        </td>
+        <!--Currency-->
+
+        <!--Reserve-->
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:ReservedDate' | abpLocalization }}
+          </span>
+
+          <p-calendar
+            formControlName="reserveDate"
+            dateFormat="dd.mm.yy"
+            styleClass="w-full p-inputtext-sm"
+            [showButtonBar]="true"
+            [firstDayOfWeek]="1"
+            appendTo="body"
+            [style]="{ 'min-width': '5.5rem' }"
+            (onFocus)="reserveDateOnFocus(orderLine)"
+            (onClose)="reserveDateAfterClose(orderLine)"
+          ></p-calendar>
+        </td>
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:ReservedQuantity' | abpLocalization }}
+          </span>
+
+          <p-inputNumber
+            class="p-inputtext-sm"
+            formControlName="reserveQuantity"
+            inputId="reserveQuantity"
+            mode="decimal"
+            [min]="0"
+            [minFractionDigits]="0"
+            [maxFractionDigits]="4"
+          >
+          </p-inputNumber>
+        </td>
+        <!--Reserve-->
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="paginatorleft"></ng-template>
+  </p-table>
+</div>
+
+<p-dialog
+  #selectDialog
+  [(visible)]="dialogVisible"
+  [position]="'top'"
+  header="{{ dialogTitle | abpLocalization }}"
+  [modal]="true"
+  [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
+  [style]="{ 'min-width': '400px !important' }"
+  [baseZIndex]="-1000"
+  [resizable]="false"
+  [draggable]="false"
+  [transitionOptions]="'150ms'"
+  [contentStyle]="{ 'overflow-x': 'hidden' }"
+  (onHide)="productDialogOnHide()"
+>
+  <ng-template pTemplate="content">
+    <app-item-lookup-list
+      *ngIf="itemListVisible"
+      [date]="orderDate"
+      [isSales]="orderType === 1"
+      [clientCode]="clientCode"
+      (selectItemChanged)="itemAfterSelect($event)"
+    ></app-item-lookup-list>
+
+    <app-service-lookup-list
+      *ngIf="serviceListVisible"
+      [date]="orderDate"
+      [isSales]="orderType === 1"
+      [clientCode]="clientCode"
+      (selectServiceChanged)="serviceAfterSelect($event)"
+    >
+    </app-service-lookup-list>
+  </ng-template>
+</p-dialog>
+
+<p-dialog
+  #discountDialog
+  [(visible)]="discountDialogVisible"
+  [position]="'top'"
+  header="{{ '::DisplayName:Discounts' | abpLocalization }}"
+  [modal]="true"
+  [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
+  [style]="{ 'max-width': '900px' }"
+  [baseZIndex]="-1000"
+  [resizable]="false"
+  [draggable]="false"
+  [transitionOptions]="'150ms'"
+  [contentStyle]="{ 'overflow-x': 'hidden' }"
+>
+  <ng-template pTemplate="content">
+    <app-discount-calculate
+      [productAggregateRootDto]="productAggregateRootDto"
+      [index]="selectedIndex"
+      (productAggregateRootDtoChanged)="handleDiscounts($event)"
+    >
+    </app-discount-calculate>
+  </ng-template>
+</p-dialog>
+
+<p-dialog
+  #deductionListSelectDialog
+  [(visible)]="deductionListSelectDialogVisible"
+  [position]="'top'"
+  [modal]="true"
+  [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
+  [baseZIndex]="-500"
+  [resizable]="false"
+  [draggable]="false"
+  [transitionOptions]="'150ms'"
+  [contentStyle]="{ 'overflow-x': 'hidden' }"
+  [style]="{ 'max-width': '1000px' }"
+  [closeOnEscape]="true"
+>
+  <ng-template pTemplate="header">
+    <h5>{{ '::SelectDeduction' | abpLocalization }}</h5>
+  </ng-template>
+
+  <ng-template pTemplate="content">
+    <app-deduction-list
+      *ngIf="deductionListSelectDialogVisible"
+      (deductionSelected)="handleDeduction($event)"
+    ></app-deduction-list>
+  </ng-template>
+</p-dialog>

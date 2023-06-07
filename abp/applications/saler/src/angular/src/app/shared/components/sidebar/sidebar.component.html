@@ -1,0 +1,9 @@
+<p-sidebar
+    *ngIf="visible$ | async"
+    [visible]="visible$ | async"
+    (visibleChange)="visibleChange($event)"
+    [baseZIndex]="10000">
+
+    <p>Angular PrimeNG Sidebar Component</p>
+
+</p-sidebar>

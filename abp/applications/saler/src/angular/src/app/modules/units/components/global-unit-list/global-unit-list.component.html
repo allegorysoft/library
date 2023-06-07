@@ -1,0 +1,72 @@
+<div class="card shadow-2 p-2 m-1">
+  <p-toolbar styleClass="mb-2 border-bottom-1 border-400 border-noround ">
+    <ng-template pTemplate="left">
+      <h5>{{ '::GlobalUnits' | abpLocalization }}</h5>
+    </ng-template>
+
+    <ng-template pTemplate="right">
+      <span class="p-input-icon-left ml-2">
+        <i class="pi pi-search"></i>
+        <input
+          pInputText
+          class="p-inputtext-sm"
+          style="padding-left: 2rem !important"
+          type="text"
+          (input)="globalUnitDt.filterGlobal($event.target.value, 'contains')"
+          placeholder="{{ '::DisplayName:SearchKeyword' | abpLocalization }}"
+        />
+      </span>
+    </ng-template>
+  </p-toolbar>
+
+  <p-table
+    #globalUnitDt
+    [dataKey]="tableConfig.dataKey"
+    [value]="globalUnits$ | async"
+    responsiveLayout="stack"
+    styleClass="p-datatable-sm"
+    [rowHover]="true"
+    paginatorDropdownAppendTo="body"
+    [globalFilterFields]="['code', 'name']"
+  >
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th>
+          {{ '::DisplayName:Code' | abpLocalization }}
+        </th>
+
+        <th>
+          {{ '::DisplayName:Name' | abpLocalization }}
+        </th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-globalUnit let-columns="columns">
+      <tr (dblclick)="selectGlobalUnit(globalUnit)">
+        <td>
+          <span class="p-column-title">
+            {{ '::DisplayName:Code' | abpLocalization }}
+          </span>
+          {{ globalUnit.code }}
+        </td>
+
+        <td>
+          <span class="p-column-title">
+            {{ '::DisplayName:Name' | abpLocalization }}
+          </span>
+          {{ globalUnit.name }}
+        </td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="emptymessage" let-columns>
+      <tr>
+        <td [attr.colspan]="2" class="text-center">
+          {{ '::NoRecordsFound' | abpLocalization }}
+        </td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="paginatorleft"></ng-template>
+  </p-table>
+</div>

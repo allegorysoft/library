@@ -1,0 +1,11 @@
+﻿{
+  "culture": "tr",
+  "texts": {
+    "CodeAlreadyExistsErrorMessage": "Aynı koda sahip {0} var kod : {1}",
+    "CodeNotFoundErrorMessage": "{1} kodlu {0} bulunamadı",
+    "NumberAlreadyExistsErrorMessage": "Aynı numaraya sahip {0} var Numara : {1}",
+    "NumberNotFoundErrorMessage": "{1} numaralı {0} bulunamadı",
+    "ThereIsTransactionRecordCannotUpdateErrorMessage": "{0} hareket kaydı olduğu için {1} güncellenemedi",
+    "ThereIsTransactionRecordCannotDeleteErrorMessage": "{0} hareket kaydı olduğu için {1} silinemedi"
+  }
+}

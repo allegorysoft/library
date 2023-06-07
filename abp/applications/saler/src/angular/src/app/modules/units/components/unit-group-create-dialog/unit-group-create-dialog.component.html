@@ -1,0 +1,61 @@
+<p-dialog
+  #dialog
+  header="{{ '::NewUnitGroup' | abpLocalization }}"
+  [(visible)]="visible"
+  [position]="position"
+  [modal]="true"
+  [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
+  [style]="{ 'max-height': '100%' }"
+  [baseZIndex]="-1000"
+  [resizable]="false"
+  [draggable]="false"
+  (onHide)="hideDialog()"
+  [transitionOptions]="'150ms'"
+>
+  <ng-template pTemplate="content">
+    <form
+      [ngStyle]="{ overflow: 'hidden' }"
+      *ngIf="unitGroupForm && visible"
+      [formGroup]="unitGroupForm"
+      (submit)="save()"
+      skipValidation
+    >
+      <div class="card p-2 pb-0 mr-2 ml-2">
+        <div class="p-fluid grid">
+          <div class="field col-12 md:col-4" style="padding-top: 0.5rem !important">
+            <span class="p-float-label">
+              <input pInputText type="text" id="code" formControlName="code" class="w-full" />
+              <label for="code">
+                {{ '::DisplayName:Code' | abpLocalization }}
+              </label>
+            </span>
+          </div>
+
+          <div class="field col-12 md:col-4" style="padding-top: 0.5rem !important">
+            <span class="p-float-label">
+              <input pInputText type="text" id="name" formControlName="name" class="w-full" />
+              <label for="name">
+                {{ '::DisplayName:Name' | abpLocalization }}
+              </label>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <app-unit-list [unitGroupForm]="unitGroupForm"></app-unit-list>
+    </form>
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    <p-button
+      *abpPermission="'ProductManagement.UnitGroup.Edit'"
+      [disabled]="!unitGroupForm || !unitGroupForm.valid"
+      label="{{ '::Save' | abpLocalization }}"
+      icon="pi pi-check"
+      [loading]="busy | async"
+      (onClick)="save()"
+      styleClass="p-button-sm"
+    >
+    </p-button>
+  </ng-template>
+</p-dialog>

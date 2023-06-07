@@ -1,0 +1,164 @@
+[
+  {
+    "DeductionCode": "601",
+    "DeductionName": "Yapım işleri ile bu işlerle birlikte ifa edilen mühendislik-mimarlık ve etüt-proje hizmetleri",
+    "DeductionPart1": 1,
+    "DeductionPart2": 2
+  },
+  {
+    "DeductionCode": "602",
+    "DeductionName": "Etüt, plan-proje, danışmanlık, denetim ve benzeri hizmetler",
+    "DeductionPart1": 9,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "603",
+    "DeductionName": "Makine, teçhizat, demirbaş ve taşıtlara ait tadil, bakım ve onarım hizmetleri",
+    "DeductionPart1": 7,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "604",
+    "DeductionName": "Yemek servis hizmeti",
+    "DeductionPart1": 5,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "605",
+    "DeductionName": "Organizasyon hizmeti",
+    "DeductionPart1": 5,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "606",
+    "DeductionName": "İşgücü temin hizmetleri",
+    "DeductionPart1": 9,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "607",
+    "DeductionName": "Özel güvenlik hizmeti",
+    "DeductionPart1": 9,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "608",
+    "DeductionName": "Yapı denetim hizmetleri",
+    "DeductionPart1": 9,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "609",
+    "DeductionName": "Fason olarak yaptırılan tekstil ve konfeksiyon işleri, çanta ve ayakkabı dikim işleri ve bu işlere aracılık hizmetleri",
+    "DeductionPart1": 7,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "610",
+    "DeductionName": "Turistik mağazalara verilen müşteri bulma / götürme hizmetleri",
+    "DeductionPart1": 9,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "611",
+    "DeductionName": "Spor kulüplerinin yayın, reklâm ve isim hakkı gelirlerine konu işlemleri",
+    "DeductionPart1": 9,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "612",
+    "DeductionName": "Temizlik hizmeti",
+    "DeductionPart1": 9,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "613",
+    "DeductionName": "Çevre ve bahçe bakım hizmetleri",
+    "DeductionPart1": 9,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "614",
+    "DeductionName": "Servis taşımacılığı hizmeti",
+    "DeductionPart1": 5,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "615",
+    "DeductionName": "Her türlü baskı ve basım hizmetleri",
+    "DeductionPart1": 7,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "616",
+    "DeductionName": "5018 sayılı kanuna ekli cetvellerdeki idare, kurum ve kuruşlara yapılan diğer hizmetler",
+    "DeductionPart1": 5,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "617",
+    "DeductionName": "Hurda metalden elde edilen külçe teslimleri",
+    "DeductionPart1": 7,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "618",
+    "DeductionName": "Hurda metalden elde edilenler dışındaki bakır, çinko ve alüminyum külçe teslimleri",
+    "DeductionPart1": 7,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "619",
+    "DeductionName": "Bakır, çinko ve alüminyum ürünlerinin teslimi",
+    "DeductionPart1": 7,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "620",
+    "DeductionName": "İstisnadan vazgeçenlerin hurda ve atık teslimi",
+    "DeductionPart1": 7,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "621",
+    "DeductionName": "Metal, plastik, lastik, kauçuk, kâğıt ve cam hurda ve atıklardan elde edilen hammadde teslimi",
+    "DeductionPart1": 9,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "622",
+    "DeductionName": "Pamuk, tiftik, yün ve yapağı ile ham post ve deri teslimleri",
+    "DeductionPart1": 9,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "623",
+    "DeductionName": "Ağaç ve orman ürünleri teslimi",
+    "DeductionPart1": 5,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "624",
+    "DeductionName": "Yük taşımacılığı hizmeti",
+    "DeductionPart1": 2,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "625",
+    "DeductionName": "Ticari reklam hizmetleri",
+    "DeductionPart1": 3,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "626",
+    "DeductionName": "Diğer teslimler",
+    "DeductionPart1": 2,
+    "DeductionPart2": 10
+  },
+  {
+    "DeductionCode": "650",
+    "DeductionName": "Diğer",
+    "DeductionPart1": 1,
+    "DeductionPart2": 2
+  }
+]

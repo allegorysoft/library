@@ -1,0 +1,23 @@
+::ng-deep {
+  .badge {
+    display: inline !important;
+  }
+
+  tr.ng-star-inserted {
+    .p-dropdown-label {
+      padding: 0.3rem 0.2rem !important;
+    }
+  }
+
+  .p-dropdown-label {
+    color: black !important;
+  }
+
+  .p-datatable-wrapper {
+    overflow-x: auto;
+  }
+
+  .ui-table-scrollable-header.ui-widget-header {
+    // overflow: visible !important;
+  }
+}

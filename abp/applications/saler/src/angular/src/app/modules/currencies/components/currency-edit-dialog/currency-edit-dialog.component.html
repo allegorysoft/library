@@ -1,0 +1,68 @@
+<p-dialog
+  #currencyEditDialog
+  header="{{ (currencyForm?.value.id > 0 ? '::EditCurrency' : '::NewCurrency') | abpLocalization }}"
+  [(visible)]="visible"
+  [position]="'top'"
+  [modal]="true"
+  [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
+  [style]="{ 'max-width': '550px' }"
+  [baseZIndex]="-1000"
+  [resizable]="false"
+  [draggable]="false"
+  [transitionOptions]="'150ms'"
+  (onHide)="hideDialog()"
+>
+  <ng-template pTemplate="content">
+    <form
+      [ngStyle]="{ overflow: 'hidden' }"
+      *ngIf="currencyForm"
+      [formGroup]="currencyForm"
+      (submit)="save()"
+      skipValidation
+    >
+      <div class="card m-1">
+        <div class="p-2 formgrid grid">
+          <div class="field col-12 md:col-4">
+            <span class="p-float-label">
+              <input pInputText type="text" id="code" formControlName="code" class="w-full" />
+              <label for="code">
+                {{ '::DisplayName:Code' | abpLocalization }}
+              </label>
+            </span>
+          </div>
+
+          <div class="field col-12 md:col-4">
+            <span class="p-float-label">
+              <input pInputText type="text" id="name" formControlName="name" class="w-full" />
+              <label for="title">
+                {{ '::DisplayName:Name' | abpLocalization }}
+              </label>
+            </span>
+          </div>
+
+          <div class="field col-12 md:col-4">
+            <span class="p-float-label">
+              <input pInputText type="text" id="symbol" formControlName="symbol" class="w-full" />
+              <label for="title">
+                {{ '::DisplayName:Symbol' | abpLocalization }}
+              </label>
+            </span>
+          </div>
+        </div>
+      </div>
+    </form>
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    <p-button
+      *ngIf="hasCreateOrEditPermission$ | async"
+      styleClass="p-button-sm"
+      [disabled]="!currencyForm || !currencyForm.valid"
+      label="{{ '::Save' | abpLocalization }}"
+      icon="pi pi-check"
+      [loading]="busy | async"
+      (onClick)="save()"
+    >
+    </p-button>
+  </ng-template>
+</p-dialog>

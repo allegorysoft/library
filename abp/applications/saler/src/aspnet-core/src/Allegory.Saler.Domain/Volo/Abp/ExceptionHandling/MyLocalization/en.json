@@ -1,0 +1,7 @@
+{
+  "culture": "en",
+  "texts": {
+    "CodeAlreadyExistsErrorMessage": "Code already exists {0}, code = {1}!",
+    "CodeNotFoundErrorMessage": "Code not found {0} , code = {1}!"
+  }
+}

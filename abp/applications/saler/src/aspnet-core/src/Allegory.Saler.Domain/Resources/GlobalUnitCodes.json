@@ -1,0 +1,8386 @@
+[
+    {
+      "Code": "08",
+      "Name": "sıcaklık lotu"                                                               
+    },                                                                                      
+    {                                                                                       
+      "Code": "10",
+      "Name": "grup"                                                                        
+    },                                                                                      
+    {                                                                                       
+      "Code": "11",
+      "Name": "takım"                                                                       
+    },                                                                                      
+    {                                                                                       
+      "Code": "13",
+      "Name": "pay"                                                                         
+    },                                                                                      
+    {                                                                                       
+      "Code": "14",
+      "Name": "atış"                                                                        
+    },                                                                                      
+    {                                                                                       
+      "Code": "16",
+      "Name": "115 kg'lık varil"                                                            
+    },                                                                                      
+    {                                                                                       
+      "Code": "17",
+      "Name": "100 poundluk varil"                                                          
+    },                                                                                      
+    {                                                                                       
+      "Code": "18",
+      "Name": "55 galonluk varil"                                                           
+    },                                                                                      
+    {                                                                                       
+      "Code": "19",
+      "Name": "tanker"                                                                      
+    },                                                                                      
+    {                                                                                       
+      "Code": "20",
+      "Name": "20 futluk konteyner (609,6 cm'lik)"                                          
+    },                                                                                      
+    {                                                                                       
+      "Code": "21",
+      "Name": "40 futluk konteyner (1219,2 cm'lik)"                                         
+    },                                                                                      
+    {                                                                                       
+      "Code": "22",
+      "Name": "desilitre / gram"                                                            
+    },                                                                                      
+    {                                                                                       
+      "Code": "23",
+      "Name": "gram / santimetre küp"                                                       
+    },                                                                                      
+    {                                                                                       
+      "Code": "24",
+      "Name": "nazari pound"                                                                
+    },                                                                                      
+    {                                                                                       
+      "Code": "25",
+      "Name": "gram / santimetre kare"                                                      
+    },                                                                                      
+    {                                                                                       
+      "Code": "26",
+      "Name": "gerçek ton"                                                                  
+    },                                                                                      
+    {                                                                                       
+      "Code": "27",
+      "Name": "nazari ton"                                                                  
+    },                                                                                      
+    {                                                                                       
+      "Code": "28",
+      "Name": "kilogram / metre kare"                                                       
+    },                                                                                      
+    {                                                                                       
+      "Code": "29",
+      "Name": "pound / bin fit kare"                                                        
+    },                                                                                      
+    {                                                                                       
+      "Code": "30",
+      "Name": "beygir gücü gün / kuru metrik ton"                                           
+    },                                                                                      
+    {                                                                                       
+      "Code": "32",
+      "Name": "kilogram / kuru metrik ton"                                                  
+    },                                                                                      
+    {                                                                                       
+      "Code": "33",
+      "Name": "kilopaskal metre kare / gram"                                                
+    },                                                                                      
+    {                                                                                       
+      "Code": "34",
+      "Name": "kilopaskal / milimetre"                                                      
+    },                                                                                      
+    {                                                                                       
+      "Code": "35",
+      "Name": "mililitre / santimetre kare saniye"                                          
+    },                                                                                      
+    {                                                                                       
+      "Code": "37",
+      "Name": "ons / foot kare"                                                             
+    },                                                                                      
+    {                                                                                       
+      "Code": "40",
+      "Name": "mililitre / saniye"                                                          
+    },                                                                                      
+    {                                                                                       
+      "Code": "41",
+      "Name": "mililitre / dakika"                                                          
+    },                                                                                      
+    {                                                                                       
+      "Code": "44",
+      "Name": "beş yüz kilogramlık toplu paket"                                             
+    },                                                                                      
+    {                                                                                       
+      "Code": "45",
+      "Name": "yüz kiloluk çuval"                                                           
+    },                                                                                      
+    {                                                                                       
+      "Code": "46",
+      "Name": "on beş lb toplu paket"                                                       
+    },                                                                                      
+    {                                                                                       
+      "Code": "47",
+      "Name": "on beş lb paket"                                                             
+    },                                                                                      
+    {                                                                                       
+      "Code": "53",
+      "Name": "nazari kilogram"                                                             
+    },                                                                                      
+    {                                                                                       
+      "Code": "54",
+      "Name": "nazari ton"                                                                  
+    },                                                                                      
+    {                                                                                       
+      "Code": "56",
+      "Name": "sitas"                                                                       
+    },                                                                                      
+    {                                                                                       
+      "Code": "57",
+      "Name": "mesh (inç karedeki atkı çözgü sayısı)"                                       
+    },                                                                                      
+    {                                                                                       
+      "Code": "58",
+      "Name": "net kilogram"                                                                
+    },                                                                                      
+    {                                                                                       
+      "Code": "59",
+      "Name": "parça / milyon"                                                              
+    },                                                                                      
+    {                                                                                       
+      "Code": "60",
+      "Name": "yüzdelik ağırlık"                                                            
+    },                                                                                      
+    {                                                                                       
+      "Code": "61",
+      "Name": "parça / milyar"                                                              
+    },                                                                                      
+    {                                                                                       
+      "Code": "62",
+      "Name": "1000 saatte yüzde"                                                           
+    },                                                                                      
+    {                                                                                       
+      "Code": "63",
+      "Name": "zamana bağlı arıza oranı"                                                    
+    },                                                                                      
+    {                                                                                       
+      "Code": "64",
+      "Name": "pound / inç kare, ölçek"                                                     
+    },                                                                                      
+    {                                                                                       
+      "Code": "66",
+      "Name": "mıknatısal alan yeğinliği birimi"                                            
+    },                                                                                      
+    {                                                                                       
+      "Code": "71",
+      "Name": "volt amper / pound"                                                          
+    },                                                                                      
+    {                                                                                       
+      "Code": "72",
+      "Name": "vat / pound"                                                                 
+    },                                                                                      
+    {                                                                                       
+      "Code": "74",
+      "Name": "milipaskal"                                                                  
+    },                                                                                      
+    {                                                                                       
+      "Code": "76",
+      "Name": "gauss"                                                                       
+    },                                                                                      
+    {                                                                                       
+      "Code": "77",
+      "Name": "mili-inç"                                                                    
+    },                                                                                      
+    {                                                                                       
+      "Code": "78",
+      "Name": "kilogauss"                                                                   
+    },                                                                                      
+    {                                                                                       
+      "Code": "81",
+      "Name": "henry (özindükleme birimi)"                                                  
+    },                                                                                      
+    {                                                                                       
+      "Code": "84",
+      "Name": "kilopound / inç kare"                                                        
+    },                                                                                      
+    {                                                                                       
+      "Code": "85",
+      "Name": "pound-kuvvet (uk enerji birimi)"                                             
+    },                                                                                      
+    {                                                                                       
+      "Code": "87",
+      "Name": "pound / fut küp"                                                             
+    },                                                                                      
+    {                                                                                       
+      "Code": "89",
+      "Name": "poise (ağdalık/viskozite birimi)"                                            
+    },                                                                                      
+    {                                                                                       
+      "Code": "90",
+      "Name": "Saybold evrensel saniyesi"                                                   
+    },                                                                                      
+    {                                                                                       
+      "Code": "91",
+      "Name": "stokes (kinematik akışkanlık birimi)"                                        
+    },                                                                                      
+    {                                                                                       
+      "Code": "92",
+      "Name": "kalori / santimetre küp"                                                     
+    },                                                                                      
+    {                                                                                       
+      "Code": "93",
+      "Name": "kalori / gram"                                                               
+    },                                                                                      
+    {                                                                                       
+      "Code": "94",
+      "Name": "curl (vektörel birim)"                                                       
+    },                                                                                      
+    {                                                                                       
+      "Code": "95",
+      "Name": "yirmi bin galonluk tanker (Ame.)"                                            
+    },                                                                                      
+    {                                                                                       
+      "Code": "96",
+      "Name": "on bin galonluk tanker (Ame.)"                                               
+    },                                                                                      
+    {                                                                                       
+      "Code": "97",
+      "Name": "on kg varil"                                                                 
+    },                                                                                      
+    {                                                                                       
+      "Code": "98",
+      "Name": "on beş kg varil"
+    },
+    {
+      "Code": "1A",
+      "Name": "kara mili"
+    },
+    {
+      "Code": "1B",
+      "Name": "vagon sayısı"
+    },
+    {
+      "Code": "1C",
+      "Name": "lokomotif adeti"
+    },
+    {
+      "Code": "1E",
+      "Name": "boş araba"
+    },
+    {
+      "Code": "1F",
+      "Name": "tren mili"
+    },
+    {
+      "Code": "1G",
+      "Name": "petrol galonu (Ame.)"
+    },
+    {
+      "Code": "1I",
+      "Name": "sabit oran"
+    },
+    {
+      "Code": "1J",
+      "Name": "ton mil"
+    },
+    {
+      "Code": "1K",
+      "Name": "lokomotif mili"
+    },
+    {
+      "Code": "1L",
+      "Name": "toplam araba sayısı"
+    },
+    {
+      "Code": "1M",
+      "Name": "toplam kara mili"
+    },
+    {
+      "Code": "1X",
+      "Name": "çeyrek mil"
+    },
+    {
+      "Code": "2A",
+      "Name": "radyan / saniye"
+    },
+    {
+      "Code": "2B",
+      "Name": "radyan / saniye kare"
+    },
+    {
+      "Code": "2C",
+      "Name": "röntgen"
+    },
+    {
+      "Code": "2I",
+      "Name": "BTU / saat"
+    },
+    {
+      "Code": "2J",
+      "Name": "santimetreküp / saniye"
+    },
+    {
+      "Code": "2K",
+      "Name": "fut küp / saat"
+    },
+    {
+      "Code": "2L",
+      "Name": "fut küp / dakika"
+    },
+    {
+      "Code": "2M",
+      "Name": "santimetre / saniye"
+    },
+    {
+      "Code": "2N",
+      "Name": "desibel"
+    },
+    {
+      "Code": "2P",
+      "Name": "kilobayt"
+    },
+    {
+      "Code": "2Q",
+      "Name": "kilobekerel"
+    },
+    {
+      "Code": "2R",
+      "Name": "kiloküri"
+    },
+    {
+      "Code": "2U",
+      "Name": "megagram"
+    },
+    {
+      "Code": "2V",
+      "Name": "megagram / saat"
+    },
+    {
+      "Code": "2W",
+      "Name": "sepet"
+    },
+    {
+      "Code": "2X",
+      "Name": "metre / dakika"
+    },
+    {
+      "Code": "2Y",
+      "Name": "miliröntgen"
+    },
+    {
+      "Code": "2Z",
+      "Name": "milivolt"
+    },
+    {
+      "Code": "3B",
+      "Name": "megajul"
+    },
+    {
+      "Code": "3E",
+      "Name": "pound / ürün poundu"
+    },
+    {
+      "Code": "3G",
+      "Name": "pound / adet"
+    },
+    {
+      "Code": "3H",
+      "Name": "kilogram / kilogram ürün"
+    },
+    {
+      "Code": "3I",
+      "Name": "kilogram / adet"
+    },
+    {
+      "Code": "4A",
+      "Name": "bobin"
+    },
+    {
+      "Code": "4B",
+      "Name": "kapak"
+    },
+    {
+      "Code": "4C",
+      "Name": "centistokes (viskozite birimi)"
+    },
+    {
+      "Code": "4E",
+      "Name": "yirmili paket"
+    },
+    {
+      "Code": "4G",
+      "Name": "mikrolitre"
+    },
+    {
+      "Code": "4H",
+      "Name": "mikrometre (mikron)"
+    },
+    {
+      "Code": "4K",
+      "Name": "miliamper"
+    },
+    {
+      "Code": "4L",
+      "Name": "megabayt"
+    },
+    {
+      "Code": "4M",
+      "Name": "miligram / saat"
+    },
+    {
+      "Code": "4N",
+      "Name": "megabekrel"
+    },
+    {
+      "Code": "4O",
+      "Name": "microfarad"
+    },
+    {
+      "Code": "4P",
+      "Name": "newton / metre"
+    },
+    {
+      "Code": "4Q",
+      "Name": "ons inç"
+    },
+    {
+      "Code": "4R",
+      "Name": "ons fut"
+    },
+    {
+      "Code": "4T",
+      "Name": "pikofarad"
+    },
+    {
+      "Code": "4U",
+      "Name": "pound / saat"
+    },
+    {
+      "Code": "4W",
+      "Name": "ton / saat (Ame.)"
+    },
+    {
+      "Code": "4X",
+      "Name": "kilolitre / saat"
+    },
+    {
+      "Code": "5A",
+      "Name": "varil / dakika"
+    },
+    {
+      "Code": "5B",
+      "Name": "takım"
+    },
+    {
+      "Code": "5C",
+      "Name": "galon / bin (Ame.)"
+    },
+    {
+      "Code": "5E",
+      "Name": "MMSCF/gün"
+    },
+    {
+      "Code": "5F",
+      "Name": "pound / 1000"
+    },
+    {
+      "Code": "5G",
+      "Name": "pompa"
+    },
+    {
+      "Code": "5I",
+      "Name": "standart fut küp"
+    },
+    {
+      "Code": "5J",
+      "Name": "hidrolik beygir gücü"
+    },
+    {
+      "Code": "5K",
+      "Name": "adet / dakika"
+    },
+    {
+      "Code": "5P",
+      "Name": "sismik seviye"
+    },
+    {
+      "Code": "5Q",
+      "Name": "sismik hat"
+    },
+    {
+      "Code": "A1",
+      "Name": "15 C kalori"
+    },
+    {
+      "Code": "A10",
+      "Name": "amper metre kare / jul saniye"
+    },
+    {
+      "Code": "A11",
+      "Name": "angström"
+    },
+    {
+      "Code": "A12",
+      "Name": "astronomik birim"
+    },
+    {
+      "Code": "A13",
+      "Name": "attojul"
+    },
+    {
+      "Code": "A14",
+      "Name": "barn (nükleer transeksiyon birimi)"
+    },
+    {
+      "Code": "A15",
+      "Name": "barn / elektron volt"
+    },
+    {
+      "Code": "A16",
+      "Name": "barn / steradyan elektron volt"
+    },
+    {
+      "Code": "A17",
+      "Name": "barn / steradyan"
+    },
+    {
+      "Code": "A18",
+      "Name": "bekerel / kg"
+    },
+    {
+      "Code": "A19",
+      "Name": "bekerel / metre küp"
+    },
+    {
+      "Code": "A2",
+      "Name": "amper / santimetre"
+    },
+    {
+      "Code": "A24",
+      "Name": "kandela / metre kare"
+    },
+    {
+      "Code": "A25",
+      "Name": "beygir gücü"
+    },
+    {
+      "Code": "A26",
+      "Name": "kulomb metre"
+    },
+    {
+      "Code": "A27",
+      "Name": "kulomb metre kare / volt"
+    },
+    {
+      "Code": "A28",
+      "Name": "kulomb / santimetre küp"
+    },
+    {
+      "Code": "A29",
+      "Name": "kulomb / metre küp"
+    },
+    {
+      "Code": "A3",
+      "Name": "amper / milimetre"
+    },
+    {
+      "Code": "A30",
+      "Name": "kulomb / milimetre küp"
+    },
+    {
+      "Code": "A31",
+      "Name": "kulomb / kilogram saniye"
+    },
+    {
+      "Code": "A32",
+      "Name": "kulomb / mol"
+    },
+    {
+      "Code": "A33",
+      "Name": "kulomb / santimetre kare"
+    },
+    {
+      "Code": "A34",
+      "Name": "kulomb / metre kare"
+    },
+    {
+      "Code": "A35",
+      "Name": "kulomb / milimetre kare"
+    },
+    {
+      "Code": "A36",
+      "Name": "santimetre küp / mol"
+    },
+    {
+      "Code": "A37",
+      "Name": "desimetre küp / mol"
+    },
+    {
+      "Code": "A38",
+      "Name": "metre küp / kulomb"
+    },
+    {
+      "Code": "A39",
+      "Name": "metre küp / kilogram"
+    },
+    {
+      "Code": "A4",
+      "Name": "amper / santimetre kare"
+    },
+    {
+      "Code": "A40",
+      "Name": "metre küp / mol"
+    },
+    {
+      "Code": "A41",
+      "Name": "amper / metre kare"
+    },
+    {
+      "Code": "A42",
+      "Name": "küri / kilogram"
+    },
+    {
+      "Code": "A43",
+      "Name": "net ağırlık tonilatosu"
+    },
+    {
+      "Code": "A44",
+      "Name": "dekalitre"
+    },
+    {
+      "Code": "A45",
+      "Name": "dekametre"
+    },
+    {
+      "Code": "A47",
+      "Name": "desitex"
+    },
+    {
+      "Code": "A48",
+      "Name": "rankin derece"
+    },
+    {
+      "Code": "A49",
+      "Name": "denye (tekstil birimi)"
+    },
+    {
+      "Code": "A5",
+      "Name": "amper metre kare"
+    },
+    {
+      "Code": "A50",
+      "Name": "din saniye / santimetre küp"
+    },
+    {
+      "Code": "A51",
+      "Name": "din saniye / santimetre"
+    },
+    {
+      "Code": "A52",
+      "Name": "din saniye / santimetrenin dördüncü kuvveti"
+    },
+    {
+      "Code": "A53",
+      "Name": "elektronvolt"
+    },
+    {
+      "Code": "A54",
+      "Name": "elektronvolt / metre"
+    },
+    {
+      "Code": "A55",
+      "Name": "elektronvolt metre kare"
+    },
+    {
+      "Code": "A56",
+      "Name": "elektronvolt metre kare / kilogram"
+    },
+    {
+      "Code": "A57",
+      "Name": "erg"
+    },
+    {
+      "Code": "A58",
+      "Name": "erg / santimetre"
+    },
+    {
+      "Code": "A6",
+      "Name": "amper / metre kare x kelvin kare"
+    },
+    {
+      "Code": "A60",
+      "Name": "erg / santimetre küp"
+    },
+    {
+      "Code": "A61",
+      "Name": "erg / gram"
+    },
+    {
+      "Code": "A62",
+      "Name": "erg / gram saniye"
+    },
+    {
+      "Code": "A63",
+      "Name": "erg / saniye"
+    },
+    {
+      "Code": "A64",
+      "Name": "erg / saniye kare santimetre"
+    },
+    {
+      "Code": "A65",
+      "Name": "erg / santimetre kare saniye"
+    },
+    {
+      "Code": "A66",
+      "Name": "erg santimetre kare"
+    },
+    {
+      "Code": "A67",
+      "Name": "erg santimetre kare / gram"
+    },
+    {
+      "Code": "A68",
+      "Name": "exajul"
+    },
+    {
+      "Code": "A69",
+      "Name": "farad / metre"
+    },
+    {
+      "Code": "A7",
+      "Name": "amper / milimetre kare"
+    },
+    {
+      "Code": "A70",
+      "Name": "femtojul"
+    },
+    {
+      "Code": "A71",
+      "Name": "femtometre"
+    },
+    {
+      "Code": "A73",
+      "Name": "fut / saniye kare"
+    },
+    {
+      "Code": "A74",
+      "Name": "fut pound-kuvvet / saniye"
+    },
+    {
+      "Code": "A75",
+      "Name": "mesaha tonu"
+    },
+    {
+      "Code": "A76",
+      "Name": "gal"
+    },
+    {
+      "Code": "A77",
+      "Name": "Gauss CGS yer değiştirme birimi"
+    },
+    {
+      "Code": "A78",
+      "Name": "Gauss CGS elektrik akımı birimi"
+    },
+    {
+      "Code": "A79",
+      "Name": "Gauss CGS elektrik yükü birimi"
+    },
+    {
+      "Code": "A8",
+      "Name": "amper saniye"
+    },
+    {
+      "Code": "A80",
+      "Name": "Gauss CGS elektrik alan gücü birimi"
+    },
+    {
+      "Code": "A81",
+      "Name": "Gauss CGS elektrik polarizasyon birimi"
+    },
+    {
+      "Code": "A82",
+      "Name": "Gauss CGS elektrik potansiyel birimi"
+    },
+    {
+      "Code": "A83",
+      "Name": "Gauss CGS mıknatıslanma birimi"
+    },
+    {
+      "Code": "A84",
+      "Name": "gigakulomb / metre küp"
+    },
+    {
+      "Code": "A85",
+      "Name": "gigaelektronvolt"
+    },
+    {
+      "Code": "A86",
+      "Name": "gigahertz"
+    },
+    {
+      "Code": "A87",
+      "Name": "gigaohm"
+    },
+    {
+      "Code": "A88",
+      "Name": "gigaohm metre"
+    },
+    {
+      "Code": "A89",
+      "Name": "gigapaskal"
+    },
+    {
+      "Code": "A90",
+      "Name": "gigavat"
+    },
+    {
+      "Code": "A91",
+      "Name": "grad"
+    },
+    {
+      "Code": "A93",
+      "Name": "gram / metre küp"
+    },
+    {
+      "Code": "A94",
+      "Name": "gram / mol"
+    },
+    {
+      "Code": "A95",
+      "Name": "gray"
+    },
+    {
+      "Code": "A96",
+      "Name": "gray / saniye"
+    },
+    {
+      "Code": "A97",
+      "Name": "hektopaskal"
+    },
+    {
+      "Code": "A98",
+      "Name": "henry / metre"
+    },
+    {
+      "Code": "ACR",
+      "Name": "İngiliz dönümü"
+    },
+    {
+      "Code": "AD",
+      "Name": "bayt"
+    },
+    {
+      "Code": "AE",
+      "Name": "amper / metre"
+    },
+    {
+      "Code": "AH",
+      "Name": "ek dakika"
+    },
+    {
+      "Code": "AI",
+      "Name": "ortalama dakika / arama"
+    },
+    {
+      "Code": "AJ",
+      "Name": "masura"
+    },
+    {
+      "Code": "AK",
+      "Name": "kulaç"
+    },
+    {
+      "Code": "AL",
+      "Name": "erişim yolu"
+    },
+    {
+      "Code": "AM",
+      "Name": "ampul"
+    },
+    {
+      "Code": "AMH",
+      "Name": "amper saat"
+    },
+    {
+      "Code": "AMP",
+      "Name": "amper"
+    },
+    {
+      "Code": "ANN",
+      "Name": "yıl"
+    },
+    {
+      "Code": "APZ",
+      "Name": "kuyumcu veya eczacı onsu"
+    },
+    {
+      "Code": "AQ",
+      "Name": "anti-hemofilik faktör (AHF) birimi"
+    },
+    {
+      "Code": "AR",
+      "Name": "fitil"
+    },
+    {
+      "Code": "ARE",
+      "Name": "ar"
+    },
+    {
+      "Code": "AS",
+      "Name": "çeşit"
+    },
+    {
+      "Code": "ASM",
+      "Name": "kütlesel alkol miktarı"
+    },
+    {
+      "Code": "ASU",
+      "Name": "hacimsel alkol miktarı"
+    },
+    {
+      "Code": "ATM",
+      "Name": "standart atmosfer"
+    },
+    {
+      "Code": "ATT",
+      "Name": "teorik atmosfer"
+    },
+    {
+      "Code": "AV",
+      "Name": "kapsül"
+    },
+    {
+      "Code": "AZ",
+      "Name": "ingiliz sıcaklık birimi / pound"
+    },
+    {
+      "Code": "B0",
+      "Name": "BTU / fut küp"
+    },
+    {
+      "Code": "B1",
+      "Name": "varil / gün (Ame.)"
+    },
+    {
+      "Code": "B11",
+      "Name": "jul / kilogram kelvin"
+    },
+    {
+      "Code": "B12",
+      "Name": "jul / metre"
+    },
+    {
+      "Code": "B13",
+      "Name": "jul / metre kare"
+    },
+    {
+      "Code": "B14",
+      "Name": "jul / metre (dördüncü kuvvetten)"
+    },
+    {
+      "Code": "B15",
+      "Name": "jul / mol"
+    },
+    {
+      "Code": "B16",
+      "Name": "jul / mol kelvin"
+    },
+    {
+      "Code": "B18",
+      "Name": "jul saniye"
+    },
+    {
+      "Code": "B2",
+      "Name": "yatak"
+    },
+    {
+      "Code": "B20",
+      "Name": "jul metre kare / kilogram"
+    },
+    {
+      "Code": "B21",
+      "Name": "kelvin / vat"
+    },
+    {
+      "Code": "B22",
+      "Name": "kiloamper"
+    },
+    {
+      "Code": "B23",
+      "Name": "kiloamper / metre kare"
+    },
+    {
+      "Code": "B24",
+      "Name": "kiloamper / metre"
+    },
+    {
+      "Code": "B25",
+      "Name": "kilobekrel / kilogram"
+    },
+    {
+      "Code": "B26",
+      "Name": "kilokulomb"
+    },
+    {
+      "Code": "B27",
+      "Name": "kilokulomb / metre küp"
+    },
+    {
+      "Code": "B28",
+      "Name": "kilokulomb / metre kare"
+    },
+    {
+      "Code": "B29",
+      "Name": "kiloelektronvolt"
+    },
+    {
+      "Code": "B31",
+      "Name": "kilogram metre / saniye"
+    },
+    {
+      "Code": "B32",
+      "Name": "kilogram metre kare"
+    },
+    {
+      "Code": "B33",
+      "Name": "kilogram metre kare / saniye"
+    },
+    {
+      "Code": "B34",
+      "Name": "kilogram / desimetre küp"
+    },
+    {
+      "Code": "B35",
+      "Name": "kilogram / litre"
+    },
+    {
+      "Code": "B36",
+      "Name": "termokimyasal kalori / gram"
+    },
+    {
+      "Code": "B37",
+      "Name": "kilogram kuvvet"
+    },
+    {
+      "Code": "B38",
+      "Name": "kilogram kuvvet metre"
+    },
+    {
+      "Code": "B39",
+      "Name": "kilogram kuvvet metre / saniye"
+    },
+    {
+      "Code": "B4",
+      "Name": "varil"
+    },
+    {
+      "Code": "B40",
+      "Name": "kilogram kuvvet / metre kare"
+    },
+    {
+      "Code": "B41",
+      "Name": "kilojul / kelvin"
+    },
+    {
+      "Code": "B42",
+      "Name": "kilojul / kilogram"
+    },
+    {
+      "Code": "B43",
+      "Name": "kilojul / kilogram kelvin"
+    },
+    {
+      "Code": "B44",
+      "Name": "kilojul / mol"
+    },
+    {
+      "Code": "B45",
+      "Name": "kilomol"
+    },
+    {
+      "Code": "B46",
+      "Name": "kilomol / metre küp"
+    },
+    {
+      "Code": "B47",
+      "Name": "kilonewton"
+    },
+    {
+      "Code": "B48",
+      "Name": "kilonewton metre"
+    },
+    {
+      "Code": "B49",
+      "Name": "kiloohm"
+    },
+    {
+      "Code": "B50",
+      "Name": "kiloohm metre"
+    },
+    {
+      "Code": "B51",
+      "Name": "kilopound"
+    },
+    {
+      "Code": "B52",
+      "Name": "kilosaniye"
+    },
+    {
+      "Code": "B53",
+      "Name": "kilosiemens"
+    },
+    {
+      "Code": "B54",
+      "Name": "kilosiemens / metre"
+    },
+    {
+      "Code": "B55",
+      "Name": "kilovolt / metre"
+    },
+    {
+      "Code": "B56",
+      "Name": "kiloweber / metre"
+    },
+    {
+      "Code": "B57",
+      "Name": "ışık yılı"
+    },
+    {
+      "Code": "B58",
+      "Name": "litre / mol"
+    },
+    {
+      "Code": "B59",
+      "Name": "lümen saat"
+    },
+    {
+      "Code": "B60",
+      "Name": "lümen / metre kare"
+    },
+    {
+      "Code": "B61",
+      "Name": "lümen / vat"
+    },
+    {
+      "Code": "B62",
+      "Name": "lümen saniye"
+    },
+    {
+      "Code": "B63",
+      "Name": "lux saat"
+    },
+    {
+      "Code": "B64",
+      "Name": "lux saniye"
+    },
+    {
+      "Code": "B65",
+      "Name": "maxwell"
+    },
+    {
+      "Code": "B66",
+      "Name": "megaamper / metre kare"
+    },
+    {
+      "Code": "B67",
+      "Name": "megabekrel / kilogram"
+    },
+    {
+      "Code": "B69",
+      "Name": "megakulomb / metre küp"
+    },
+    {
+      "Code": "B7",
+      "Name": "devir"
+    },
+    {
+      "Code": "B70",
+      "Name": "megakulomb / metre kare"
+    },
+    {
+      "Code": "B71",
+      "Name": "megaelektronvolt"
+    },
+    {
+      "Code": "B72",
+      "Name": "megagram / metre küp"
+    },
+    {
+      "Code": "B73",
+      "Name": "meganewton"
+    },
+    {
+      "Code": "B74",
+      "Name": "meganewton metre"
+    },
+    {
+      "Code": "B75",
+      "Name": "megaohm"
+    },
+    {
+      "Code": "B76",
+      "Name": "megaohm metre"
+    },
+    {
+      "Code": "B77",
+      "Name": "megasiemens / metre"
+    },
+    {
+      "Code": "B78",
+      "Name": "megavolt"
+    },
+    {
+      "Code": "B79",
+      "Name": "megavolt / metre"
+    },
+    {
+      "Code": "B8",
+      "Name": "jul / metre küp"
+    },
+    {
+      "Code": "B81",
+      "Name": "1 / metre kare x 1 / saniye"
+    },
+    {
+      "Code": "B83",
+      "Name": "metrenin dördüncü kuvveti"
+    },
+    {
+      "Code": "B84",
+      "Name": "mikroamper"
+    },
+    {
+      "Code": "B85",
+      "Name": "mikrobar"
+    },
+    {
+      "Code": "B86",
+      "Name": "mikrokulomb"
+    },
+    {
+      "Code": "B87",
+      "Name": "mikrokulomb / metre küp"
+    },
+    {
+      "Code": "B88",
+      "Name": "mikrokulomb / metre kare"
+    },
+    {
+      "Code": "B89",
+      "Name": "microfarad / metre"
+    },
+    {
+      "Code": "B9",
+      "Name": "batt"
+    },
+    {
+      "Code": "B90",
+      "Name": "mikrohenry"
+    },
+    {
+      "Code": "B91",
+      "Name": "mikrohenry / metre"
+    },
+    {
+      "Code": "B92",
+      "Name": "mikronewton"
+    },
+    {
+      "Code": "B93",
+      "Name": "mikronewton metre"
+    },
+    {
+      "Code": "B94",
+      "Name": "mikroohm"
+    },
+    {
+      "Code": "B95",
+      "Name": "mikroohm metre"
+    },
+    {
+      "Code": "B96",
+      "Name": "mikropaskal"
+    },
+    {
+      "Code": "B97",
+      "Name": "mikroradyan"
+    },
+    {
+      "Code": "B98",
+      "Name": "mikrosaniye"
+    },
+    {
+      "Code": "B99",
+      "Name": "mikrosiemens"
+    },
+    {
+      "Code": "BAR",
+      "Name": "bar"
+    },
+    {
+      "Code": "BB",
+      "Name": "temel kutu"
+    },
+    {
+      "Code": "BE",
+      "Name": "deste"
+    },
+    {
+      "Code": "BFT",
+      "Name": "board foot (kereste ölçü birimi)"
+    },
+    {
+      "Code": "BG",
+      "Name": "çuval"
+    },
+    {
+      "Code": "BHP",
+      "Name": "fren beygir gücü"
+    },
+    {
+      "Code": "BIL",
+      "Name": "trilyon"
+    },
+    {
+      "Code": "BJ",
+      "Name": "kova"
+    },
+    {
+      "Code": "BK",
+      "Name": "sepet"
+    },
+    {
+      "Code": "BL",
+      "Name": "balya"
+    },
+    {
+      "Code": "BLD",
+      "Name": "kuru yük varili (Ame.)"
+    },
+    {
+      "Code": "BLL",
+      "Name": "varil (Ame.) (petrol vb.)"
+    },
+    {
+      "Code": "BO",
+      "Name": "şişe"
+    },
+    {
+      "Code": "BP",
+      "Name": "yüz board fut (kereste ölçü birimi)"
+    },
+    {
+      "Code": "BQL",
+      "Name": "bekerel"
+    },
+    {
+      "Code": "BR",
+      "Name": "bar"
+    },
+    {
+      "Code": "BTU",
+      "Name": "BTU"
+    },
+    {
+      "Code": "BUA",
+      "Name": "kile (Ame.)"
+    },
+    {
+      "Code": "BUI",
+      "Name": "kile (İng.)"
+    },
+    {
+      "Code": "BW",
+      "Name": "temel ağırlık"
+    },
+    {
+      "Code": "BX",
+      "Name": "kutu"
+    },
+    {
+      "Code": "BZ",
+      "Name": "milyon İng. Isı birimi"
+    },
+    {
+      "Code": "C0",
+      "Name": "arama"
+    },
+    {
+      "Code": "C1",
+      "Name": "kompozit ürün poundu (toplam ağırlık)"
+    },
+    {
+      "Code": "C10",
+      "Name": "milifarad"
+    },
+    {
+      "Code": "C11",
+      "Name": "miligal"
+    },
+    {
+      "Code": "C12",
+      "Name": "miligram / metre"
+    },
+    {
+      "Code": "C13",
+      "Name": "miligray"
+    },
+    {
+      "Code": "C14",
+      "Name": "milihenry"
+    },
+    {
+      "Code": "C15",
+      "Name": "milijul"
+    },
+    {
+      "Code": "C16",
+      "Name": "milimetre / saniye"
+    },
+    {
+      "Code": "C17",
+      "Name": "milimetre kare / saniye"
+    },
+    {
+      "Code": "C18",
+      "Name": "milimol"
+    },
+    {
+      "Code": "C19",
+      "Name": "mol / kilogram"
+    },
+    {
+      "Code": "C20",
+      "Name": "milinewton"
+    },
+    {
+      "Code": "C22",
+      "Name": "milinewton / metre"
+    },
+    {
+      "Code": "C23",
+      "Name": "miliohm metre"
+    },
+    {
+      "Code": "C24",
+      "Name": "milipaskal saniye"
+    },
+    {
+      "Code": "C25",
+      "Name": "miliradyan"
+    },
+    {
+      "Code": "C26",
+      "Name": "milisaniye"
+    },
+    {
+      "Code": "C27",
+      "Name": "milisiemens"
+    },
+    {
+      "Code": "C28",
+      "Name": "milisievert"
+    },
+    {
+      "Code": "C29",
+      "Name": "militesla"
+    },
+    {
+      "Code": "C3",
+      "Name": "mikrovolt / metre"
+    },
+    {
+      "Code": "C30",
+      "Name": "milivolt / metre"
+    },
+    {
+      "Code": "C31",
+      "Name": "milivat"
+    },
+    {
+      "Code": "C32",
+      "Name": "milivat / metre kare"
+    },
+    {
+      "Code": "C33",
+      "Name": "miliweber"
+    },
+    {
+      "Code": "C34",
+      "Name": "mol"
+    },
+    {
+      "Code": "C35",
+      "Name": "mol / desimetre küp"
+    },
+    {
+      "Code": "C36",
+      "Name": "mol / metre küp"
+    },
+    {
+      "Code": "C38",
+      "Name": "mol / litre"
+    },
+    {
+      "Code": "C39",
+      "Name": "nanoamper"
+    },
+    {
+      "Code": "C4",
+      "Name": "vagon (yük miktarı)"
+    },
+    {
+      "Code": "C40",
+      "Name": "nanokulomb"
+    },
+    {
+      "Code": "C41",
+      "Name": "nanofarad"
+    },
+    {
+      "Code": "C42",
+      "Name": "nanofarad / metre"
+    },
+    {
+      "Code": "C43",
+      "Name": "nanohenry"
+    },
+    {
+      "Code": "C44",
+      "Name": "nanohenry / metre"
+    },
+    {
+      "Code": "C45",
+      "Name": "nanometre"
+    },
+    {
+      "Code": "C46",
+      "Name": "nanoohm metre"
+    },
+    {
+      "Code": "C47",
+      "Name": "nanosaniye"
+    },
+    {
+      "Code": "C48",
+      "Name": "nanotesla"
+    },
+    {
+      "Code": "C49",
+      "Name": "nanovat"
+    },
+    {
+      "Code": "C50",
+      "Name": "neper"
+    },
+    {
+      "Code": "C51",
+      "Name": "neper / saniye"
+    },
+    {
+      "Code": "C52",
+      "Name": "pikometre"
+    },
+    {
+      "Code": "C53",
+      "Name": "newton metre saniye"
+    },
+    {
+      "Code": "C54",
+      "Name": "newton metre kare kilogram kare"
+    },
+    {
+      "Code": "C55",
+      "Name": "newton / metre kare"
+    },
+    {
+      "Code": "C56",
+      "Name": "newton / milimetre kare"
+    },
+    {
+      "Code": "C57",
+      "Name": "newton saniye"
+    },
+    {
+      "Code": "C58",
+      "Name": "newton saniye / metre"
+    },
+    {
+      "Code": "C59",
+      "Name": "oktav"
+    },
+    {
+      "Code": "C6",
+      "Name": "hücre"
+    },
+    {
+      "Code": "C60",
+      "Name": "ohm santimetre"
+    },
+    {
+      "Code": "C61",
+      "Name": "ohm metre"
+    },
+    {
+      "Code": "C62",
+      "Name": "tek"
+    },
+    {
+      "Code": "C63",
+      "Name": "parsek"
+    },
+    {
+      "Code": "C64",
+      "Name": "paskal"
+    },
+    {
+      "Code": "C65",
+      "Name": "paskal saniye"
+    },
+    {
+      "Code": "C66",
+      "Name": "paskal saniye / metre küp"
+    },
+    {
+      "Code": "C67",
+      "Name": "paskal saniye / metre"
+    },
+    {
+      "Code": "C68",
+      "Name": "petajul"
+    },
+    {
+      "Code": "C69",
+      "Name": "fon"
+    },
+    {
+      "Code": "C7",
+      "Name": "yüzdepoise"
+    },
+    {
+      "Code": "C70",
+      "Name": "pikoamper"
+    },
+    {
+      "Code": "C71",
+      "Name": "pikokulomb"
+    },
+    {
+      "Code": "C72",
+      "Name": "pikofarad / metre"
+    },
+    {
+      "Code": "C73",
+      "Name": "pikohenry"
+    },
+    {
+      "Code": "C75",
+      "Name": "pikovat"
+    },
+    {
+      "Code": "C76",
+      "Name": "pikovat / metre kare"
+    },
+    {
+      "Code": "C78",
+      "Name": "pound-kuvvet"
+    },
+    {
+      "Code": "C8",
+      "Name": "milikulomb / kilogram"
+    },
+    {
+      "Code": "C81",
+      "Name": "radyan"
+    },
+    {
+      "Code": "C82",
+      "Name": "radyan metre kare / mol"
+    },
+    {
+      "Code": "C83",
+      "Name": "radyan metre kare / kilogram"
+    },
+    {
+      "Code": "C84",
+      "Name": "radyan / metre"
+    },
+    {
+      "Code": "C85",
+      "Name": "1 / angström"
+    },
+    {
+      "Code": "C86",
+      "Name": "1 / metre küp"
+    },
+    {
+      "Code": "C87",
+      "Name": "1 / saniyedeki metre küp"
+    },
+    {
+      "Code": "C88",
+      "Name": "1 / metre küp başına elektron volt"
+    },
+    {
+      "Code": "C89",
+      "Name": "1 / henry"
+    },
+    {
+      "Code": "C9",
+      "Name": "bobin grubu"
+    },
+    {
+      "Code": "C90",
+      "Name": "1 / metre küp başına jul"
+    },
+    {
+      "Code": "C91",
+      "Name": "1 / kelvin"
+    },
+    {
+      "Code": "C92",
+      "Name": "1 / metre"
+    },
+    {
+      "Code": "C93",
+      "Name": "1 / metre kare"
+    },
+    {
+      "Code": "C94",
+      "Name": "1 / dakika"
+    },
+    {
+      "Code": "C95",
+      "Name": "1 / mole"
+    },
+    {
+      "Code": "C97",
+      "Name": "1 / saniye"
+    },
+    {
+      "Code": "C98",
+      "Name": "metre küp başına 1 / saniye"
+    },
+    {
+      "Code": "C99",
+      "Name": "metre kare başına 1 / saniye"
+    },
+    {
+      "Code": "CA",
+      "Name": "kap"
+    },
+    {
+      "Code": "CCT",
+      "Name": "metrik ton için taşıma kapasitesi"
+    },
+    {
+      "Code": "CDL",
+      "Name": "kandela"
+    },
+    {
+      "Code": "CEL",
+      "Name": "santigrat derece"
+    },
+    {
+      "Code": "CEN",
+      "Name": "yüzlük"
+    },
+    {
+      "Code": "CG",
+      "Name": "kart"
+    },
+    {
+      "Code": "CGM",
+      "Name": "santigram"
+    },
+    {
+      "Code": "CH",
+      "Name": "konteyner"
+    },
+    {
+      "Code": "CJ",
+      "Name": "konik bobin"
+    },
+    {
+      "Code": "CK",
+      "Name": "konnektör"
+    },
+    {
+      "Code": "CKG",
+      "Name": "kulomb / kilogram"
+    },
+    {
+      "Code": "CL",
+      "Name": "bobin"
+    },
+    {
+      "Code": "CLT",
+      "Name": "santilitre"
+    },
+    {
+      "Code": "CMK",
+      "Name": "santimetre kare"
+    },
+    {
+      "Code": "CMQ",
+      "Name": "santimetre küp"
+    },
+    {
+      "Code": "CMT",
+      "Name": "santimetre"
+    },
+    {
+      "Code": "CNP",
+      "Name": "yüzlük paket"
+    },
+    {
+      "Code": "CNT",
+      "Name": "yüz libre (İng.)"
+    },
+    {
+      "Code": "CO",
+      "Name": "damacana"
+    },
+    {
+      "Code": "COU",
+      "Name": "kulomb"
+    },
+    {
+      "Code": "CQ",
+      "Name": "kartuş"
+    },
+    {
+      "Code": "CR",
+      "Name": "kafesli sandık"
+    },
+    {
+      "Code": "CS",
+      "Name": "kasa"
+    },
+    {
+      "Code": "CT",
+      "Name": "karton"
+    },
+    {
+      "Code": "CTM",
+      "Name": "metrik karat"
+    },
+    {
+      "Code": "CU",
+      "Name": "kap"
+    },
+    {
+      "Code": "CUR",
+      "Name": "küri"
+    },
+    {
+      "Code": "CWA",
+      "Name": "yüz pound (cwt) / yüz libre (Ame.)"
+    },
+    {
+      "Code": "CWI",
+      "Name": "yüz libre (İng.)"
+    },
+    {
+      "Code": "CY",
+      "Name": "silindir"
+    },
+    {
+      "Code": "CZ",
+      "Name": "combo"
+    },
+    {
+      "Code": "D1",
+      "Name": "steradyan başına 1 / saniye"
+    },
+    {
+      "Code": "D10",
+      "Name": "siemens / metre"
+    },
+    {
+      "Code": "D12",
+      "Name": "siemens metre kare / mol"
+    },
+    {
+      "Code": "D13",
+      "Name": "sievert"
+    },
+    {
+      "Code": "D14",
+      "Name": "bin doğrusal yard"
+    },
+    {
+      "Code": "D15",
+      "Name": "son"
+    },
+    {
+      "Code": "D16",
+      "Name": "santimetre kare / erg"
+    },
+    {
+      "Code": "D17",
+      "Name": "santimetre kare / steradyan erg"
+    },
+    {
+      "Code": "D18",
+      "Name": "metre kelvin"
+    },
+    {
+      "Code": "D19",
+      "Name": "metre kare kelvin / vat"
+    },
+    {
+      "Code": "D2",
+      "Name": "steradyan metre kare başına 1 / saniye"
+    },
+    {
+      "Code": "D20",
+      "Name": "metre kare / jul"
+    },
+    {
+      "Code": "D21",
+      "Name": "metre kare / kilogram"
+    },
+    {
+      "Code": "D22",
+      "Name": "metre kare / mol"
+    },
+    {
+      "Code": "D24",
+      "Name": "metre kare / steradyan"
+    },
+    {
+      "Code": "D25",
+      "Name": "metre kare / steradyan jul"
+    },
+    {
+      "Code": "D26",
+      "Name": "metre kare / volt saniye"
+    },
+    {
+      "Code": "D27",
+      "Name": "steradyan"
+    },
+    {
+      "Code": "D28",
+      "Name": "syphon"
+    },
+    {
+      "Code": "D29",
+      "Name": "terahertz"
+    },
+    {
+      "Code": "D30",
+      "Name": "terajul"
+    },
+    {
+      "Code": "D31",
+      "Name": "teravat"
+    },
+    {
+      "Code": "D32",
+      "Name": "teravat saat"
+    },
+    {
+      "Code": "D33",
+      "Name": "tesla"
+    },
+    {
+      "Code": "D35",
+      "Name": "termokimyasal kalori"
+    },
+    {
+      "Code": "D37",
+      "Name": "termokimyasal kalori / gram kelvin"
+    },
+    {
+      "Code": "D38",
+      "Name": "termokimyasal kalori / saniye santimetre kelvin"
+    },
+    {
+      "Code": "D39",
+      "Name": "termokimyasal kalori / saniye santimetre kare kelvin"
+    },
+    {
+      "Code": "D40",
+      "Name": "bin litre"
+    },
+    {
+      "Code": "D41",
+      "Name": "ton / metre küp"
+    },
+    {
+      "Code": "D42",
+      "Name": "dönencel yıl"
+    },
+    {
+      "Code": "D43",
+      "Name": "birleşik atomik kütle birimi"
+    },
+    {
+      "Code": "D44",
+      "Name": "var"
+    },
+    {
+      "Code": "D45",
+      "Name": "volt kare / kelvin kare"
+    },
+    {
+      "Code": "D46",
+      "Name": "volt - amper"
+    },
+    {
+      "Code": "D47",
+      "Name": "volt / santimetre"
+    },
+    {
+      "Code": "D48",
+      "Name": "volt / kelvin"
+    },
+    {
+      "Code": "D49",
+      "Name": "milivolt / kelvin"
+    },
+    {
+      "Code": "D5",
+      "Name": "kilogram / santimetre kare"
+    },
+    {
+      "Code": "D50",
+      "Name": "volt / metre"
+    },
+    {
+      "Code": "D51",
+      "Name": "volt / milimetre"
+    },
+    {
+      "Code": "D52",
+      "Name": "vat / kelvin"
+    },
+    {
+      "Code": "D53",
+      "Name": "vat / metre kelvin"
+    },
+    {
+      "Code": "D54",
+      "Name": "vat / metre kare"
+    },
+    {
+      "Code": "D55",
+      "Name": "vat / metre kare kelvin"
+    },
+    {
+      "Code": "D56",
+      "Name": "vat / metrekare kelvinin dördüncü kuvveti"
+    },
+    {
+      "Code": "D57",
+      "Name": "vat / steradyan"
+    },
+    {
+      "Code": "D58",
+      "Name": "vat / steradyan metre kare"
+    },
+    {
+      "Code": "D59",
+      "Name": "weber / metre"
+    },
+    {
+      "Code": "D6",
+      "Name": "röntgen / saniye"
+    },
+    {
+      "Code": "D60",
+      "Name": "weber / milimetre"
+    },
+    {
+      "Code": "D61",
+      "Name": "dakika"
+    },
+    {
+      "Code": "D62",
+      "Name": "saniye"
+    },
+    {
+      "Code": "D64",
+      "Name": "blok"
+    },
+    {
+      "Code": "D66",
+      "Name": "kaset (kutu)"
+    },
+    {
+      "Code": "D67",
+      "Name": "dolar / saat"
+    },
+    {
+      "Code": "D69",
+      "Name": "inçin dördüncü kuvveti"
+    },
+    {
+      "Code": "D7",
+      "Name": "sandwich"
+    },
+    {
+      "Code": "D70",
+      "Name": "Uluslararası Tablo - kalori"
+    },
+    {
+      "Code": "D73",
+      "Name": "jul / metre kare"
+    },
+    {
+      "Code": "D74",
+      "Name": "kilogram / mol"
+    },
+    {
+      "Code": "D75",
+      "Name": "Uluslararası Tablo - kalori /gram"
+    },
+    {
+      "Code": "D76",
+      "Name": "Uluslararası Tablo - kalori /gram kelvin"
+    },
+    {
+      "Code": "D77",
+      "Name": "megakulomb"
+    },
+    {
+      "Code": "D80",
+      "Name": "mikrovat"
+    },
+    {
+      "Code": "D81",
+      "Name": "mikrotesla"
+    },
+    {
+      "Code": "D82",
+      "Name": "mikrovolt"
+    },
+    {
+      "Code": "D83",
+      "Name": "milinewton metre"
+    },
+    {
+      "Code": "D85",
+      "Name": "mikrovat / metre kare"
+    },
+    {
+      "Code": "D86",
+      "Name": "milikulomb"
+    },
+    {
+      "Code": "D87",
+      "Name": "milimol / kilogram"
+    },
+    {
+      "Code": "D88",
+      "Name": "milikulomb / metre küp"
+    },
+    {
+      "Code": "D89",
+      "Name": "milikulomb / metre kare"
+    },
+    {
+      "Code": "D9",
+      "Name": "din / santimetre kare"
+    },
+    {
+      "Code": "D90",
+      "Name": "metre küp (net)"
+    },
+    {
+      "Code": "D92",
+      "Name": "bant"
+    },
+    {
+      "Code": "D93",
+      "Name": "saniye / metre küp"
+    },
+    {
+      "Code": "D94",
+      "Name": "saniye / radyan metre küp"
+    },
+    {
+      "Code": "D95",
+      "Name": "jul / gram"
+    },
+    {
+      "Code": "D96",
+      "Name": "pound brüt"
+    },
+    {
+      "Code": "D97",
+      "Name": "palet / birim yük"
+    },
+    {
+      "Code": "D99",
+      "Name": "sleeve"
+    },
+    {
+      "Code": "DAA",
+      "Name": "dekar"
+    },
+    {
+      "Code": "DAD",
+      "Name": "on gün"
+    },
+    {
+      "Code": "DAY",
+      "Name": "gün"
+    },
+    {
+      "Code": "DB",
+      "Name": "kuru yük poundu"
+    },
+    {
+      "Code": "DC",
+      "Name": "disk"
+    },
+    {
+      "Code": "DD",
+      "Name": "derece"
+    },
+    {
+      "Code": "DEC",
+      "Name": "onluk"
+    },
+    {
+      "Code": "DG",
+      "Name": "desigram"
+    },
+    {
+      "Code": "DJ",
+      "Name": "dekagram"
+    },
+    {
+      "Code": "DLT",
+      "Name": "desilitre"
+    },
+    {
+      "Code": "DMK",
+      "Name": "desimetre kare"
+    },
+    {
+      "Code": "DMQ",
+      "Name": "desimetre küp"
+    },
+    {
+      "Code": "DMT",
+      "Name": "desimetre"
+    },
+    {
+      "Code": "DN",
+      "Name": "decinevton metre"
+    },
+    {
+      "Code": "DPC",
+      "Name": "düzine"
+    },
+    {
+      "Code": "DPR",
+      "Name": "düzine çifti"
+    },
+    {
+      "Code": "DPT",
+      "Name": "yer değiştirme tonajı"
+    },
+    {
+      "Code": "DQ",
+      "Name": "veri kaydı"
+    },
+    {
+      "Code": "DR",
+      "Name": "varil"
+    },
+    {
+      "Code": "DRA",
+      "Name": "dirhem (Ame.)"
+    },
+    {
+      "Code": "DRI",
+      "Name": "dirhem (İng.)"
+    },
+    {
+      "Code": "DRL",
+      "Name": "düzine rulo"
+    },
+    {
+      "Code": "DRM",
+      "Name": "dirhem (İng.)"
+    },
+    {
+      "Code": "DS",
+      "Name": "görüntüleme"
+    },
+    {
+      "Code": "DT",
+      "Name": "kuru yük tonu"
+    },
+    {
+      "Code": "DTN",
+      "Name": "desiton"
+    },
+    {
+      "Code": "DU",
+      "Name": "din"
+    },
+    {
+      "Code": "DWT",
+      "Name": "pennyweight (eski bir ağırlık birimi)"
+    },
+    {
+      "Code": "DX",
+      "Name": "din / santimetre"
+    },
+    {
+      "Code": "DZN",
+      "Name": "düzine"
+    },
+    {
+      "Code": "DZP",
+      "Name": "düzine paket"
+    },
+    {
+      "Code": "E3",
+      "Name": "treyler"
+    },
+    {
+      "Code": "E4",
+      "Name": "gros kilogram"
+    },
+    {
+      "Code": "E5",
+      "Name": "metrik uzun ton"
+    },
+    {
+      "Code": "EA",
+      "Name": "adet"
+    },
+    {
+      "Code": "EB",
+      "Name": "elektronik posta kutusu"
+    },
+    {
+      "Code": "EC",
+      "Name": "adet / ay"
+    },
+    {
+      "Code": "EP",
+      "Name": "on birli paket"
+    },
+    {
+      "Code": "EQ",
+      "Name": "eşdeğer galon"
+    },
+    {
+      "Code": "EV",
+      "Name": "zarf"
+    },
+    {
+      "Code": "F1",
+      "Name": "bin fit küp / gün"
+    },
+    {
+      "Code": "F9",
+      "Name": "fibre / santimetre kare"
+    },
+    {
+      "Code": "FAH",
+      "Name": "fahrenhayt derece"
+    },
+    {
+      "Code": "FAR",
+      "Name": "farad"
+    },
+    {
+      "Code": "FC",
+      "Name": "bin fit küp"
+    },
+    {
+      "Code": "FD",
+      "Name": "milyon parça / fut küp"
+    },
+    {
+      "Code": "FF",
+      "Name": "yüz metre küp"
+    },
+    {
+      "Code": "FG",
+      "Name": "transdermal bandaj"
+    },
+    {
+      "Code": "FH",
+      "Name": "mikromol"
+    },
+    {
+      "Code": "FM",
+      "Name": "milyon fit kare"
+    },
+    {
+      "Code": "FOT",
+      "Name": "fut"
+    },
+    {
+      "Code": "FP",
+      "Name": "pound / fut kare"
+    },
+    {
+      "Code": "FR",
+      "Name": "fut / dakika"
+    },
+    {
+      "Code": "FS",
+      "Name": "fut / saniye"
+    },
+    {
+      "Code": "FTK",
+      "Name": "fut kare"
+    },
+    {
+      "Code": "FTQ",
+      "Name": "fut küp"
+    },
+    {
+      "Code": "G2",
+      "Name": "US galon / dakika"
+    },
+    {
+      "Code": "G3",
+      "Name": "ingiliz galonu / dakika"
+    },
+    {
+      "Code": "G7",
+      "Name": "mikrofiş tabaka"
+    },
+    {
+      "Code": "GB",
+      "Name": "galon (Ame.) / gün"
+    },
+    {
+      "Code": "GBQ",
+      "Name": "gigabekrel"
+    },
+    {
+      "Code": "GC",
+      "Name": "100 gram başına gram"
+    },
+    {
+      "Code": "GD",
+      "Name": "gros varil"
+    },
+    {
+      "Code": "GE",
+      "Name": "pound / galon (Ame.)"
+    },
+    {
+      "Code": "GF",
+      "Name": "gram / metre"
+    },
+    {
+      "Code": "GFI",
+      "Name": "fisil izotop gramı"
+    },
+    {
+      "Code": "GGR",
+      "Name": "düzinelik gross"
+    },
+    {
+      "Code": "GH",
+      "Name": "yarım galon (Ame.)"
+    },
+    {
+      "Code": "GIA",
+      "Name": "gill (Ame.) yaklaşık 1.2 desilitre"
+    },
+    {
+      "Code": "GII",
+      "Name": "gill (İng.) yaklaşık 1.2 desilitre"
+    },
+    {
+      "Code": "GJ",
+      "Name": "gram / mililitre"
+    },
+    {
+      "Code": "GK",
+      "Name": "kilogram başına gram"
+    },
+    {
+      "Code": "GL",
+      "Name": "gram / litre"
+    },
+    {
+      "Code": "GLD",
+      "Name": "kuru yük galonu (Ame.)"
+    },
+    {
+      "Code": "GLI",
+      "Name": "galon (İng.)"
+    },
+    {
+      "Code": "GLL",
+      "Name": "galon (Ame.)"
+    },
+    {
+      "Code": "GM",
+      "Name": "gram / metre kare"
+    },
+    {
+      "Code": "GN",
+      "Name": "gros galon"
+    },
+    {
+      "Code": "GO",
+      "Name": "miligram / metre kare"
+    },
+    {
+      "Code": "GP",
+      "Name": "miligram / metre küp"
+    },
+    {
+      "Code": "GQ",
+      "Name": "mikrogram / metre küp"
+    },
+    {
+      "Code": "GRM",
+      "Name": "gram"
+    },
+    {
+      "Code": "GRN",
+      "Name": "grain (0,065 gram)"
+    },
+    {
+      "Code": "GRO",
+      "Name": "gros (12 düzine)"
+    },
+    {
+      "Code": "GRT",
+      "Name": "groston"
+    },
+    {
+      "Code": "GT",
+      "Name": "bin ton"
+    },
+    {
+      "Code": "GV",
+      "Name": "gigajul"
+    },
+    {
+      "Code": "GW",
+      "Name": "galon / bin fit küp"
+    },
+    {
+      "Code": "GWH",
+      "Name": "gigavat saat"
+    },
+    {
+      "Code": "GY",
+      "Name": "gros yard"
+    },
+    {
+      "Code": "GZ",
+      "Name": "kalibre sistemi"
+    },
+    {
+      "Code": "H1",
+      "Name": "yarım sayfa - elektronik"
+    },
+    {
+      "Code": "H2",
+      "Name": "yarım litre"
+    },
+    {
+      "Code": "HA",
+      "Name": "çile (veya kangal)"
+    },
+    {
+      "Code": "HAR",
+      "Name": "hektar"
+    },
+    {
+      "Code": "HBA",
+      "Name": "hektobar"
+    },
+    {
+      "Code": "HBX",
+      "Name": "yüz kutu"
+    },
+    {
+      "Code": "HC",
+      "Name": "yüz adet"
+    },
+    {
+      "Code": "HD",
+      "Name": "yarım düzine"
+    },
+    {
+      "Code": "HE",
+      "Name": "karat / 100"
+    },
+    {
+      "Code": "HF",
+      "Name": "yüz fit"
+    },
+    {
+      "Code": "HGM",
+      "Name": "hektogram"
+    },
+    {
+      "Code": "HH",
+      "Name": "yüz fit kare"
+    },
+    {
+      "Code": "HI",
+      "Name": "yüz tabaka"
+    },
+    {
+      "Code": "HIU",
+      "Name": "yüz uluslararası birim"
+    },
+    {
+      "Code": "HJ",
+      "Name": "metrik beygir gücü"
+    },
+    {
+      "Code": "HK",
+      "Name": "yüz kilogram"
+    },
+    {
+      "Code": "HL",
+      "Name": "yüz fit (lineer)"
+    },
+    {
+      "Code": "HLT",
+      "Name": "hektolitre"
+    },
+    {
+      "Code": "HM",
+      "Name": "mil / saat"
+    },
+    {
+      "Code": "HMQ",
+      "Name": "milyon metre küp"
+    },
+    {
+      "Code": "HMT",
+      "Name": "hektometre"
+    },
+    {
+      "Code": "HN",
+      "Name": "klasik milimetre civa"
+    },
+    {
+      "Code": "HO",
+      "Name": "yüz ons"
+    },
+    {
+      "Code": "HP",
+      "Name": "klasik milimetre su"
+    },
+    {
+      "Code": "HPA",
+      "Name": "saf alkol hektolitresi"
+    },
+    {
+      "Code": "HS",
+      "Name": "yüz fit kare"
+    },
+    {
+      "Code": "HT",
+      "Name": "yarım saat"
+    },
+    {
+      "Code": "HTZ",
+      "Name": "hertz"
+    },
+    {
+      "Code": "HUR",
+      "Name": "saat"
+    },
+    {
+      "Code": "HY",
+      "Name": "yüz yard"
+    },
+    {
+      "Code": "IA",
+      "Name": "inç pound"
+    },
+    {
+      "Code": "IC",
+      "Name": "adet / inç"
+    },
+    {
+      "Code": "IE",
+      "Name": "kişi"
+    },
+    {
+      "Code": "IF",
+      "Name": "inç su"
+    },
+    {
+      "Code": "II",
+      "Name": "kolon inç"
+    },
+    {
+      "Code": "IL",
+      "Name": "inç / dakika"
+    },
+    {
+      "Code": "INH",
+      "Name": "inç"
+    },
+    {
+      "Code": "INK",
+      "Name": "inç kare"
+    },
+    {
+      "Code": "INQ",
+      "Name": "inç küp"
+    },
+    {
+      "Code": "IP",
+      "Name": "sigorta poliçesi"
+    },
+    {
+      "Code": "IT",
+      "Name": "adet / santimetre"
+    },
+    {
+      "Code": "IU",
+      "Name": "inç / saniye (doğrusal hız)"
+    },
+    {
+      "Code": "IV",
+      "Name": "inç / saniye kare (ivme)"
+    },
+    {
+      "Code": "J2",
+      "Name": "jul / kilogram"
+    },
+    {
+      "Code": "JB",
+      "Name": "jumbo"
+    },
+    {
+      "Code": "JE",
+      "Name": "jul / kelvin"
+    },
+    {
+      "Code": "JG",
+      "Name": "testi"
+    },
+    {
+      "Code": "JK",
+      "Name": "megajul / kilogram"
+    },
+    {
+      "Code": "JM",
+      "Name": "megajul / metre küp"
+    },
+    {
+      "Code": "JOU",
+      "Name": "jul"
+    },
+    {
+      "Code": "JR",
+      "Name": "kavanoz"
+    },
+    {
+      "Code": "K2",
+      "Name": "kilovolt amper reaktif istem"
+    },
+    {
+      "Code": "K3",
+      "Name": "kilovolt amper reaktif saat"
+    },
+    {
+      "Code": "K5",
+      "Name": "kilovolt amper (reaktif)"
+    },
+    {
+      "Code": "K6",
+      "Name": "kilolitre"
+    },
+    {
+      "Code": "KA",
+      "Name": "kalıp"
+    },
+    {
+      "Code": "KBA",
+      "Name": "kilobar"
+    },
+    {
+      "Code": "KD",
+      "Name": "kilogram onlu"
+    },
+    {
+      "Code": "KEL",
+      "Name": "kelvin"
+    },
+    {
+      "Code": "KF",
+      "Name": "kilopaket"
+    },
+    {
+      "Code": "KG",
+      "Name": "fıçı"
+    },
+    {
+      "Code": "KGM",
+      "Name": "kilogram"
+    },
+    {
+      "Code": "KGS",
+      "Name": "kilogram / saniye"
+    },
+    {
+      "Code": "KHZ",
+      "Name": "kilohertz"
+    },
+    {
+      "Code": "KI",
+      "Name": "kilogram / milimetre genişliği"
+    },
+    {
+      "Code": "KJ",
+      "Name": "kilosegment"
+    },
+    {
+      "Code": "KJO",
+      "Name": "kilojul"
+    },
+    {
+      "Code": "KL",
+      "Name": "kilogram / metre"
+    },
+    {
+      "Code": "KMH",
+      "Name": "kilometre / saat"
+    },
+    {
+      "Code": "KMK",
+      "Name": "kilometre kare"
+    },
+    {
+      "Code": "KMQ",
+      "Name": "kilogram / metre küp"
+    },
+    {
+      "Code": "KMT",
+      "Name": "kilometre"
+    },
+    {
+      "Code": "KNI",
+      "Name": "kilogram nitrojen"
+    },
+    {
+      "Code": "KNT",
+      "Name": "knot (deniz mili / saat)"
+    },
+    {
+      "Code": "KPA",
+      "Name": "kilopaskal"
+    },
+    {
+      "Code": "KPH",
+      "Name": "kilogram potasyum hidroksit"
+    },
+    {
+      "Code": "KPO",
+      "Name": "kilogram potasyum oksit"
+    },
+    {
+      "Code": "KPP",
+      "Name": "kilogram fosfor pentoksit (fosforik anhidrit)"
+    },
+    {
+      "Code": "KR",
+      "Name": "kiloröntgen"
+    },
+    {
+      "Code": "KS",
+      "Name": "bin pound / inç kare"
+    },
+    {
+      "Code": "KSH",
+      "Name": "kilogram sodyum hidroksit"
+    },
+    {
+      "Code": "KT",
+      "Name": "kit"
+    },
+    {
+      "Code": "KTM",
+      "Name": "kilometre"
+    },
+    {
+      "Code": "KTN",
+      "Name": "kiloton"
+    },
+    {
+      "Code": "KUR",
+      "Name": "kilogram uranyum"
+    },
+    {
+      "Code": "KVA",
+      "Name": "kilovolt - amper"
+    },
+    {
+      "Code": "KVT",
+      "Name": "kilovolt"
+    },
+    {
+      "Code": "KW",
+      "Name": "kilogram / milimetre"
+    },
+    {
+      "Code": "KWH",
+      "Name": "kilovat saat"
+    },
+    {
+      "Code": "KWT",
+      "Name": "kilovat"
+    },
+    {
+      "Code": "KX",
+      "Name": "mililitre / kilogram"
+    },
+    {
+      "Code": "L2",
+      "Name": "litre / dakika"
+    },
+    {
+      "Code": "LA",
+      "Name": "pound / inç küp"
+    },
+    {
+      "Code": "LBR",
+      "Name": "pound"
+    },
+    {
+      "Code": "LBT",
+      "Name": "kuyumcu poundu (Ame.)"
+    },
+    {
+      "Code": "LC",
+      "Name": "doğrusal santimetre"
+    },
+    {
+      "Code": "LD",
+      "Name": "litre / gün"
+    },
+    {
+      "Code": "LF",
+      "Name": "doğrusal fut"
+    },
+    {
+      "Code": "LH",
+      "Name": "işgücü saat"
+    },
+    {
+      "Code": "LI",
+      "Name": "doğrusal inç"
+    },
+    {
+      "Code": "LK",
+      "Name": "link"
+    },
+    {
+      "Code": "LM",
+      "Name": "doğrusal metre"
+    },
+    {
+      "Code": "LN",
+      "Name": "uzunluk"
+    },
+    {
+      "Code": "LO",
+      "Name": "lot"
+    },
+    {
+      "Code": "LP",
+      "Name": "sıvı pound"
+    },
+    {
+      "Code": "LPA",
+      "Name": "saf alkol litresi"
+    },
+    {
+      "Code": "LTN",
+      "Name": "ton (İng.) veya uzun ton (Ame.)"
+    },
+    {
+      "Code": "LTR",
+      "Name": "litre"
+    },
+    {
+      "Code": "LUM",
+      "Name": "lümen"
+    },
+    {
+      "Code": "LUX",
+      "Name": "lux"
+    },
+    {
+      "Code": "LX",
+      "Name": "doğrusal yard / pound"
+    },
+    {
+      "Code": "LY",
+      "Name": "doğrusal yard"
+    },
+    {
+      "Code": "M0",
+      "Name": "manyetik bant"
+    },
+    {
+      "Code": "M1",
+      "Name": "miligram / litre"
+    },
+    {
+      "Code": "M4",
+      "Name": "para değeri"
+    },
+    {
+      "Code": "M5",
+      "Name": "mikrocurie"
+    },
+    {
+      "Code": "M7",
+      "Name": "mikroinç"
+    },
+    {
+      "Code": "M9",
+      "Name": "milyon İng. Isı birimi / 1000 fut küp"
+    },
+    {
+      "Code": "MA",
+      "Name": "makina / ünite"
+    },
+    {
+      "Code": "MAL",
+      "Name": "megalitre"
+    },
+    {
+      "Code": "MAM",
+      "Name": "megametre"
+    },
+    {
+      "Code": "MAW",
+      "Name": "megavat"
+    },
+    {
+      "Code": "MBR",
+      "Name": "milibar"
+    },
+    {
+      "Code": "MC",
+      "Name": "mikrogram"
+    },
+    {
+      "Code": "MCU",
+      "Name": "milicurie"
+    },
+    {
+      "Code": "MD",
+      "Name": "kuru metrik ton"
+    },
+    {
+      "Code": "MGM",
+      "Name": "miligram"
+    },
+    {
+      "Code": "MHZ",
+      "Name": "megahertz"
+    },
+    {
+      "Code": "MIK",
+      "Name": "mil kare"
+    },
+    {
+      "Code": "MIL",
+      "Name": "bin"
+    },
+    {
+      "Code": "MIN",
+      "Name": "dakika"
+    },
+    {
+      "Code": "MIO",
+      "Name": "milyon"
+    },
+    {
+      "Code": "MIU",
+      "Name": "milyon uluslararası birim"
+    },
+    {
+      "Code": "MK",
+      "Name": "miligram / inç kare"
+    },
+    {
+      "Code": "MLD",
+      "Name": "milyar"
+    },
+    {
+      "Code": "MLT",
+      "Name": "mililitre"
+    },
+    {
+      "Code": "MMK",
+      "Name": "milimetre kare"
+    },
+    {
+      "Code": "MMQ",
+      "Name": "milimetre küp"
+    },
+    {
+      "Code": "MMT",
+      "Name": "milimetre"
+    },
+    {
+      "Code": "MON",
+      "Name": "ay"
+    },
+    {
+      "Code": "MPA",
+      "Name": "megapaskal"
+    },
+    {
+      "Code": "MQ",
+      "Name": "bin metre"
+    },
+    {
+      "Code": "MQH",
+      "Name": "metrekip / saat"
+    },
+    {
+      "Code": "MQS",
+      "Name": "metre küp / saniye"
+    },
+    {
+      "Code": "MSK",
+      "Name": "metre / saniye kare"
+    },
+    {
+      "Code": "MT",
+      "Name": "mat"
+    },
+    {
+      "Code": "MTK",
+      "Name": "metre kare"
+    },
+    {
+      "Code": "MTQ",
+      "Name": "metre küp"
+    },
+    {
+      "Code": "MTR",
+      "Name": "metre"
+    },
+    {
+      "Code": "MTS",
+      "Name": "metre / saniye"
+    },
+    {
+      "Code": "MVA",
+      "Name": "megavolt - amper"
+    },
+    {
+      "Code": "MWH",
+      "Name": "megavat saat"
+    },
+    {
+      "Code": "N2",
+      "Name": "satır sayısı"
+    },
+    {
+      "Code": "N3",
+      "Name": "baskı noktası"
+    },
+    {
+      "Code": "NA",
+      "Name": "kilogram başına miligram"
+    },
+    {
+      "Code": "NB",
+      "Name": "barn"
+    },
+    {
+      "Code": "NBB",
+      "Name": "bobin sayısı (sarım sayısı)"
+    },
+    {
+      "Code": "NC",
+      "Name": "vagon"
+    },
+    {
+      "Code": "NCL",
+      "Name": "hücre sayısı"
+    },
+    {
+      "Code": "ND",
+      "Name": "net varil"
+    },
+    {
+      "Code": "NE",
+      "Name": "net litre"
+    },
+    {
+      "Code": "NEW",
+      "Name": "newton"
+    },
+    {
+      "Code": "NF",
+      "Name": "mesaj"
+    },
+    {
+      "Code": "NG",
+      "Name": "net galon"
+    },
+    {
+      "Code": "NH",
+      "Name": "mesaj saat"
+    },
+    {
+      "Code": "NI",
+      "Name": "net ingiliz galonu"
+    },
+    {
+      "Code": "NIU",
+      "Name": "uluslararası birim sayısı"
+    },
+    {
+      "Code": "NJ",
+      "Name": "ekran sayısı"
+    },
+    {
+      "Code": "NMI",
+      "Name": "deniz mili"
+    },
+    {
+      "Code": "NMP",
+      "Name": "paket sayısı"
+    },
+    {
+      "Code": "NN",
+      "Name": "tren"
+    },
+    {
+      "Code": "NPL",
+      "Name": "parsel (sayısı)"
+    },
+    {
+      "Code": "NPR",
+      "Name": "çift (sayısı)"
+    },
+    {
+      "Code": "NPT",
+      "Name": "parça (sayısı)"
+    },
+    {
+      "Code": "NQ",
+      "Name": "1 / ohm"
+    },
+    {
+      "Code": "NR",
+      "Name": "micro 1 / ohm"
+    },
+    {
+      "Code": "NRL",
+      "Name": "rulo sayısı"
+    },
+    {
+      "Code": "NT",
+      "Name": "net ton"
+    },
+    {
+      "Code": "NTT",
+      "Name": "net gayri safi ton"
+    },
+    {
+      "Code": "NU",
+      "Name": "newton metre"
+    },
+    {
+      "Code": "NV",
+      "Name": "araç"
+    },
+    {
+      "Code": "NX",
+      "Name": "parça / bin"
+    },
+    {
+      "Code": "NY",
+      "Name": "pound / kuru metrik ton"
+    },
+    {
+      "Code": "OA",
+      "Name": "panel"
+    },
+    {
+      "Code": "OHM",
+      "Name": "ohm"
+    },
+    {
+      "Code": "ON",
+      "Name": "ons / yard kare"
+    },
+    {
+      "Code": "ONZ",
+      "Name": "ons"
+    },
+    {
+      "Code": "OP",
+      "Name": "ikili paket"
+    },
+    {
+      "Code": "OT",
+      "Name": "ekstra çalışma saati"
+    },
+    {
+      "Code": "OZA",
+      "Name": "sıvı ons (Ame.) yaklaşık 30 cc."
+    },
+    {
+      "Code": "OZI",
+      "Name": "sıvı ons (İng.) yaklaşık 30 cc."
+    },
+    {
+      "Code": "P0",
+      "Name": "sayfa - elektronik"
+    },
+    {
+      "Code": "P1",
+      "Name": "yüzdelik"
+    },
+    {
+      "Code": "P2",
+      "Name": "pound / fut"
+    },
+    {
+      "Code": "P3",
+      "Name": "üçlü paket"
+    },
+    {
+      "Code": "P4",
+      "Name": "dörtlü paket"
+    },
+    {
+      "Code": "P5",
+      "Name": "beşli paket"
+    },
+    {
+      "Code": "P6",
+      "Name": "altılı paket"
+    },
+    {
+      "Code": "P7",
+      "Name": "yedili paket"
+    },
+    {
+      "Code": "P8",
+      "Name": "sekizli paket"
+    },
+    {
+      "Code": "P9",
+      "Name": "dokuzlu paket"
+    },
+    {
+      "Code": "PA",
+      "Name": "paket"
+    },
+    {
+      "Code": "PAL",
+      "Name": "paskal"
+    },
+    {
+      "Code": "PB",
+      "Name": "çift inç"
+    },
+    {
+      "Code": "PD",
+      "Name": "pad"
+    },
+    {
+      "Code": "PE",
+      "Name": "pound karşılığı"
+    },
+    {
+      "Code": "PF",
+      "Name": "palet (lift)"
+    },
+    {
+      "Code": "PK",
+      "Name": "paket"
+    },
+    {
+      "Code": "PL",
+      "Name": "kova"
+    },
+    {
+      "Code": "PM",
+      "Name": "poun yüzdesi"
+    },
+    {
+      "Code": "PN",
+      "Name": "pound net"
+    },
+    {
+      "Code": "PO",
+      "Name": "pound / inç uzunluk"
+    },
+    {
+      "Code": "PQ",
+      "Name": "sayfa / inç"
+    },
+    {
+      "Code": "PR",
+      "Name": "çift"
+    },
+    {
+      "Code": "PS",
+      "Name": "pound-kuvvet / inç kare"
+    },
+    {
+      "Code": "PT",
+      "Name": "pint (Ame.)"
+    },
+    {
+      "Code": "PTD",
+      "Name": "kuru yük pinti (Ame.)"
+    },
+    {
+      "Code": "PTI",
+      "Name": "pint  (İng.)"
+    },
+    {
+      "Code": "PTL",
+      "Name": "sıvı pint (Ame.)"
+    },
+    {
+      "Code": "PU",
+      "Name": "tepsi"
+    },
+    {
+      "Code": "PV",
+      "Name": "yarım pint (Ame.)"
+    },
+    {
+      "Code": "PW",
+      "Name": "pound / inç genişlik"
+    },
+    {
+      "Code": "PY",
+      "Name": "dokuz litrelik kuru ölçü (Ame.)"
+    },
+    {
+      "Code": "PZ",
+      "Name": "iki galonluk kuru ölçü (İng.)"
+    },
+    {
+      "Code": "QA",
+      "Name": "sayfa - tıpkıbasım"
+    },
+    {
+      "Code": "QAN",
+      "Name": "çeyrek yıl"
+    },
+    {
+      "Code": "QB",
+      "Name": "sayfa - yazılı çıktı"
+    },
+    {
+      "Code": "QD",
+      "Name": "çeyrek doz"
+    },
+    {
+      "Code": "QH",
+      "Name": "çeyrek saat"
+    },
+    {
+      "Code": "QK",
+      "Name": "çeyrek kilogram"
+    },
+    {
+      "Code": "QR",
+      "Name": "kağıt destesi (24 parçalık)"
+    },
+    {
+      "Code": "QT",
+      "Name": "quart (galonun dörtte biri (0,95 litre) - us)"
+    },
+    {
+      "Code": "QTD",
+      "Name": "kuru yük quartı (galonun dörtte biri 0,95 litre)"
+    },
+    {
+      "Code": "QTI",
+      "Name": "quart (galonun dörtte biri (0,95 litre) - uk)"
+    },
+    {
+      "Code": "QTL",
+      "Name": "sıvı yük quartı (galonun dörtte biri, 0,95 litre)"
+    },
+    {
+      "Code": "QTR",
+      "Name": "çeyrek (25 poundluk ölçü - uk)"
+    },
+    {
+      "Code": "R1",
+      "Name": "pika (1/6 inç)"
+    },
+    {
+      "Code": "R4",
+      "Name": "kalori"
+    },
+    {
+      "Code": "R9",
+      "Name": "bin metre küp"
+    },
+    {
+      "Code": "RD",
+      "Name": "rot (doğrusal birim)"
+    },
+    {
+      "Code": "RH",
+      "Name": "işletim saati"
+    },
+    {
+      "Code": "RK",
+      "Name": "rulo (metrik ölçü)"
+    },
+    {
+      "Code": "RL",
+      "Name": "makara"
+    },
+    {
+      "Code": "RM",
+      "Name": "ream (480-500 tabakalık kağıt tomarı)"
+    },
+    {
+      "Code": "RN",
+      "Name": "ream (480-500 tabakalık kağıt tomarı, metrik ölçü)"
+    },
+    {
+      "Code": "RO",
+      "Name": "rulo"
+    },
+    {
+      "Code": "RP",
+      "Name": "pound / ream"
+    },
+    {
+      "Code": "RPM",
+      "Name": "tur / dakika"
+    },
+    {
+      "Code": "RPS",
+      "Name": "tur / saniye"
+    },
+    {
+      "Code": "RT",
+      "Name": "rtm (1 tonluk yükün 1 mil hareketinin maliyeti)"
+    },
+    {
+      "Code": "S3",
+      "Name": "fut kare / saniye"
+    },
+    {
+      "Code": "S4",
+      "Name": "metre kare / saniye"
+    },
+    {
+      "Code": "S5",
+      "Name": "1/64 inç"
+    },
+    {
+      "Code": "S6",
+      "Name": "devre"
+    },
+    {
+      "Code": "S7",
+      "Name": "bellek birimi"
+    },
+    {
+      "Code": "S8",
+      "Name": "standart reklam birimi (bir gazete kolonunun 1/16'sı)"
+    },
+    {
+      "Code": "SA",
+      "Name": "çuval"
+    },
+    {
+      "Code": "SAN",
+      "Name": "yarım yıl (6 ay)"
+    },
+    {
+      "Code": "SCO",
+      "Name": "skor"
+    },
+    {
+      "Code": "SCR",
+      "Name": "scruple (Yirmi grain'lik ve üçü bir grama gelen eczacı tartısı)"
+    },
+    {
+      "Code": "SD",
+      "Name": "solid pound"
+    },
+    {
+      "Code": "SE",
+      "Name": "kısım"
+    },
+    {
+      "Code": "SEC",
+      "Name": "saniye"
+    },
+    {
+      "Code": "SET",
+      "Name": "set"
+    },
+    {
+      "Code": "SG",
+      "Name": "parça"
+    },
+    {
+      "Code": "SHT",
+      "Name": "tonaj"
+    },
+    {
+      "Code": "SIE",
+      "Name": "siemens"
+    },
+    {
+      "Code": "SK",
+      "Name": "yarım tanker"
+    },
+    {
+      "Code": "SL",
+      "Name": "palet"
+    },
+    {
+      "Code": "SMI",
+      "Name": "mil (nizami mil)"
+    },
+    {
+      "Code": "SN",
+      "Name": "rod kare"
+    },
+    {
+      "Code": "SO",
+      "Name": "makara"
+    },
+    {
+      "Code": "SQ",
+      "Name": "kare"
+    },
+    {
+      "Code": "STN",
+      "Name": "ton (İng.) veya kısa ton (uk/Ame.)"
+    },
+    {
+      "Code": "SV",
+      "Name": "kızak"
+    },
+    {
+      "Code": "SW",
+      "Name": "çile"
+    },
+    {
+      "Code": "SX",
+      "Name": "yükleme"
+    },
+    {
+      "Code": "T0",
+      "Name": "hizmetteki telekomünikasyon hattı"
+    },
+    {
+      "Code": "T1",
+      "Name": "bin pound brüt"
+    },
+    {
+      "Code": "T3",
+      "Name": "bin adet"
+    },
+    {
+      "Code": "T4",
+      "Name": "bin çuval"
+    },
+    {
+      "Code": "T5",
+      "Name": "bin kasa"
+    },
+    {
+      "Code": "T6",
+      "Name": "bin galon (Ame.)"
+    },
+    {
+      "Code": "T8",
+      "Name": "bin doğrusal inç"
+    },
+    {
+      "Code": "TA",
+      "Name": "on fut kare"
+    },
+    {
+      "Code": "TAH",
+      "Name": "kiloamper saat"
+    },
+    {
+      "Code": "TC",
+      "Name": "kamyon yükü"
+    },
+    {
+      "Code": "TD",
+      "Name": "therm"
+    },
+    {
+      "Code": "TE",
+      "Name": "tote (sepet)"
+    },
+    {
+      "Code": "TF",
+      "Name": "on yard kare"
+    },
+    {
+      "Code": "TI",
+      "Name": "bin inç kare"
+    },
+    {
+      "Code": "TJ",
+      "Name": "bin santimetre kare"
+    },
+    {
+      "Code": "TK",
+      "Name": "tank, dikdörtgen"
+    },
+    {
+      "Code": "TL",
+      "Name": "bin fit (doğrusal)"
+    },
+    {
+      "Code": "TNE",
+      "Name": "ton (metrik ton)"
+    },
+    {
+      "Code": "TP",
+      "Name": "on paket"
+    },
+    {
+      "Code": "TPR",
+      "Name": "on çift"
+    },
+    {
+      "Code": "TQ",
+      "Name": "bin fit"
+    },
+    {
+      "Code": "TQD",
+      "Name": "günde bin metre küp"
+    },
+    {
+      "Code": "TR",
+      "Name": "on fit kare"
+    },
+    {
+      "Code": "TRL",
+      "Name": "trilyon"
+    },
+    {
+      "Code": "TS",
+      "Name": "bin fut kare"
+    },
+    {
+      "Code": "TSD",
+      "Name": "%90 kuru ton"
+    },
+    {
+      "Code": "TT",
+      "Name": "bin doğrusal metre"
+    },
+    {
+      "Code": "TU",
+      "Name": "tüp"
+    },
+    {
+      "Code": "TV",
+      "Name": "bin kilogram"
+    },
+    {
+      "Code": "TY",
+      "Name": "tank, silindirik"
+    },
+    {
+      "Code": "U1",
+      "Name": "işlem"
+    },
+    {
+      "Code": "U2",
+      "Name": "tablet"
+    },
+    {
+      "Code": "UA",
+      "Name": "torr"
+    },
+    {
+      "Code": "UB",
+      "Name": "hizmetteki telekomünikasyon hattı ortalaması"
+    },
+    {
+      "Code": "UC",
+      "Name": "telekomünikasyon bağlantı noktası"
+    },
+    {
+      "Code": "UD",
+      "Name": "dakikanın onda biri"
+    },
+    {
+      "Code": "UE",
+      "Name": "saatin onda biri"
+    },
+    {
+      "Code": "UF",
+      "Name": "ortalama telekomünikasyon hattı başına kullanım"
+    },
+    {
+      "Code": "UH",
+      "Name": "onbin yarda"
+    },
+    {
+      "Code": "UM",
+      "Name": "milyon birim"
+    },
+    {
+      "Code": "VA",
+      "Name": "volt amper / kilogram"
+    },
+    {
+      "Code": "VI",
+      "Name": "vial"
+    },
+    {
+      "Code": "VLT",
+      "Name": "volt"
+    },
+    {
+      "Code": "VS",
+      "Name": "ziyaret"
+    },
+    {
+      "Code": "W2",
+      "Name": "ıslak kilo"
+    },
+    {
+      "Code": "W4",
+      "Name": "iki hafta"
+    },
+    {
+      "Code": "WA",
+      "Name": "vat / kilogram"
+    },
+    {
+      "Code": "WB",
+      "Name": "ıslak pound"
+    },
+    {
+      "Code": "WCD",
+      "Name": "cord (odun tartı birimi)"
+    },
+    {
+      "Code": "WE",
+      "Name": "ıslak ton"
+    },
+    {
+      "Code": "WEB",
+      "Name": "weber"
+    },
+    {
+      "Code": "WEE",
+      "Name": "hafta"
+    },
+    {
+      "Code": "WG",
+      "Name": "şarap galonu"
+    },
+    {
+      "Code": "WH",
+      "Name": "teker"
+    },
+    {
+      "Code": "WHR",
+      "Name": "vat saat"
+    },
+    {
+      "Code": "WI",
+      "Name": "ağırlık / inç kare"
+    },
+    {
+      "Code": "WM",
+      "Name": "çalışma ayı"
+    },
+    {
+      "Code": "WR",
+      "Name": "sarım"
+    },
+    {
+      "Code": "WSD",
+      "Name": "standart"
+    },
+    {
+      "Code": "WTT",
+      "Name": "vat"
+    },
+    {
+      "Code": "WW",
+      "Name": "mililitre su"
+    },
+    {
+      "Code": "X1",
+      "Name": "zincir (uzunluk ölçüsü)"
+    },
+    {
+      "Code": "YDK",
+      "Name": "yarda kare"
+    },
+    {
+      "Code": "YDQ",
+      "Name": "yarda küp"
+    },
+    {
+      "Code": "YL",
+      "Name": "yüz lineer yard"
+    },
+    {
+      "Code": "YRD",
+      "Name": "yarda"
+    },
+    {
+      "Code": "YT",
+      "Name": "on yard"
+    },
+    {
+      "Code": "Z2",
+      "Name": "sandık"
+    },
+    {
+      "Code": "Z3",
+      "Name": "fıçı"
+    },
+    {
+      "Code": "Z4",
+      "Name": "hogshead (büyük fıçı, sıvı ölçüsü)"
+    },
+    {
+      "Code": "Z5",
+      "Name": "lug"
+    },
+    {
+      "Code": "ZP",
+      "Name": "sayfa"
+    },
+    {
+      "Code": "1D",
+      "Name": "caboose count"
+    },
+    {
+      "Code": "1H",
+      "Name": "caboose mile"
+    },
+    {
+      "Code": "3C",
+      "Name": "manmonth"
+    },
+    {
+      "Code": "5H",
+      "Name": "stage"
+    },
+    {
+      "Code": "A20",
+      "Name": "British thermal unit (international table) per second square foot degree Rankine"
+    },
+    {
+      "Code": "A21",
+      "Name": "British thermal unit (international table) per pound degree Rankine"
+    },
+    {
+      "Code": "A22",
+      "Name": "British thermal unit (international table) per second foot degree Rankine"
+    },
+    {
+      "Code": "A23",
+      "Name": "British thermal unit (international table) per hour square foot degree Rankine"
+    },
+    {
+      "Code": "A9",
+      "Name": "rate"
+    },
+    {
+      "Code": "AA",
+      "Name": "ball"
+    },
+    {
+      "Code": "AB",
+      "Name": "bulk pack"
+    },
+    {
+      "Code": "AP",
+      "Name": "aluminium pound only"
+    },
+    {
+      "Code": "AW",
+      "Name": "powder filled vial"
+    },
+    {
+      "Code": "AY",
+      "Name": "assembly"
+    },
+    {
+      "Code": "B3",
+      "Name": "batting pound"
+    },
+    {
+      "Code": "B5",
+      "Name": "billet"
+    },
+    {
+      "Code": "B6",
+      "Name": "bun"
+    },
+    {
+      "Code": "BD",
+      "Name": "board"
+    },
+    {
+      "Code": "BH",
+      "Name": "brush"
+    },
+    {
+      "Code": "BT",
+      "Name": "bolt"
+    },
+    {
+      "Code": "C2",
+      "Name": "carset"
+    },
+    {
+      "Code": "C5",
+      "Name": "cost"
+    },
+    {
+      "Code": "C77",
+      "Name": "pound gage"
+    },
+    {
+      "Code": "C80",
+      "Name": "rad"
+    },
+    {
+      "Code": "C96",
+      "Name": "reciprocal pascal or pascal to the power minus one"
+    },
+    {
+      "Code": "CLF",
+      "Name": "hundred leave"
+    },
+    {
+      "Code": "CV",
+      "Name": "cover"
+    },
+    {
+      "Code": "D23",
+      "Name": "pen gram (protein)"
+    },
+    {
+      "Code": "D34",
+      "Name": "tex"
+    },
+    {
+      "Code": "D63",
+      "Name": "book"
+    },
+    {
+      "Code": "D65",
+      "Name": "round"
+    },
+    {
+      "Code": "D71",
+      "Name": "calorie (international table) per second centimetre kelvin"
+    },
+    {
+      "Code": "D72",
+      "Name": "calorie (international table) per second square centimetre kelvin"
+    },
+    {
+      "Code": "D79",
+      "Name": "beam"
+    },
+    {
+      "Code": "D8",
+      "Name": "draize score"
+    },
+    {
+      "Code": "D91",
+      "Name": "rem"
+    },
+    {
+      "Code": "D98",
+      "Name": "mass pound"
+    },
+    {
+      "Code": "DE",
+      "Name": "deal"
+    },
+    {
+      "Code": "DI",
+      "Name": "dispenser"
+    },
+    {
+      "Code": "DY",
+      "Name": "directory book"
+    },
+    {
+      "Code": "E2",
+      "Name": "belt"
+    },
+    {
+      "Code": "FB",
+      "Name": "field"
+    },
+    {
+      "Code": "FE",
+      "Name": "track foot"
+    },
+    {
+      "Code": "FL",
+      "Name": "flake ton"
+    },
+    {
+      "Code": "IM",
+      "Name": "impression"
+    },
+    {
+      "Code": "JO",
+      "Name": "joint"
+    },
+    {
+      "Code": "K1",
+      "Name": "kilowatt demand"
+    },
+    {
+      "Code": "KB",
+      "Name": "kilocharacter"
+    },
+    {
+      "Code": "KNS",
+      "Name": "kilogram named substance"
+    },
+    {
+      "Code": "KO",
+      "Name": "milliequivalence caustic potash per gram of product"
+    },
+    {
+      "Code": "KSD",
+      "Name": "kilogram of substance 90 % dry"
+    },
+    {
+      "Code": "KVR",
+      "Name": "kilovar"
+    },
+    {
+      "Code": "LE",
+      "Name": "lite"
+    },
+    {
+      "Code": "LEF",
+      "Name": "leaf"
+    },
+    {
+      "Code": "LJ",
+      "Name": "large spray"
+    },
+    {
+      "Code": "LR",
+      "Name": "layer"
+    },
+    {
+      "Code": "LS",
+      "Name": "lump sum"
+    },
+    {
+      "Code": "MBE",
+      "Name": "thousand standard brick equivalent"
+    },
+    {
+      "Code": "MBF",
+      "Name": "thousand board foot"
+    },
+    {
+      "Code": "MF",
+      "Name": "milligram per square foot per side"
+    },
+    {
+      "Code": "MV",
+      "Name": "number of mults"
+    },
+    {
+      "Code": "N1",
+      "Name": "pen calorie"
+    },
+    {
+      "Code": "NAR",
+      "Name": "number of articles"
+    },
+    {
+      "Code": "NL",
+      "Name": "load"
+    },
+    {
+      "Code": "OZ",
+      "Name": "ounce av"
+    },
+    {
+      "Code": "PG",
+      "Name": "plate"
+    },
+    {
+      "Code": "PGL",
+      "Name": "proof gallon"
+    },
+    {
+      "Code": "PI",
+      "Name": "pitch"
+    },
+    {
+      "Code": "Q3",
+      "Name": "meal"
+    },
+    {
+      "Code": "RA",
+      "Name": "rack"
+    },
+    {
+      "Code": "RG",
+      "Name": "ring"
+    },
+    {
+      "Code": "RS",
+      "Name": "reset"
+    },
+    {
+      "Code": "RU",
+      "Name": "run"
+    },
+    {
+      "Code": "SP",
+      "Name": "shelf package"
+    },
+    {
+      "Code": "SR",
+      "Name": "strip"
+    },
+    {
+      "Code": "SS",
+      "Name": "sheet metric measure"
+    },
+    {
+      "Code": "SST",
+      "Name": "short standard (7200 matches)"
+    },
+    {
+      "Code": "ST",
+      "Name": "sheet"
+    },
+    {
+      "Code": "STI",
+      "Name": "stone (UK)"
+    },
+    {
+      "Code": "T7",
+      "Name": "thousand impression"
+    },
+    {
+      "Code": "TN",
+      "Name": "tin"
+    },
+    {
+      "Code": "TSH",
+      "Name": "ton of steam per hour"
+    },
+    {
+      "Code": "TW",
+      "Name": "thousand sheet"
+    },
+    {
+      "Code": "VQ",
+      "Name": "bulk"
+    },
+    {
+      "Code": "Z1",
+      "Name": "lift van"
+    },
+    {
+      "Code": "Z6",
+      "Name": "conference point"
+    },
+    {
+      "Code": "Z8",
+      "Name": "newspage agate line"
+    },
+    {
+      "Code": "ZZ",
+      "Name": "mutually defined"
+    },
+    {
+      "Code": 15,
+      "Name": "stick, military"
+    },
+    {
+      "Code": "2G",
+      "Name": "Volt AC"
+    },
+    {
+      "Code": "2H",
+      "Name": "Volt DC"
+    },
+    {
+      "Code": 31,
+      "Name": "tahmini ağırlık"
+    },
+    {
+      "Code": 36,
+      "Name": "ayak küp / dakika / ayak kare"
+    },
+    {
+      "Code": 38,
+      "Name": "Ons / ayak kare / 0,01 inç"
+    },
+    {
+      "Code": 43,
+      "Name": "süper hacimli çuval"
+    },
+    {
+      "Code": 48,
+      "Name": "hacimli yük vagonu"
+    },
+    {
+      "Code": 5,
+      "Name": "lift"
+    },
+    {
+      "Code": 6,
+      "Name": "küçük sprey"
+    },
+    {
+      "Code": 69,
+      "Name": "test-spesifik ölçek"
+    },
+    {
+      "Code": 73,
+      "Name": "ampere tum per centimetre"
+    },
+    {
+      "Code": 80,
+      "Name": "Libre / inç kare (tam)"
+    },
+    {
+      "Code": "A59",
+      "Name": "8-part cloud cover"
+    },
+    {
+      "Code": "A99",
+      "Name": "bit"
+    },
+    {
+      "Code": "ACT",
+      "Name": "aktivite"
+    },
+    {
+      "Code": "B10",
+      "Name": "bit / saniye"
+    },
+    {
+      "Code": "B17",
+      "Name": "alacak girdisi"
+    },
+    {
+      "Code": "B19",
+      "Name": "basamak (hane)"
+    },
+    {
+      "Code": "B30",
+      "Name": "Gibibit"
+    },
+    {
+      "Code": "B68",
+      "Name": "Gigabit"
+    },
+    {
+      "Code": "B80",
+      "Name": "Gigabit / saniye"
+    },
+    {
+      "Code": "B82",
+      "Name": "İnç / doğrusal ayak"
+    },
+    {
+      "Code": "C21",
+      "Name": "Kibibit"
+    },
+    {
+      "Code": "C37",
+      "Name": "Kilobit"
+    },
+    {
+      "Code": "C74",
+      "Name": "Kilobit / saniye"
+    },
+    {
+      "Code": "C79",
+      "Name": "Kilovolt amper saat"
+    },
+    {
+      "Code": "Common",
+      "Name": "BOŞ"
+    },
+    {
+      "Code": "CTG",
+      "Name": "İçerik gram"
+    },
+    {
+      "Code": "CTN",
+      "Name": "İçerik ton (metrik)"
+    },
+    {
+      "Code": "D03",
+      "Name": "Kilowat / saat"
+    },
+    {
+      "Code": "D04",
+      "Name": "Lot (ağırlık birimi)"
+    },
+    {
+      "Code": "D11",
+      "Name": "Mebibit"
+    },
+    {
+      "Code": "D36",
+      "Name": "Megabit"
+    },
+    {
+      "Code": "D68",
+      "Name": "Sözcük sayısı"
+    },
+    {
+      "Code": "D78",
+      "Name": "Megajul / saniye"
+    },
+    {
+      "Code": "DMA",
+      "Name": "Küp dekametre"
+    },
+    {
+      "Code": "DMO",
+      "Name": "Standart kilolitre"
+    },
+    {
+      "Code": "E01",
+      "Name": "Newton  / santimetre kare"
+    },
+    {
+      "Code": "E07",
+      "Name": "Megawat saat / saat"
+    },
+    {
+      "Code": "E08",
+      "Name": "Megawat / hertz"
+    },
+    {
+      "Code": "E09",
+      "Name": "Miliamper saat"
+    },
+    {
+      "Code": "E10",
+      "Name": "Günün derecesi"
+    },
+    {
+      "Code": "E11",
+      "Name": "Gigakalori"
+    },
+    {
+      "Code": "E12",
+      "Name": "Binde"
+    },
+    {
+      "Code": "E14",
+      "Name": "Kilokalori (uluslar arası tablo)"
+    },
+    {
+      "Code": "E15",
+      "Name": "Kilokalori (termokimyasal) / saat"
+    },
+    {
+      "Code": "E16",
+      "Name": "Milyon Btu(IT) / saat"
+    },
+    {
+      "Code": "E17",
+      "Name": "Ayak küp / saniye"
+    },
+    {
+      "Code": "E18",
+      "Name": "Ton / saat"
+    },
+    {
+      "Code": "E19",
+      "Name": "Ping"
+    },
+    {
+      "Code": "E20",
+      "Name": "Megabit / saniye"
+    },
+    {
+      "Code": "E21",
+      "Name": "pay"
+    },
+    {
+      "Code": "E22",
+      "Name": "TEU"
+    },
+    {
+      "Code": "E23",
+      "Name": "lastik"
+    },
+    {
+      "Code": "E25",
+      "Name": "Aktif birim"
+    },
+    {
+      "Code": "E27",
+      "Name": "Doz"
+    },
+    {
+      "Code": "E28",
+      "Name": "Kuru ağırlıkta ton"
+    },
+    {
+      "Code": "E30",
+      "Name": "strand"
+    },
+    {
+      "Code": "E31",
+      "Name": "Metre kare / litre"
+    },
+    {
+      "Code": "E32",
+      "Name": "Litre / saat"
+    },
+    {
+      "Code": "E33",
+      "Name": "Ayak / bin"
+    },
+    {
+      "Code": "E34",
+      "Name": "Gigabyte"
+    },
+    {
+      "Code": "E35",
+      "Name": "Terabyte"
+    },
+    {
+      "Code": "E36",
+      "Name": "Petabyte"
+    },
+    {
+      "Code": "E37",
+      "Name": "Piksel"
+    },
+    {
+      "Code": "E38",
+      "Name": "Megapiksel"
+    },
+    {
+      "Code": "E39",
+      "Name": "nokta / inç"
+    },
+    {
+      "Code": "E40",
+      "Name": "pay / yüzbin"
+    },
+    {
+      "Code": "E41",
+      "Name": "Kilogram-kuvvet / milimetre kare"
+    },
+    {
+      "Code": "E42",
+      "Name": "Kilogram-kuvvet / santimetre kare"
+    },
+    {
+      "Code": "E43",
+      "Name": "Jul / santimetre kare"
+    },
+    {
+      "Code": "E44",
+      "Name": "Kilogram-kuvvet metre / santimetre kare"
+    },
+    {
+      "Code": "E45",
+      "Name": "Miliohm"
+    },
+    {
+      "Code": "E46",
+      "Name": "Kilowat saat / metre küp"
+    },
+    {
+      "Code": "E47",
+      "Name": "Kilowat saat / kelvin"
+    },
+    {
+      "Code": "E48",
+      "Name": "Hizmet birimi"
+    },
+    {
+      "Code": "E49",
+      "Name": "İş günü"
+    },
+    {
+      "Code": "E50",
+      "Name": "Muhasebe birimi"
+    },
+    {
+      "Code": "E51",
+      "Name": "İş"
+    },
+    {
+      "Code": "E52",
+      "Name": "run foot"
+    },
+    {
+      "Code": "E53",
+      "Name": "test"
+    },
+    {
+      "Code": "E54",
+      "Name": "trip"
+    },
+    {
+      "Code": "E55",
+      "Name": "kullanım sayısı"
+    },
+    {
+      "Code": "E56",
+      "Name": "well"
+    },
+    {
+      "Code": "E57",
+      "Name": "zone sayısı"
+    },
+    {
+      "Code": "E58",
+      "Name": "Exabit / saniye"
+    },
+    {
+      "Code": "E59",
+      "Name": "Exbibyte"
+    },
+    {
+      "Code": "E60",
+      "Name": "Pebibyte"
+    },
+    {
+      "Code": "E61",
+      "Name": "Tebibyte"
+    },
+    {
+      "Code": "E62",
+      "Name": "Gibibyte"
+    },
+    {
+      "Code": "E63",
+      "Name": "Mebibyte"
+    },
+    {
+      "Code": "E64",
+      "Name": "Kibibyte"
+    },
+    {
+      "Code": "E65",
+      "Name": "Exbibit / metre"
+    },
+    {
+      "Code": "E66",
+      "Name": "Exbibit / metre kare"
+    },
+    {
+      "Code": "E67",
+      "Name": "Exbibit / metre küp"
+    },
+    {
+      "Code": "E68",
+      "Name": "Gigabyte / saniye"
+    },
+    {
+      "Code": "E69",
+      "Name": "Gibibit / metre"
+    },
+    {
+      "Code": "E70",
+      "Name": "Gibibit / metre kare"
+    },
+    {
+      "Code": "E71",
+      "Name": "Gibibit / metre küp"
+    },
+    {
+      "Code": "E72",
+      "Name": "Kibibit / metre"
+    },
+    {
+      "Code": "E73",
+      "Name": "Kibibit / metre kare"
+    },
+    {
+      "Code": "E74",
+      "Name": "Kibibit / metre küp"
+    },
+    {
+      "Code": "E75",
+      "Name": "Mebibit / metre"
+    },
+    {
+      "Code": "E76",
+      "Name": "Mebibit / metre kare"
+    },
+    {
+      "Code": "E77",
+      "Name": "Mebibit / metre küp"
+    },
+    {
+      "Code": "E78",
+      "Name": "Petabit"
+    },
+    {
+      "Code": "E79",
+      "Name": "Petabit / saniye"
+    },
+    {
+      "Code": "E80",
+      "Name": "Petabit / metre"
+    },
+    {
+      "Code": "E81",
+      "Name": "Petabit / metre kare"
+    },
+    {
+      "Code": "E82",
+      "Name": "Petabit / metre küp"
+    },
+    {
+      "Code": "E83",
+      "Name": "Terabit"
+    },
+    {
+      "Code": "E84",
+      "Name": "Terabit / saniye"
+    },
+    {
+      "Code": "E85",
+      "Name": "Tebibit / metre"
+    },
+    {
+      "Code": "E86",
+      "Name": "Tebibit / metre küp"
+    },
+    {
+      "Code": "E87",
+      "Name": "Tebibit / metre kare"
+    },
+    {
+      "Code": "E88",
+      "Name": "Bit / metre"
+    },
+    {
+      "Code": "E89",
+      "Name": "Bit / metre kare"
+    },
+    {
+      "Code": "E90",
+      "Name": "reciprocal centimetre"
+    },
+    {
+      "Code": "E91",
+      "Name": "reciprocal day"
+    },
+    {
+      "Code": "E92",
+      "Name": "Desimetre küp / saat"
+    },
+    {
+      "Code": "E93",
+      "Name": "Kilogram / saat"
+    },
+    {
+      "Code": "E94",
+      "Name": "Kilomol / saniye"
+    },
+    {
+      "Code": "E95",
+      "Name": "Mol / saniye"
+    },
+    {
+      "Code": "E96",
+      "Name": "Derece / saniye"
+    },
+    {
+      "Code": "E97",
+      "Name": "Milimetre / santigrat metre"
+    },
+    {
+      "Code": "E98",
+      "Name": "Santigrat / kelvin"
+    },
+    {
+      "Code": "E99",
+      "Name": "Hektopaskal / bar"
+    },
+    {
+      "Code": "F01",
+      "Name": "Bit / metre küp"
+    },
+    {
+      "Code": "F02",
+      "Name": "Kelvin / kelvin"
+    },
+    {
+      "Code": "F03",
+      "Name": "Kilopaskal / bar"
+    },
+    {
+      "Code": "F04",
+      "Name": "Milibar / bar"
+    },
+    {
+      "Code": "F05",
+      "Name": "Megapaskal / bar"
+    },
+    {
+      "Code": "F06",
+      "Name": "Puaz / bar"
+    },
+    {
+      "Code": "F07",
+      "Name": "Paskal / bar"
+    },
+    {
+      "Code": "F08",
+      "Name": "Miliamper / inç"
+    },
+    {
+      "Code": "F10",
+      "Name": "Kelvin / saat"
+    },
+    {
+      "Code": "F11",
+      "Name": "Kelvin / dakika"
+    },
+    {
+      "Code": "F12",
+      "Name": "Kelvin / saniye"
+    },
+    {
+      "Code": "F13",
+      "Name": "slug"
+    },
+    {
+      "Code": "F14",
+      "Name": "Gram / kelvin"
+    },
+    {
+      "Code": "F15",
+      "Name": "Kilogram / kelvin"
+    },
+    {
+      "Code": "F16",
+      "Name": "Miligram / kelvin"
+    },
+    {
+      "Code": "F17",
+      "Name": "Libre-kuvvet / ayak"
+    },
+    {
+      "Code": "F18",
+      "Name": "Kilogram santimetre kare"
+    },
+    {
+      "Code": "F19",
+      "Name": "Kilogram milimetre kare"
+    },
+    {
+      "Code": "F20",
+      "Name": "slug"
+    },
+    {
+      "Code": "F21",
+      "Name": "Libre-kuvvet inç"
+    },
+    {
+      "Code": "F22",
+      "Name": "Libre-kuvvet ayak / amper"
+    },
+    {
+      "Code": "F23",
+      "Name": "Gram / desimetre küp"
+    },
+    {
+      "Code": "F24",
+      "Name": "Kilogram / kilomol"
+    },
+    {
+      "Code": "F25",
+      "Name": "Gram / hertz"
+    },
+    {
+      "Code": "F26",
+      "Name": "Gram / gün"
+    },
+    {
+      "Code": "F27",
+      "Name": "Gram / saat"
+    },
+    {
+      "Code": "F28",
+      "Name": "Gram /dakika"
+    },
+    {
+      "Code": "F29",
+      "Name": "Gram / saniye"
+    },
+    {
+      "Code": "F30",
+      "Name": "Kilogram / gün"
+    },
+    {
+      "Code": "F31",
+      "Name": "Kilogram / dakika"
+    },
+    {
+      "Code": "F32",
+      "Name": "Miligram / gün"
+    },
+    {
+      "Code": "F33",
+      "Name": "Miligram / dakika"
+    },
+    {
+      "Code": "F34",
+      "Name": "Miligram / saniye"
+    },
+    {
+      "Code": "F35",
+      "Name": "Gram / gün kelvin"
+    },
+    {
+      "Code": "F36",
+      "Name": "Gram / saat kelvin"
+    },
+    {
+      "Code": "F37",
+      "Name": "Gram / dakika kelvin"
+    },
+    {
+      "Code": "F38",
+      "Name": "Gram / saniye kelvin"
+    },
+    {
+      "Code": "F39",
+      "Name": "Kilogram / gün kelvin"
+    },
+    {
+      "Code": "F40",
+      "Name": "Kilogram / saat kelvin"
+    },
+    {
+      "Code": "F41",
+      "Name": "Kilogram / dakika kelvin"
+    },
+    {
+      "Code": "F42",
+      "Name": "Kilogram / saniye kelvin"
+    },
+    {
+      "Code": "F43",
+      "Name": "Miligram / kelvin"
+    },
+    {
+      "Code": "F44",
+      "Name": "Miligram / saat kelvin"
+    },
+    {
+      "Code": "F45",
+      "Name": "Miligram / dakika kelvin"
+    },
+    {
+      "Code": "F46",
+      "Name": "Miligram / saniye kelvin"
+    },
+    {
+      "Code": "F47",
+      "Name": "Newton / milimetre"
+    },
+    {
+      "Code": "F48",
+      "Name": "Libre-kuvvet / inç"
+    },
+    {
+      "Code": "F49",
+      "Name": "rod (uzaklık birimi)"
+    },
+    {
+      "Code": "F50",
+      "Name": "Mikrometre / kelvin"
+    },
+    {
+      "Code": "F51",
+      "Name": "Santimetre / kelvin"
+    },
+    {
+      "Code": "F52",
+      "Name": "Metre / kelvin"
+    },
+    {
+      "Code": "F53",
+      "Name": "Milimetre / kelvin"
+    },
+    {
+      "Code": "F54",
+      "Name": "Miliohm / metre"
+    },
+    {
+      "Code": "F55",
+      "Name": "Ohm / mil (kara mili)"
+    },
+    {
+      "Code": "F56",
+      "Name": "Ohm / kilometre"
+    },
+    {
+      "Code": "F57",
+      "Name": "Miliamper / libre-kuvvet / inçkare"
+    },
+    {
+      "Code": "F58",
+      "Name": "reciprocal bar"
+    },
+    {
+      "Code": "F59",
+      "Name": "Miliamper / bar"
+    },
+    {
+      "Code": "F60",
+      "Name": "Santigrat / bar"
+    },
+    {
+      "Code": "F61",
+      "Name": "Kelvin / bar"
+    },
+    {
+      "Code": "F62",
+      "Name": "Gram / gün bar"
+    },
+    {
+      "Code": "F63",
+      "Name": "Gram / saat bar"
+    },
+    {
+      "Code": "F64",
+      "Name": "Gram / dakika bar"
+    },
+    {
+      "Code": "F65",
+      "Name": "Gram / saniye bar"
+    },
+    {
+      "Code": "F66",
+      "Name": "Kilogram / gün bar"
+    },
+    {
+      "Code": "F67",
+      "Name": "Kilogram / saat bar"
+    },
+    {
+      "Code": "F68",
+      "Name": "Kilogram / dakika bar"
+    },
+    {
+      "Code": "F69",
+      "Name": "Kilogram / saniye bar"
+    },
+    {
+      "Code": "F70",
+      "Name": "Miligram / gün bar"
+    },
+    {
+      "Code": "F71",
+      "Name": "Miligram / saat bar"
+    },
+    {
+      "Code": "F72",
+      "Name": "Miligram / dakika bar"
+    },
+    {
+      "Code": "F73",
+      "Name": "Miligram / saniye bar"
+    },
+    {
+      "Code": "F74",
+      "Name": "Gram / bar"
+    },
+    {
+      "Code": "F75",
+      "Name": "Miligram / bar"
+    },
+    {
+      "Code": "F76",
+      "Name": "Miliamper / milimetre"
+    },
+    {
+      "Code": "F77",
+      "Name": "Paskal - saniye / kelvin"
+    },
+    {
+      "Code": "F78",
+      "Name": "İnç su"
+    },
+    {
+      "Code": "F79",
+      "Name": "İnç cıva"
+    },
+    {
+      "Code": "F80",
+      "Name": "Su beygir gücü"
+    },
+    {
+      "Code": "F81",
+      "Name": "Bar / kelvin"
+    },
+    {
+      "Code": "F82",
+      "Name": "Hektopaskal / kelvin"
+    },
+    {
+      "Code": "F83",
+      "Name": "Kilopaskal / kelvin"
+    },
+    {
+      "Code": "F84",
+      "Name": "Milibar / kelvin"
+    },
+    {
+      "Code": "F85",
+      "Name": "Megapaskal / kelvin"
+    },
+    {
+      "Code": "F86",
+      "Name": "Puaz / kelvin"
+    },
+    {
+      "Code": "F87",
+      "Name": "Volt / litre dakika"
+    },
+    {
+      "Code": "F88",
+      "Name": "Newton / santimetre"
+    },
+    {
+      "Code": "F89",
+      "Name": "Newton metre / derece"
+    },
+    {
+      "Code": "F90",
+      "Name": "Newton metre / amper"
+    },
+    {
+      "Code": "F91",
+      "Name": "Bar litre / saniye"
+    },
+    {
+      "Code": "F92",
+      "Name": "Bar metreküp / saniye"
+    },
+    {
+      "Code": "F93",
+      "Name": "Hektopaskal litre / saniye"
+    },
+    {
+      "Code": "F94",
+      "Name": "Hektopaskal metreküp / saniye"
+    },
+    {
+      "Code": "F95",
+      "Name": "Milibar litre / saniye"
+    },
+    {
+      "Code": "F96",
+      "Name": "Milibar metreküp / saniye"
+    },
+    {
+      "Code": "F97",
+      "Name": "Megapaskal litre / saniye"
+    },
+    {
+      "Code": "F98",
+      "Name": "Megapaskal metreküp / saniye"
+    },
+    {
+      "Code": "F99",
+      "Name": "Paskal litre / saniye"
+    },
+    {
+      "Code": "FBM",
+      "Name": "fibre metre"
+    },
+    {
+      "Code": "FIT",
+      "Name": "FIT (Sürede Hata)"
+    },
+    {
+      "Code": "G01",
+      "Name": "Paskal metreküp / saniye"
+    },
+    {
+      "Code": "G04",
+      "Name": "Santimetre / bar"
+    },
+    {
+      "Code": "G05",
+      "Name": "Metre / bar"
+    },
+    {
+      "Code": "G06",
+      "Name": "Milimetre / bar"
+    },
+    {
+      "Code": "G08",
+      "Name": "İnç kare / saniye"
+    },
+    {
+      "Code": "G09",
+      "Name": "Metrekare / saniye kelvin"
+    },
+    {
+      "Code": "G10",
+      "Name": "stoks / kelvin"
+    },
+    {
+      "Code": "G11",
+      "Name": "Gram / santimetreküp bar"
+    },
+    {
+      "Code": "G12",
+      "Name": "Gram / decimetreküp bar"
+    },
+    {
+      "Code": "G13",
+      "Name": "Gram / litre bar"
+    },
+    {
+      "Code": "G14",
+      "Name": "Gram / metreküp bar"
+    },
+    {
+      "Code": "G15",
+      "Name": "Gram / mililitre bar"
+    },
+    {
+      "Code": "G16",
+      "Name": "Kilogram / santimetreküp bar"
+    },
+    {
+      "Code": "G17",
+      "Name": "Kilogram / litre bar"
+    },
+    {
+      "Code": "G18",
+      "Name": "Kilogram / metreküp bar"
+    },
+    {
+      "Code": "G19",
+      "Name": "Newton metre / kilogram"
+    },
+    {
+      "Code": "G20",
+      "Name": "Libre-kuvvet ayak / libre (pound)"
+    },
+    {
+      "Code": "G21",
+      "Name": "Küp (hacim birimi)"
+    },
+    {
+      "Code": "G23",
+      "Name": "peck"
+    },
+    {
+      "Code": "G24",
+      "Name": "Çorba kaşığı (US)"
+    },
+    {
+      "Code": "G25",
+      "Name": "Çay kaşığı (US)"
+    },
+    {
+      "Code": "G26",
+      "Name": "ster"
+    },
+    {
+      "Code": "G27",
+      "Name": "Santimetreküp / kelvin"
+    },
+    {
+      "Code": "G28",
+      "Name": "Litre / kelvin"
+    },
+    {
+      "Code": "G29",
+      "Name": "Metreküp / kelvin"
+    },
+    {
+      "Code": "G30",
+      "Name": "Mililitre / kelvin"
+    },
+    {
+      "Code": "G31",
+      "Name": "Kilogram / santimetreküp"
+    },
+    {
+      "Code": "G32",
+      "Name": "Ons / yarda küp"
+    },
+    {
+      "Code": "G33",
+      "Name": "Gram / santimetreküp kelvin"
+    },
+    {
+      "Code": "G34",
+      "Name": "Gram / decimetreküp kelvin"
+    },
+    {
+      "Code": "G35",
+      "Name": "Gram / litre kelvin"
+    },
+    {
+      "Code": "G36",
+      "Name": "Gram / metreküp kelvin"
+    },
+    {
+      "Code": "G37",
+      "Name": "Gram / mililitre kelvin"
+    },
+    {
+      "Code": "G38",
+      "Name": "Kilogram / santimetreküp kelvin"
+    },
+    {
+      "Code": "G39",
+      "Name": "Kilogram / litre kelvin"
+    },
+    {
+      "Code": "G40",
+      "Name": "Kilogram / metreküp kelvin"
+    },
+    {
+      "Code": "G41",
+      "Name": "Metrekare / saniye bar"
+    },
+    {
+      "Code": "G42",
+      "Name": "Mikrosiemens / santimetre"
+    },
+    {
+      "Code": "G43",
+      "Name": "Mikrosiemens / metre"
+    },
+    {
+      "Code": "G44",
+      "Name": "Nanosiemens / santimetre"
+    },
+    {
+      "Code": "G45",
+      "Name": "Nanosiemens / metre"
+    },
+    {
+      "Code": "G46",
+      "Name": "stoks / bar"
+    },
+    {
+      "Code": "G47",
+      "Name": "Santimetreküp / gün"
+    },
+    {
+      "Code": "G48",
+      "Name": "Santimetreküp / saat"
+    },
+    {
+      "Code": "G49",
+      "Name": "Santimetreküp / dakika"
+    },
+    {
+      "Code": "G50",
+      "Name": "Galon (US) / saat"
+    },
+    {
+      "Code": "G51",
+      "Name": "Litre / saniye"
+    },
+    {
+      "Code": "G52",
+      "Name": "Metreküp / gün"
+    },
+    {
+      "Code": "G53",
+      "Name": "Metreküp / dakika"
+    },
+    {
+      "Code": "G54",
+      "Name": "Mililitre / gün"
+    },
+    {
+      "Code": "G55",
+      "Name": "Mililitre / saat"
+    },
+    {
+      "Code": "G56",
+      "Name": "İnçküp / saat"
+    },
+    {
+      "Code": "G57",
+      "Name": "İnçküp / dakika"
+    },
+    {
+      "Code": "G58",
+      "Name": "İnçküp / saniye"
+    },
+    {
+      "Code": "G59",
+      "Name": "Miliamper / litre dakika"
+    },
+    {
+      "Code": "G60",
+      "Name": "Volt / bar"
+    },
+    {
+      "Code": "G61",
+      "Name": "Santimetreküp / gün kelvin"
+    },
+    {
+      "Code": "G62",
+      "Name": "Santimetreküp / saat kelvin"
+    },
+    {
+      "Code": "G63",
+      "Name": "Santimetreküp / dakika kelvin"
+    },
+    {
+      "Code": "G64",
+      "Name": "Santimetreküp / saniye kelvin"
+    },
+    {
+      "Code": "G65",
+      "Name": "Litre / gün kelvin"
+    },
+    {
+      "Code": "G66",
+      "Name": "Litre / saat kelvin"
+    },
+    {
+      "Code": "G67",
+      "Name": "Litre / dakika kelvin"
+    },
+    {
+      "Code": "G68",
+      "Name": "Litre / saniye kelvin"
+    },
+    {
+      "Code": "G69",
+      "Name": "Metreküp / gün kelvin"
+    },
+    {
+      "Code": "G70",
+      "Name": "Metreküp / saat kelvin"
+    },
+    {
+      "Code": "G71",
+      "Name": "Metreküp / dakika kelvin"
+    },
+    {
+      "Code": "G72",
+      "Name": "Metreküp / saniye kelvin"
+    },
+    {
+      "Code": "G73",
+      "Name": "Mililitre / gün kelvin"
+    },
+    {
+      "Code": "G74",
+      "Name": "Mililitre / saat kelvin"
+    },
+    {
+      "Code": "G75",
+      "Name": "Mililitre / dakika kelvin"
+    },
+    {
+      "Code": "G76",
+      "Name": "Mililitre / saniye kelvin"
+    },
+    {
+      "Code": "G77",
+      "Name": "Milimetrenin dördüncü kuvveti"
+    },
+    {
+      "Code": "G78",
+      "Name": "santimetreküp / gün bar"
+    },
+    {
+      "Code": "G79",
+      "Name": "santimetreküp / saat bar"
+    },
+    {
+      "Code": "G80",
+      "Name": "santimetreküp / dakika bar"
+    },
+    {
+      "Code": "G81",
+      "Name": "santimetreküp / saniye bar"
+    },
+    {
+      "Code": "G82",
+      "Name": "litre / gün bar"
+    },
+    {
+      "Code": "G83",
+      "Name": "litre / saat bar"
+    },
+    {
+      "Code": "G84",
+      "Name": "litre / dakika bar"
+    },
+    {
+      "Code": "G85",
+      "Name": "litre / saniye bar"
+    },
+    {
+      "Code": "G86",
+      "Name": "metreküp / gün bar"
+    },
+    {
+      "Code": "G87",
+      "Name": "metreküp / saat bar"
+    },
+    {
+      "Code": "G88",
+      "Name": "metreküp / dakika bar"
+    },
+    {
+      "Code": "G89",
+      "Name": "metreküp / saniye bar"
+    },
+    {
+      "Code": "G90",
+      "Name": "mililitre / gün bar"
+    },
+    {
+      "Code": "G91",
+      "Name": "mililitre / saat bar"
+    },
+    {
+      "Code": "G92",
+      "Name": "mililitre / dakika bar"
+    },
+    {
+      "Code": "G93",
+      "Name": "mililitre / saniye bar"
+    },
+    {
+      "Code": "G94",
+      "Name": "santimetreküp / bar"
+    },
+    {
+      "Code": "G95",
+      "Name": "litre / bar"
+    },
+    {
+      "Code": "G96",
+      "Name": "metreküp / bar"
+    },
+    {
+      "Code": "G97",
+      "Name": "mililitre / bar"
+    },
+    {
+      "Code": "G98",
+      "Name": "mikrohenri / kiloohm"
+    },
+    {
+      "Code": "G99",
+      "Name": "mikrohenri / ohm"
+    },
+    {
+      "Code": "GDW",
+      "Name": "gram, kuru ağırlık"
+    },
+    {
+      "Code": "GIC",
+      "Name": "gram, konteynır dahil"
+    },
+    {
+      "Code": "GIP",
+      "Name": "gram, iç ambalaj dahil"
+    },
+    {
+      "Code": "H03",
+      "Name": "henri / kiloohm"
+    },
+    {
+      "Code": "H04",
+      "Name": "henri / ohm"
+    },
+    {
+      "Code": "H05",
+      "Name": "milihenri /kiloohm"
+    },
+    {
+      "Code": "H06",
+      "Name": "milihenri / ohm"
+    },
+    {
+      "Code": "H07",
+      "Name": "paskal saniye / bar"
+    },
+    {
+      "Code": "H08",
+      "Name": "microbecquerel"
+    },
+    {
+      "Code": "H09",
+      "Name": "reciprocal year"
+    },
+    {
+      "Code": "H10",
+      "Name": "reciprocal hour"
+    },
+    {
+      "Code": "H11",
+      "Name": "reciprocal month"
+    },
+    {
+      "Code": "H12",
+      "Name": "santigrat / saat"
+    },
+    {
+      "Code": "H13",
+      "Name": "santigrat / dakika"
+    },
+    {
+      "Code": "H14",
+      "Name": "santigrat / saniye"
+    },
+    {
+      "Code": "H15",
+      "Name": "santimetrekare / gram"
+    },
+    {
+      "Code": "H16",
+      "Name": "dekametrekare"
+    },
+    {
+      "Code": "H18",
+      "Name": "hektometrekare"
+    },
+    {
+      "Code": "H19",
+      "Name": "hektometreküp"
+    },
+    {
+      "Code": "H20",
+      "Name": "kilometreküp"
+    },
+    {
+      "Code": "H21",
+      "Name": "boşluk"
+    },
+    {
+      "Code": "H22",
+      "Name": "voltkare inç / libre-kuvvet"
+    },
+    {
+      "Code": "H23",
+      "Name": "volt / inç"
+    },
+    {
+      "Code": "H24",
+      "Name": "volt / mikrosaniye"
+    },
+    {
+      "Code": "H25",
+      "Name": "yüzde / kelvin"
+    },
+    {
+      "Code": "H26",
+      "Name": "ohm / metre"
+    },
+    {
+      "Code": "H27",
+      "Name": "derece / metre"
+    },
+    {
+      "Code": "H28",
+      "Name": "mikrofarad / kilometre"
+    },
+    {
+      "Code": "H29",
+      "Name": "mikrogram / litre"
+    },
+    {
+      "Code": "H30",
+      "Name": "mikrometrekare (mikronkare)"
+    },
+    {
+      "Code": "H31",
+      "Name": "amper / kilogram"
+    },
+    {
+      "Code": "H32",
+      "Name": "amperkare saniye"
+    },
+    {
+      "Code": "H33",
+      "Name": "farad / kilometre"
+    },
+    {
+      "Code": "H34",
+      "Name": "hertz metre"
+    },
+    {
+      "Code": "H35",
+      "Name": "kelvin metre / watt"
+    },
+    {
+      "Code": "H36",
+      "Name": "megaohm / kilometre"
+    },
+    {
+      "Code": "H37",
+      "Name": "megaohm / metre"
+    },
+    {
+      "Code": "H38",
+      "Name": "megaamper"
+    },
+    {
+      "Code": "H39",
+      "Name": "megahertz kilometre"
+    },
+    {
+      "Code": "H40",
+      "Name": "newton / amper"
+    },
+    {
+      "Code": "H41",
+      "Name": "newton metre watt (- 0,5 kuvveti)"
+    },
+    {
+      "Code": "H42",
+      "Name": "paskal / metre"
+    },
+    {
+      "Code": "H43",
+      "Name": "siemens / santimetre"
+    },
+    {
+      "Code": "H44",
+      "Name": "teraohm"
+    },
+    {
+      "Code": "H45",
+      "Name": "volt saniye / metre"
+    },
+    {
+      "Code": "H46",
+      "Name": "volt / saniye"
+    },
+    {
+      "Code": "H47",
+      "Name": "watt / metreküp"
+    },
+    {
+      "Code": "H48",
+      "Name": "attofarad"
+    },
+    {
+      "Code": "H49",
+      "Name": "santimetre / saat"
+    },
+    {
+      "Code": "H50",
+      "Name": "reciprocal cubic centimetre"
+    },
+    {
+      "Code": "H51",
+      "Name": "desibel / kilometre"
+    },
+    {
+      "Code": "H52",
+      "Name": "desibel / metre"
+    },
+    {
+      "Code": "H53",
+      "Name": "kilogram / bar"
+    },
+    {
+      "Code": "H54",
+      "Name": "kilogram / desimetreküp kelvin"
+    },
+    {
+      "Code": "H55",
+      "Name": "kilogram / desimetreküp bar"
+    },
+    {
+      "Code": "H56",
+      "Name": "kilogram / metrakare saniye"
+    },
+    {
+      "Code": "H57",
+      "Name": "inç / 2 pi radyan"
+    },
+    {
+      "Code": "H58",
+      "Name": "metre / volt saniye"
+    },
+    {
+      "Code": "H59",
+      "Name": "metrekare / newton"
+    },
+    {
+      "Code": "H60",
+      "Name": "metreküp / metreküp"
+    },
+    {
+      "Code": "H61",
+      "Name": "milisiemens / santimetre"
+    },
+    {
+      "Code": "H62",
+      "Name": "milivolt / dakika"
+    },
+    {
+      "Code": "H63",
+      "Name": "miligram / santimetrekare"
+    },
+    {
+      "Code": "H64",
+      "Name": "miligram / gram"
+    },
+    {
+      "Code": "H65",
+      "Name": "mililitre / metreküp"
+    },
+    {
+      "Code": "H66",
+      "Name": "mililitre / yıl"
+    },
+    {
+      "Code": "H67",
+      "Name": "mililitre / saat"
+    },
+    {
+      "Code": "H68",
+      "Name": "milimol / gram"
+    },
+    {
+      "Code": "H69",
+      "Name": "pikopaskal / kilometre"
+    },
+    {
+      "Code": "H70",
+      "Name": "pikosaniye"
+    },
+    {
+      "Code": "H71",
+      "Name": "yüzde / ay"
+    },
+    {
+      "Code": "H72",
+      "Name": "yüzde / hektobar"
+    },
+    {
+      "Code": "H73",
+      "Name": "yüzde / dekakelvin"
+    },
+    {
+      "Code": "H74",
+      "Name": "watt / metre"
+    },
+    {
+      "Code": "H75",
+      "Name": "dekapaskal"
+    },
+    {
+      "Code": "H76",
+      "Name": "gram / milimetre"
+    },
+    {
+      "Code": "H77",
+      "Name": "modül genişliği"
+    },
+    {
+      "Code": "H78",
+      "Name": "konvansiyonel santimetre su"
+    },
+    {
+      "Code": "H79",
+      "Name": "French gauge"
+    },
+    {
+      "Code": "H80",
+      "Name": "rack unit"
+    },
+    {
+      "Code": "H81",
+      "Name": "milimetre / dakika"
+    },
+    {
+      "Code": "H82",
+      "Name": "büyük nokta"
+    },
+    {
+      "Code": "H83",
+      "Name": "litre / kilogram"
+    },
+    {
+      "Code": "H84",
+      "Name": "gram / milimetre"
+    },
+    {
+      "Code": "H85",
+      "Name": "reciprocal week"
+    },
+    {
+      "Code": "H87",
+      "Name": "parça"
+    },
+    {
+      "Code": "H88",
+      "Name": "megaohm kilometre"
+    },
+    {
+      "Code": "H89",
+      "Name": "yüzde / ohm"
+    },
+    {
+      "Code": "H90",
+      "Name": "yüzde / derece"
+    },
+    {
+      "Code": "H91",
+      "Name": "yüzde / onbin"
+    },
+    {
+      "Code": "H92",
+      "Name": "yüzde / yüzbin"
+    },
+    {
+      "Code": "H93",
+      "Name": "yüzde / yüz"
+    },
+    {
+      "Code": "H94",
+      "Name": "yüzde / bin"
+    },
+    {
+      "Code": "H95",
+      "Name": "yüzde / volt"
+    },
+    {
+      "Code": "H96",
+      "Name": "yüzde / bar"
+    },
+    {
+      "Code": "H98",
+      "Name": "yüzde / inç"
+    },
+    {
+      "Code": "H99",
+      "Name": "yüzde / metre"
+    },
+    {
+      "Code": "HDW",
+      "Name": "yüz kilogram, kuru ağırlık"
+    },
+    {
+      "Code": "HEA",
+      "Name": "baş"
+    },
+    {
+      "Code": "HKM",
+      "Name": "yüz kilogram, net kütle"
+    },
+    {
+      "Code": "ISD",
+      "Name": "uluslar arası şeker derecesi"
+    },
+    {
+      "Code": "J10",
+      "Name": "yüzde / milimetre"
+    },
+    {
+      "Code": "J12",
+      "Name": "per mille per psi"
+    },
+    {
+      "Code": "J13",
+      "Name": "API (gravite) derecesi"
+    },
+    {
+      "Code": "J14",
+      "Name": "Baume derecesi (orijinal ölçek)"
+    },
+    {
+      "Code": "J15",
+      "Name": "Baume  derecesi (US Ağır)"
+    },
+    {
+      "Code": "J16",
+      "Name": "Baume  derecesi (US Hafif)"
+    },
+    {
+      "Code": "J17",
+      "Name": "Balling derecesi"
+    },
+    {
+      "Code": "J18",
+      "Name": "Brix derecesi"
+    },
+    {
+      "Code": "J19",
+      "Name": "Fahrenayt saat ayak kare / İngiliz Sıcaklık Birimi (termokimyasal)"
+    },
+    {
+      "Code": "J20",
+      "Name": "Fahrenayt / kelvin"
+    },
+    {
+      "Code": "J21",
+      "Name": "Fahrenayt / bar"
+    },
+    {
+      "Code": "J22",
+      "Name": "Fahrenayt saat ayak kare / İngiliz Sıcaklık Birimi (uluslar arası tablo)"
+    },
+    {
+      "Code": "J23",
+      "Name": "Fahrenayt / saat"
+    },
+    {
+      "Code": "J24",
+      "Name": "Fahrenayt / dakika"
+    },
+    {
+      "Code": "J25",
+      "Name": "Fahrenayt / saniye"
+    },
+    {
+      "Code": "J26",
+      "Name": "reciprocal degree Fahrenheit"
+    },
+    {
+      "Code": "J27",
+      "Name": "Oechsle derecesi"
+    },
+    {
+      "Code": "J28",
+      "Name": "Rankine derecesi / saat"
+    },
+    {
+      "Code": "J29",
+      "Name": "Rankine derecesi / dakika"
+    },
+    {
+      "Code": "J30",
+      "Name": "Rankine derecesi / saniye"
+    },
+    {
+      "Code": "J31",
+      "Name": "Twaddell derecesi"
+    },
+    {
+      "Code": "J32",
+      "Name": "mikro puaz"
+    },
+    {
+      "Code": "J33",
+      "Name": "mikrogram / metreküp - kelvin"
+    },
+    {
+      "Code": "J34",
+      "Name": "mikrogram / metreküp - bar"
+    },
+    {
+      "Code": "J35",
+      "Name": "mikrogram / metreküp - bar"
+    },
+    {
+      "Code": "J36",
+      "Name": "mikrolitre / litre"
+    },
+    {
+      "Code": "J38",
+      "Name": "baud"
+    },
+    {
+      "Code": "J39",
+      "Name": "İngiliz sıcaklık birimi (ortalama)"
+    },
+    {
+      "Code": "J40",
+      "Name": "İngiliz sıcaklık birimi (uluslar arası tablo) ayak / saat ayak kare Fahrenayt"
+    },
+    {
+      "Code": "J41",
+      "Name": "İngiliz sıcaklık birimi (uluslar arası tablo) inç / saat ayak kare Fahrenayt"
+    },
+    {
+      "Code": "J42",
+      "Name": "İngiliz sıcaklık birimi (uluslar arası tablo) inç / saniye ayak kare Fahrenayt"
+    },
+    {
+      "Code": "J43",
+      "Name": "İngiliz sıcaklık birimi (uluslar arası tablo) / libre Fahrenayt"
+    },
+    {
+      "Code": "J44",
+      "Name": "İngiliz sıcaklık birimi (uluslar arası tablo) / dakika"
+    },
+    {
+      "Code": "J45",
+      "Name": "İngiliz sıcaklık birimi (uluslar arası tablo) / saniye"
+    },
+    {
+      "Code": "J46",
+      "Name": "İngiliz sıcaklık birimi (termokimyasal) ayak / saat ayak kare Fahrenayt"
+    },
+    {
+      "Code": "J47",
+      "Name": "İngiliz sıcaklık birimi (termokimyasal) / saat"
+    },
+    {
+      "Code": "J48",
+      "Name": "İngiliz sıcaklık birimi (termokimyasal) inç / saat ayak kare Fahrenayt"
+    },
+    {
+      "Code": "J49",
+      "Name": "İngiliz sıcaklık birimi (termokimyasal) inç / saniye ayak kare Fahrenayt"
+    },
+    {
+      "Code": "J50",
+      "Name": "İngiliz sıcaklık birimi (termokimyasal) / libre Fahrenayt"
+    },
+    {
+      "Code": "J51",
+      "Name": "İngiliz sıcaklık birimi (termokimyasal) / dakika"
+    },
+    {
+      "Code": "J52",
+      "Name": "İngiliz sıcaklık birimi (termokimyasal) / saniye"
+    },
+    {
+      "Code": "J53",
+      "Name": "coulomb metre kare / kilogram"
+    },
+    {
+      "Code": "J54",
+      "Name": "megabaud"
+    },
+    {
+      "Code": "J55",
+      "Name": "watt saniye"
+    },
+    {
+      "Code": "J56",
+      "Name": "bar / bar"
+    },
+    {
+      "Code": "J57",
+      "Name": "varil (UK petrol)"
+    },
+    {
+      "Code": "J58",
+      "Name": "varil (UK petrol) / dakika"
+    },
+    {
+      "Code": "J59",
+      "Name": "varil (UK petrol) / gün"
+    },
+    {
+      "Code": "J60",
+      "Name": "varil (UK petrol) / saat"
+    },
+    {
+      "Code": "J61",
+      "Name": "varil (UK petrol) / saniye"
+    },
+    {
+      "Code": "J62",
+      "Name": "varil (US petrol) / saat"
+    },
+    {
+      "Code": "J63",
+      "Name": "varil (US petrol) / saniye"
+    },
+    {
+      "Code": "J64",
+      "Name": "buşel (UK) / gün"
+    },
+    {
+      "Code": "J65",
+      "Name": "buşel (UK) / saat"
+    },
+    {
+      "Code": "J66",
+      "Name": "buşel (UK) / dakika"
+    },
+    {
+      "Code": "J67",
+      "Name": "buşel (UK) / saniye"
+    },
+    {
+      "Code": "J68",
+      "Name": "buşel (US - kuru) / gün"
+    },
+    {
+      "Code": "J69",
+      "Name": "buşel (US - kuru) / saat"
+    },
+    {
+      "Code": "J70",
+      "Name": "buşel (US - kuru) / dakika"
+    },
+    {
+      "Code": "J71",
+      "Name": "buşel (US - kuru) / saniye"
+    },
+    {
+      "Code": "J72",
+      "Name": "centinewton metre"
+    },
+    {
+      "Code": "J73",
+      "Name": "sentipuaz / kelvin"
+    },
+    {
+      "Code": "J74",
+      "Name": "sentipuaz / bar"
+    },
+    {
+      "Code": "J75",
+      "Name": "kalori (ortalama)"
+    },
+    {
+      "Code": "J76",
+      "Name": "kalori (uluslar arası tablo) / gram santigrat"
+    },
+    {
+      "Code": "J78",
+      "Name": "calorie (thermochemical) per centimetre second degree Celsius"
+    },
+    {
+      "Code": "J79",
+      "Name": "kalori (termokimyasal) / gram santigrat"
+    },
+    {
+      "Code": "J81",
+      "Name": "kalori (termokimyasal) / dakika"
+    },
+    {
+      "Code": "J82",
+      "Name": "kalori (termokimyasal) / saniye"
+    },
+    {
+      "Code": "J83",
+      "Name": "clo"
+    },
+    {
+      "Code": "J84",
+      "Name": "santimetre / saniye kelvin"
+    },
+    {
+      "Code": "J85",
+      "Name": "santimetre / saniye bar"
+    },
+    {
+      "Code": "J87",
+      "Name": "santimetreküp / metreküp"
+    },
+    {
+      "Code": "J89",
+      "Name": "santimetre cıva"
+    },
+    {
+      "Code": "J90",
+      "Name": "desimetreküp /gün"
+    },
+    {
+      "Code": "J91",
+      "Name": "desimetreküp / metreküp"
+    },
+    {
+      "Code": "J92",
+      "Name": "desimetreküp / dakika"
+    },
+    {
+      "Code": "J93",
+      "Name": "desimetreküp / saniye"
+    },
+    {
+      "Code": "J94",
+      "Name": "din santimetre"
+    },
+    {
+      "Code": "J95",
+      "Name": "ons (UK likit) / gün"
+    },
+    {
+      "Code": "J96",
+      "Name": "ons (UK likit) / saat"
+    },
+    {
+      "Code": "J97",
+      "Name": "ons (UK likit) / dakika"
+    },
+    {
+      "Code": "J98",
+      "Name": "ons (UK likit) / saniye"
+    },
+    {
+      "Code": "J99",
+      "Name": "ons (UK likit) / gün"
+    },
+    {
+      "Code": "JNT",
+      "Name": "boru hattı birleştirme parçası"
+    },
+    {
+      "Code": "JPS",
+      "Name": "yüz metre"
+    },
+    {
+      "Code": "JWL",
+      "Name": "mücevherlerin sayısı"
+    },
+    {
+      "Code": "K10",
+      "Name": "ons (US likit) / saat"
+    },
+    {
+      "Code": "K11",
+      "Name": "ons (US likit) / dakika"
+    },
+    {
+      "Code": "K12",
+      "Name": "ons (US likit) / saniye"
+    },
+    {
+      "Code": "K13",
+      "Name": "ayak / fahrenayt"
+    },
+    {
+      "Code": "K14",
+      "Name": "ayak / saat"
+    },
+    {
+      "Code": "K15",
+      "Name": "ayak libre-kuvvet / saat"
+    },
+    {
+      "Code": "K16",
+      "Name": "ayak libre-kuvvet / dakika"
+    },
+    {
+      "Code": "K17",
+      "Name": "ayak / psi"
+    },
+    {
+      "Code": "K18",
+      "Name": "ayak / saniye - fahrenayt"
+    },
+    {
+      "Code": "K19",
+      "Name": "ayak / saniye psi"
+    },
+    {
+      "Code": "K20",
+      "Name": "reciprocal cubic foot"
+    },
+    {
+      "Code": "K21",
+      "Name": "ayak küp / fahrenayt"
+    },
+    {
+      "Code": "K22",
+      "Name": "ayak küp / gün"
+    },
+    {
+      "Code": "K23",
+      "Name": "ayak küp / psi"
+    },
+    {
+      "Code": "K24",
+      "Name": "ayak su"
+    },
+    {
+      "Code": "K25",
+      "Name": "ayak cıva"
+    },
+    {
+      "Code": "K26",
+      "Name": "galon (UK) / gün"
+    },
+    {
+      "Code": "K27",
+      "Name": "galon (UK) / saat"
+    },
+    {
+      "Code": "K28",
+      "Name": "galon (UK) / saniye"
+    },
+    {
+      "Code": "K30",
+      "Name": "galon (US likit) / saniye"
+    },
+    {
+      "Code": "K31",
+      "Name": "gram-kuvvet / santimetrekare"
+    },
+    {
+      "Code": "K32",
+      "Name": "gill (UK) / gün"
+    },
+    {
+      "Code": "K33",
+      "Name": "gill (UK) / saat"
+    },
+    {
+      "Code": "K34",
+      "Name": "gill (UK) / dakika"
+    },
+    {
+      "Code": "K35",
+      "Name": "gill (UK) / saniye"
+    },
+    {
+      "Code": "K36",
+      "Name": "gill (US) / gün"
+    },
+    {
+      "Code": "K37",
+      "Name": "gill (US) / saat"
+    },
+    {
+      "Code": "K38",
+      "Name": "gill (US) / dakika"
+    },
+    {
+      "Code": "K39",
+      "Name": "gill (US) / saniye"
+    },
+    {
+      "Code": "K40",
+      "Name": "standart serbest düşüş ivmesi"
+    },
+    {
+      "Code": "K41",
+      "Name": "grain / galon (US)"
+    },
+    {
+      "Code": "K42",
+      "Name": "beygir günü (kazan)"
+    },
+    {
+      "Code": "K43",
+      "Name": "beygir günü (elektrik)"
+    },
+    {
+      "Code": "K45",
+      "Name": "inç / fahrenayt"
+    },
+    {
+      "Code": "K46",
+      "Name": "inç / psi"
+    },
+    {
+      "Code": "K47",
+      "Name": "inç / saniye fahrenayt"
+    },
+    {
+      "Code": "K48",
+      "Name": "inç / saniye psi"
+    },
+    {
+      "Code": "K49",
+      "Name": "reciprocal cubic inch"
+    },
+    {
+      "Code": "K50",
+      "Name": "kilobaud"
+    },
+    {
+      "Code": "K51",
+      "Name": "kilokalori (ortalama)"
+    },
+    {
+      "Code": "K52",
+      "Name": "Kilokalori (uluslar arası tablo) / saat metre santigrat"
+    },
+    {
+      "Code": "K53",
+      "Name": "kilokalori (termokimyasal)"
+    },
+    {
+      "Code": "K54",
+      "Name": "kilokalori (termokimyasal) / dakika"
+    },
+    {
+      "Code": "K55",
+      "Name": "kilokalori (termokimyasal) / saniye"
+    },
+    {
+      "Code": "K58",
+      "Name": "kilomol / saat"
+    },
+    {
+      "Code": "K59",
+      "Name": "kilomol / metreküp kelvin"
+    },
+    {
+      "Code": "K60",
+      "Name": "kilomol / metreküp bar"
+    },
+    {
+      "Code": "K61",
+      "Name": "kilomol / dakika"
+    },
+    {
+      "Code": "K62",
+      "Name": "litre / litre"
+    },
+    {
+      "Code": "K63",
+      "Name": "reciprocal litre"
+    },
+    {
+      "Code": "K64",
+      "Name": "libre (avoirdupois) / fahrenayt"
+    },
+    {
+      "Code": "K65",
+      "Name": "libre (avoirdupois) ayak kare"
+    },
+    {
+      "Code": "K66",
+      "Name": "libre (avoirdupois) / gün"
+    },
+    {
+      "Code": "K67",
+      "Name": "libre / ayak saat"
+    },
+    {
+      "Code": "K68",
+      "Name": "libre / ayak saniye"
+    },
+    {
+      "Code": "K69",
+      "Name": "libre (avoirdupois) /ayak küp fahrenayt"
+    },
+    {
+      "Code": "K70",
+      "Name": "libre (avoirdupois) / ayak küp psi"
+    },
+    {
+      "Code": "K71",
+      "Name": "libre (avoirdupois) / galon (UK)"
+    },
+    {
+      "Code": "K73",
+      "Name": "libre (avoirdupois) / saat - fahrenayt"
+    },
+    {
+      "Code": "K74",
+      "Name": "libre (avoirdupois) / saat psi"
+    },
+    {
+      "Code": "K75",
+      "Name": "libre (avoirdupois) / inç küp fahrenayt"
+    },
+    {
+      "Code": "K76",
+      "Name": "libre (avoirdupois) / inç küp psi"
+    },
+    {
+      "Code": "K77",
+      "Name": "libre (avoirdupois) / psi"
+    },
+    {
+      "Code": "K78",
+      "Name": "libre (avoirdupois) / dakika"
+    },
+    {
+      "Code": "K79",
+      "Name": "libre (avoirdupois) / dakika fahrenayt"
+    },
+    {
+      "Code": "K80",
+      "Name": "libre (avoirdupois) / dakika psi"
+    },
+    {
+      "Code": "K81",
+      "Name": "libre (avoirdupois) / saniye"
+    },
+    {
+      "Code": "K82",
+      "Name": "libre (avoirdupois) / saniye fahrenayt"
+    },
+    {
+      "Code": "K83",
+      "Name": "libre (avoirdupois) / saniye psi"
+    },
+    {
+      "Code": "K84",
+      "Name": "libre / yard küp"
+    },
+    {
+      "Code": "K85",
+      "Name": "libre-kuvvet / ayak kare"
+    },
+    {
+      "Code": "K86",
+      "Name": "libre-kuvvet / inç kare fahrenayt"
+    },
+    {
+      "Code": "K87",
+      "Name": "psi inç küp / saniye"
+    },
+    {
+      "Code": "K88",
+      "Name": "psi litre / saniye"
+    },
+    {
+      "Code": "K89",
+      "Name": "psi metreküp / saniye"
+    },
+    {
+      "Code": "K90",
+      "Name": "psi yard küp / saniye"
+    },
+    {
+      "Code": "K91",
+      "Name": "libre-kuvvet saniye / ayak kare"
+    },
+    {
+      "Code": "K92",
+      "Name": "libre-kuvvet saniye/ inç kare"
+    },
+    {
+      "Code": "K93",
+      "Name": "reciprocal psi"
+    },
+    {
+      "Code": "K94",
+      "Name": "kuart (UK likit) / gün"
+    },
+    {
+      "Code": "K95",
+      "Name": "kuart (UK likit) / saat"
+    },
+    {
+      "Code": "K96",
+      "Name": "kuart (UK likit) / dakika"
+    },
+    {
+      "Code": "K97",
+      "Name": "kuart (UK likit) / saniye"
+    },
+    {
+      "Code": "K98",
+      "Name": "kuart (UK likit) / gün"
+    },
+    {
+      "Code": "K99",
+      "Name": "kuart (UK likit) / saat"
+    },
+    {
+      "Code": "KAT",
+      "Name": "katal"
+    },
+    {
+      "Code": "KCC",
+      "Name": "kolin klorür kilogram"
+    },
+    {
+      "Code": "KDW",
+      "Name": "kilogram süzme net ağırlık"
+    },
+    {
+      "Code": "KHY",
+      "Name": "hidrojen peroksit kilogram"
+    },
+    {
+      "Code": "KIC",
+      "Name": "kilogram, konteynır dahil"
+    },
+    {
+      "Code": "KIP",
+      "Name": "kilogram, iç ambalaj dahil"
+    },
+    {
+      "Code": "KLK",
+      "Name": "laktik kuru malzeme yüzdesi"
+    },
+    {
+      "Code": "KLX",
+      "Name": "kilolux"
+    },
+    {
+      "Code": "KMA",
+      "Name": "metilamin kilogram"
+    },
+    {
+      "Code": "KWO",
+      "Name": "volfram üçoksit kilogram"
+    },
+    {
+      "Code": "L10",
+      "Name": "kuart (US likit) / dakika"
+    },
+    {
+      "Code": "L11",
+      "Name": "kuart (US likit) / saniye"
+    },
+    {
+      "Code": "L12",
+      "Name": "metre / saniye kelvin"
+    },
+    {
+      "Code": "L13",
+      "Name": "metre / saniye bar"
+    },
+    {
+      "Code": "L14",
+      "Name": "metrekare  saat santigrat / kilokalori (uluslar arası tablo)"
+    },
+    {
+      "Code": "L15",
+      "Name": "milipaskal saniye / kelvin"
+    },
+    {
+      "Code": "L16",
+      "Name": "milipaskal saniye / bar"
+    },
+    {
+      "Code": "L17",
+      "Name": "miligram / metreküp kelvin"
+    },
+    {
+      "Code": "L18",
+      "Name": "miligram / metreküp bar"
+    },
+    {
+      "Code": "L19",
+      "Name": "mililitre / litre"
+    },
+    {
+      "Code": "L20",
+      "Name": "reciprocal cubic millimetre"
+    },
+    {
+      "Code": "L21",
+      "Name": "milimetreküp / metreküp"
+    },
+    {
+      "Code": "L23",
+      "Name": "mol / saat"
+    },
+    {
+      "Code": "L24",
+      "Name": "mol / kilogram kelvin"
+    },
+    {
+      "Code": "L25",
+      "Name": "mol / kilogram bar"
+    },
+    {
+      "Code": "L26",
+      "Name": "mol / litre kelvin"
+    },
+    {
+      "Code": "L27",
+      "Name": "mol / litre bar"
+    },
+    {
+      "Code": "L28",
+      "Name": "mol / metreküp kelvin"
+    },
+    {
+      "Code": "L29",
+      "Name": "mol / metreküp bar"
+    },
+    {
+      "Code": "L30",
+      "Name": "mol / dakika"
+    },
+    {
+      "Code": "L31",
+      "Name": "insan eşiti miliröntgen"
+    },
+    {
+      "Code": "L32",
+      "Name": "nanogram / kilogram"
+    },
+    {
+      "Code": "L33",
+      "Name": "ons (avoirdupois) / gün"
+    },
+    {
+      "Code": "L34",
+      "Name": "ons (avoirdupois) / saat"
+    },
+    {
+      "Code": "L35",
+      "Name": "ons (avoirdupois) / dakika"
+    },
+    {
+      "Code": "L36",
+      "Name": "ons (avoirdupois) / saniye"
+    },
+    {
+      "Code": "L37",
+      "Name": "ons (avoirdupois) / galon (UK)"
+    },
+    {
+      "Code": "L38",
+      "Name": "ons (avoirdupois) / galon (US)"
+    },
+    {
+      "Code": "L39",
+      "Name": "ons (avoirdupois) / inç küp"
+    },
+    {
+      "Code": "L40",
+      "Name": "ons (avoirdupois)-kuvvet"
+    },
+    {
+      "Code": "L41",
+      "Name": "ons (avoirdupois)-kuvvet inç"
+    },
+    {
+      "Code": "L42",
+      "Name": "pikosiemens / metre"
+    },
+    {
+      "Code": "L43",
+      "Name": "peck (UK)"
+    },
+    {
+      "Code": "L44",
+      "Name": "peck (UK) / gün"
+    },
+    {
+      "Code": "L45",
+      "Name": "peck (UK) / saat"
+    },
+    {
+      "Code": "L46",
+      "Name": "peck (UK) / dakika"
+    },
+    {
+      "Code": "L47",
+      "Name": "peck (UK) / saniye"
+    },
+    {
+      "Code": "L48",
+      "Name": "peck (US kuru) / gün"
+    },
+    {
+      "Code": "L49",
+      "Name": "peck (US kuru) / saat"
+    },
+    {
+      "Code": "L50",
+      "Name": "peck (US kuru) / dakika"
+    },
+    {
+      "Code": "L51",
+      "Name": "peck (US kuru) / saniye"
+    },
+    {
+      "Code": "L52",
+      "Name": "psi / psi"
+    },
+    {
+      "Code": "L53",
+      "Name": "pint (UK) / gün"
+    },
+    {
+      "Code": "L54",
+      "Name": "pint (UK) / saat"
+    },
+    {
+      "Code": "L55",
+      "Name": "pint (UK) / dakika"
+    },
+    {
+      "Code": "L56",
+      "Name": "pint (UK) / saniye"
+    },
+    {
+      "Code": "L57",
+      "Name": "pint (US likit) / gün"
+    },
+    {
+      "Code": "L58",
+      "Name": "pint (US likit) / saat"
+    },
+    {
+      "Code": "L59",
+      "Name": "pint (US likit) / dakika"
+    },
+    {
+      "Code": "L60",
+      "Name": "pint (US likit) / saniye"
+    },
+    {
+      "Code": "L61",
+      "Name": "pint (US kuru)"
+    },
+    {
+      "Code": "L62",
+      "Name": "kuart (US kuru)"
+    },
+    {
+      "Code": "L63",
+      "Name": "slug / gün"
+    },
+    {
+      "Code": "L64",
+      "Name": "slug / ayak saniye"
+    },
+    {
+      "Code": "L65",
+      "Name": "slug / ayak küp"
+    },
+    {
+      "Code": "L66",
+      "Name": "slug / saat"
+    },
+    {
+      "Code": "L67",
+      "Name": "slug / dakika"
+    },
+    {
+      "Code": "L68",
+      "Name": "slug / saniye"
+    },
+    {
+      "Code": "L69",
+      "Name": "ton / kelvin"
+    },
+    {
+      "Code": "L70",
+      "Name": "ton / bar"
+    },
+    {
+      "Code": "L71",
+      "Name": "ton / gün"
+    },
+    {
+      "Code": "L72",
+      "Name": "ton / gün kelvin"
+    },
+    {
+      "Code": "L73",
+      "Name": "ton / gün bar"
+    },
+    {
+      "Code": "L74",
+      "Name": "ton / saat kelvin"
+    },
+    {
+      "Code": "L75",
+      "Name": "ton / saat bar"
+    },
+    {
+      "Code": "L76",
+      "Name": "ton / metreküp kelvin"
+    },
+    {
+      "Code": "L77",
+      "Name": "ton / metreküp bar"
+    },
+    {
+      "Code": "L78",
+      "Name": "ton / dakika"
+    },
+    {
+      "Code": "L79",
+      "Name": "ton / dakika kelvin"
+    },
+    {
+      "Code": "L80",
+      "Name": "ton / dakika bar"
+    },
+    {
+      "Code": "L81",
+      "Name": "ton / saniye"
+    },
+    {
+      "Code": "L82",
+      "Name": "ton / saniye kelvin"
+    },
+    {
+      "Code": "L83",
+      "Name": "ton / saniye bar"
+    },
+    {
+      "Code": "L84",
+      "Name": "ton (UK deniz taşımacılığı)"
+    },
+    {
+      "Code": "L85",
+      "Name": "ton (uzun) / gün"
+    },
+    {
+      "Code": "L86",
+      "Name": "ton (US deniz taşımacılığı)"
+    },
+    {
+      "Code": "L87",
+      "Name": "ton (kısa) / fahrenayt"
+    },
+    {
+      "Code": "L88",
+      "Name": "ton (kısa) / gün"
+    },
+    {
+      "Code": "L89",
+      "Name": "ton (kısa) / saat Fahrenayt"
+    },
+    {
+      "Code": "L90",
+      "Name": "ton (kısa) / saat psi"
+    },
+    {
+      "Code": "L91",
+      "Name": "ton (kısa) / psi"
+    },
+    {
+      "Code": "L92",
+      "Name": "ton (UK uzun) / yarda küp"
+    },
+    {
+      "Code": "L93",
+      "Name": "ton (US kısa) / yarda küp"
+    },
+    {
+      "Code": "L94",
+      "Name": "ton-kuvvet (US kısa)"
+    },
+    {
+      "Code": "L95",
+      "Name": "normal yıl"
+    },
+    {
+      "Code": "L96",
+      "Name": "yıldız yıl"
+    },
+    {
+      "Code": "L98",
+      "Name": "yarda / Fahrenayt"
+    },
+    {
+      "Code": "L99",
+      "Name": "yarda / psi"
+    },
+    {
+      "Code": "LAC",
+      "Name": "laktoz fazlalığı yüzdesi"
+    },
+    {
+      "Code": "LUB",
+      "Name": "metrik ton, makine yağı"
+    },
+    {
+      "Code": "M10",
+      "Name": "reciprocal cubic yard"
+    },
+    {
+      "Code": "M11",
+      "Name": "yarda küp / Fahrenayt"
+    },
+    {
+      "Code": "M12",
+      "Name": "yarda küp / gün"
+    },
+    {
+      "Code": "M13",
+      "Name": "yarda küp / saat"
+    },
+    {
+      "Code": "M14",
+      "Name": "yarda küp / psi"
+    },
+    {
+      "Code": "M15",
+      "Name": "yarda küp / dakika"
+    },
+    {
+      "Code": "M16",
+      "Name": "yarda küp / saniye"
+    },
+    {
+      "Code": "M17",
+      "Name": "kilohertz metre"
+    },
+    {
+      "Code": "M18",
+      "Name": "gigahertz metre"
+    },
+    {
+      "Code": "M19",
+      "Name": "Beaufort"
+    },
+    {
+      "Code": "M20",
+      "Name": "reciprocal megakelvin or megakelvin to the power minus one"
+    },
+    {
+      "Code": "M21",
+      "Name": "reciprocal kilovolt - ampere reciprocal hour"
+    },
+    {
+      "Code": "M22",
+      "Name": "mililitre / santimetreküp dakika"
+    },
+    {
+      "Code": "M23",
+      "Name": "newton / santimetre"
+    },
+    {
+      "Code": "M24",
+      "Name": "ohm kilometre"
+    },
+    {
+      "Code": "M25",
+      "Name": "yüzde / santigrat"
+    },
+    {
+      "Code": "M26",
+      "Name": "gigaohm / metre"
+    },
+    {
+      "Code": "M27",
+      "Name": "megahertz metre"
+    },
+    {
+      "Code": "M29",
+      "Name": "kilogram / kilogram"
+    },
+    {
+      "Code": "M30",
+      "Name": "reciprocal volt - ampere reciprocal second"
+    },
+    {
+      "Code": "M31",
+      "Name": "kilogram / kilometre"
+    },
+    {
+      "Code": "M32",
+      "Name": "paskal saniye / litre"
+    },
+    {
+      "Code": "M33",
+      "Name": "milimol / litre"
+    },
+    {
+      "Code": "M34",
+      "Name": "newton metre / metrekare"
+    },
+    {
+      "Code": "M35",
+      "Name": "milivolt / amper"
+    },
+    {
+      "Code": "M36",
+      "Name": "30-günlük ay"
+    },
+    {
+      "Code": "M37",
+      "Name": "actual/360"
+    },
+    {
+      "Code": "M38",
+      "Name": "kilometre / saniye kare"
+    },
+    {
+      "Code": "M39",
+      "Name": "santimetre / saniye kare"
+    },
+    {
+      "Code": "M40",
+      "Name": "yarda / saniye kare"
+    },
+    {
+      "Code": "M41",
+      "Name": "milimetre / saniye kare"
+    },
+    {
+      "Code": "M42",
+      "Name": "mil (kara mili) / saniye kare"
+    },
+    {
+      "Code": "M43",
+      "Name": "mil"
+    },
+    {
+      "Code": "M44",
+      "Name": "devir"
+    },
+    {
+      "Code": "M45",
+      "Name": "derece (açı birimi) / saniye kare"
+    },
+    {
+      "Code": "M46",
+      "Name": "revolution per minute"
+    },
+    {
+      "Code": "M47",
+      "Name": "dairesel mil"
+    },
+    {
+      "Code": "M48",
+      "Name": "mil kare (US survey foot bazında)"
+    },
+    {
+      "Code": "M49",
+      "Name": "chain (US survey foot bazında)"
+    },
+    {
+      "Code": "M50",
+      "Name": "furlong"
+    },
+    {
+      "Code": "M51",
+      "Name": "ayak (US survey)"
+    },
+    {
+      "Code": "M52",
+      "Name": "mil (US survey foot bazında)"
+    },
+    {
+      "Code": "M53",
+      "Name": "metre / paskal"
+    },
+    {
+      "Code": "M55",
+      "Name": "metre / radyant"
+    },
+    {
+      "Code": "M56",
+      "Name": "shake"
+    },
+    {
+      "Code": "M57",
+      "Name": "mil / dakika"
+    },
+    {
+      "Code": "M58",
+      "Name": "mil / saniye"
+    },
+    {
+      "Code": "M59",
+      "Name": "metre / saniye paskal"
+    },
+    {
+      "Code": "M60",
+      "Name": "metre / saat"
+    },
+    {
+      "Code": "M61",
+      "Name": "inç / yıl"
+    },
+    {
+      "Code": "M62",
+      "Name": "kilometre / saniye"
+    },
+    {
+      "Code": "M63",
+      "Name": "inç / dakika"
+    },
+    {
+      "Code": "M64",
+      "Name": "yarda / saniye"
+    },
+    {
+      "Code": "M65",
+      "Name": "yarda / dakika"
+    },
+    {
+      "Code": "M66",
+      "Name": "yarda / saat"
+    },
+    {
+      "Code": "M67",
+      "Name": "akre-ayak (US survey foot bazında)"
+    },
+    {
+      "Code": "M68",
+      "Name": "cord (128 ft3)"
+    },
+    {
+      "Code": "M69",
+      "Name": "mil küp (UK kara mili)"
+    },
+    {
+      "Code": "M70",
+      "Name": "ton, register"
+    },
+    {
+      "Code": "M71",
+      "Name": "metreküp / paskal"
+    },
+    {
+      "Code": "M72",
+      "Name": "bel"
+    },
+    {
+      "Code": "M73",
+      "Name": "kilogram / metreküp paskal"
+    },
+    {
+      "Code": "M74",
+      "Name": "kilogram / paskal"
+    },
+    {
+      "Code": "M75",
+      "Name": "kilolibre-kuvvet"
+    },
+    {
+      "Code": "M76",
+      "Name": "poundal"
+    },
+    {
+      "Code": "M77",
+      "Name": "kilogram metre / saniye kare"
+    },
+    {
+      "Code": "M78",
+      "Name": "pond"
+    },
+    {
+      "Code": "M79",
+      "Name": "ayak kare / saat"
+    },
+    {
+      "Code": "M80",
+      "Name": "stokes per pascal"
+    },
+    {
+      "Code": "M81",
+      "Name": "santimetre / saniye"
+    },
+    {
+      "Code": "M82",
+      "Name": "metrekare / saniye paskal"
+    },
+    {
+      "Code": "M83",
+      "Name": "denier"
+    },
+    {
+      "Code": "M84",
+      "Name": "libre / yarda"
+    },
+    {
+      "Code": "M85",
+      "Name": "ton, assay"
+    },
+    {
+      "Code": "M86",
+      "Name": "pfund"
+    },
+    {
+      "Code": "M87",
+      "Name": "kilogram / saniye paskal"
+    },
+    {
+      "Code": "M88",
+      "Name": "ton / ay"
+    },
+    {
+      "Code": "M89",
+      "Name": "ton / yıl"
+    },
+    {
+      "Code": "M90",
+      "Name": "kilolibre / saat"
+    },
+    {
+      "Code": "M91",
+      "Name": "libre / libre"
+    },
+    {
+      "Code": "M92",
+      "Name": "libre-kuvvet / ayak"
+    },
+    {
+      "Code": "M93",
+      "Name": "newton metre / radyan"
+    },
+    {
+      "Code": "M94",
+      "Name": "kilogram metre"
+    },
+    {
+      "Code": "M95",
+      "Name": "poundal ayak"
+    },
+    {
+      "Code": "M96",
+      "Name": "poundal  inç"
+    },
+    {
+      "Code": "M97",
+      "Name": "din metre"
+    },
+    {
+      "Code": "M98",
+      "Name": "kilogram santimetre / saniye"
+    },
+    {
+      "Code": "M99",
+      "Name": "gram santimetre / saniye"
+    },
+    {
+      "Code": "MAH",
+      "Name": "megavolt amper reaktif saat"
+    },
+    {
+      "Code": "MAR",
+      "Name": "megavar"
+    },
+    {
+      "Code": "MND",
+      "Name": "kilogram, kuru ağırlık"
+    },
+    {
+      "Code": "N10",
+      "Name": "libre ayak / saniye"
+    },
+    {
+      "Code": "N11",
+      "Name": "libre inç / saniye"
+    },
+    {
+      "Code": "N12",
+      "Name": "Pferdestaerke"
+    },
+    {
+      "Code": "N13",
+      "Name": "santimetre cıva  (0 ºC)"
+    },
+    {
+      "Code": "N14",
+      "Name": "santimetre su (4 ºC)"
+    },
+    {
+      "Code": "N15",
+      "Name": "ayak su (39.2 ºF)"
+    },
+    {
+      "Code": "N16",
+      "Name": "inç cıva (32 ºF)"
+    },
+    {
+      "Code": "N17",
+      "Name": "inç cıva  (60 ºF)"
+    },
+    {
+      "Code": "N18",
+      "Name": "inç su (39.2 ºF)"
+    },
+    {
+      "Code": "N19",
+      "Name": "inç su (60 ºF)"
+    },
+    {
+      "Code": "N20",
+      "Name": "kip / inç kare"
+    },
+    {
+      "Code": "N21",
+      "Name": "poundal / ayak kare"
+    },
+    {
+      "Code": "N22",
+      "Name": "ons (avoirdupois) / inç kare"
+    },
+    {
+      "Code": "N23",
+      "Name": "konvansiyonel metre su"
+    },
+    {
+      "Code": "N24",
+      "Name": "gram / milimetrekare"
+    },
+    {
+      "Code": "N25",
+      "Name": "libre / yarda kare"
+    },
+    {
+      "Code": "N26",
+      "Name": "poundal / inç kare"
+    },
+    {
+      "Code": "N27",
+      "Name": "ayak dördüncü kuvveti"
+    },
+    {
+      "Code": "N28",
+      "Name": "desimetreküp / kilogram"
+    },
+    {
+      "Code": "N29",
+      "Name": "ayak küp / libre"
+    },
+    {
+      "Code": "N30",
+      "Name": "inç küp / libre"
+    },
+    {
+      "Code": "N31",
+      "Name": "kilonewton / metre"
+    },
+    {
+      "Code": "N32",
+      "Name": "poundal / inç"
+    },
+    {
+      "Code": "N33",
+      "Name": "libre-kuvvet / yarda"
+    },
+    {
+      "Code": "N34",
+      "Name": "poundal saniye / ayak kare"
+    },
+    {
+      "Code": "N35",
+      "Name": "puaz / paskal"
+    },
+    {
+      "Code": "N36",
+      "Name": "newton saniye / metrekare"
+    },
+    {
+      "Code": "N37",
+      "Name": "kilogram / metre saniye"
+    },
+    {
+      "Code": "N38",
+      "Name": "kilogram / metre dakika"
+    },
+    {
+      "Code": "N39",
+      "Name": "kilogram / metre gün"
+    },
+    {
+      "Code": "N40",
+      "Name": "kilogram / metre saat"
+    },
+    {
+      "Code": "N41",
+      "Name": "gram / santimetre saniye"
+    },
+    {
+      "Code": "N42",
+      "Name": "poundal saniye / inç kare"
+    },
+    {
+      "Code": "N43",
+      "Name": "libre / ayak dakika"
+    },
+    {
+      "Code": "N44",
+      "Name": "libre / ayak gün"
+    },
+    {
+      "Code": "N45",
+      "Name": "metreküp / saniye paskal"
+    },
+    {
+      "Code": "N46",
+      "Name": "ayak poundal"
+    },
+    {
+      "Code": "N47",
+      "Name": "inç poundal"
+    },
+    {
+      "Code": "N48",
+      "Name": "watt / santimetrekare"
+    },
+    {
+      "Code": "N49",
+      "Name": "watt / inç kare"
+    },
+    {
+      "Code": "N50",
+      "Name": "İngiliz sıcaklık birimi (uluslar arası tablo) / ayak kare saat"
+    },
+    {
+      "Code": "N51",
+      "Name": "İngiliz sıcaklık birimi (termokimyasal) / ayak kare saat"
+    },
+    {
+      "Code": "N52",
+      "Name": "İngiliz sıcaklık birimi (termokimyasal) / ayak kare dakika"
+    },
+    {
+      "Code": "N53",
+      "Name": "İngiliz sıcaklık birimi (uluslar arası tablo) / ayak kare saniye"
+    },
+    {
+      "Code": "N54",
+      "Name": "İngiliz sıcaklık birimi (termokimyasal) / ayak kare saniye"
+    },
+    {
+      "Code": "N55",
+      "Name": "İngiliz sıcaklık birimi (uluslar arası tablo) / inç kare saniye"
+    },
+    {
+      "Code": "N56",
+      "Name": "kalori (termokimyasal) / santimetrekare dakika"
+    },
+    {
+      "Code": "N57",
+      "Name": "kalori (termokimyasal) / santimetrekare saniye"
+    },
+    {
+      "Code": "N58",
+      "Name": "İngiliz sıcaklık birimi (uluslar arası tablo) / ayak küp"
+    },
+    {
+      "Code": "N59",
+      "Name": "İngiliz sıcaklık birimi (termokimyasal) / ayak küp"
+    },
+    {
+      "Code": "N60",
+      "Name": "İngiliz sıcaklık birimi (uluslar arası tablo) / Fahrenayt"
+    },
+    {
+      "Code": "N61",
+      "Name": "İngiliz sıcaklık birimi (termokimyasal) / Fahrenayt"
+    },
+    {
+      "Code": "N62",
+      "Name": "İngiliz sıcaklık birimi (uluslar arası tablo) / Rankine"
+    },
+    {
+      "Code": "N63",
+      "Name": "İngiliz sıcaklık birimi (termokimyasal) / Rankine"
+    },
+    {
+      "Code": "N64",
+      "Name": "İngiliz sıcaklık birimi (termokimyasal) / libre Rankine"
+    },
+    {
+      "Code": "N65",
+      "Name": "kilokalori (uluslar arası tablo) / gram kelvin"
+    },
+    {
+      "Code": "N66",
+      "Name": "İngiliz sıcaklık birimi (39 ºF)"
+    },
+    {
+      "Code": "N67",
+      "Name": "İngiliz sıcaklık birimi (59 ºF)"
+    },
+    {
+      "Code": "N68",
+      "Name": "İngiliz sıcaklık birimi (60 ºF)"
+    },
+    {
+      "Code": "N69",
+      "Name": "kalori (20 ºC)"
+    },
+    {
+      "Code": "N70",
+      "Name": "quad (1015 BtuIT)"
+    },
+    {
+      "Code": "N71",
+      "Name": "therm (EC)"
+    },
+    {
+      "Code": "N72",
+      "Name": "therm (US)"
+    },
+    {
+      "Code": "N73",
+      "Name": "İngiliz sıcaklık birimi (termokimyasal) / libre"
+    },
+    {
+      "Code": "N74",
+      "Name": "İngiliz sıcaklık birimi (uluslar arası tablo)  / saat ayak kare Fahrenayt"
+    },
+    {
+      "Code": "N75",
+      "Name": "İngiliz sıcaklık birimi (termokimyasal) / saat ayak kare Fahrenayt"
+    },
+    {
+      "Code": "N76",
+      "Name": "İngiliz sıcaklık birimi (uluslar arası tablo) / saniye ayak kare Fahrenayt"
+    },
+    {
+      "Code": "N77",
+      "Name": "İngiliz sıcaklık birimi (termokimyasal) / saniye ayak kare Fahrenayt"
+    },
+    {
+      "Code": "N78",
+      "Name": "kilowatt / metrekare kelvin"
+    },
+    {
+      "Code": "N79",
+      "Name": "kelvin / paskal"
+    },
+    {
+      "Code": "N80",
+      "Name": "watt / metre santigrat"
+    },
+    {
+      "Code": "N81",
+      "Name": "kilowatt / metre kelvin"
+    },
+    {
+      "Code": "N82",
+      "Name": "kilowatt / metre santigrat"
+    },
+    {
+      "Code": "N83",
+      "Name": "metre / santigrat metre"
+    },
+    {
+      "Code": "N84",
+      "Name": "Fahrenayt saat / İngiliz sıcaklık birimi (uluslar arası tablo)"
+    },
+    {
+      "Code": "N85",
+      "Name": "Fahrenayt saat / İngiliz sıcaklık birimi (termokimyasal)"
+    },
+    {
+      "Code": "N86",
+      "Name": "Fahrenayt saniye / İngiliz sıcaklık birimi (uluslar arası tablo)"
+    },
+    {
+      "Code": "N87",
+      "Name": "Fahrenayt saniye / İngiliz sıcaklık birimi (termokimyasal)"
+    },
+    {
+      "Code": "N88",
+      "Name": "Fahrenayt saat ayak kare /İngiliz sıcaklık birimi (uluslar arası tablo) inç"
+    },
+    {
+      "Code": "N89",
+      "Name": "Fahrenayt saat ayak kare / İngiliz sıcaklık birimi (termokimyasal)  inç"
+    },
+    {
+      "Code": "N90",
+      "Name": "kilofarad"
+    },
+    {
+      "Code": "N91",
+      "Name": "reciprocal joule"
+    },
+    {
+      "Code": "N92",
+      "Name": "pikosiemens"
+    },
+    {
+      "Code": "N93",
+      "Name": "amper / paskal"
+    },
+    {
+      "Code": "N94",
+      "Name": "franklin"
+    },
+    {
+      "Code": "N95",
+      "Name": "amper dakika"
+    },
+    {
+      "Code": "N96",
+      "Name": "biot"
+    },
+    {
+      "Code": "N97",
+      "Name": "gilbert"
+    },
+    {
+      "Code": "N98",
+      "Name": "volt / paskal"
+    },
+    {
+      "Code": "N99",
+      "Name": "pikovolt"
+    },
+    {
+      "Code": "Name",
+      "Name": "BOŞ"
+    },
+    {
+      "Code": "NIL",
+      "Name": "nil"
+    },
+    {
+      "Code": "ODE",
+      "Name": "ozan incelmesi eşdeğeri"
+    },
+    {
+      "Code": "P10",
+      "Name": "coulomb / metre"
+    },
+    {
+      "Code": "P11",
+      "Name": "kiloweber"
+    },
+    {
+      "Code": "P12",
+      "Name": "gamma"
+    },
+    {
+      "Code": "P13",
+      "Name": "kilotesla"
+    },
+    {
+      "Code": "P14",
+      "Name": "jul / saniye"
+    },
+    {
+      "Code": "P15",
+      "Name": "jul / dakika"
+    },
+    {
+      "Code": "P16",
+      "Name": "jul / saat"
+    },
+    {
+      "Code": "P17",
+      "Name": "jul / gün"
+    },
+    {
+      "Code": "P18",
+      "Name": "kilojul / saniye"
+    },
+    {
+      "Code": "P19",
+      "Name": "kilojul / dakika"
+    },
+    {
+      "Code": "P20",
+      "Name": "kilojul / saat"
+    },
+    {
+      "Code": "P21",
+      "Name": "kilojul / gün"
+    },
+    {
+      "Code": "P22",
+      "Name": "nanoohm"
+    },
+    {
+      "Code": "P23",
+      "Name": "ohm dairesel-mil / ayak"
+    },
+    {
+      "Code": "P24",
+      "Name": "kilohenry"
+    },
+    {
+      "Code": "P25",
+      "Name": "lumen / ayak kare"
+    },
+    {
+      "Code": "P26",
+      "Name": "phot"
+    },
+    {
+      "Code": "P27",
+      "Name": "ayakmum"
+    },
+    {
+      "Code": "P28",
+      "Name": "candela / inç kare"
+    },
+    {
+      "Code": "P29",
+      "Name": "ayak lambert"
+    },
+    {
+      "Code": "P30",
+      "Name": "lambert"
+    },
+    {
+      "Code": "P31",
+      "Name": "stilb"
+    },
+    {
+      "Code": "P32",
+      "Name": "candela / ayak kare"
+    },
+    {
+      "Code": "P33",
+      "Name": "kilocandela"
+    },
+    {
+      "Code": "P34",
+      "Name": "milicandela"
+    },
+    {
+      "Code": "P35",
+      "Name": "Hefner-Kerze"
+    },
+    {
+      "Code": "P36",
+      "Name": "uluslararası mum"
+    },
+    {
+      "Code": "P37",
+      "Name": "İngiliz sıcaklık birimi (uluslar arası tablo) / ayak kare"
+    },
+    {
+      "Code": "P38",
+      "Name": "İngiliz sıcaklık birimi (termokimyasal) / ayak kare"
+    },
+    {
+      "Code": "P39",
+      "Name": "kalori (termokimyasal) / santimetrekare"
+    },
+    {
+      "Code": "P40",
+      "Name": "langley"
+    },
+    {
+      "Code": "P41",
+      "Name": "onluk (logaritmik)"
+    },
+    {
+      "Code": "P42",
+      "Name": "paskal kare saniye"
+    },
+    {
+      "Code": "P43",
+      "Name": "bel / metre"
+    },
+    {
+      "Code": "P44",
+      "Name": "libre mol"
+    },
+    {
+      "Code": "P45",
+      "Name": "libre mol / saniye"
+    },
+    {
+      "Code": "P46",
+      "Name": "libre mol / dakika"
+    },
+    {
+      "Code": "P47",
+      "Name": "kilomol / kilogram"
+    },
+    {
+      "Code": "P48",
+      "Name": "libre mol / libre"
+    },
+    {
+      "Code": "P49",
+      "Name": "newton metrekare / amper"
+    },
+    {
+      "Code": "P50",
+      "Name": "weber metre"
+    },
+    {
+      "Code": "P51",
+      "Name": "mol / kilogram paskal"
+    },
+    {
+      "Code": "P52",
+      "Name": "mol / metrekare paskal"
+    },
+    {
+      "Code": "P53",
+      "Name": "birim ucay"
+    },
+    {
+      "Code": "P54",
+      "Name": "miligray / saniye"
+    },
+    {
+      "Code": "P55",
+      "Name": "mikrogray / saniye"
+    },
+    {
+      "Code": "P56",
+      "Name": "nanogray / saniye"
+    },
+    {
+      "Code": "P57",
+      "Name": "gray / dakika"
+    },
+    {
+      "Code": "P58",
+      "Name": "miligray / dakika"
+    },
+    {
+      "Code": "P59",
+      "Name": "mikrogray / dakika"
+    },
+    {
+      "Code": "P60",
+      "Name": "nanogray / dakika"
+    },
+    {
+      "Code": "P61",
+      "Name": "gray / saat"
+    },
+    {
+      "Code": "P62",
+      "Name": "miligray / saat"
+    },
+    {
+      "Code": "P63",
+      "Name": "mikrogray / saat"
+    },
+    {
+      "Code": "P64",
+      "Name": "nanogray / saat"
+    },
+    {
+      "Code": "P65",
+      "Name": "sievert / saniye"
+    },
+    {
+      "Code": "P66",
+      "Name": "milisievert / saniye"
+    },
+    {
+      "Code": "P67",
+      "Name": "mikrosievert / saniye"
+    },
+    {
+      "Code": "P68",
+      "Name": "nanosievert / saniye"
+    },
+    {
+      "Code": "P69",
+      "Name": "rem / saniye"
+    },
+    {
+      "Code": "P70",
+      "Name": "sievert / saat"
+    },
+    {
+      "Code": "P71",
+      "Name": "milisievert / saat"
+    },
+    {
+      "Code": "P72",
+      "Name": "mikrosievert / saat"
+    },
+    {
+      "Code": "P73",
+      "Name": "nanosievert / saat"
+    },
+    {
+      "Code": "P74",
+      "Name": "sievert / dakika"
+    },
+    {
+      "Code": "P75",
+      "Name": "milisievert / dakika"
+    },
+    {
+      "Code": "P76",
+      "Name": "mikrosievert / dakika"
+    },
+    {
+      "Code": "P77",
+      "Name": "nanosievert / dakika"
+    },
+    {
+      "Code": "P78",
+      "Name": "reciprocal square inch"
+    },
+    {
+      "Code": "P79",
+      "Name": "paskal metrekare / kilogram"
+    },
+    {
+      "Code": "P80",
+      "Name": "milipaskal / metre"
+    },
+    {
+      "Code": "P81",
+      "Name": "kilopaskal / metre"
+    },
+    {
+      "Code": "P82",
+      "Name": "hektopaskal / metre"
+    },
+    {
+      "Code": "P83",
+      "Name": "standart atmosfer / metre"
+    },
+    {
+      "Code": "P84",
+      "Name": "teknik atmosfer / metre"
+    },
+    {
+      "Code": "P85",
+      "Name": "torr / metre"
+    },
+    {
+      "Code": "P86",
+      "Name": "psi / inç"
+    },
+    {
+      "Code": "P87",
+      "Name": "metreküp / saniye metrekare"
+    },
+    {
+      "Code": "P88",
+      "Name": "rhe"
+    },
+    {
+      "Code": "P89",
+      "Name": "libre-kuvvet ayak / inç"
+    },
+    {
+      "Code": "P90",
+      "Name": "libre-kuvvet inç / inç"
+    },
+    {
+      "Code": "P91",
+      "Name": "perm (0 ºC)"
+    },
+    {
+      "Code": "P92",
+      "Name": "perm (23 ºC)"
+    },
+    {
+      "Code": "P93",
+      "Name": "byte / saniye"
+    },
+    {
+      "Code": "P94",
+      "Name": "kilobyte / saniye"
+    },
+    {
+      "Code": "P95",
+      "Name": "megabyte / saniye"
+    },
+    {
+      "Code": "P96",
+      "Name": "reciprocal volt"
+    },
+    {
+      "Code": "P97",
+      "Name": "reciprocal radian"
+    },
+    {
+      "Code": "P98",
+      "Name": "paskal (stokiyometrik rakamların toplamının kuvvetinde)"
+    },
+    {
+      "Code": "P99",
+      "Name": "mole per cubiv metre to the power sum of stoichiometric numbers"
+    },
+    {
+      "Code": "PFL",
+      "Name": "proof litre"
+    },
+    {
+      "Code": "PLA",
+      "Name": "Plato derecesi"
+    },
+    {
+      "Code": "Q10",
+      "Name": "jul / tesla"
+    },
+    {
+      "Code": "Q11",
+      "Name": "erlang"
+    },
+    {
+      "Code": "Q12",
+      "Name": "oktet"
+    },
+    {
+      "Code": "Q13",
+      "Name": "oktet / saniye"
+    },
+    {
+      "Code": "Q14",
+      "Name": "şanon"
+    },
+    {
+      "Code": "Q15",
+      "Name": "hartley"
+    },
+    {
+      "Code": "Q16",
+      "Name": "naturel bilgi birimi"
+    },
+    {
+      "Code": "Q17",
+      "Name": "şanon / saniye"
+    },
+    {
+      "Code": "Q18",
+      "Name": "hartley / saniye"
+    },
+    {
+      "Code": "Q19",
+      "Name": "naturel bilgi birimi / saniye"
+    },
+    {
+      "Code": "Q20",
+      "Name": "saniye / kilogram"
+    },
+    {
+      "Code": "Q21",
+      "Name": "watt metrekare"
+    },
+    {
+      "Code": "Q22",
+      "Name": "saniye / radyan metreküp"
+    },
+    {
+      "Code": "Q23",
+      "Name": "weber -1 kuvveti"
+    },
+    {
+      "Code": "Q24",
+      "Name": "reciprocal inch"
+    },
+    {
+      "Code": "Q25",
+      "Name": "diyoptri"
+    },
+    {
+      "Code": "Q26",
+      "Name": "bir / bir"
+    },
+    {
+      "Code": "Q27",
+      "Name": "newton metre / metre"
+    },
+    {
+      "Code": "Q28",
+      "Name": "kilogram / metrekare paskal saniye"
+    },
+    {
+      "Code": "Q29",
+      "Name": "mikrogram / hektogram"
+    },
+    {
+      "Code": "Q30",
+      "Name": "pH (Hidrojen potansiyeli)"
+    },
+    {
+      "Code": "Q31",
+      "Name": "kilojul / gram"
+    },
+    {
+      "Code": "ROM",
+      "Name": "oda"
+    },
+    {
+      "Code": "SQR",
+      "Name": "kare, çatı döşeme"
+    },
+    {
+      "Code": "STC",
+      "Name": "stik"
+    },
+    {
+      "Code": "STK",
+      "Name": "stik, sigara"
+    },
+    {
+      "Code": "STL",
+      "Name": "standart litre"
+    },
+    {
+      "Code": "STW",
+      "Name": "pipet"
+    },
+    {
+      "Code": "SYR",
+      "Name": "şırınga"
+    },
+    {
+      "Code": "TAN",
+      "Name": "toplam asit indeksi"
+    },
+    {
+      "Code": "TIC",
+      "Name": "metrik ton, konteynır dahil"
+    },
+    {
+      "Code": "TIP",
+      "Name": "metrik ton, iç ambalaj dahil"
+    },
+    {
+      "Code": "TKM",
+      "Name": "ton kilometre"
+    },
+    {
+      "Code": "TMS",
+      "Name": "ithal edilen etin kilogramı, sakatat hariç"
+    },
+    {
+      "Code": "TST",
+      "Name": "on set"
+    },
+    {
+      "Code": "TTS",
+      "Name": "on bin stick"
+    },
+    {
+      "Code": "VP",
+      "Name": "hacim yüzdesi"
+    },
+    {
+      "Code": "Z11",
+      "Name": "asma konteynır"
+    },
+    {
+      "Code": "SM3",
+      "Name": "Standart metreküp"
+    },
+    {
+      "Code": "NM3",
+      "Name": "Normal metreküp"
+    },
+    {
+      "Code": "PTN",
+      "Name": "Parça,Kısım"
+    }
+  ]

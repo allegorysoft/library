@@ -1,0 +1,96 @@
+<div class="card m-1 p-2 shadow-2">
+  <p-toolbar styleClass="mb-2 border-bottom-1 border-400 border-noround ">
+    <ng-template pTemplate="left">
+      <h5>{{ '::Deductions' | abpLocalization }}</h5>
+    </ng-template>
+
+    <ng-template pTemplate="right">
+      <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input
+          pInputText
+          class="p-inputtext-sm"
+          style="padding-left: 2rem !important"
+          type="text"
+          (input)="deductionDt.filterGlobal($event.target.value, 'contains')"
+          placeholder="{{ '::DisplayName:SearchKeyword' | abpLocalization }}"
+        />
+      </span>
+    </ng-template>
+  </p-toolbar>
+
+  <p-table
+    #deductionDt
+    [dataKey]="tableConfig.dataKey"
+    [lazy]="tableConfig.lazy"
+    [value]="deductions$ | async"
+    responsiveLayout="stack"
+    styleClass="p-datatable-sm"
+    [rowHover]="true"
+    [paginator]="tableConfig.paginator"
+    [rows]="tableConfig.pageSize"
+    [totalRecords]="(deductions$ | async).length"
+    [loading]="retrievingData$ | async"
+    [showCurrentPageReport]="tableConfig.showCurrentPageReport"
+    [rowsPerPageOptions]="tableConfig.pageSizeOptions"
+    [globalFilterFields]="['deductionCode', 'deductionName']"
+    paginatorDropdownAppendTo="body"
+  >
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th>
+          {{ '::DisplayName:DeductionCode' | abpLocalization }}
+        </th>
+
+        <th>
+          {{ '::DisplayName:DeductionName' | abpLocalization }}
+        </th>
+        <th>
+          {{ '::DisplayName:DeductionPart1' | abpLocalization }}
+        </th>
+        <th>
+          {{ '::DisplayName:DeductionPart2' | abpLocalization }}
+        </th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-deduction let-columns="columns">
+      <tr (dblclick)="selectDeduction(deduction)">
+        <td style="width: 6rem">
+          <span class="p-column-title font-medium">
+            {{ '::DisplayName:DeductionCode' | abpLocalization }}
+          </span>
+          {{ deduction.deductionCode }}
+        </td>
+        <td>
+          <span class="p-column-title font-medium">
+            {{ '::DisplayName:DeductionName' | abpLocalization }}
+          </span>
+          <span class="data-content"> {{ deduction.deductionName }}</span>
+        </td>
+        <td>
+          <span class="p-column-title font-medium">
+            {{ '::DisplayName:DeductionPart1' | abpLocalization }}
+          </span>
+          {{ deduction.deductionPart1 }}
+        </td>
+        <td>
+          <span class="p-column-title font-medium">
+            {{ '::DisplayName:DeductionPart2' | abpLocalization }}
+          </span>
+          {{ deduction.deductionPart2 }}
+        </td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="emptymessage" let-columns>
+      <tr>
+        <td [attr.colspan]="4" class="text-center">
+          {{ '::NoRecordsFound' | abpLocalization }}
+        </td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="paginatorleft"></ng-template>
+  </p-table>
+</div>

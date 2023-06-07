@@ -1,0 +1,284 @@
+<p-dialog
+  #itemCreateDialog
+  header="{{ '::EditService' | abpLocalization }}"
+  [(visible)]="visible"
+  [position]="position"
+  [modal]="true"
+  [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
+  [style]="{ 'max-width': '550px', 'min-height': '23.5rem' }"
+  [baseZIndex]="-500"
+  [resizable]="false"
+  [draggable]="false"
+  (onHide)="hideDialog()"
+  [transitionOptions]="'150ms'"
+>
+  <ng-template pTemplate="content">
+    <form
+      [ngStyle]="{ overflow: 'hidden' }"
+      *ngIf="serviceForm && visible"
+      [formGroup]="serviceForm"
+      (submit)="save()"
+      skipValidation
+    >
+      <div class="card m-2">
+        <div class="p-3 formgrid grid p-fluid">
+          <div class="field col-12 md:col-6">
+            <span class="p-float-label">
+              <input
+                pInputText
+                type="text"
+                id="code"
+                formControlName="code"
+                class="w-full p-inputtext-sm"
+              />
+              <label for="code">
+                {{ '::DisplayName:Code' | abpLocalization }}
+              </label>
+            </span>
+          </div>
+
+          <div class="field col-12 md:col-6">
+            <span class="p-float-label">
+              <input
+                pInputText
+                type="text"
+                id="name"
+                formControlName="name"
+                class="w-full p-inputtext-sm"
+              />
+              <label for="name">
+                {{ '::DisplayName:Name' | abpLocalization }}
+              </label>
+            </span>
+          </div>
+
+          <div class="field col-12 md:col-6">
+            <div class="p-inputgroup">
+              <span class="p-float-label">
+                <input
+                  type="text"
+                  pInputText
+                  formControlName="unitGroupCode"
+                  style="height: 2.5rem"
+                  class="p-inputtext-sm"
+                />
+
+                <label for="name">
+                  {{ '::DisplayName:MainUnit' | abpLocalization }}
+                </label>
+              </span>
+              <button
+                pButton
+                pRipple
+                type="button"
+                icon="pi pi-ellipsis-h"
+                (click)="unitGroupListSelectDialogVisible = true"
+              ></button>
+            </div>
+          </div>
+
+          <div class="field col-12 md:col-3">
+            <span class="p-float-label">
+              <p-inputNumber
+                formControlName="purchaseVatRate"
+                inputId="minmaxfraction"
+                mode="decimal"
+                [minFractionDigits]="0"
+                [maxFractionDigits]="5"
+                class="p-inputtext-sm"
+              >
+              </p-inputNumber>
+              <label for="name">
+                {{ '::DisplayName:PurchaseVat' | abpLocalization }}
+              </label>
+            </span>
+          </div>
+
+          <div class="field col-12 md:col-3">
+            <span class="p-float-label">
+              <p-inputNumber
+                formControlName="salesVatRate"
+                inputId="minmaxfraction"
+                mode="decimal"
+                [minFractionDigits]="0"
+                [maxFractionDigits]="5"
+                class="p-inputtext-sm"
+              >
+              </p-inputNumber>
+              <label for="name">
+                {{ '::DisplayName:SalesVat' | abpLocalization }}
+              </label>
+            </span>
+          </div>
+
+          <div
+            formGroupName="deduction"
+            class="formgrid grid border-1 border-400 border-round p-2 m-2 mt-0"
+          >
+            <div class="col-12 md:col-12 flex" style="height: 0.7rem">
+              <h6 class="text-indigo-500 group-name">
+                {{ '::GroupName:Deduction' | abpLocalization }}
+              </h6>
+            </div>
+
+            <div class="field col-12 md:col-4">
+              <div class="p-inputgroup">
+                <span class="p-float-label">
+                  <input
+                    type="text"
+                    pInputText
+                    formControlName="code"
+                    maxlength="3"
+                    style="height: 2.5rem"
+                    class="p-inputtext-sm"
+                  />
+
+                  <label for="name">
+                    {{ '::DisplayName:DeductionCode' | abpLocalization }}
+                  </label>
+                </span>
+                <button
+                  pButton
+                  pRipple
+                  type="button"
+                  icon="pi pi-ellipsis-h"
+                  (click)="deductionListSelectDialogVisible = true"
+                ></button>
+              </div>
+            </div>
+
+            <div class="field col-12 md:col-4">
+              <span class="p-float-label">
+                <p-inputNumber
+                  formControlName="salesPart1"
+                  inputId="minmaxfraction"
+                  mode="decimal"
+                  [minFractionDigits]="0"
+                  [maxFractionDigits]="5"
+                  class="p-inputtext-sm"
+                >
+                </p-inputNumber>
+                <label for="name">
+                  {{ '::DisplayName:SalesPart1' | abpLocalization }}
+                </label>
+              </span>
+            </div>
+            <div class="field col-12 md:col-4">
+              <span class="p-float-label">
+                <p-inputNumber
+                  formControlName="salesPart2"
+                  inputId="minmaxfraction"
+                  mode="decimal"
+                  [minFractionDigits]="0"
+                  [maxFractionDigits]="5"
+                  class="p-inputtext-sm"
+                >
+                </p-inputNumber>
+                <label for="name">
+                  {{ '::DisplayName:SalesPart2' | abpLocalization }}
+                </label>
+              </span>
+            </div>
+
+            <div class="field col-12 md:col-4 m-0"></div>
+            <div class="field col-12 md:col-4">
+              <span class="p-float-label">
+                <p-inputNumber
+                  formControlName="purchasePart1"
+                  inputId="minmaxfraction"
+                  mode="decimal"
+                  [minFractionDigits]="0"
+                  [maxFractionDigits]="5"
+                  class="p-inputtext-sm"
+                >
+                </p-inputNumber>
+                <label for="name">
+                  {{ '::DisplayName:PurchasePart1' | abpLocalization }}
+                </label>
+              </span>
+            </div>
+            <div class="field col-12 md:col-4">
+              <span class="p-float-label">
+                <p-inputNumber
+                  formControlName="purchasePart2"
+                  inputId="minmaxfraction"
+                  mode="decimal"
+                  [minFractionDigits]="0"
+                  [maxFractionDigits]="5"
+                  class="p-inputtext-sm"
+                >
+                </p-inputNumber>
+                <label for="name">
+                  {{ '::DisplayName:PurchasePart2' | abpLocalization }}
+                </label>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    <p-button
+      *abpPermission="'ProductManagement.Service.Edit'"
+      styleClass="p-button-sm"
+      [disabled]="!serviceForm || !serviceForm.valid"
+      label="{{ '::Save' | abpLocalization }}"
+      icon="pi pi-check"
+      [loading]="loading | async"
+      (onClick)="save()"
+    >
+    </p-button>
+  </ng-template>
+</p-dialog>
+
+<p-dialog
+  #unitGroupListSelectDialog
+  [(visible)]="unitGroupListSelectDialogVisible"
+  [position]="'top'"
+  [modal]="true"
+  [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
+  [style]="{ 'max-width': '650px' }"
+  [baseZIndex]="-500"
+  [resizable]="false"
+  [draggable]="false"
+  [transitionOptions]="'150ms'"
+  [contentStyle]="{ 'overflow-x': 'hidden' }"
+  (onHide)="unitGroupListDialogOnHide()"
+  [closeOnEscape]="false"
+>
+  <ng-template pTemplate="header">
+    <h5>{{ '::Header:SelectMainUnit' | abpLocalization }}</h5>
+  </ng-template>
+
+  <ng-template pTemplate="content">
+    <app-unit-group-list></app-unit-group-list>
+  </ng-template>
+</p-dialog>
+
+<p-dialog
+  #deductionListSelectDialog
+  [(visible)]="deductionListSelectDialogVisible"
+  [position]="'top'"
+  [modal]="true"
+  [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
+  [baseZIndex]="-500"
+  [resizable]="false"
+  [draggable]="false"
+  [transitionOptions]="'150ms'"
+  [contentStyle]="{ 'overflow-x': 'hidden' }"
+  [style]="{ 'max-width': '1000px' }"
+  [closeOnEscape]="false"
+>
+  <ng-template pTemplate="header">
+    <h5>{{ '::SelectDeduction' | abpLocalization }}</h5>
+  </ng-template>
+
+  <ng-template pTemplate="content">
+    <app-deduction-list
+      *ngIf="deductionListSelectDialogVisible"
+      (deductionSelected)="handleDeduction($event)"
+    ></app-deduction-list>
+  </ng-template>
+</p-dialog>

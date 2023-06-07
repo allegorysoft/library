@@ -1,0 +1,22 @@
+{
+    "production": true,
+    "application": {
+        "baseUrl": "",
+        "name": "Saler",
+        "logoUrl": ""
+    },
+    "oAuthConfig": {
+        "issuer": "http: //saler.api.allegorysoft.com",
+        "redirectUri": "http://saler.allegorysoft.com",
+        "clientId": "Saler_App",
+        "responseType": "code",
+        "scope": "offline_access Saler",
+        "requireHttps": false
+    },
+    "apis": {
+        "default": {
+            "url": "http: //saler.api.allegorysoft.com",
+            "rootNamespace": "Allegory.Saler"
+        }
+    }
+}

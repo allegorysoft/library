@@ -1,0 +1,177 @@
+<div class="grid">
+  <div class="col-12">
+    <div class="card shadow-2 p-2">
+      <p-toolbar styleClass="mb-2">
+        <ng-template pTemplate="left">
+          <h5>{{ '::Clients' | abpLocalization }}</h5>
+        </ng-template>
+
+        <ng-template pTemplate="right">
+          <button
+            *ngIf="table?.multiSortMeta?.length > 0"
+            pButton
+            pRipple
+            type="button"
+            icon="pi pi-filter-slash"
+            class="p-button-rounded p-button-text p-speeddial-button p-button-plain"
+            [ngStyle]="{ 'margin-right': '.5rem' }"
+            (click)="clearSort()"
+          ></button>
+
+          <p-button
+            *abpPermission="'ClientManagement.Client.Create'"
+            label="{{ '::NewClient' | abpLocalization }}"
+            styleClass="p-button-sm"
+            icon="pi pi-plus"
+            (click)="showDialog(0)"
+          >
+          </p-button>
+        </ng-template>
+      </p-toolbar>
+
+      <p-table
+        #clientDt
+        [dataKey]="tableConfig.dataKey"
+        [lazy]="tableConfig.lazy"
+        (onLazyLoad)="loadClients($event)"
+        [value]="clients$ | async"
+        responsiveLayout="stack"
+        styleClass="p-datatable-sm"
+        [rowHover]="true"
+        [paginator]="tableConfig.paginator"
+        [rows]="pageSize"
+        [totalRecords]="totalRecords | async"
+        [loading]="loading"
+        [showCurrentPageReport]="tableConfig.showCurrentPageReport"
+        [rowsPerPageOptions]="pageSizeOptions$ | async"
+        [sortMode]="tableConfig.sortMode"
+        paginatorDropdownAppendTo="body"
+        stateStorage="local"
+        [stateKey]="filterStateToken"
+      >
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th>{{ '::Actions' | abpLocalization }}</th>
+
+            <th pSortableColumn="code">
+              {{ '::DisplayName:Code' | abpLocalization }}
+              <p-sortIcon field="code"></p-sortIcon>
+            </th>
+
+            <th pSortableColumn="title">
+              {{ '::DisplayName:Title' | abpLocalization }}
+              <p-sortIcon field="title"></p-sortIcon>
+            </th>
+
+            <th pSortableColumn="identityNumber">
+              {{ '::DisplayName:IdentityNumber' | abpLocalization }}
+              <p-sortIcon field="identityNumber"></p-sortIcon>
+            </th>
+          </tr>
+
+          <tr>
+            <th>
+              <button
+                pButton
+                pRipple
+                type="button"
+                icon="pi pi-filter-slash"
+                class="p-button-rounded p-button-text p-speeddial-button p-button-plain"
+                [ngStyle]="{ 'margin-left': '.9rem' }"
+                (click)="clearSort()"
+              ></button>
+            </th>
+
+            <th>
+              <p-columnFilter type="text" field="code" matchMode="contains"></p-columnFilter>
+            </th>
+
+            <th>
+              <p-columnFilter type="text" field="title" matchMode="contains"></p-columnFilter>
+            </th>
+
+            <th>
+              <p-columnFilter
+                type="text"
+                field="identityNumber"
+                matchMode="contains"
+              ></p-columnFilter>
+            </th>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-client let-columns="columns">
+          <tr (dblclick)="selectClient(client)">
+            <td style="width: 5rem">
+              <span class="p-column-title">
+                {{ '::Actions' | abpLocalization }}
+              </span>
+
+              <span>
+                <button
+                  *ngIf="'ClientManagement.Client.Delete' | permission"
+                  pButton
+                  pRipple
+                  type="button"
+                  icon="pi pi-trash"
+                  class="p-button-rounded p-button-danger p-button-text"
+                  (click)="delete(client.id, client.title)"
+                ></button>
+                <button
+                  *ngIf="'ClientManagement.Client.Edit' | permission"
+                  pButton
+                  pRipple
+                  type="button"
+                  icon="pi pi-pencil"
+                  class="p-button-rounded p-button-plain p-button-text"
+                  (click)="showDialog(1, client.id)"
+                ></button>
+              </span>
+            </td>
+
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:Code' | abpLocalization }}
+              </span>
+              {{ client.code }}
+            </td>
+
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:Title' | abpLocalization }}
+              </span>
+              {{ client.title }}
+            </td>
+
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:IdentityNumber' | abpLocalization }}
+              </span>
+              {{ client.identityNumber }}
+            </td>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="emptymessage" let-columns>
+          <tr>
+            <td [attr.colspan]="4" class="text-center">
+              {{ '::NoRecordsFound' | abpLocalization }}
+            </td>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="paginatorleft"></ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>
+
+<app-client-create-dialog *ngIf="createDialogVisible" [(visible)]="createDialogVisible">
+</app-client-create-dialog>
+
+<app-client-edit-dialog
+  *ngIf="editDialogVisible"
+  [(visible)]="editDialogVisible"
+  [clientId]="selectedClientId"
+>
+</app-client-edit-dialog>

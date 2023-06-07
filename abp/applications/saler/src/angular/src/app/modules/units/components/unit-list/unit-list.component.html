@@ -1,0 +1,174 @@
+<div class="card mt-1 mr-2 ml-2" [formGroup]="unitGroupForm">
+  <p-table
+    [value]="units.controls"
+    responsiveLayout="scroll"
+    formArrayName="units"
+    styleClass="p-datatable-sm"
+    responsiveLayout="stack"
+  >
+    <ng-template pTemplate="caption">
+      <div class="flex">
+        <h5>{{ '::Units' | abpLocalization }}</h5>
+        <button
+          pButton
+          pRipple
+          [disabled]="newRowLength > 0"
+          pTooltip="{{ '::AddRow' | abpLocalization }}"
+          tooltipPosition="bottom"
+          type="button"
+          icon="pi pi-plus"
+          class="p-button-rounded p-button-text ml-auto"
+          (click)="createUnit()"
+        ></button>
+      </div>
+    </ng-template>
+
+    <ng-template pTemplate="header">
+      <tr>
+        <th>{{ '::Actions' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:Code' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:Name' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:MainUnit' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:Divisible' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:ConvFact' | abpLocalization }} 1</th>
+        <th>{{ '::DisplayName:ConvFact' | abpLocalization }} 2</th>
+        <th>{{ '::DisplayName:GlobalUnitCode' | abpLocalization }}</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-unit let-i="rowIndex">
+      <tr>
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::Actions' | abpLocalization }}
+          </span>
+          <button
+            pButton
+            pRipple
+            type="button"
+            icon="pi pi-trash"
+            class="p-button-rounded p-button-text p-button-danger"
+            (click)="removeUnit(i, unit)"
+          ></button>
+        </td>
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:Code' | abpLocalization }}
+          </span>
+          <input
+            type="text"
+            (blur)="onBlur(unit)"
+            pInputText
+            class="p-inputtext-sm"
+            placeholder="{{ '::DisplayName:Code' | abpLocalization }}"
+            formControlName="code"
+          />
+        </td>
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:Name' | abpLocalization }}
+          </span>
+          <input
+            type="text"
+            pInputText
+            class="p-inputtext-sm"
+            placeholder="{{ '::DisplayName:Name' | abpLocalization }}"
+            formControlName="name"
+          />
+        </td>
+        <td [formGroupName]="i" class="text-center">
+          <span class="p-column-title">
+            {{ '::DisplayName:MainUnit' | abpLocalization }}
+          </span>
+          <p-checkbox
+            (onChange)="mainUnitSelectedChange(unit)"
+            formControlName="mainUnit"
+            binary="true"
+            inputId="binary"
+          >
+          </p-checkbox>
+        </td>
+        <td [formGroupName]="i" class="text-center">
+          <span class="p-column-title">
+            {{ '::DisplayName:Divisible' | abpLocalization }}
+          </span>
+          <p-checkbox
+            (onChange)="divsibileOnChange(unit)"
+            formControlName="divisible"
+            binary="true"
+            inputId="binary"
+          ></p-checkbox>
+        </td>
+        <td [formGroupName]="i">
+          <span class="p-column-title"> {{ '::DisplayName:ConvFact' | abpLocalization }} 1 </span>
+          <p-inputNumber
+            class="p-inputtext-sm"
+            formControlName="convFact1"
+            mode="decimal"
+            [useGrouping]="false"
+            [minFractionDigits]="minFractionDigits"
+            [maxFractionDigits]="maxFractionDigits"
+            (onBlur)="convFactOnBlur(unit)"
+          >
+          </p-inputNumber>
+        </td>
+        <td [formGroupName]="i">
+          <span class="p-column-title"> {{ '::DisplayName:ConvFact' | abpLocalization }} 2 </span>
+          <p-inputNumber
+            class="p-inputtext-sm"
+            formControlName="convFact2"
+            mode="decimal"
+            [useGrouping]="false"
+            [minFractionDigits]="minFractionDigits"
+            [maxFractionDigits]="maxFractionDigits"
+            (onBlur)="convFactOnBlur(unit)"
+          >
+          </p-inputNumber>
+        </td>
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:GlobalUnitCode' | abpLocalization }}
+          </span>
+
+          <div class="p-inputgroup" style="width: 7rem">
+            <input type="text" pInputText formControlName="globalUnitCode" class="p-inputtext-sm" />
+
+            <button
+              [disabled]="!unit.get('code')?.value"
+              pButton
+              pRipple
+              type="button"
+              icon="pi pi-ellipsis-h"
+              (click)="globalUnitSelect(unit)"
+            ></button>
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+
+<p-dialog
+  #globalUnitListSelectDialog
+  [(visible)]="globalUnitDialogVisible"
+  [position]="'top'"
+  [modal]="true"
+  [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
+  [baseZIndex]="-500"
+  [resizable]="false"
+  [draggable]="false"
+  [transitionOptions]="'150ms'"
+  [contentStyle]="{ 'overflow-x': 'hidden' }"
+  [closeOnEscape]="true"
+>
+  <ng-template pTemplate="header">
+    <h5>{{ '::SelectGlobalUnit' | abpLocalization }}</h5>
+  </ng-template>
+
+  <ng-template pTemplate="content">
+    <app-global-unit-list
+      *ngIf="globalUnitDialogVisible"
+      (globalUnitSelected)="handleGlobalUnit($event)"
+    ></app-global-unit-list>
+  </ng-template>
+</p-dialog>

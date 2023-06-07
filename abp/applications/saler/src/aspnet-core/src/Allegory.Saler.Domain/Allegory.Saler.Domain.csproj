@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<RootNamespace />
+		<GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Volo\Abp\ExceptionHandling\MyLocalization\*.json" />
+		<Content Remove="Volo\Abp\ExceptionHandling\MyLocalization\*.json" />
+		<EmbeddedResource Include="Resources\**\*.*" />
+		<Content Remove="Resources\**\*.*" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\GlobalUnitCodes.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Allegory.Saler.Domain.Shared\Allegory.Saler.Domain.Shared.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.Emailing" Version="5.3.0" />
+		<PackageReference Include="Volo.Abp.Identity.Domain" Version="5.3.0" />
+		<PackageReference Include="Volo.Abp.PermissionManagement.Domain.Identity" Version="5.3.0" />
+		<PackageReference Include="Volo.Abp.IdentityServer.Domain" Version="5.3.0" />
+		<PackageReference Include="Volo.Abp.PermissionManagement.Domain.IdentityServer" Version="5.3.0" />
+		<PackageReference Include="Volo.Abp.BackgroundJobs.Domain" Version="5.3.0" />
+		<PackageReference Include="Volo.Abp.AuditLogging.Domain" Version="5.3.0" />
+		<PackageReference Include="Volo.Abp.SettingManagement.Domain" Version="5.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="6.0.5" />
+	</ItemGroup>
+
+</Project>

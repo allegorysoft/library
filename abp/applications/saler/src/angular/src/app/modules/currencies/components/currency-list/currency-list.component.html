@@ -1,0 +1,165 @@
+<div class="card p-2 shadow-2">
+  <p-toolbar styleClass="mb-2">
+    <ng-template pTemplate="left">
+      <h5>{{ '::Currencies' | abpLocalization }}</h5>
+    </ng-template>
+
+    <ng-template pTemplate="right">
+      <button
+        *ngIf="table?.multiSortMeta?.length > 0"
+        pButton
+        pRipple
+        type="button"
+        icon="pi pi-filter-slash"
+        class="p-button-rounded p-button-text p-speeddial-button p-button-plain"
+        [ngStyle]="{ 'margin-right': '.5rem' }"
+        (click)="clearSort()"
+      ></button>
+
+      <button
+        pButton
+        pRipple
+        *abpPermission="'General.Currency.Create'"
+        label="{{ '::NewCurrency' | abpLocalization }}"
+        class="p-button-sm"
+        icon="pi pi-plus"
+        (click)="showDialog()"
+      ></button>
+    </ng-template>
+  </p-toolbar>
+
+  <p-table
+    #currencyDt
+    [dataKey]="tableConfig.dataKey"
+    [lazy]="tableConfig.lazy"
+    (onLazyLoad)="loadCurrencies($event)"
+    [value]="currencies$ | async"
+    responsiveLayout="stack"
+    styleClass="p-datatable-sm"
+    [rowHover]="true"
+    [paginator]="tableConfig.paginator"
+    [rows]="pageSize"
+    [totalRecords]="totalCount | async"
+    [loading]="loading"
+    [showCurrentPageReport]="tableConfig.showCurrentPageReport"
+    [rowsPerPageOptions]="pageSizeOptions$ | async"
+    [sortMode]="tableConfig.sortMode"
+    paginatorDropdownAppendTo="body"
+    stateStorage="local"
+    [stateKey]="filterStateToken"
+  >
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th>{{ '::Actions' | abpLocalization }}</th>
+
+        <th pSortableColumn="code">
+          {{ '::DisplayName:Code' | abpLocalization }}
+          <p-sortIcon field="code"></p-sortIcon>
+        </th>
+
+        <th pSortableColumn="name">
+          {{ '::DisplayName:Name' | abpLocalization }}
+          <p-sortIcon field="name"></p-sortIcon>
+        </th>
+
+        <th pSortableColumn="symbol">
+          {{ '::DisplayName:Symbol' | abpLocalization }}
+          <p-sortIcon field="symbol"></p-sortIcon>
+        </th>
+      </tr>
+
+      <tr>
+        <th>
+          <button
+            pButton
+            pRipple
+            type="button"
+            icon="pi pi-filter-slash"
+            class="p-button-rounded p-button-text p-speeddial-button p-button-plain"
+            [ngStyle]="{ 'margin-left': '.9rem' }"
+            (click)="clearSort()"
+          ></button>
+        </th>
+
+        <th>
+          <p-columnFilter type="text" field="code" matchMode="contains"> </p-columnFilter>
+        </th>
+
+        <th>
+          <p-columnFilter type="text" field="name" matchMode="contains"> </p-columnFilter>
+        </th>
+
+        <th>
+          <p-columnFilter type="text" field="symbol" matchMode="contains"> </p-columnFilter>
+        </th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-currency let-columns="columns">
+      <tr (dblclick)="selectCurrency(currency)">
+        <td style="width: 7rem">
+          <span class="p-column-title">
+            {{ '::Actions' | abpLocalization }}
+          </span>
+
+          <span>
+            <button
+              *ngIf="'General.Currency.Delete' | permission"
+              pButton
+              pRipple
+              type="button"
+              icon="pi pi-trash"
+              class="p-button-rounded p-button-danger p-button-text"
+              (click)="deleteOnClick(currency.id, currency.name)"
+            ></button>
+            <button
+              *ngIf="'General.Currency.Edit' | permission"
+              pButton
+              pRipple
+              type="button"
+              icon="pi pi-pencil"
+              class="p-button-rounded p-button-plain p-button-text"
+              (click)="showDialog(currency)"
+            ></button>
+          </span>
+        </td>
+
+        <td>
+          <span class="p-column-title">
+            {{ '::DisplayName:Code' | abpLocalization }}
+          </span>
+          {{ currency.code }}
+        </td>
+
+        <td>
+          <span class="p-column-title">
+            {{ '::DisplayName:Name' | abpLocalization }}
+          </span>
+          {{ currency.name }}
+        </td>
+
+        <td>
+          <span class="p-column-title">
+            {{ '::DisplayName:Symbol' | abpLocalization }}
+          </span>
+          {{ currency.symbol }}
+        </td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="emptymessage" let-columns>
+      <tr>
+        <td [attr.colspan]="4" class="text-center">
+          {{ '::NoRecordsFound' | abpLocalization }}
+        </td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="paginatorleft"></ng-template>
+  </p-table>
+</div>
+
+<app-currency-edit-dialog
+  *ngIf="dialogVisible"
+  [(visible)]="dialogVisible"
+></app-currency-edit-dialog>

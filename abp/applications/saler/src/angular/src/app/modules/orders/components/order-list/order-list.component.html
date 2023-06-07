@@ -1,0 +1,229 @@
+<div class="grid">
+  <div class="col-12">
+    <div class="card shadow-2 p-2">
+      <p-toolbar styleClass="mb-2">
+        <ng-template pTemplate="left">
+          <h5>{{ (orderType === 0 ? '::PurchaseOrders' : '::SalesOrders') | abpLocalization }}</h5>
+        </ng-template>
+
+        <ng-template pTemplate="right">
+          <button
+            *ngIf="table?.multiSortMeta?.length > 0"
+            pButton
+            pRipple
+            type="button"
+            icon="pi pi-filter-slash"
+            class="p-button-rounded p-button-text p-speeddial-button p-button-plain"
+            [ngStyle]="{ 'margin-right': '.5rem' }"
+            (click)="clearSort()"
+          ></button>
+
+          <p-button
+            type="button"
+            *abpPermission="'OrderManagement.Order.Create'"
+            label="{{ '::NewOrder' | abpLocalization }}"
+            styleClass="p-button-sm"
+            icon="pi pi-plus"
+            [routerLink]="['/orders/' + urlByOrderType + '/create']"
+          >
+          </p-button>
+        </ng-template>
+      </p-toolbar>
+
+      <p-table
+        #orderDt
+        [dataKey]="tableConfig.dataKey"
+        [lazy]="tableConfig.lazy"
+        (onLazyLoad)="loadOrders($event)"
+        [value]="orders$ | async"
+        responsiveLayout="stack"
+        styleClass="p-datatable-sm"
+        [rowHover]="true"
+        [paginator]="tableConfig.paginator"
+        paginatorDropdownAppendTo="body"
+        [rows]="pageSize"
+        [totalRecords]="totalRecords$ | async"
+        [loading]="loading"
+        [abpLoading]="navigateToEdit"
+        [showCurrentPageReport]="tableConfig.showCurrentPageReport"
+        [rowsPerPageOptions]="pageSizeOptions$ | async"
+        [sortMode]="tableConfig.sortMode"
+        stateStorage="local"
+        [stateKey]="filterStateToken"
+      >
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th>{{ '::Actions' | abpLocalization }}</th>
+
+            <th pSortableColumn="number">
+              {{ '::DisplayName:OrderNumber' | abpLocalization }}
+              <p-sortIcon field="number"></p-sortIcon>
+            </th>
+
+            <th pSortableColumn="statu">
+              {{ '::DisplayName:OrderStatu' | abpLocalization }}
+              <p-sortIcon field="statu"></p-sortIcon>
+            </th>
+
+            <th pSortableColumn="clientCode">
+              {{ '::DisplayName:ClientCode' | abpLocalization }}
+              <p-sortIcon field="clientCode"></p-sortIcon>
+            </th>
+
+            <th pSortableColumn="date">
+              {{ '::DisplayName:OrderDate' | abpLocalization }}
+              <p-sortIcon field="date"></p-sortIcon>
+            </th>
+
+            <th pSortableColumn="totalGross">
+              {{ '::DisplayName:TotalGross' | abpLocalization }}
+              <p-sortIcon field="totalGross"></p-sortIcon>
+            </th>
+          </tr>
+
+          <tr>
+            <th>
+              <button
+                pButton
+                pRipple
+                type="button"
+                icon="pi pi-filter-slash"
+                class="p-button-rounded p-button-text p-speeddial-button p-button-plain"
+                [ngStyle]="{ 'margin-left': '.9rem' }"
+                (click)="clearSort()"
+              ></button>
+            </th>
+
+            <th>
+              <p-columnFilter
+                styleClass="p-inputtext-sm"
+                type="text"
+                field="number"
+                matchMode="contains"
+              >
+              </p-columnFilter>
+            </th>
+
+            <th>
+              <p-columnFilter field="statu" matchMode="equals" [showMenu]="false">
+                <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                  <p-dropdown
+                    [ngModel]="value"
+                    placeholder="{{ '::All' | abpLocalization }}"
+                    inputId="dropdown"
+                    styleClass="w-full"
+                    [options]="orderStatuOptions"
+                    optionLabel="key"
+                    optionValue="value"
+                    (onChange)="filter($event.value)"
+                    appendTo="body"
+                  >
+                    <ng-template let-statu pTemplate="selectedItem" style="padding: 0 !important">
+                      {{ '::Enum:OrderStatu:' + statu?.value | abpLocalization }}
+                    </ng-template>
+
+                    <ng-template let-statu pTemplate="item">
+                      <span class="badge order-status-{{ statu?.value }}">
+                        {{ '::Enum:OrderStatu:' + statu?.value | abpLocalization }}
+                      </span>
+                    </ng-template>
+                  </p-dropdown>
+                </ng-template>
+              </p-columnFilter>
+            </th>
+
+            <th>
+              <p-columnFilter type="text" field="clientCode"></p-columnFilter>
+            </th>
+
+            <th>
+              <!-- <p-columnFilter type="date" field="date"></p-columnFilter> -->
+            </th>
+
+            <th>
+              <p-columnFilter type="numeric" field="totalGross"></p-columnFilter>
+            </th>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-order let-columns="columns">
+          <tr>
+            <td style="width: 5rem">
+              <span class="p-column-title">
+                {{ '::Actions' | abpLocalization }}
+              </span>
+              <span>
+                <button
+                  *ngIf="'OrderManagement.Order.Delete' | permission"
+                  pButton
+                  pRipple
+                  type="button"
+                  icon="pi pi-trash"
+                  class="p-button-rounded p-button-danger p-button-text"
+                  (click)="delete(order.id, order.number)"
+                ></button>
+                <button
+                  *ngIf="'OrderManagement.Order.Edit' | permission"
+                  pButton
+                  pRipple
+                  type="button"
+                  icon="pi pi-pencil"
+                  class="p-button-rounded p-button-plain p-button-text"
+                  (click)="edit(order.id)"
+                  [routerLink]="['/orders/' + urlByOrderType + '/edit/' + order.id]"
+                ></button>
+              </span>
+            </td>
+
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:OrderNumber' | abpLocalization }}
+              </span>
+              {{ order.number }}
+            </td>
+
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:OrderStatu' | abpLocalization }}
+              </span>
+              <span class="badge order-status-{{ order.statu }}">
+                {{ '::Enum:OrderStatu:' + order.statu | abpLocalization }}
+              </span>
+            </td>
+
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:ClientCode' | abpLocalization }}
+              </span>
+              {{ order.clientCode ?? '-' }}
+            </td>
+
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:OrderDate' | abpLocalization }}
+              </span>
+              {{ order.date | date: datePattern }}
+            </td>
+
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:TotalGross' | abpLocalization }}
+              </span>
+              {{ order.totalGross | number: '1.2-2' }}
+            </td>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="emptymessage" let-columns>
+          <tr>
+            <td [attr.colspan]="6" class="text-center">
+              {{ '::NoRecordsFound' | abpLocalization }}
+            </td>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="paginatorleft"></ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>

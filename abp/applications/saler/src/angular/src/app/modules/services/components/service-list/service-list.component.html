@@ -1,0 +1,183 @@
+<div class="grid">
+  <div class="col-12">
+    <div class="card shadow-2 p-2">
+      <p-toolbar styleClass="mb-2">
+        <ng-template pTemplate="left">
+          <h5>{{ '::Services' | abpLocalization }}</h5>
+        </ng-template>
+
+        <ng-template pTemplate="right">
+          <button
+            *ngIf="table?.multiSortMeta?.length > 0"
+            pButton
+            pRipple
+            type="button"
+            icon="pi pi-filter-slash"
+            class="p-button-rounded p-button-text p-speeddial-button p-button-plain"
+            [ngStyle]="{ 'margin-right': '.5rem' }"
+            (click)="clearSort()"
+          ></button>
+
+          <p-button
+            *abpPermission="'ProductManagement.Service.Create'"
+            label="{{ '::NewService' | abpLocalization }}"
+            styleClass="p-button-sm"
+            icon="pi pi-plus"
+            (click)="showDialog(0)"
+          >
+          </p-button>
+        </ng-template>
+      </p-toolbar>
+
+      <p-table
+        #serviceDt
+        [dataKey]="tableConfig.dataKey"
+        [lazy]="tableConfig.lazy"
+        (onLazyLoad)="loadServices($event)"
+        [value]="services$ | async"
+        responsiveLayout="stack"
+        styleClass="p-datatable-sm"
+        [rowHover]="true"
+        [paginator]="tableConfig.paginator"
+        [rows]="pageSize"
+        [totalRecords]="totalRecords$ | async"
+        [loading]="loading$ | async"
+        [showCurrentPageReport]="tableConfig.showCurrentPageReport"
+        [rowsPerPageOptions]="pageSizeOptions.value"
+        [sortMode]="tableConfig.sortMode"
+        paginatorDropdownAppendTo="body"
+        stateStorage="local"
+        [stateKey]="filterStateToken"
+      >
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th>{{ '::Actions' | abpLocalization }}</th>
+
+            <th pSortableColumn="code">
+              {{ '::DisplayName:Code' | abpLocalization }}
+              <p-sortIcon field="code"></p-sortIcon>
+            </th>
+
+            <th pSortableColumn="name">
+              {{ '::DisplayName:Name' | abpLocalization }}
+              <p-sortIcon field="name"></p-sortIcon>
+            </th>
+
+            <th pSortableColumn="mainUnitCode">
+              {{ '::DisplayName:MainUnit' | abpLocalization }}
+              <p-sortIcon field="mainUnitCode"></p-sortIcon>
+            </th>
+          </tr>
+
+          <tr>
+            <th>
+              <button
+                pButton
+                pRipple
+                type="button"
+                icon="pi pi-filter-slash"
+                class="p-button-rounded p-button-text p-speeddial-button p-button-plain"
+                [ngStyle]="{ 'margin-left': '.9rem' }"
+                (click)="clearSort()"
+              ></button>
+            </th>
+
+            <th>
+              <p-columnFilter
+                styleClass="p-inputtext-sm"
+                type="text"
+                field="code"
+                matchMode="contains"
+              >
+              </p-columnFilter>
+            </th>
+
+            <th>
+              <p-columnFilter type="text" field="name" matchMode="contains"> </p-columnFilter>
+            </th>
+
+            <th>
+              <p-columnFilter
+                type="text"
+                field="mainUnitCode"
+                matchMode="contains"
+              ></p-columnFilter>
+            </th>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-service let-columns="columns">
+          <tr (dblclick)="selectService(service)">
+            <td style="width: 5rem">
+              <span class="p-column-title">
+                {{ '::Actions' | abpLocalization }}
+              </span>
+
+              <span>
+                <button
+                  *ngIf="'ProductManagement.Service.Delete' | permission"
+                  pButton
+                  pRipple
+                  type="button"
+                  icon="pi pi-trash"
+                  class="p-button-rounded p-button-danger p-button-text"
+                  (click)="deleteOnClick(service.id, service.code)"
+                ></button>
+                <button
+                  *ngIf="'ProductManagement.Service.Edit' | permission"
+                  pButton
+                  pRipple
+                  type="button"
+                  icon="pi pi-pencil"
+                  class="p-button-rounded p-button-plain p-button-text"
+                  (click)="showDialog(1, service.id)"
+                ></button>
+              </span>
+            </td>
+
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:Code' | abpLocalization }}
+              </span>
+              {{ service.code }}
+            </td>
+
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:Name' | abpLocalization }}
+              </span>
+              {{ service.name }}
+            </td>
+
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:MainUnit' | abpLocalization }}
+              </span>
+              {{ service.mainUnitCode }}
+            </td>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="emptymessage" let-columns>
+          <tr>
+            <td [attr.colspan]="4" class="text-center">
+              {{ '::NoRecordsFound' | abpLocalization }}
+            </td>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="paginatorleft"></ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>
+
+<app-service-create-dialog *ngIf="createDialogVisible" [(visible)]="createDialogVisible">
+</app-service-create-dialog>
+
+<app-service-edit-dialog
+  *ngIf="editDialogVisible"
+  [(visible)]="editDialogVisible"
+  [serviceId]="selectedServiceId"
+>
+</app-service-edit-dialog>

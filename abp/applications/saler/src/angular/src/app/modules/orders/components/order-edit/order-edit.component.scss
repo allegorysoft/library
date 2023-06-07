@@ -1,0 +1,28 @@
+::ng-deep {
+  .general-total {
+    width: 350px;
+
+    label {
+      font-size: 0.85rem !important;
+    }
+
+    p-inputnumber,
+    span.p-inputnumber {
+      width: 100% !important;
+      height: 1.7rem !important;
+    }
+    .p-inputnumber-input {
+      width: 100% !important;
+      text-align: right;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .general-total {
+      width: 100%;
+    }
+    .general-currency-total {
+      margin-left: 0.5rem;
+    }
+  }
+}

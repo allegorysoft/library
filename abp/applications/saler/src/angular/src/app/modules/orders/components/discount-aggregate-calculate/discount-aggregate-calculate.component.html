@@ -1,0 +1,114 @@
+<form
+  class="card m-2"
+  [formGroup]="calculableProductAggregateForm"
+  *ngIf="calculableProductAggregateForm"
+>
+  <p-table
+    [value]="discounts.controls"
+    formArrayName="discounts"
+    styleClass="p-datatable-sm p-1"
+    responsiveLayout="stack"
+    [abpLoading]="busy"
+  >
+    <ng-template pTemplate="caption">
+      <div class="flex">
+        {{ '::DisplayName:Total' | abpLocalization }} :
+        {{ calculableProductAggregateForm!.value!.totalVatBase | number: '1.0-2' }}
+        <button
+          pButton
+          pRipple
+          pTooltip="{{ '::Save' | abpLocalization }}"
+          tooltipPosition="bottom"
+          type="button"
+          icon="pi pi-check"
+          class="p-button-rounded p-button-success p-button-text ml-auto"
+          (click)="save()"
+        ></button>
+        <button
+          pButton
+          pRipple
+          [disabled]="newRowLength > 0"
+          pTooltip="{{ '::AddRow' | abpLocalization }}"
+          tooltipPosition="bottom"
+          type="button"
+          icon="pi pi-plus"
+          class="p-button-rounded p-button-text"
+          (click)="addNewRow()"
+        ></button>
+      </div>
+    </ng-template>
+
+    <ng-template pTemplate="header">
+      <tr>
+        <th>{{ '::Actions' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:DiscountRate' | abpLocalization }}</th>
+        <th>{{ '::DisplayName:DiscountTotal' | abpLocalization }}</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-discountLine let-i="rowIndex">
+      <tr>
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::Actions' | abpLocalization }}
+          </span>
+          <button
+            pButton
+            pRipple
+            type="button"
+            icon="pi pi-trash"
+            class="p-button-rounded p-button-text p-button-danger"
+            (click)="removeDiscountLine(i)"
+          ></button>
+        </td>
+
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:DiscountRate' | abpLocalization }}
+          </span>
+
+          <p-inputNumber
+            class="p-inputtext-sm"
+            formControlName="rate"
+            inputId="minmaxfraction"
+            mode="decimal"
+            [minFractionDigits]="0"
+            [maxFractionDigits]="5"
+            (onFocus)="rateOnFocus(discountLine)"
+            (onBlur)="rateOnBlur(discountLine, i)"
+            min="0"
+            max="100"
+          >
+          </p-inputNumber>
+        </td>
+
+        <td [formGroupName]="i">
+          <span class="p-column-title">
+            {{ '::DisplayName:DiscountTotal' | abpLocalization }}
+          </span>
+
+          <p-inputNumber
+            class="p-inputtext-sm"
+            formControlName="total"
+            inputId="minmaxfraction"
+            mode="decimal"
+            [minFractionDigits]="0"
+            [maxFractionDigits]="5"
+            (onFocus)="totalOnFocus(discountLine)"
+            (onBlur)="totalOnBlur(discountLine, i)"
+            min="0"
+          >
+          </p-inputNumber>
+        </td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="emptymessage" let-columns>
+      <tr>
+        <td [attr.colspan]="3" class="text-center">
+          {{ '::NoRecordsFound' | abpLocalization }}
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</form>

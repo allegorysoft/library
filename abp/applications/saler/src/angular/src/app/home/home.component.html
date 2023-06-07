@@ -1,0 +1,36 @@
+<div class="grid" *ngIf="hasLoggedIn">
+  <div class="col-12 md:col-8">
+    <div class="card p-2">
+      <div
+        class="card-header"
+        style="
+          justify-content: space-between;
+          display: flex;
+          -ms-flex-align: center;
+          align-items: center;
+        "
+      >
+        <h5>{{ '::Menu:Orders' | abpLocalization }}</h5>
+      </div>
+
+      <p-chart type="line" [data]="lineStylesData"></p-chart>
+    </div>
+  </div>
+  <div class="col-12 md:col-4">
+    <div class="card p-2">
+      <p-chart type="radar" [data]="data"></p-chart>
+    </div>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <div class="card p-2">
+      <p-chart type="polarArea" [data]="colorData"></p-chart>
+    </div>
+  </div>
+  <div class="col-12 md:col-8">
+    <div class="card p-2">
+      <h5>Multi Axis</h5>
+      <p-chart type="bar" [data]="multiAxisData" [options]="multiAxisOptions"></p-chart>
+    </div>
+  </div>
+</div>

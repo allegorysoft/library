@@ -1,0 +1,154 @@
+::ng-deep {
+  .p-component {
+    font-size: 0.95rem !important;
+  }
+
+  .p-menubar {
+    border-radius: 0;
+    padding: 0.5rem;
+
+    .p-menuitem-link {
+      padding: 0.5rem 0.75rem !important;
+    }
+  }
+
+  .p-toolbar {
+    padding: 0.3rem !important;
+  }
+
+  .p-inputtext {
+    padding: 0.3rem 0.3rem !important;
+  }
+
+  p-columnfilterformelement .p-inputtext,
+  .p-inputtext-sm,
+  .p-button-sm {
+    height: 2rem !important;
+  }
+
+  .p-inputnumber-button-group {
+    height: 2rem !important;
+  }
+
+  .p-inputnumber-input {
+    width: 5rem !important;
+  }
+  .p-speeddial {
+    position: relative !important;
+    justify-content: unset !important;
+    height: 2rem !important;
+  }
+
+  .p-speeddial-button,
+  .p-speeddial-action {
+    height: 2rem !important;
+    width: 2rem !important;
+
+    .p-button-icon {
+      font-size: 1rem !important;
+    }
+  }
+
+  .p-button-icon-only {
+    height: 2rem !important;
+    width: 2rem !important;
+  }
+
+  .p-datatable-thead tr th {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+  }
+
+  .p-paginator {
+    .p-paginator-pages .p-paginator-page {
+      height: 2rem !important;
+      min-width: 2rem !important;
+    }
+
+    .p-paginator-first,
+    .p-paginator-prev,
+    .p-paginator-next,
+    .p-paginator-last {
+      height: 2rem !important;
+      min-width: 2rem !important;
+    }
+    .p-dropdown {
+      height: 2rem !important;
+    }
+    .p-dropdown .p-dropdown-label {
+      padding: 0.25rem 0.15rem !important;
+    }
+  }
+
+  .p-dropdown-panel .p-dropdown-items:not(.p-dropdown-virtualscroll) {
+    padding: 0 !important;
+  }
+
+  .p-column-filter-row-item {
+    padding: 0.5rem 0.5rem !important;
+  }
+  .p-column-filter-separator {
+    margin: 0.1rem 0 !important;
+  }
+
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+    padding: 0.25rem 0.75rem !important;
+  }
+
+  .p-dialog-header {
+    padding: 0.5rem !important;
+  }
+  .p-dialog-content {
+    padding: 0 !important;
+  }
+  .p-dialog-footer {
+    padding: 0.5rem 0.75rem !important;
+  }
+
+  .group-name {
+    position: relative !important;
+    top: -1.2rem !important;
+    background: white !important;
+    height: 3rem;
+  }
+
+  .p-datatable.p-datatable-sm .p-datatable-tbody > tr > td,
+  .p-datatable.p-datatable-sm .p-datatable-thead > tr > th {
+    padding: 0.1rem 0.3rem !important;
+  }
+  .p-datatable.p-datatable-sm .p-datatable-thead > tr > th {
+    height: 36px !important;
+  }
+
+  .p-card-footer {
+    padding: 0 !important;
+  }
+
+  .p-tooltip .p-tooltip-text {
+    padding: 0.2rem !important;
+  }
+
+  .p-datepicker {
+    .p-datepicker-header,
+    table td,
+    .p-timepicker,
+    .p-datepicker-buttonbar {
+      padding: 0rem !important;
+    }
+
+    .p-timepicker {
+      height: 4rem;
+      span {
+        font-size: 1rem;
+      }
+      button {
+        width: 1rem !important;
+        height: 1rem !important;
+      }
+    }
+
+    .p-datepicker-buttonbar button {
+      padding: 0.3rem;
+    }
+  }
+}

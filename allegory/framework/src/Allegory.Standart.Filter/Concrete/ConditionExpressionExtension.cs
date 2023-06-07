@@ -25,7 +25,7 @@ namespace Allegory.Standart.Filter.Concrete
 
         public static Func<TEntity, bool> ToLambdaExpression<TEntity>(this Condition condition)
         {
-            return ToExpression<TEntity>(condition).Compile();
+            return ToExpression<TEntity>(condition)?.Compile();
         }
 
         [Obsolete("This extension method is obsolete and will be removed in a future version. Use ToExpression instead.")]

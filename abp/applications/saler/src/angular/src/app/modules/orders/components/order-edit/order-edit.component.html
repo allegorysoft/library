@@ -1,0 +1,400 @@
+<form *ngIf="orderForm" [formGroup]="orderForm" (submit)="save()" skipValidation>
+  <p-card styleClass="shadow-2">
+    <ng-template pTemplate="header">
+      <h5 style="padding: 0.6rem 0 0 0.6rem; margin: 0">
+        {{ '::EditOrder' | abpLocalization }} -
+        {{ '::' + (orderType === 0 ? 'Purchase' : 'Sales') | abpLocalization }}
+      </h5>
+    </ng-template>
+
+    <div class="formgrid grid">
+      <div class="formgrid grid border-1 border-400 border-round p-2 m-2 mt-0 w-full">
+        <div class="col-12 md:col-12 flex pb-2" style="height: 0px !important">
+          <h6 class="text-indigo-500 group-name">
+            {{ '::GroupName:GeneralInformation' | abpLocalization }}
+          </h6>
+        </div>
+
+        <div class="field col-12 md:col-3">
+          <span class="p-float-label">
+            <input
+              pInputText
+              type="text"
+              id="number"
+              formControlName="number"
+              class="w-full p-inputtext-sm"
+            />
+            <label for="number">
+              {{ '::DisplayName:OrderNumber' | abpLocalization }}
+            </label>
+          </span>
+        </div>
+
+        <div class="field col-12 md:col-3">
+          <span class="p-float-label">
+            <p-calendar
+              formControlName="date"
+              dateFormat="dd.mm.yy"
+              styleClass="w-full p-inputtext-sm"
+              [showButtonBar]="true"
+              [firstDayOfWeek]="1"
+              [showTime]="true"
+              (onFocus)="dateOnFocus()"
+              (onBlur)="dateOnBlur()"
+              (onSelect)="dateOnBlur()"
+            ></p-calendar>
+            <label for="number">
+              {{ '::DisplayName:OrderDate' | abpLocalization }}
+            </label>
+          </span>
+        </div>
+
+        <div class="field col-12 md:col-3">
+          <div class="p-inputgroup">
+            <span class="p-float-label">
+              <input type="text" pInputText formControlName="clientCode" class="p-inputtext-sm" />
+              <label for="number">
+                {{ '::DisplayName:ClientCode' | abpLocalization }}
+              </label>
+            </span>
+
+            <button
+              pButton
+              pRipple
+              type="button"
+              icon="pi pi-ellipsis-h"
+              (click)="clientDialogVisible = true"
+            ></button>
+          </div>
+        </div>
+
+        <div class="field col-12 md:col-3">
+          <span class="p-float-label">
+            <p-dropdown
+              inputId="dropdown"
+              styleClass="w-full p-inputtext-sm"
+              [options]="orderStatuOptions"
+              formControlName="statu"
+              optionLabel="key"
+              optionValue="value"
+            >
+              <ng-template pTemplate="selectedItem">
+                <span>
+                  {{ '::Enum:OrderStatu:' + orderForm.get('statu').value | abpLocalization }}
+                </span>
+              </ng-template>
+
+              <ng-template let-statu pTemplate="item">
+                <span>{{ '::Enum:OrderStatu:' + statu.value | abpLocalization }}</span>
+              </ng-template>
+            </p-dropdown>
+            <label for="dropdown">
+              {{ '::DisplayName:OrderStatu' | abpLocalization }}
+            </label>
+          </span>
+        </div>
+
+        <div class="field col-12 md:col-3" *ngIf="!orderForm.value.hasCurrency">
+          <button
+            pButton
+            pRipple
+            label="{{ '::ChangeCurrency' | abpLocalization }}"
+            icon="pi pi-dollar"
+            type="button"
+            class="p-button-outlined p-button-sm"
+            (click)="changeCurrency()"
+          ></button>
+        </div>
+        <div class="field col-12 md:col-2" *ngIf="orderForm.value.hasCurrency">
+          <span class="p-float-label">
+            <p-dropdown
+              inputId="currencies"
+              [options]="currencies"
+              styleClass="w-full p-inputtext-sm"
+              formControlName="currencyCode"
+              [optionLabel]="'currencyCode'"
+              [optionValue]="'currencyCode'"
+              [filter]="true"
+              filterBy="currencyCode"
+              (onChange)="currencyOnChange($event.value)"
+            >
+              <ng-template pTemplate="selectedItem">
+                <span>{{ orderForm.get('currencyCode').value }}</span>
+              </ng-template>
+
+              <ng-template let-currency pTemplate="item">
+                <span>{{ currency.currencyCode }}</span>
+              </ng-template>
+            </p-dropdown>
+
+            <label for="currencies">
+              {{ '::DisplayName:OrderCurrency' | abpLocalization }}
+            </label>
+          </span>
+        </div>
+        <div class="field col-12 md:col-1" *ngIf="orderForm.value.hasCurrency">
+          <p-inputNumber
+            formControlName="currencyRate"
+            inputId="minmaxfraction"
+            mode="decimal"
+            [minFractionDigits]="2"
+            [maxFractionDigits]="4"
+            styleClass="w-full p-inputtext-sm"
+            (onFocus)="currencyRateOnFocus()"
+            (onBlur)="currencyRateOnBlur()"
+          >
+          </p-inputNumber>
+        </div>
+      </div>
+
+      <div class="w-full">
+        <app-order-line [orderForm]="orderForm"></app-order-line>
+      </div>
+    </div>
+
+    <ng-template pTemplate="footer">
+      <!--General total section-->
+      <div class="flex justify-content-end">
+        <div class="formgrid grid pt-1 mb-1 general-total">
+          <div class="col-12 md:col-12">
+            <div class="grid">
+              <div class="field col-12 md:col-5 m-0">
+                <label for="totalDiscount" class="m-0">
+                  {{ '::DisplayName:TotalDiscount' | abpLocalization }}
+                  <button
+                    pButton
+                    pRipple
+                    type="button"
+                    icon="pi pi-pencil"
+                    class="p-button-rounded p-button-text p-button-sm"
+                    (click)="editDiscounts()"
+                    style="
+                      padding: 0 !important;
+                      margin: 0 !important;
+                      height: 1.5rem !important;
+                      width: 1.5rem !important;
+                    "
+                  ></button>
+                </label>
+              </div>
+              <div class="field col-12 md:col-7 mb-1">
+                <p-inputNumber
+                  formControlName="totalDiscount"
+                  inputId="minmaxfraction"
+                  mode="decimal"
+                  [minFractionDigits]="minFractionDigits"
+                  [maxFractionDigits]="maxFractionDigits"
+                  class="p-inputtext-sm"
+                  [readonly]="true"
+                >
+                </p-inputNumber>
+              </div>
+
+              <div class="field col-12 md:col-5 m-0">
+                <label for="totalVatBase" class="m-0">
+                  {{ '::DisplayName:VatBase' | abpLocalization }}
+                </label>
+              </div>
+
+              <div class="field col-12 md:col-7 mb-1">
+                <p-inputNumber
+                  formControlName="totalVatBase"
+                  inputId="minmaxfraction"
+                  mode="decimal"
+                  [minFractionDigits]="minFractionDigits"
+                  [maxFractionDigits]="maxFractionDigits"
+                  class="p-inputtext-sm"
+                  [readonly]="true"
+                >
+                </p-inputNumber>
+              </div>
+
+              <div class="field col-12 md:col-5 m-0">
+                <label for="totalVatAmount" class="m-0">
+                  {{ '::DisplayName:TotalVat' | abpLocalization }}
+                </label>
+              </div>
+              <div class="field col-12 md:col-7 mb-1">
+                <p-inputNumber
+                  formControlName="totalVatAmount"
+                  inputId="minmaxfraction"
+                  mode="decimal"
+                  [minFractionDigits]="minFractionDigits"
+                  [maxFractionDigits]="maxFractionDigits"
+                  class="p-inputtext-sm"
+                  [readonly]="true"
+                >
+                </p-inputNumber>
+              </div>
+
+              <div class="field col-12 md:col-5 m-0">
+                <label for="totalGross" class="m-0">
+                  {{ '::DisplayName:TotalGross' | abpLocalization }}
+                </label>
+              </div>
+              <div class="field col-12 md:col-7 mb-1">
+                <p-inputNumber
+                  formControlName="totalGross"
+                  inputId="minmaxfraction"
+                  mode="decimal"
+                  [minFractionDigits]="minFractionDigits"
+                  [maxFractionDigits]="maxFractionDigits"
+                  class="p-inputtext-sm"
+                  [readonly]="true"
+                >
+                </p-inputNumber>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="formgrid grid pt-1 mb-1 general-total general-currency-total">
+          <div class="col-12 md:col-12">
+            <div class="grid">
+              <div class="field col-12 md:col-5 m-0">
+                <label for="currencyTotalDiscount" class="m-0">
+                  {{ '::DisplayName:CurrencyTotalDiscount' | abpLocalization }}
+                </label>
+              </div>
+              <div class="field col-12 md:col-7 mb-1">
+                <p-inputNumber
+                  formControlName="currencyTotalDiscount"
+                  inputId="minmaxfraction"
+                  mode="decimal"
+                  [minFractionDigits]="minFractionDigits"
+                  [maxFractionDigits]="maxFractionDigits"
+                  class="p-inputtext-sm"
+                  [readonly]="true"
+                >
+                </p-inputNumber>
+              </div>
+
+              <div class="field col-12 md:col-5 m-0">
+                <label for="currencyTotalVatBase" class="m-0">
+                  {{ '::DisplayName:CurrencyTotalVatBase' | abpLocalization }}
+                </label>
+              </div>
+              <div class="field col-12 md:col-7 mb-1">
+                <p-inputNumber
+                  formControlName="currencyTotalVatBase"
+                  inputId="minmaxfraction"
+                  mode="decimal"
+                  [minFractionDigits]="minFractionDigits"
+                  [maxFractionDigits]="maxFractionDigits"
+                  class="p-inputtext-sm"
+                  [readonly]="true"
+                >
+                </p-inputNumber>
+              </div>
+
+              <div class="field col-12 md:col-5 m-0">
+                <label for="currencyTotalVatAmount" class="m-0">
+                  {{ '::DisplayName:CurrencyTotalVatAmount' | abpLocalization }}
+                </label>
+              </div>
+              <div class="field col-12 md:col-7 mb-1">
+                <p-inputNumber
+                  formControlName="currencyTotalVatAmount"
+                  inputId="minmaxfraction"
+                  mode="decimal"
+                  [minFractionDigits]="minFractionDigits"
+                  [maxFractionDigits]="maxFractionDigits"
+                  class="p-inputtext-sm"
+                  [readonly]="true"
+                >
+                </p-inputNumber>
+              </div>
+
+              <div class="field col-12 md:col-5 m-0">
+                <label for="currencyTotalGross" class="m-0">
+                  {{ '::DisplayName:CurrencyTotalGross' | abpLocalization }}
+                </label>
+              </div>
+              <div class="field col-12 md:col-7 mb-1">
+                <p-inputNumber
+                  formControlName="currencyTotalGross"
+                  inputId="minmaxfraction"
+                  mode="decimal"
+                  [minFractionDigits]="minFractionDigits"
+                  [maxFractionDigits]="maxFractionDigits"
+                  class="p-inputtext-sm"
+                  [readonly]="true"
+                >
+                </p-inputNumber>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--General total section-->
+
+      <div class="flex justify-content-end">
+        <p-button
+          styleClass="p-button-sm p-button-secondary"
+          label="{{ '::Cancel' | abpLocalization }}"
+          icon="pi pi-times"
+          [disabled]="busy$ | async"
+          (onClick)="navigateOrders()"
+        >
+        </p-button>
+
+        <p-button
+          *abpPermission="'OrderManagement.Order.Edit'"
+          styleClass="p-button-sm ml-1"
+          [disabled]="!orderForm || !orderForm.valid"
+          label="{{ '::Save' | abpLocalization }}"
+          icon="pi pi-check"
+          [loading]="busy$ | async"
+          (onClick)="save()"
+        >
+        </p-button>
+      </div>
+    </ng-template>
+  </p-card>
+</form>
+
+<p-dialog
+  #clientSelectDialog
+  [(visible)]="clientDialogVisible"
+  [position]="'top'"
+  header="{{ '::SelectClient' | abpLocalization }}"
+  [modal]="true"
+  [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
+  [style]="{ 'max-width': '650px' }"
+  [baseZIndex]="-1000"
+  [resizable]="false"
+  [draggable]="false"
+  [transitionOptions]="'150ms'"
+  [contentStyle]="{ 'overflow-x': 'hidden' }"
+>
+  <ng-template pTemplate="content">
+    <app-client-list
+      *ngIf="clientDialogVisible"
+      (selectClientChange)="clientAfterSelect($event)"
+    ></app-client-list>
+  </ng-template>
+</p-dialog>
+
+<p-dialog
+  #aggregateRootDiscountDialogVisible
+  [(visible)]="discountDialogVisible"
+  [position]="'top'"
+  header="{{ '::DisplayName:Discounts' | abpLocalization }}"
+  [modal]="true"
+  [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
+  [style]="{ 'max-width': '650px' }"
+  [baseZIndex]="-1000"
+  [resizable]="false"
+  [draggable]="false"
+  [transitionOptions]="'150ms'"
+  [contentStyle]="{ 'overflow-x': 'hidden' }"
+>
+  <ng-template pTemplate="content">
+    <app-discount-aggregate-calculate
+      *ngIf="discountDialogVisible"
+      [calculableProductAggregateRootDto]="calculableProductAggregateRootDto"
+      (calculableProductAggregateRootDtoChanged)="handleDiscounts($event)"
+    >
+    </app-discount-aggregate-calculate>
+  </ng-template>
+</p-dialog>

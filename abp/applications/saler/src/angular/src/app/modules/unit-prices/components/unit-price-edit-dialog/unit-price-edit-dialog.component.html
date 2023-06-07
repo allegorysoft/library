@@ -1,0 +1,306 @@
+<p-dialog
+  *ngIf="unitPriceForm"
+  #unitPriceEditDialog
+  header="{{
+    (+unitPriceForm?.value.id > 0 ? '::EditUnitPrice' : '::NewUnitPrice') | abpLocalization
+  }}"
+  [(visible)]="visible"
+  (onHide)="hideDialog()"
+  [position]="'top'"
+  [modal]="true"
+  [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
+  [style]="{ 'max-width': '700px' }"
+  [baseZIndex]="-500"
+  [resizable]="false"
+  [draggable]="false"
+  [transitionOptions]="'150ms'"
+  [closeOnEscape]="false"
+  [closable]="!(loading$ | async) && !(busy$ | async)"
+>
+  <ng-template pTemplate="content">
+    <form
+      [abpLoading]="loading$ | async"
+      [formGroup]="unitPriceForm"
+      (submit)="save()"
+      class="overflow-hidden"
+      skipValidation
+    >
+      <div class="card m-1">
+        <div class="p-3 formgrid grid p-fluid">
+          <div class="field col-12 md:col-4">
+            <span class="p-float-label">
+              <input
+                pInputText
+                type="text"
+                id="code"
+                formControlName="code"
+                class="w-full p-inputtext-sm"
+              />
+              <label for="code">
+                {{ '::DisplayName:Code' | abpLocalization }}
+              </label>
+            </span>
+          </div>
+
+          <div class="field col-12 md:col-4">
+            <span class="p-float-label">
+              <p-calendar
+                inputId="beginDate"
+                formControlName="beginDate"
+                showButtonBar="true"
+                dateFormat="dd.mm.yy"
+                styleClass="w-full p-inputtext-sm"
+                [firstDayOfWeek]="1"
+                [showTime]="true"
+                appendTo="body"
+              ></p-calendar>
+              <label for="beginDate">
+                {{ '::DisplayName:BeginDate' | abpLocalization }}
+              </label>
+            </span>
+          </div>
+
+          <div class="field col-12 md:col-4">
+            <span class="p-float-label">
+              <p-calendar
+                inputId="endDate"
+                formControlName="endDate"
+                showButtonBar="true"
+                dateFormat="dd.mm.yy"
+                styleClass="w-full p-inputtext-sm"
+                [firstDayOfWeek]="1"
+                [showTime]="true"
+                appendTo="body"
+              ></p-calendar>
+              <label for="endDate">
+                {{ '::DisplayName:EndDate' | abpLocalization }}
+              </label>
+            </span>
+          </div>
+
+          <div class="field col-12 md:col-4">
+            <div class="p-inputgroup">
+              <span class="p-float-label">
+                <input
+                  pInputText
+                  type="text"
+                  id="productCode"
+                  formControlName="productCode"
+                  class="w-full p-inputtext-sm"
+                />
+
+                <label for="productCode">
+                  {{ '::DisplayName:ProductCode' | abpLocalization }}
+                </label>
+              </span>
+              <button
+                pButton
+                pRipple
+                type="button"
+                icon="pi pi-ellipsis-h"
+                (click)="dialogVisible = true"
+              ></button>
+            </div>
+          </div>
+
+          <div class="field col-12 md:col-4">
+            <div class="p-inputgroup">
+              <span class="p-float-label">
+                <input
+                  pInputText
+                  type="text"
+                  id="productName"
+                  formControlName="productName"
+                  class="w-full p-inputtext-sm"
+                />
+
+                <label for="productCode">
+                  {{ '::DisplayName:ProductName' | abpLocalization }}
+                </label>
+              </span>
+              <button
+                pButton
+                pRipple
+                type="button"
+                icon="pi pi-ellipsis-h"
+                (click)="dialogVisible = true"
+              ></button>
+            </div>
+          </div>
+
+          <div class="field col-12 md:col-4">
+            <p-dropdown
+              [options]="units || []"
+              formControlName="unitCode"
+              emptyMessage="{{ '::NoRecordsFound' | abpLocalization }}"
+              optionLabel="code"
+              optionValue="code"
+              styleClass="p-inputtext-sm w-full"
+              [filter]="true"
+              filterBy="unitCode"
+              [showClear]="true"
+              appendTo="body"
+              placeholder="{{ '::DisplayName:UnitCode' | abpLocalization }}"
+            >
+            </p-dropdown>
+          </div>
+
+          <div class="field col-12 md:col-4">
+            <div class="p-inputgroup">
+              <span class="p-float-label">
+                <input
+                  pInputText
+                  type="text"
+                  id="clientCode"
+                  formControlName="clientCode"
+                  class="w-full p-inputtext-sm"
+                />
+
+                <label for="clientCode">
+                  {{ '::DisplayName:ClientCode' | abpLocalization }}
+                </label>
+              </span>
+              <button
+                pButton
+                pRipple
+                type="button"
+                icon="pi pi-ellipsis-h"
+                (click)="clientDialogVisible = true"
+              ></button>
+            </div>
+            <span class="p-float-label"> </span>
+          </div>
+
+          <div class="field col-12 md:col-4">
+            <!-- <span class="p-float-label"> -->
+            <p-dropdown
+              [options]="currencies"
+              formControlName="currencyCode"
+              emptyMessage="{{ '::NoRecordsFound' | abpLocalization }}"
+              optionLabel="code"
+              optionValue="code"
+              styleClass="p-inputtext-sm w-full"
+              [filter]="true"
+              filterBy="currencyCode"
+              [showClear]="true"
+              appendTo="body"
+              placeholder="{{ '::DisplayName:CurrencyCode' | abpLocalization }}"
+            >
+            </p-dropdown>
+            <!-- <label for="currencyCode">
+                {{ '::DisplayName:CurrencyCode' | abpLocalization }}
+              </label>
+            </span> -->
+          </div>
+          <div class="field col-12 md:col-4"></div>
+
+          <div class="field col-12 md:col-4">
+            <span class="p-float-label">
+              <p-inputNumber
+                inputId="minmaxfraction"
+                mode="decimal"
+                [min]="0"
+                [minFractionDigits]="0"
+                [maxFractionDigits]="5"
+                class="p-inputtext-sm"
+                formControlName="purchasePrice"
+              >
+              </p-inputNumber>
+              <label for="purchasePrice">
+                {{ '::DisplayName:PurchasePrice' | abpLocalization }}
+              </label>
+            </span>
+          </div>
+
+          <div class="field col-12 md:col-4">
+            <span class="p-float-label">
+              <p-inputNumber
+                inputId="minmaxfraction"
+                mode="decimal"
+                [min]="0"
+                [minFractionDigits]="0"
+                [maxFractionDigits]="5"
+                class="p-inputtext-sm"
+                formControlName="salesPrice"
+              >
+              </p-inputNumber>
+              <label for="salesPrice">
+                {{ '::DisplayName:SalesPrice' | abpLocalization }}
+              </label>
+            </span>
+          </div>
+
+          <div class="field col-12 md:col-4">
+            <p-checkbox
+              inputId="isVatIncluded"
+              formControlName="isVatIncluded"
+              [binary]="true"
+            ></p-checkbox>
+            <label class="m-0 pl-2" for="isVatIncluded">
+              {{ '::DisplayName:IsVatIncluded' | abpLocalization }}
+            </label>
+          </div>
+        </div>
+      </div>
+    </form>
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    <p-button
+      *ngIf="hasCreateOrEditPermission$ | async"
+      styleClass="p-button-sm"
+      label="{{ '::Save' | abpLocalization }}"
+      icon="pi pi-check"
+      [disabled]="!unitPriceForm || !unitPriceForm.valid"
+      [loading]="(busy$ | async) || (loading$ | async)"
+      (onClick)="save()"
+    >
+    </p-button>
+  </ng-template>
+</p-dialog>
+
+<p-dialog
+  #selectDialog
+  [(visible)]="dialogVisible"
+  [position]="'top'"
+  header="{{ dialogTitle | abpLocalization }}"
+  [modal]="true"
+  [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
+  [style]="{ 'min-width': '400px !important' }"
+  [baseZIndex]="-1000"
+  [resizable]="false"
+  [draggable]="false"
+  [transitionOptions]="'150ms'"
+  [contentStyle]="{ 'overflow-x': 'hidden' }"
+  (onHide)="productDialogOnHide()"
+>
+  <ng-template pTemplate="content">
+    <app-item-list *ngIf="type === 0" (selectItemChanged)="productDialogOnHide($event)">
+    </app-item-list>
+
+    <app-service-list *ngIf="type === 1" (selectServiceChanged)="productDialogOnHide($event)">
+    </app-service-list>
+  </ng-template>
+</p-dialog>
+
+<p-dialog
+  #clientSelectDialog
+  [(visible)]="clientDialogVisible"
+  [position]="'top'"
+  header="{{ '::SelectClient' | abpLocalization }}"
+  [modal]="true"
+  [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
+  [style]="{ 'max-width': '650px' }"
+  [baseZIndex]="-1000"
+  [resizable]="false"
+  [draggable]="false"
+  [transitionOptions]="'150ms'"
+  [contentStyle]="{ 'overflow-x': 'hidden' }"
+>
+  <ng-template pTemplate="content">
+    <app-client-list
+      *ngIf="clientDialogVisible"
+      (selectClientChange)="clientAfterSelect($event)"
+    ></app-client-list>
+  </ng-template>
+</p-dialog>

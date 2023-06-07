@@ -1,0 +1,33 @@
+<router-outlet></router-outlet>
+
+
+<p-dialog
+    #clientSelectDialog
+    [(visible)]="visible"
+    [position]="'top'"
+    [modal]="true"
+    [breakpoints]="{'960px': '75vw', '640px': '100vw'}"
+    [style]="{'max-width':'650px'}"
+    [baseZIndex]="-1000"
+    [resizable]="false"
+    [draggable]="false"
+    [transitionOptions]="'150ms'"
+    [contentStyle]="{'overflow-x':'hidden'}"
+    (onHide)="onHide()">
+
+    <ng-template pTemplate="header">
+        <button
+            pButton
+            pRipple
+            [loading]="busy"
+            label="{{'::RemoveClientConnect' | abpLocalization}}"
+            class="p-button-sm p-button-text p-button-danger"
+            (click)="clear()">
+        </button>
+    </ng-template>
+
+
+    <ng-template pTemplate="content">
+        <app-client-list (selectClientChange)="clientAfterSelect($event)"></app-client-list>
+    </ng-template>
+</p-dialog>

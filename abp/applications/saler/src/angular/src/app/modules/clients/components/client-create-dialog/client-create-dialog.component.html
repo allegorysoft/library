@@ -1,0 +1,82 @@
+<p-dialog
+    #clientCreateDialog
+    header="{{'::NewClient' | abpLocalization}}"
+    [(visible)]="visible"
+    [position]="position"
+    [modal]="true"
+    [breakpoints]="{'960px': '75vw', '640px': '100vw'}"
+    [style]="{'max-width':'550px'}"
+    [baseZIndex]="-1000"
+    [resizable]="false"
+    [draggable]="false"
+    (onHide)="hideDialog()"
+    [transitionOptions]="'150ms'">
+
+    <ng-template pTemplate="content">
+        <form
+            [ngStyle]="{'overflow':'hidden'}"
+            *ngIf="clientForm && visible"
+            [formGroup]="clientForm"
+            (submit)="save()"
+            skipValidation>
+
+            <div class="card">
+                <div class="p-3 formgrid grid">
+                    <div class="field col-12 md:col-6">
+                        <span class="p-float-label">
+                            <input
+                                pInputText type="text"
+                                id="code"
+                                formControlName="code"
+                                class="w-full">
+                            <label for="code">
+                                {{'::DisplayName:Code' | abpLocalization}}
+                            </label>
+
+                        </span>
+                    </div>
+
+                    <div class="field col-12 md:col-6">
+                        <span class="p-float-label">
+                            <input
+                                pInputText type="text"
+                                id="identityNumber"
+                                formControlName="identityNumber"
+                                class="w-full">
+                            <label for="title">
+                                {{'::DisplayName:IdentityNumber' |
+                                abpLocalization}}
+                            </label>
+                        </span>
+                    </div>
+
+                    <div class="field col-12">
+                        <span class="p-float-label">
+                            <input
+                                pInputText
+                                type="text"
+                                id="title"
+                                formControlName="title"
+                                class="w-full">
+                            <label for="title">
+                                {{'::DisplayName:Title' | abpLocalization}}
+                            </label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </ng-template>
+
+    <ng-template pTemplate="footer">
+        <p-button
+            *abpPermission="'ClientManagement.Client.Create'"
+            styleClass="p-button-sm"
+            [disabled]="!clientForm || !clientForm.valid"
+            label="{{'::Save' | abpLocalization}}"
+            icon="pi pi-check"
+            [loading]="loading | async"
+            (onClick)="save()">
+        </p-button>
+    </ng-template>
+</p-dialog>

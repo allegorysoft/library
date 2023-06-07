@@ -1,0 +1,245 @@
+<div class="card p-2 shadow-2">
+  <p-toolbar styleClass="mb-2">
+    <ng-template pTemplate="left">
+      <h5 class="m-0">{{ '::DailyExchanges' | abpLocalization }}</h5>
+    </ng-template>
+
+    <ng-template pTemplate="right">
+      <button
+        pButton
+        pRipple
+        type="button"
+        icon="pi pi-cloud-download"
+        class="p-button-rounded p-button-text mr-1"
+        pTooltip="{{ '::GetFromCentralBank' | abpLocalization }}"
+        tooltipPosition="bottom"
+        [appendTo]="'body'"
+        (click)="refreshDailyExchange()"
+        [loading]="refresingDailyExchanges$ | async"
+        *abpPermission="'General.Currency.Edit'"
+      ></button>
+
+      <p-calendar
+        inputId="exchangeDate"
+        [(ngModel)]="date"
+        dateFormat="dd.mm.yy"
+        styleClass="p-inputtext-sm"
+        [firstDayOfWeek]="1"
+        (onSelect)="loadDailyExchanges()"
+      ></p-calendar>
+    </ng-template>
+  </p-toolbar>
+
+  <p-table
+    #dailyExchangeDt
+    [dataKey]="tableConfig.dataKey"
+    [loading]="loading"
+    [value]="dailyExchanges"
+    responsiveLayout="stack"
+    styleClass="p-datatable-sm"
+    [rowHover]="true"
+    [paginator]="tableConfig.paginator"
+    [rows]="pageSize"
+    [totalRecords]="dailyExchanges?.length"
+    [showCurrentPageReport]="tableConfig.showCurrentPageReport"
+    [rowsPerPageOptions]="pageSizeOptions$ | async"
+    paginatorDropdownAppendTo="body"
+    stateStorage="local"
+    [stateKey]="filterStateToken"
+    editMode="row"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th
+          style="width: 5.4rem !important; max-width: 7rem !important"
+          *ngIf="'General.Currency.Edit' | permission"
+        >
+          <!-- pSortableColumn="rate4" -->
+          {{ '::Actions' | abpLocalization }}
+          <!-- <p-sortIcon field="rate4"></p-sortIcon> -->
+        </th>
+
+        <th>
+          <!-- pSortableColumn="currencyCode" -->
+          {{ '::DisplayName:CurrencyCode' | abpLocalization }}
+          <!-- <p-sortIcon field="currencyCode"></p-sortIcon> -->
+        </th>
+
+        <th>
+          <!-- pSortableColumn="rate1" -->
+          {{ '::DisplayName:Rate1' | abpLocalization }}
+          <!-- <p-sortIcon field="rate1"></p-sortIcon> -->
+        </th>
+
+        <th>
+          <!-- pSortableColumn="rate2" -->
+          {{ '::DisplayName:Rate2' | abpLocalization }}
+          <!-- <p-sortIcon field="rate2"></p-sortIcon> -->
+        </th>
+
+        <th>
+          <!-- pSortableColumn="rate3" -->
+          {{ '::DisplayName:Rate3' | abpLocalization }}
+          <!-- <p-sortIcon field="rate3"></p-sortIcon> -->
+        </th>
+
+        <th>
+          <!-- pSortableColumn="rate4" -->
+          {{ '::DisplayName:Rate4' | abpLocalization }}
+          <!-- <p-sortIcon field="rate4"></p-sortIcon> -->
+        </th>
+      </tr>
+
+      <tr>
+        <th *ngIf="'General.Currency.Edit' | permission"></th>
+        <th style="max-width: 5rem">
+          <p-columnFilter type="text" field="currencyCode" matchMode="contains"> </p-columnFilter>
+        </th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-exchange let-editing="editing" let-i="rowIndex">
+      <tr
+        (dblclick)="selectExchange(exchange)"
+        [pEditableRow]="exchange"
+        [class.p-highlight]="editing"
+      >
+        <td *ngIf="'General.Currency.Edit' | permission">
+          <span class="p-column-title">
+            {{ '::DisplayName:CurrencyCode' | abpLocalization }}
+          </span>
+
+          <span>
+            <button
+              *ngIf="!editing"
+              [loading]="refresingDailyExchanges$ | async"
+              pButton
+              pRipple
+              type="button"
+              pInitEditableRow
+              icon="pi pi-pencil"
+              (click)="onRowEditInit(exchange)"
+              class="p-button-rounded p-button-text"
+            ></button>
+            <button
+              *ngIf="editing"
+              [loading]="refresingDailyExchanges$ | async"
+              pButton
+              pRipple
+              type="button"
+              pSaveEditableRow
+              icon="pi pi-check"
+              (click)="onRowEditSave(exchange)"
+              class="p-button-rounded p-button-text p-button-success mr-2"
+            ></button>
+            <button
+              *ngIf="editing"
+              [loading]="refresingDailyExchanges$ | async"
+              pButton
+              pRipple
+              type="button"
+              pCancelEditableRow
+              icon="pi pi-times"
+              (click)="onRowEditCancel(i)"
+              class="p-button-rounded p-button-text p-button-danger"
+            ></button>
+          </span>
+        </td>
+
+        <td>
+          <span class="p-column-title">
+            {{ '::DisplayName:CurrencyCode' | abpLocalization }}
+          </span>
+          {{ exchange.currencyCode }}
+        </td>
+
+        <td>
+          <span class="p-column-title"> {{ '::DisplayName:Rate1' | abpLocalization }} </span>
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input
+                style="max-width: 6rem"
+                pInputText
+                type="number"
+                [(ngModel)]="exchange.rate1"
+                class="p-inputtext-sm"
+              />
+            </ng-template>
+            <ng-template pTemplate="output">
+              {{ exchange.rate1 }}
+            </ng-template>
+          </p-cellEditor>
+        </td>
+
+        <td>
+          <span class="p-column-title"> {{ '::DisplayName:Rate2' | abpLocalization }} </span>
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input
+                style="max-width: 6rem"
+                pInputText
+                type="number"
+                [(ngModel)]="exchange.rate2"
+                class="p-inputtext-sm"
+              />
+            </ng-template>
+            <ng-template pTemplate="output">
+              {{ exchange.rate2 }}
+            </ng-template>
+          </p-cellEditor>
+        </td>
+
+        <td>
+          <span class="p-column-title"> {{ '::DisplayName:Rate3' | abpLocalization }} </span>
+
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input
+                style="max-width: 6rem"
+                pInputText
+                type="number"
+                [(ngModel)]="exchange.rate3"
+                class="p-inputtext-sm"
+              />
+            </ng-template>
+            <ng-template pTemplate="output">
+              {{ exchange.rate3 }}
+            </ng-template>
+          </p-cellEditor>
+        </td>
+
+        <td>
+          <span class="p-column-title"> {{ '::DisplayName:Rate4' | abpLocalization }} </span>
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input
+                style="max-width: 6rem"
+                pInputText
+                type="number"
+                [(ngModel)]="exchange.rate4"
+                class="p-inputtext-sm"
+              />
+            </ng-template>
+            <ng-template pTemplate="output">
+              {{ exchange.rate4 }}
+            </ng-template>
+          </p-cellEditor>
+        </td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td [attr.colspan]="6" class="text-center">
+          {{ '::NoRecordsFound' | abpLocalization }}
+        </td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="paginatorleft"></ng-template>
+  </p-table>
+</div>

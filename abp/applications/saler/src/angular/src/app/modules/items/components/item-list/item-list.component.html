@@ -1,0 +1,247 @@
+<div class="grid">
+  <div class="col-12">
+    <div class="card shadow-2 p-2">
+      <p-toolbar styleClass="mb-2">
+        <ng-template pTemplate="left">
+          <h5>{{ '::Items' | abpLocalization }}</h5>
+        </ng-template>
+
+        <ng-template pTemplate="right">
+          <button
+            *ngIf="table?.multiSortMeta?.length > 0"
+            pButton
+            pRipple
+            type="button"
+            icon="pi pi-filter-slash"
+            class="p-button-rounded p-button-text p-speeddial-button p-button-plain"
+            [ngStyle]="{ 'margin-right': '.5rem' }"
+            (click)="clearSort()"
+          ></button>
+
+          <p-button
+            *abpPermission="'ProductManagement.Item.Create'"
+            label="{{ '::NewItem' | abpLocalization }}"
+            styleClass="p-button-sm"
+            icon="pi pi-plus"
+            (click)="showDialog(0)"
+          >
+          </p-button>
+        </ng-template>
+      </p-toolbar>
+
+      <p-table
+        #itemDt
+        [dataKey]="tableConfig.dataKey"
+        [lazy]="tableConfig.lazy"
+        (onLazyLoad)="loadItems($event)"
+        [value]="items$ | async"
+        responsiveLayout="stack"
+        styleClass="p-datatable-sm"
+        [rowHover]="true"
+        [paginator]="tableConfig.paginator"
+        [rows]="pageSize"
+        [totalRecords]="totalRecords$ | async"
+        [loading]="loading$ | async"
+        [showCurrentPageReport]="tableConfig.showCurrentPageReport"
+        [rowsPerPageOptions]="pageSizeOptions.value"
+        [sortMode]="tableConfig.sortMode"
+        paginatorDropdownAppendTo="body"
+        stateStorage="local"
+        [stateKey]="filterStateToken"
+      >
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th>{{ '::Actions' | abpLocalization }}</th>
+
+            <th pSortableColumn="code">
+              {{ '::DisplayName:Code' | abpLocalization }}
+              <p-sortIcon field="code"></p-sortIcon>
+            </th>
+
+            <th pSortableColumn="name">
+              {{ '::DisplayName:Name' | abpLocalization }}
+              <p-sortIcon field="name"></p-sortIcon>
+            </th>
+
+            <th pSortableColumn="type">
+              {{ '::DisplayName:ItemType' | abpLocalization }}
+              <p-sortIcon field="type"></p-sortIcon>
+            </th>
+
+            <th pSortableColumn="mainUnitCode">
+              {{ '::DisplayName:MainUnit' | abpLocalization }}
+              <p-sortIcon field="mainUnitCode"></p-sortIcon>
+            </th>
+
+            <th pSortableColumn="stock">
+              {{ '::DisplayName:Stock' | abpLocalization }}
+              <p-sortIcon field="stock"></p-sortIcon>
+            </th>
+
+            <th pSortableColumn="reservedStock">
+              {{ '::DisplayName:ReservedStock' | abpLocalization }}
+              <p-sortIcon field="reservedStock"></p-sortIcon>
+            </th>
+          </tr>
+
+          <tr>
+            <th>
+              <button
+                pButton
+                pRipple
+                type="button"
+                icon="pi pi-filter-slash"
+                class="p-button-rounded p-button-text p-speeddial-button p-button-plain"
+                [ngStyle]="{ 'margin-left': '.9rem' }"
+                (click)="clearSort()"
+              ></button>
+            </th>
+
+            <th>
+              <p-columnFilter type="text" field="code" matchMode="contains"> </p-columnFilter>
+            </th>
+
+            <th>
+              <p-columnFilter type="text" field="name" matchMode="contains"> </p-columnFilter>
+            </th>
+
+            <th>
+              <p-columnFilter type="text" field="type" matchMode="equals">
+                <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                  <p-dropdown
+                    [ngModel]="value"
+                    placeholder="{{ '::All' | abpLocalization }}"
+                    inputId="dropdown"
+                    styleClass="w-full"
+                    [options]="itemTypeOptions"
+                    optionLabel="key"
+                    optionValue="value"
+                    (onChange)="filter($event.value)"
+                    appendTo="body"
+                  >
+                    <ng-template
+                      let-itemType
+                      pTemplate="selectedItem"
+                      style="padding: 0 !important"
+                    >
+                      {{ '::Enum:ItemType:' + itemType?.value | abpLocalization }}
+                    </ng-template>
+
+                    <ng-template let-itemType pTemplate="item">
+                      {{ '::Enum:ItemType:' + itemType?.value | abpLocalization }}
+                    </ng-template>
+                  </p-dropdown>
+                </ng-template>
+              </p-columnFilter>
+            </th>
+
+            <th>
+              <p-columnFilter type="text" field="mainUnitCode"></p-columnFilter>
+            </th>
+
+            <th>
+              <p-columnFilter type="numeric" field="stock"></p-columnFilter>
+            </th>
+
+            <th>
+              <p-columnFilter type="numeric" field="reservedStock"></p-columnFilter>
+            </th>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-item let-columns="columns">
+          <tr (dblclick)="selectItem(item)">
+            <td style="width: 5rem">
+              <span class="p-column-title">
+                {{ '::Actions' | abpLocalization }}
+              </span>
+
+              <span>
+                <button
+                  *ngIf="'ProductManagement.Item.Delete' | permission"
+                  pButton
+                  pRipple
+                  type="button"
+                  icon="pi pi-trash"
+                  class="p-button-rounded p-button-danger p-button-text"
+                  (click)="deleteOnClick(item.id, item.code)"
+                ></button>
+                <button
+                  *ngIf="'ProductManagement.Item.Edit' | permission"
+                  pButton
+                  pRipple
+                  type="button"
+                  icon="pi pi-pencil"
+                  class="p-button-rounded p-button-plain p-button-text"
+                  (click)="showDialog(1, item.id)"
+                ></button>
+              </span>
+            </td>
+
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:Code' | abpLocalization }}
+              </span>
+              {{ item.code }}
+            </td>
+
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:Name' | abpLocalization }}
+              </span>
+              {{ item.name }}
+            </td>
+
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:ItemType' | abpLocalization }}
+              </span>
+              {{ '::Enum:ItemType:' + item.type | abpLocalization }}
+            </td>
+
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:MainUnit' | abpLocalization }}
+              </span>
+              {{ item.mainUnitCode }}
+            </td>
+
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:Stock' | abpLocalization }}
+              </span>
+              {{ item.stock }}
+            </td>
+
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:ReservedStock' | abpLocalization }}
+              </span>
+              {{ item.reservedStock }}
+            </td>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="emptymessage" let-columns>
+          <tr>
+            <td [attr.colspan]="7" class="text-center">
+              {{ '::NoRecordsFound' | abpLocalization }}
+            </td>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="paginatorleft"></ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>
+
+<app-item-create-dialog *ngIf="createDialogVisible" [(visible)]="createDialogVisible">
+</app-item-create-dialog>
+
+<app-item-edit-dialog
+  *ngIf="editDialogVisible"
+  [(visible)]="editDialogVisible"
+  [itemId]="selectedItemId"
+>
+</app-item-edit-dialog>

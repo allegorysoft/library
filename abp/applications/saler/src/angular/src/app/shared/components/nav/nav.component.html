@@ -1,0 +1,30 @@
+<p-menubar [model]="menuItems">
+  <ng-template pTemplate="start">
+    <p-button
+      label="Saler"
+      styleClass="p-button-text p-button-sm"
+      [routerLink]="['']">
+    </p-button>
+  </ng-template>
+
+  <ng-template pTemplate="end">
+    <ng-container *ngIf="!isAuthenticated; else auth">
+      <p-button
+        label="{{'AbpAccount::Login' | abpLocalization}}"
+        styleClass="p-button-rounded p-button-text p-button-sm"
+        icon="pi pi-fw pi-sign-in"
+        (click)="navigateToLogin()">
+      </p-button>
+    </ng-container>
+
+    <ng-template #auth>
+      <p-button
+        label="{{(currentUser$ | async).name}}"
+        styleClass="p-button-rounded p-button-text p-button-sm"
+        icon="pi pi-user"
+        (click)="menu.toggle($event)">
+      </p-button>
+      <p-menu #menu [popup]="true" [model]="accountItems"></p-menu>
+    </ng-template>
+  </ng-template>
+</p-menubar>

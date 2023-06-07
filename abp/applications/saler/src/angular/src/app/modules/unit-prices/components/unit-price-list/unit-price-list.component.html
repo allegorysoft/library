@@ -1,0 +1,284 @@
+<div class="grid">
+  <div class="col-12">
+    <div class="card shadow-2 p-2">
+      <p-toolbar styleClass="mb-2">
+        <ng-template pTemplate="left">
+          <h5>{{ '::UnitPrices' | abpLocalization }}</h5>
+        </ng-template>
+
+        <ng-template pTemplate="right">
+          <button
+            *ngIf="table?.multiSortMeta?.length > 0"
+            pButton
+            pRipple
+            type="button"
+            icon="pi pi-filter-slash"
+            class="p-button-rounded p-button-text p-speeddial-button p-button-plain"
+            [ngStyle]="{ 'margin-right': '.5rem' }"
+            (click)="clearSort()"
+          ></button>
+
+          <button
+            pButton
+            pRipple
+            type="button"
+            *abpPermission="'ProductManagement.UnitPrice.Create'"
+            label="{{ '::NewUnitPrice' | abpLocalization }}"
+            class="p-button-sm"
+            icon="pi pi-plus"
+            (click)="createUnitPrice()"
+          ></button>
+        </ng-template>
+      </p-toolbar>
+
+      <p-table
+        #unitPriceDt
+        [dataKey]="tableConfig.dataKey"
+        [lazy]="tableConfig.lazy"
+        (onLazyLoad)="loadUnitPrices($event)"
+        [value]="unitPrices$ | async"
+        responsiveLayout="stack"
+        styleClass="p-datatable-sm"
+        [rowHover]="true"
+        [paginator]="tableConfig.paginator"
+        paginatorDropdownAppendTo="body"
+        [rows]="pageSize"
+        [totalRecords]="totalRecords$ | async"
+        [loading]="loading$ | async"
+        [showCurrentPageReport]="tableConfig.showCurrentPageReport"
+        [rowsPerPageOptions]="pageSizeOptions.value"
+        [sortMode]="tableConfig.sortMode"
+        stateStorage="local"
+        [stateKey]="filterStateToken"
+      >
+        <ng-template pTemplate="header">
+          <tr>
+            <th>{{ '::Actions' | abpLocalization }}</th>
+            <th pSortableColumn="code">
+              {{ '::DisplayName:Code' | abpLocalization }}
+              <p-sortIcon field="code"></p-sortIcon>
+            </th>
+            <th pSortableColumn="productCode">
+              {{ '::DisplayName:ProductCode' | abpLocalization }}
+              <p-sortIcon field="productCode"></p-sortIcon>
+            </th>
+            <th pSortableColumn="productName">
+              {{ '::DisplayName:ProductName' | abpLocalization }}
+              <p-sortIcon field="productName"></p-sortIcon>
+            </th>
+            <th pSortableColumn="unitCode">
+              {{ '::DisplayName:UnitCode' | abpLocalization }}
+              <p-sortIcon field="unitCode"></p-sortIcon>
+            </th>
+            <th pSortableColumn="purchasePrice">
+              {{ '::DisplayName:PurchasePrice' | abpLocalization }}
+              <p-sortIcon field="purchasePrice"></p-sortIcon>
+            </th>
+            <th pSortableColumn="salesPrice">
+              {{ '::DisplayName:SalesPrice' | abpLocalization }}
+              <p-sortIcon field="salesPrice"></p-sortIcon>
+            </th>
+            <th pSortableColumn="currencyCode">
+              {{ '::DisplayName:CurrencyCode' | abpLocalization }}
+              <p-sortIcon field="currencyCode"></p-sortIcon>
+            </th>
+            <th pSortableColumn="clientCode">
+              {{ '::DisplayName:ClientCode' | abpLocalization }}
+              <p-sortIcon field="clientCode"></p-sortIcon>
+            </th>
+          </tr>
+
+          <tr>
+            <th>
+              <button
+                pButton
+                pRipple
+                type="button"
+                icon="pi pi-filter-slash"
+                class="p-button-rounded p-button-text p-speeddial-button p-button-plain"
+                (click)="clearSort()"
+              ></button>
+            </th>
+
+            <th>
+              <p-columnFilter
+                styleClass="p-inputtext-sm"
+                type="text"
+                field="code"
+                matchMode="contains"
+              >
+              </p-columnFilter>
+            </th>
+
+            <th>
+              <p-columnFilter
+                styleClass="p-inputtext-sm"
+                type="text"
+                field="productCode"
+                matchMode="contains"
+              >
+              </p-columnFilter>
+            </th>
+
+            <th>
+              <p-columnFilter
+                styleClass="p-inputtext-sm"
+                type="text"
+                field="productName"
+                matchMode="contains"
+              >
+              </p-columnFilter>
+            </th>
+
+            <th>
+              <p-columnFilter
+                styleClass="p-inputtext-sm"
+                type="text"
+                field="unitCode"
+                matchMode="contains"
+              >
+              </p-columnFilter>
+            </th>
+
+            <th>
+              <p-columnFilter styleClass="p-inputtext-sm" type="numeric" field="purchasePrice">
+              </p-columnFilter>
+            </th>
+
+            <th>
+              <p-columnFilter styleClass="p-inputtext-sm" type="numeric" field="salesPrice">
+              </p-columnFilter>
+            </th>
+
+            <th>
+              <p-columnFilter
+                styleClass="p-inputtext-sm"
+                type="text"
+                field="currencyCode"
+                matchMode="contains"
+              >
+              </p-columnFilter>
+            </th>
+
+            <th>
+              <p-columnFilter
+                styleClass="p-inputtext-sm"
+                type="text"
+                field="clientCode"
+                matchMode="contains"
+              >
+              </p-columnFilter>
+            </th>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-unitPrice let-columns="columns">
+          <tr *ngIf="!(loading$ | async)">
+            <td style="width: 5rem">
+              <span class="p-column-title">
+                {{ '::Actions' | abpLocalization }}
+              </span>
+              <span>
+                <button
+                  *ngIf="'ProductManagement.UnitPrice.Delete' | permission"
+                  pButton
+                  pRipple
+                  type="button"
+                  icon="pi pi-trash"
+                  class="p-button-rounded p-button-danger p-button-text"
+                  (click)="delete(unitPrice.id, unitPrice.code)"
+                ></button>
+                <button
+                  *ngIf="'ProductManagement.UnitPrice.Edit' | permission"
+                  pButton
+                  pRipple
+                  type="button"
+                  icon="pi pi-pencil"
+                  class="p-button-rounded p-button-plain p-button-text"
+                  (click)="editUnitPrice(unitPrice.id)"
+                ></button>
+              </span>
+            </td>
+
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:Code' | abpLocalization }}
+              </span>
+              {{ unitPrice.code }}
+            </td>
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:ProductCode' | abpLocalization }}
+              </span>
+              {{ unitPrice.productCode }}
+            </td>
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:ProductName' | abpLocalization }}
+              </span>
+              {{ unitPrice.productName }}
+            </td>
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:UnitCode' | abpLocalization }}
+              </span>
+              {{ unitPrice.unitCode }}
+            </td>
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:PurchasePrice' | abpLocalization }}
+              </span>
+              {{ unitPrice.purchasePrice }}
+            </td>
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:SalesPrice' | abpLocalization }}
+              </span>
+              {{ unitPrice.salesPrice }}
+            </td>
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:CurrencyCode' | abpLocalization }}
+              </span>
+              {{ unitPrice.currencyCode }}
+            </td>
+            <td>
+              <span class="p-column-title">
+                {{ '::DisplayName:ClientCode' | abpLocalization }}
+              </span>
+              {{ unitPrice.clientCode }}
+            </td>
+          </tr>
+
+          <tr *ngIf="loading$ | async">
+            <td><p-skeleton></p-skeleton></td>
+            <td><p-skeleton></p-skeleton></td>
+            <td><p-skeleton></p-skeleton></td>
+            <td><p-skeleton></p-skeleton></td>
+            <td><p-skeleton></p-skeleton></td>
+            <td><p-skeleton></p-skeleton></td>
+            <td><p-skeleton></p-skeleton></td>
+            <td><p-skeleton></p-skeleton></td>
+            <td><p-skeleton></p-skeleton></td>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="emptymessage" let-columns>
+          <tr>
+            <td [attr.colspan]="9" class="text-center">
+              {{ '::NoRecordsFound' | abpLocalization }}
+            </td>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="paginatorleft"></ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>
+
+<app-unit-price-edit-dialog
+  *ngIf="isDialogOpen"
+  [(visible)]="isDialogOpen"
+  [type]="type"
+></app-unit-price-edit-dialog>
