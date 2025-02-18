@@ -255,7 +255,7 @@ public static partial class ConditionExtension
             : Convert.ChangeType(value, propertyType, CultureInfo.InvariantCulture);
     }
 
-    public static Condition? Combine(this Condition? condition, Condition? other, bool groupOr = false, bool not = false)
+    public static Condition Combine(this Condition condition, Condition other, bool groupOr = false, bool not = false)
     {
         if (condition == null)
         {

@@ -57,4 +57,24 @@ public static class SortExtension
             return sorts.Count > 0 ? new Sort(sorts) : null;
         }
     }
+
+    public static Sort Combine(this Sort sort, Sort other)
+    {
+        if (sort == null)
+        {
+            return other;
+        }
+
+        if (other == null)
+        {
+            return sort;
+        }
+
+        return new Sort(
+            new List<Sort>
+            {
+                sort,
+                other
+            });
+    }
 }
