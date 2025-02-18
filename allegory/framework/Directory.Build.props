@@ -1,5 +1,5 @@
 <Project>
   <PropertyGroup>
-      <NetVersion>net7.0</NetVersion>
+      <NetVersion>net9.0</NetVersion>
   </PropertyGroup>
 </Project>
