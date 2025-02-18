@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Allegory.Standart.Filter\Allegory.Standart.Filter.csproj" />
+    <ProjectReference Include="..\..\src\Allegory.Standard.Filter\Allegory.Standard.Filter.csproj" />
   </ItemGroup>
 
 </Project>

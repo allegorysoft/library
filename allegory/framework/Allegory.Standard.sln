@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2C72BD73-0F2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{4C25890E-B62A-4F08-A6DB-7030B20E27DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allegory.Standart.Filter", "src\Allegory.Standart.Filter\Allegory.Standart.Filter.csproj", "{070A7E4C-4F58-4BD1-9CB1-9D4AE69DA798}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allegory.Standard.Filter", "src\Allegory.Standard.Filter\Allegory.Standard.Filter.csproj", "{070A7E4C-4F58-4BD1-9CB1-9D4AE69DA798}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allegory.Standart.Filter.Tests", "test\Allegory.Standart.Filter.Tests\Allegory.Standart.Filter.Tests.csproj", "{AFBCD6F5-A5F7-4A80-8BA3-EBC33A7AA2D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allegory.Standard.Filter.Tests", "test\Allegory.Standard.Filter.Tests\Allegory.Standard.Filter.Tests.csproj", "{AFBCD6F5-A5F7-4A80-8BA3-EBC33A7AA2D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
