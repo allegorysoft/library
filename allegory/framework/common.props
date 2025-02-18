@@ -1,6 +1,7 @@
 <Project>
     <PropertyGroup>
         <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/allegorysoft/library</RepositoryUrl>
         <Authors>Allegorysoft</Authors>

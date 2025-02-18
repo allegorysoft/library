@@ -254,4 +254,26 @@ public static partial class ConditionExtension
             ? Enum.Parse(propertyType, value.ToString())
             : Convert.ChangeType(value, propertyType, CultureInfo.InvariantCulture);
     }
+
+    public static Condition? Combine(this Condition? condition, Condition? other, bool groupOr = false, bool not = false)
+    {
+        if (condition == null)
+        {
+            return other;
+        }
+
+        if (other == null)
+        {
+            return condition;
+        }
+
+        return new Condition(
+            new List<Condition>
+            {
+                condition,
+                other
+            },
+            groupOr,
+            not);
+    }
 }
