@@ -54,11 +54,22 @@ public static partial class ConditionExtension
         }
     }
 
-    public static string GetFilterQuery(this Condition condition,
-        OperatorCombine operatorCombine = OperatorCombine.WithWhere)
+    public static string GetFilterQuery(
+        this Condition condition,
+        OperatorCombine operatorCombine = OperatorCombine.WithWhere,
+        bool renameParameters = true)
     {
-        if (condition == null || string.IsNullOrEmpty(condition.ToString())) return null;
-        string filterQuery = condition.ToString();
+        if (condition == null || string.IsNullOrEmpty(condition.ToString()))
+        {
+            return null;
+        }
+
+        if (renameParameters)
+        {
+            condition.RenameParameters();
+        }
+
+        var filterQuery = condition.ToString();
         switch (operatorCombine)
         {
             case OperatorCombine.WithNone:
@@ -85,17 +96,27 @@ public static partial class ConditionExtension
         return filterQuery;
     }
 
-    public static string GetFilterQuery(this Condition condition, out IDictionary<string, object> dictionaries,
-        OperatorCombine operatorCombine = OperatorCombine.WithWhere, params string[] columns)
+    public static string GetFilterQuery(
+        this Condition condition,
+        out IDictionary<string, object> dictionaries,
+        OperatorCombine operatorCombine = OperatorCombine.WithWhere,
+        bool renameParameters = true,
+        params string[] columns)
     {
         condition = condition.RemoveConditions(columns);
+        var filterQuery = condition.GetFilterQuery(operatorCombine, renameParameters);
         dictionaries = condition.GetDictionaries();
-        return condition.GetFilterQuery(operatorCombine);
+        return filterQuery;
     }
 
-    public static string GetFilterQuery<TEntity>(this Condition condition,
-        out IDictionary<string, object> dictionaries, OperatorCombine operatorCombine = OperatorCombine.WithWhere,
-        bool removeConditions = true, bool convertToValueType = true, params string[] columns)
+    public static string GetFilterQuery<TEntity>(
+        this Condition condition,
+        out IDictionary<string, object> dictionaries,
+        OperatorCombine operatorCombine = OperatorCombine.WithWhere,
+        bool removeConditions = true,
+        bool convertToValueType = true,
+        bool renameParameters = true,
+        params string[] columns)
     {
         if (removeConditions)
             condition = condition.RemoveConditions<TEntity>(columns);
@@ -105,8 +126,9 @@ public static partial class ConditionExtension
         if (convertToValueType)
             condition = condition.ConvertToValueType<TEntity>();
 
+        var filterQuery = condition.GetFilterQuery(operatorCombine, renameParameters);
         dictionaries = condition.GetDictionaries();
-        return condition.GetFilterQuery(operatorCombine);
+        return filterQuery;
     }
 
     public static Condition RemoveConditions(this Condition condition, params string[] columns)

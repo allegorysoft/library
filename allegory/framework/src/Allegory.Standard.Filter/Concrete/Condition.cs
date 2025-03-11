@@ -174,4 +174,34 @@ public sealed class Condition
         filter += "@" + ParameterName;
         return filter;
     }
+
+    internal void RenameParameters()
+    {
+        var p = this;
+        while (p.Parent != null)
+        {
+            p = p.Parent;
+        }
+
+        var counter = 1;
+        RenameParameters(p, ref counter);
+    }
+
+    private void RenameParameters(Condition condition, ref int c)
+    {
+        if (condition.IsGroup)
+        {
+            foreach (var item in condition.Group)
+            {
+                RenameParameters(item, ref c);
+            }
+        }
+        else
+        {
+            if (condition.IsColumn && condition.Value != null)
+            {
+                condition._parameterName = "P-" + c++;
+            }
+        }
+    }
 }

@@ -300,4 +300,58 @@ public class ConditionExpressionExtensionTests
 
         var expression = conditions.ToLambdaExpression<Sample>();
     }
+
+    [TestMethod]
+    public void ShouldRenameParameterNames()
+    {
+        var conditions = new Condition
+        {
+            Group = new List<Condition>
+            {
+                new Condition
+                {
+                    Column = "column1",
+                    Operator = Operator.Equals,
+                    Value = "some value"
+                },
+                new Condition
+                {
+                    Column = "column2",
+                    Operator = Operator.IsGreaterThan,
+                    Value = 20
+                },
+                new Condition
+                {
+                    Group = new List<Condition>
+                    {
+                        new Condition
+                        {
+                            Column = "column1",
+                            Operator = Operator.Equals,
+                            Value = "some value"
+                        },
+                        new Condition
+                        {
+                            Column = "column2",
+                            Operator = Operator.IsGreaterThan,
+                            Value = 20
+                        },
+                        new Condition
+                        {
+                            Column = "column3",
+                            Operator = Operator.IsNull
+                        }
+                    }
+                }
+            }
+        };
+
+        var expression = conditions.GetFilterQuery<Sample>(out var parameters);
+
+        Assert.AreEqual(4, parameters.Count);
+        for (var i = 0; i < parameters.Count; i++)
+        {
+            Assert.IsTrue(parameters.ContainsKey("P-" + (i + 1)));
+        }
+    }
 }
