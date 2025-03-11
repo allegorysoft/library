@@ -12,7 +12,6 @@ public sealed class Condition
 {
     #region Fields
 
-    private bool _parametersRenamed;
     private string _parameterName;
     private ObservableCollection<Condition> _group;
 
@@ -178,14 +177,14 @@ public sealed class Condition
 
     internal void RenameParameters()
     {
-        if (Parent != null || _parametersRenamed)
+        var p = this;
+        while (p.Parent != null)
         {
-            return;
+            p = p.Parent;
         }
 
         var counter = 1;
-        RenameParameters(this, ref counter);
-        _parametersRenamed = true;
+        RenameParameters(p, ref counter);
     }
 
     private void RenameParameters(Condition condition, ref int c)
