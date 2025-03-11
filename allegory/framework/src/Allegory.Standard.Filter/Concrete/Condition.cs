@@ -10,6 +10,8 @@ namespace Allegory.Standard.Filter.Concrete;
 
 public sealed class Condition
 {
+    public const string ParameterPrefix = "P_";
+
     #region Fields
 
     private string _parameterName;
@@ -200,7 +202,7 @@ public sealed class Condition
         {
             if (condition.IsColumn && condition.Value != null)
             {
-                condition._parameterName = "P-" + c++;
+                condition._parameterName = ParameterPrefix + c++;
             }
         }
     }

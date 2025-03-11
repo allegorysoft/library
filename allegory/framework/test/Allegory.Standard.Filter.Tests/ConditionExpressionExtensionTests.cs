@@ -351,7 +351,7 @@ public class ConditionExpressionExtensionTests
         Assert.AreEqual(4, parameters.Count);
         for (var i = 0; i < parameters.Count; i++)
         {
-            Assert.IsTrue(parameters.ContainsKey("P-" + (i + 1)));
+            Assert.IsTrue(parameters.ContainsKey(Condition.ParameterPrefix + (i + 1)));
         }
     }
 }
