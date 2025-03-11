@@ -12,6 +12,7 @@ public sealed class Condition
 {
     #region Fields
 
+    private bool _parametersRenamed;
     private string _parameterName;
     private ObservableCollection<Condition> _group;
 
@@ -173,5 +174,35 @@ public sealed class Condition
 
         filter += "@" + ParameterName;
         return filter;
+    }
+
+    internal void RenameParameters()
+    {
+        if (Parent != null || _parametersRenamed)
+        {
+            return;
+        }
+
+        var counter = 1;
+        RenameParameters(this, ref counter);
+        _parametersRenamed = true;
+    }
+
+    private void RenameParameters(Condition condition, ref int c)
+    {
+        if (condition.IsGroup)
+        {
+            foreach (var item in condition.Group)
+            {
+                RenameParameters(item, ref c);
+            }
+        }
+        else
+        {
+            if (condition.IsColumn && condition.Value != null)
+            {
+                condition._parameterName = "P-" + c++;
+            }
+        }
     }
 }
