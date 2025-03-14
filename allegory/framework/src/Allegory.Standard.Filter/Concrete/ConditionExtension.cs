@@ -277,7 +277,11 @@ public static partial class ConditionExtension
             : Convert.ChangeType(value, propertyType, CultureInfo.InvariantCulture);
     }
 
-    public static Condition Combine(this Condition condition, Condition other, bool groupOr = false, bool not = false)
+    public static Condition Combine(
+        this Condition condition,
+        Condition other,
+        bool groupOr = false,
+        bool not = false)
     {
         if (condition == null)
         {
@@ -297,5 +301,47 @@ public static partial class ConditionExtension
             },
             groupOr,
             not);
+    }
+
+    public static Condition Combine(
+        this Condition condition,
+        params IList<Condition> other)
+    {
+        if (condition == null)
+        {
+            return new Condition(other, false, false);
+        }
+
+        if (other == null || other.Count == 0)
+        {
+            return condition;
+        }
+
+        other.Insert(0, condition);
+
+        return new Condition(
+            other,
+            false,
+            false);
+    }
+
+    public static Condition Change(this Condition condition, bool? not = null, bool? groupOr = null)
+    {
+        if (condition == null)
+        {
+            return null;
+        }
+
+        if (not.HasValue)
+        {
+            condition.Not = not.Value;
+        }
+
+        if (groupOr.HasValue)
+        {
+            condition.GroupOr = groupOr.Value;
+        }
+
+        return condition;
     }
 }
