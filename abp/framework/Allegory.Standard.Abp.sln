@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5FC63416-E79C-44CD-B0E2-FAD871CC591F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{753C3C31-61FE-4A9A-AE23-989073A02089}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "abp", "abp", "{51FB256E-A448-489F-982D-FED8393A9C2D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "standard", "standard", "{EF3D39BD-1BEA-4D54-85EC-7E8C8204672D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{51FB256E-A448-489F-982D-FED8393A9C2D} = {5FC63416-E79C-44CD-B0E2-FAD871CC591F}
+		{EF3D39BD-1BEA-4D54-85EC-7E8C8204672D} = {5FC63416-E79C-44CD-B0E2-FAD871CC591F}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+	EndGlobalSection
+EndGlobal
