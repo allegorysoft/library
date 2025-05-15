@@ -1,16 +1,17 @@
 <Project>
+
     <PropertyGroup>
         <LangVersion>latest</LangVersion>
         <Nullable>enable</Nullable>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/allegorysoft/library</RepositoryUrl>
         <Authors>Allegorysoft</Authors>
-        <Description>Allegory Framework</Description>
         <Version>1.1.0</Version>
         <PackageIcon>allegory-icon.png</PackageIcon>
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="..\..\..\resources\allegory-icon.png" Pack="true" PackagePath="\" />
+        <None Include="$(AllegoryIconPath)" Pack="true" Visible="false" PackagePath="\" />
     </ItemGroup>
+
 </Project>
